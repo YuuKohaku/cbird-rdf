@@ -1,0 +1,226 @@
+{
+    "@context": {
+        "ci": "iris://data/#",
+        "iris": "iris://vocabulary/domain#",
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "owlTime": "http://www.w3.org/2006/time#",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "rmf": "iris://vocabulary/basic#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
+    },
+    "@graph": [
+        {
+            "@id": "ci:_x2",
+            "@type": "owlTime:DurationDescription",
+            "owlTime:minutes": {
+                "@type": "xsd:decimal",
+                "@value": "20"
+            }
+    },
+        {
+            "@id": "ci:department1",
+            "@type": "iris:Department",
+            "iris:unitOf": {
+                "@id": "ci:office1"
+            },
+            "rdfs:label": "Department 1"
+    },
+        {
+            "@id": "ci:human2",
+            "@type": "iris:Person",
+            "iris:firstName": {
+                "@language": "en",
+                "@value": "Maria"
+            },
+            "iris:lastName": {
+                "@language": "en",
+                "@value": "Medvedeva"
+            },
+            "iris:login": {
+                "@language": "en",
+                "@value": "MASHA"
+            },
+            "iris:middleName": {
+                "@language": "en",
+                "@value": "Ivanovna"
+            },
+            "iris:password": "654321",
+            "iris:provides": {
+                "@id": "ci:service2"
+            }
+    },
+        {
+            "@id": "ci:human1",
+            "@type": "iris:Person",
+            "iris:firstName": {
+                "@language": "en",
+                "@value": "Vasisualy"
+            },
+            "iris:lastName": {
+                "@language": "en",
+                "@value": "Ivanov"
+            },
+            "iris:login": {
+                "@language": "en",
+                "@value": "vasyoQ"
+            },
+            "iris:middleName": {
+                "@language": "en",
+                "@value": "Ivanovich"
+            },
+            "iris:password": "123456",
+            "iris:provides": [
+                {
+                    "@id": "ci:service1"
+        },
+                {
+                    "@id": "ci:service2"
+        }
+      ]
+    },
+        {
+            "@id": "_:ub158bL55C2",
+            "@type": "iris:Membership",
+            "iris:member": {
+                "@id": "ci:human2"
+            },
+            "iris:organization": {
+                "@id": "ci:department1"
+            },
+            "iris:role": {
+                "@id": "iris:Operator"
+            }
+    },
+        {
+            "@id": "ci:service2",
+            "@type": "iris:Service",
+            "iris:codeFRGU": "Smth",
+            "iris:deptCodeFRGU": "Smth",
+            "iris:liveOperationTime": {
+                "@id": "ci:_x2"
+            },
+            "iris:order": {
+                "@type": "xsd:decimal",
+                "@value": "6"
+            },
+            "iris:prebookInterval": {
+                "@id": "ci:_x3"
+            },
+            "iris:prebookOperationTime": {
+                "@id": "ci:_x2"
+            },
+            "iris:prebookPercentage": {
+                "@type": "xsd:decimal",
+                "@value": "50"
+            },
+            "iris:prebookTodayPercentage": {
+                "@type": "xsd:decimal",
+                "@value": "20"
+            },
+            "iris:prefix": "Smth",
+            "iris:priority": {
+                "@type": "xsd:decimal",
+                "@value": "3"
+            },
+            "iris:serviceCodeEPGU": "Smth"
+    },
+        {
+            "@id": "ci:service1",
+            "@type": "iris:Service",
+            "iris:codeFRGU": "Smth",
+            "iris:deptCodeFRGU": "Smth",
+            "iris:liveOperationTime": {
+                "@id": "ci:_x1"
+            },
+            "iris:order": {
+                "@type": "xsd:decimal",
+                "@value": "1"
+            },
+            "iris:prebookInterval": {
+                "@id": "ci:_x3"
+            },
+            "iris:prebookOperationTime": {
+                "@id": "ci:_x1"
+            },
+            "iris:prebookPercentage": {
+                "@type": "xsd:decimal",
+                "@value": "45"
+            },
+            "iris:prebookTodayPercentage": {
+                "@type": "xsd:decimal",
+                "@value": "15"
+            },
+            "iris:prefix": "Smth",
+            "iris:priority": {
+                "@type": "xsd:decimal",
+                "@value": "1"
+            },
+            "iris:serviceCodeEPGU": "Smth"
+    },
+        {
+            "@id": "ci:_x3",
+            "@type": "owlTime:DurationDescription",
+            "owlTime:days": {
+                "@type": "xsd:decimal",
+                "@value": "2"
+            }
+    },
+        {
+            "@id": "ci:office1",
+            "@type": "iris:Office",
+            "iris:hasUnit": {
+                "@id": "ci:department1"
+            },
+            "rdfs:label": "Office 1"
+    },
+        {
+            "@id": "ci:_x1",
+            "@type": "owlTime:DurationDescription",
+            "owlTime:minutes": {
+                "@type": "xsd:decimal",
+                "@value": "15"
+            }
+    },
+        {
+            "@id": "_:ub158bL50C2",
+            "@type": "iris:Membership",
+            "iris:member": {
+                "@id": "ci:human1"
+            },
+            "iris:organization": {
+                "@id": "ci:department1"
+            },
+            "iris:role": {
+                "@id": "iris:Operator"
+            }
+    },
+        {
+            "@id": "ci:pc1",
+            "@type": "iris:AWP",
+            "iris:attachedTo": {
+                "@id": "ci:department1"
+            },
+            "iris:deviceOf": {
+                "@id": "ci:human1"
+            }
+    },
+        {
+            "@id": "ci:orgroot",
+            "@type": "iris:FormalOrganization",
+            "iris:hasUnit": {
+                "@id": "ci:office1"
+            }
+    },
+        {
+            "@id": "ci:pc2",
+            "@type": "iris:AWP",
+            "iris:attachedTo": {
+                "@id": "ci:department1"
+            },
+            "iris:deviceOf": {
+                "@id": "ci:human2"
+            }
+    }
+  ]
+}

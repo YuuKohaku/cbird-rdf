@@ -1,0 +1,1376 @@
+{
+    "@context": {
+        "dct": "http://purl.org/dc/terms/",
+        "dcterms": "http://purl.org/dc/terms/",
+        "foaf": "http://xmlns.com/foaf/0.1/",
+        "gr": "http://purl.org/goodrelations/v1#",
+        "iris": "file:///iris/vocabulary/domain#",
+        "org": "http://www.w3.org/ns/org#",
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "owlTime": "http://www.w3.org/2006/time#",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "schema": "http://schema.org/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
+    },
+    "@graph": [
+        {
+            "@id": "iris:Employee",
+            "@type": [
+        "owl:Class",
+        "rdfs:Class"
+      ],
+            "rdfs:subClassOf": {
+                "@id": "iris:Role"
+            }
+    },
+        {
+            "@id": "iris:Office",
+            "@type": [
+        "owl:Class",
+        "rdfs:Class"
+      ],
+            "rdfs:subClassOf": {
+                "@id": "org:OrganizationalUnit"
+            }
+    },
+        {
+            "@id": "iris:deviceSound",
+            "@type": [
+        "owl:FunctionalProperty",
+        "owl:ObjectProperty",
+        "rdf:Property"
+      ],
+            "rdfs:comment": {
+                "@language": "en",
+                "@value": "Device sound."
+            },
+            "rdfs:domain": {
+                "@id": "iris:RoomDisplay"
+            },
+            "rdfs:range": {
+                "@id": "dcterms:Sound"
+            }
+    },
+        {
+            "@id": "iris:prebookTodayPercentage",
+            "@type": [
+        "owl:FunctionalProperty",
+        "owl:DatatypeProperty",
+        "rdf:Property"
+      ],
+            "rdfs:domain": {
+                "@id": "iris:Service"
+            },
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "prebookTodayPercentage"
+            },
+            "rdfs:range": {
+                "@id": "xsd:decimal"
+            }
+    },
+        {
+            "@id": "iris:firstName",
+            "owl:equivalentProperty": {
+                "@id": "foaf:firstName"
+            }
+    },
+        {
+            "@id": "iris:hasPlan",
+            "@type": [
+        "rdf:Property",
+        "owl:ObjectProperty"
+      ],
+            "rdfs:domain": {
+                "@id": "_:ub108bL357C21"
+            },
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "hasPlan"
+            },
+            "rdfs:range": {
+                "@id": "iris:Plan"
+            }
+    },
+        {
+            "@id": "iris:prebookOperationTime",
+            "@type": [
+        "rdf:Property",
+        "owl:FunctionalProperty",
+        "owl:ObjectProperty"
+      ],
+            "rdfs:domain": {
+                "@id": "iris:Service"
+            },
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "prebookOpTime"
+            },
+            "rdfs:range": {
+                "@id": "owlTime:DurationDescription"
+            }
+    },
+        {
+            "@id": "iris:hasPermission",
+            "@type": [
+        "rdf:Property",
+        "owl:ObjectProperty",
+        "owl:InverseFunctionalProperty"
+      ],
+            "rdfs:domain": {
+                "@id": "iris:Person"
+            },
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "permission"
+            },
+            "rdfs:range": {
+                "@id": "iris:Permission"
+            }
+    },
+        {
+            "@id": "iris:password",
+            "@type": [
+        "rdf:Property",
+        "owl:DatatypeProperty"
+      ],
+            "rdfs:domain": {
+                "@id": "iris:Person"
+            },
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "passwd"
+            },
+            "rdfs:range": {
+                "@id": "rdfs:Literal"
+            }
+    },
+        {
+            "@id": "iris:serviceName",
+            "@type": [
+        "owl:FunctionalProperty",
+        "rdf:Property",
+        "owl:DatatypeProperty"
+      ],
+            "owl:subPropertyOf": {
+                "@id": "gr:name"
+            },
+            "rdfs:domain": {
+                "@id": "iris:Service"
+            },
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "serviceName"
+            },
+            "rdfs:range": {
+                "@id": "rdfs:Literal"
+            }
+    },
+        {
+            "@id": "iris:validSince",
+            "@type": [
+        "rdf:Property",
+        "owl:DatatypeProperty"
+      ],
+            "rdfs:domain": {
+                "@id": "iris:Plan"
+            },
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "validSince"
+            },
+            "rdfs:range": {
+                "@id": "xsd:date"
+            }
+    },
+        {
+            "@id": "iris:Sunday",
+            "owl:sameAs": {
+                "@id": "gr:Sunday"
+            }
+    },
+        {
+            "@id": "iris:offers",
+            "owl:equivalentProperty": {
+                "@id": "gr:offers"
+            }
+    },
+        {
+            "@id": "iris:prebookInterval",
+            "@type": [
+        "owl:FunctionalProperty",
+        "owl:ObjectProperty",
+        "rdf:Property"
+      ],
+            "rdfs:domain": {
+                "@id": "iris:Service"
+            },
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "prebookDays"
+            },
+            "rdfs:range": {
+                "@id": "owlTime:DurationDescription"
+            }
+    },
+        {
+            "@id": "iris:deptCodeFRGU",
+            "@type": [
+        "owl:FunctionalProperty",
+        "rdf:Property",
+        "owl:DatatypeProperty"
+      ],
+            "rdfs:domain": {
+                "@id": "iris:Service"
+            },
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "deptCodeFRGU"
+            },
+            "rdfs:range": {
+                "@id": "rdfs:Literal"
+            }
+    },
+        {
+            "@id": "iris:hasBusinessFunction",
+            "owl:equivalentProperty": {
+                "@id": "gr:hasBusinessFunction"
+            }
+    },
+        {
+            "@id": "iris:attachedTo",
+            "@type": [
+        "rdf:Property",
+        "owl:ObjectProperty"
+      ],
+            "rdfs:domain": {
+                "@id": "iris:Device"
+            },
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "attachedTo"
+            },
+            "rdfs:range": {
+                "@id": "org:Organization"
+            },
+            "rdfs:subPropertyOf": {
+                "@id": "org:memberOf"
+            }
+    },
+        {
+            "@id": "iris:Plan",
+            "@type": [
+        "owl:Class",
+        "rdfs:Class"
+      ],
+            "owl:subClassOf": {
+                "@id": "gr:OpeningHoursSpecification"
+            },
+            "rdfs:comment": {
+                "@language": "en",
+                "@value": "This class is a conceptual representation of any work schedule attached to people, physical devices, organizatoins, services etc.."
+            },
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "Plan"
+            }
+    },
+        {
+            "@id": "iris:hasTimeChunk",
+            "@type": [
+        "rdf:Property",
+        "owl:ObjectProperty"
+      ],
+            "rdfs:domain": {
+                "@id": "iris:Plan"
+            },
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "hasTimeChunk"
+            },
+            "rdfs:range": {
+                "@id": "iris:TimeChunk"
+            }
+    },
+        {
+            "@id": "iris:liveOperationTime",
+            "@type": [
+        "rdf:Property",
+        "owl:FunctionalProperty",
+        "owl:ObjectProperty"
+      ],
+            "rdfs:domain": {
+                "@id": "iris:Service"
+            },
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "liveOpTime"
+            },
+            "rdfs:range": {
+                "@id": "owlTime:DurationDescription"
+            }
+    },
+        {
+            "@id": "_:ub108bL414C1",
+            "@type": "owl:AllDisjointClasses",
+            "owl:members": {
+                "@list": [
+                    {
+                        "@id": "iris:Office"
+          },
+                    {
+                        "@id": "iris:Department"
+          }
+        ]
+            }
+    },
+        {
+            "@id": "iris:hasMember",
+            "owl:equivalentProperty": {
+                "@id": "org:hasMember"
+            }
+    },
+        {
+            "@id": "iris:Friday",
+            "owl:sameAs": {
+                "@id": "gr:Friday"
+            }
+    },
+        {
+            "@id": "iris:prebookPercentage",
+            "@type": [
+        "owl:FunctionalProperty",
+        "rdf:Property",
+        "owl:DatatypeProperty"
+      ],
+            "rdfs:domain": {
+                "@id": "iris:Service"
+            },
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "prebookPercentage"
+            },
+            "rdfs:range": {
+                "@id": "xsd:decimal"
+            }
+    },
+        {
+            "@id": "iris:FormalOrganization",
+            "owl:equivalentClass": {
+                "@id": "gr:BusinessEntity"
+            }
+    },
+        {
+            "@id": "_:ub108bL64C25",
+            "@type": "owl:Restriction",
+            "owl:onClass": {
+                "@id": "iris:Office"
+            },
+            "owl:onProperty": {
+                "@id": "iris:hasUnit"
+            },
+            "owl:qualifiedCardinality": {
+                "@type": "xsd:nonNegativeInteger",
+                "@value": "0"
+            }
+    },
+        {
+            "@id": "iris:Role",
+            "owl:equivalentClass": {
+                "@id": "org:Role"
+            }
+    },
+        {
+            "@id": "iris:Monday",
+            "owl:sameAs": {
+                "@id": "gr:Monday"
+            }
+    },
+        {
+            "@id": "iris:hasPlanDay",
+            "@type": [
+        "owl:ObjectProperty",
+        "rdf:Property"
+      ],
+            "rdfs:domain": {
+                "@id": "iris:Plan"
+            },
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "hasPlanDay"
+            },
+            "rdfs:range": {
+                "@id": "iris:DayOfTheWeek"
+            }
+    },
+        {
+            "@id": "iris:Tuesday",
+            "owl:sameAs": {
+                "@id": "gr:Tuesday"
+            }
+    },
+        {
+            "@id": "iris:Membership",
+            "owl:equivalentClass": {
+                "@id": "org:Membership"
+            }
+    },
+        {
+            "@id": "_:ub108bL327C32",
+            "@type": "owl:Class",
+            "owl:unionOf": {
+                "@list": [
+                    {
+                        "@id": "org:Organization"
+          },
+                    {
+                        "@id": "iris:Person"
+          }
+        ]
+            }
+    },
+        {
+            "@id": "iris:starts",
+            "@type": [
+        "rdf:Property",
+        "owl:DatatypeProperty"
+      ],
+            "rdfs:domain": {
+                "@id": "iris:TimeChunk"
+            },
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "starts"
+            },
+            "rdfs:range": {
+                "@id": "xsd:time"
+            }
+    },
+        {
+            "@id": "iris:ActiveDevice",
+            "@type": [
+        "rdfs:Class",
+        "owl:Class"
+      ],
+            "owl:disjointWith": {
+                "@id": "iris:PassiveDevice"
+            },
+            "rdfs:comment": {
+                "@language": "en",
+                "@value": "A device that can make requests to EQ."
+            },
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "Active device."
+            },
+            "rdfs:subClassOf": {
+                "@id": "iris:Device"
+            }
+    },
+        {
+            "@id": "iris:hasDevice",
+            "@type": [
+        "owl:ObjectProperty",
+        "rdf:Property"
+      ],
+            "owl:inverseOf": {
+                "@id": "iris:deviceOf"
+            },
+            "rdfs:domain": {
+                "@id": "iris:Person"
+            },
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "hasDevice"
+            },
+            "rdfs:range": {
+                "@id": "iris:ActiveDevice"
+            }
+    },
+        {
+            "@id": "iris:prefix",
+            "@type": [
+        "rdf:Property",
+        "owl:FunctionalProperty",
+        "owl:DatatypeProperty"
+      ],
+            "rdfs:domain": {
+                "@id": "iris:Service"
+            },
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "prefix"
+            },
+            "rdfs:range": {
+                "@id": "rdfs:Literal"
+            }
+    },
+        {
+            "@id": "iris:GlobalService",
+            "@type": "gr:ProductOrServiceModel",
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "GlobalService"
+            }
+    },
+        {
+            "@id": "iris:hasAttachment",
+            "@type": [
+        "rdf:Property",
+        "owl:ObjectProperty"
+      ],
+            "owl:inverseOf": {
+                "@id": "iris:attachedTo"
+            },
+            "rdfs:domain": {
+                "@id": "org:Organization"
+            },
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "hasAttachment"
+            },
+            "rdfs:range": {
+                "@id": "iris:Device"
+            },
+            "rdfs:subPropertyOf": {
+                "@id": "org:hasMember"
+            }
+    },
+        {
+            "@id": "iris:memberOf",
+            "owl:equivalentProperty": {
+                "@id": "org:memberOf"
+            }
+    },
+        {
+            "@id": "iris:hasLiveQPlan",
+            "@type": [
+        "rdf:Property",
+        "owl:ObjectProperty"
+      ],
+            "owl:subPropertyOf": {
+                "@id": "iris:hasPlan"
+            },
+            "rdfs:domain": {
+                "@id": "iris:Service"
+            },
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "hasLiveQPlan"
+            },
+            "rdfs:range": {
+                "@id": "iris:Plan"
+            }
+    },
+        {
+            "@id": "iris:hasStatus",
+            "@type": [
+        "rdf:Property",
+        "owl:ObjectProperty"
+      ],
+            "rdfs:domain": {
+                "@id": "iris:Service"
+            },
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "hasStatus"
+            },
+            "rdfs:range": {
+                "@id": "iris:ServiceStatus"
+            }
+    },
+        {
+            "@id": "iris:Service",
+            "@type": [
+        "rdfs:Class",
+        "owl:Class"
+      ],
+            "gr:hasMakeAndModel": {
+                "@id": "iris:GlobalService"
+            },
+            "owl:subClassOf": {
+                "@id": "gr:SomeItems"
+            },
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "Service"
+            }
+    },
+        {
+            "@id": "iris:DayOfWeek",
+            "owl:equivalentClass": {
+                "@id": "gr:DayOfWeek"
+            }
+    },
+        {
+            "@id": "iris:availableAt",
+            "owl:equivalentProperty": {
+                "@id": "gr:availableAtOrFrom"
+            }
+    },
+        {
+            "@id": "iris:Permission",
+            "@type": [
+        "owl:Class",
+        "rdfs:Class"
+      ],
+            "rdfs:comment": {
+                "@language": "en",
+                "@value": "A Permission representation."
+            },
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "Permission."
+            }
+    },
+        {
+            "@id": "iris:role",
+            "owl:equivalentProperty": {
+                "@id": "org:role"
+            }
+    },
+        {
+            "@id": "iris:order",
+            "@type": [
+        "owl:FunctionalProperty",
+        "owl:DatatypeProperty",
+        "rdf:Property"
+      ],
+            "rdfs:domain": {
+                "@id": "iris:Service"
+            },
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "order"
+            },
+            "rdfs:range": {
+                "@id": "xsd:decimal"
+            }
+    },
+        {
+            "@id": "iris:Wednesday",
+            "owl:sameAs": {
+                "@id": "gr:Wednesday"
+            }
+    },
+        {
+            "@id": "iris:provides",
+            "@type": [
+        "rdf:Property",
+        "owl:ObjectProperty"
+      ],
+            "owl:inverseOf": {
+                "@id": "iris:hasProvider"
+            },
+            "rdfs:domain": {
+                "@id": "_:ub108bL332C21"
+            },
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "provides"
+            },
+            "rdfs:range": {
+                "@id": "iris:Service"
+            }
+    },
+        {
+            "@id": "iris:codeFRGU",
+            "@type": [
+        "rdf:Property",
+        "owl:FunctionalProperty",
+        "owl:DatatypeProperty"
+      ],
+            "rdfs:domain": {
+                "@id": "iris:Service"
+            },
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "codeFRGU"
+            },
+            "rdfs:range": {
+                "@id": "rdfs:Literal"
+            }
+    },
+        {
+            "@id": "iris:Person",
+            "@type": [
+        "owl:Class",
+        "rdfs:Class"
+      ],
+            "rdfs:comment": {
+                "@language": "en",
+                "@value": "A person representation."
+            },
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "Person"
+            },
+            "rdfs:subClassOf": {
+                "@id": "foaf:Person"
+            }
+    },
+        {
+            "@id": "_:ub108bL411C1",
+            "@type": "owl:AllDisjointClasses",
+            "owl:members": {
+                "@list": [
+                    {
+                        "@id": "iris:Terminal"
+          },
+                    {
+                        "@id": "iris:AWP"
+          },
+                    {
+                        "@id": "iris:RoomDisplay"
+          },
+                    {
+                        "@id": "iris:OperatorDisplay"
+          }
+        ]
+            }
+    },
+        {
+            "@id": "iris:hasPrebookQPlan",
+            "@type": [
+        "rdf:Property",
+        "owl:ObjectProperty"
+      ],
+            "owl:subPropertyOf": {
+                "@id": "iris:hasPlan"
+            },
+            "rdfs:domain": {
+                "@id": "iris:Service"
+            },
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "hasPrebookQPlan"
+            },
+            "rdfs:range": {
+                "@id": "iris:Plan"
+            }
+    },
+        {
+            "@id": "iris:PassiveDevice",
+            "@type": [
+        "owl:Class",
+        "rdfs:Class"
+      ],
+            "rdfs:comment": {
+                "@language": "en",
+                "@value": "A device that cannot make requests to EQ."
+            },
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "Passive device."
+            },
+            "rdfs:subClassOf": {
+                "@id": "iris:Device"
+            }
+    },
+        {
+            "@id": "iris:deviceDesign",
+            "@type": [
+        "owl:FunctionalProperty",
+        "owl:ObjectProperty",
+        "rdf:Property"
+      ],
+            "rdfs:comment": {
+                "@language": "en",
+                "@value": "Device software design."
+            },
+            "rdfs:domain": {
+                "@id": "iris:Device"
+            },
+            "rdfs:range": {
+                "@id": "dcterms:StillImage"
+            }
+    },
+        {
+            "@id": "iris:deviceOf",
+            "@type": [
+        "rdf:Property",
+        "owl:ObjectProperty"
+      ],
+            "rdfs:domain": {
+                "@id": "iris:ActiveDevice"
+            },
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "deviceOf"
+            },
+            "rdfs:range": {
+                "@id": "iris:Person"
+            }
+    },
+        {
+            "@id": "iris:hasLocation",
+            "owl:equivalentProperty": {
+                "@id": "gr:hasPOS"
+            }
+    },
+        {
+            "@id": "iris:lastName",
+            "owl:equivalentProperty": {
+                "@id": "foaf:lastName"
+            }
+    },
+        {
+            "@id": "iris:ProvideService",
+            "owl:equivalentClass": {
+                "@id": "gr:ProvideService"
+            }
+    },
+        {
+            "@id": "iris:Administrator",
+            "@type": [
+        "owl:Class",
+        "rdfs:Class"
+      ],
+            "rdfs:subClassOf": {
+                "@id": "iris:Employee"
+            }
+    },
+        {
+            "@id": "iris:TimeChunk",
+            "@type": [
+        "rdfs:Class",
+        "owl:Class"
+      ],
+            "rdfs:comment": {
+                "@language": "en",
+                "@value": "This class is a conceptual representation of time chunk; intended to be 1..* part of day Plan."
+            },
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "TimeChunk"
+            }
+    },
+        {
+            "@id": "iris:hasUnit",
+            "owl:equivalentProperty": {
+                "@id": "org:hasUnit"
+            }
+    },
+        {
+            "@id": "iris:Terminal",
+            "@type": [
+        "rdfs:Class",
+        "owl:Class"
+      ],
+            "rdfs:comment": {
+                "@language": "en",
+                "@value": "Terminal."
+            },
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "Terminal."
+            },
+            "rdfs:subClassOf": {
+                "@id": "iris:ActiveDevice"
+            }
+    },
+        {
+            "@id": "_:ub108bL332C21",
+            "@type": "owl:Class",
+            "owl:unionOf": {
+                "@list": [
+                    {
+                        "@id": "org:Organization"
+          },
+                    {
+                        "@id": "iris:Person"
+          }
+        ]
+            }
+    },
+        {
+            "@id": "iris:serviceDescription",
+            "@type": [
+        "rdf:Property",
+        "owl:FunctionalProperty",
+        "owl:DatatypeProperty"
+      ],
+            "owl:subPropertyOf": {
+                "@id": "gr:description"
+            },
+            "rdfs:domain": {
+                "@id": "iris:Service"
+            },
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "serviceDescription"
+            },
+            "rdfs:range": {
+                "@id": "rdfs:Literal"
+            }
+    },
+        {
+            "@id": "iris:level",
+            "@type": [
+        "owl:DatatypeProperty",
+        "owl:FunctionalProperty"
+      ],
+            "rdfs:domain": {
+                "@id": "iris:Service"
+            },
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "level"
+            },
+            "rdfs:range": {
+                "@id": "rdfs:Literal"
+            }
+    },
+        {
+            "@id": "iris:login",
+            "@type": [
+        "owl:DatatypeProperty",
+        "rdf:Property"
+      ],
+            "rdfs:comment": {
+                "@language": "en",
+                "@value": "An IRIS login of a person."
+            },
+            "rdfs:domain": {
+                "@id": "iris:Person"
+            },
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "login"
+            },
+            "rdfs:range": {
+                "@id": "rdfs:Literal"
+            },
+            "rdfs:subPropertyOf": {
+                "@id": "foaf:nick"
+            }
+    },
+        {
+            "@id": "iris:avatar",
+            "owl:equivalentProperty": {
+                "@id": "foaf:img"
+            }
+    },
+        {
+            "@id": "_:ub108bL357C21",
+            "@type": "owl:Class",
+            "owl:unionOf": {
+                "@list": [
+                    {
+                        "@id": "org:Organization"
+          },
+                    {
+                        "@id": "iris:Person"
+          },
+                    {
+                        "@id": "iris:Service"
+          },
+                    {
+                        "@id": "iris:Location"
+          },
+                    {
+                        "@id": "iris:ServiceStatus"
+          }
+        ]
+            }
+    },
+        {
+            "@id": "iris:validUntil",
+            "@type": [
+        "rdf:Property",
+        "owl:DatatypeProperty"
+      ],
+            "rdfs:domain": {
+                "@id": "iris:Plan"
+            },
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "validUntil"
+            },
+            "rdfs:range": {
+                "@id": "xsd:date"
+            }
+    },
+        {
+            "@id": "iris:headOf",
+            "owl:equivalentProperty": {
+                "@id": "org:headOf"
+            }
+    },
+        {
+            "@id": "iris:ServiceStatus",
+            "@type": [
+        "rdfs:Class",
+        "owl:Class"
+      ],
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "ServiceStatus"
+            }
+    },
+        {
+            "@id": "iris:statusOf",
+            "@type": [
+        "owl:ObjectProperty",
+        "rdf:Property"
+      ],
+            "owl:inverseOf": {
+                "@id": "iris:hasStatus"
+            },
+            "rdfs:domain": {
+                "@id": "iris:ServiceStatus"
+            },
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "hasStatus"
+            },
+            "rdfs:range": {
+                "@id": "iris:Service"
+            }
+    },
+        {
+            "@id": "iris:hasPrebookEnqPlan",
+            "@type": [
+        "owl:ObjectProperty",
+        "rdf:Property"
+      ],
+            "owl:subPropertyOf": {
+                "@id": "iris:hasPlan"
+            },
+            "rdfs:domain": {
+                "@id": "iris:Service"
+            },
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "hasPrebookEnqPlan"
+            },
+            "rdfs:range": {
+                "@id": "iris:Plan"
+            }
+    },
+        {
+            "@id": "iris:priority",
+            "@type": [
+        "owl:DatatypeProperty",
+        "owl:FunctionalProperty",
+        "rdf:Property"
+      ],
+            "rdfs:domain": {
+                "@id": "iris:Service"
+            },
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "priority"
+            },
+            "rdfs:range": {
+                "@id": "xsd:decimal"
+            }
+    },
+        {
+            "@id": "iris:Action",
+            "@type": [
+        "rdfs:Class",
+        "owl:Class"
+      ],
+            "rdfs:comment": {
+                "@language": "en",
+                "@value": "An action linked to permission."
+            },
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "Action."
+            }
+    },
+        {
+            "@id": "iris:AWP",
+            "@type": [
+        "owl:Class",
+        "rdfs:Class"
+      ],
+            "rdfs:comment": {
+                "@language": "en",
+                "@value": "Automated workplace."
+            },
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "Automated workplace."
+            },
+            "rdfs:subClassOf": {
+                "@id": "iris:ActiveDevice"
+            }
+    },
+        {
+            "@id": "iris:Saturday",
+            "owl:sameAs": {
+                "@id": "gr:Saturday"
+            }
+    },
+        {
+            "@id": "iris:serviceCodeEPGU",
+            "@type": [
+        "owl:DatatypeProperty",
+        "rdf:Property",
+        "owl:FunctionalProperty"
+      ],
+            "rdfs:domain": {
+                "@id": "iris:Service"
+            },
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "serviceCodeEPGU"
+            },
+            "rdfs:range": {
+                "@id": "rdfs:Literal"
+            }
+    },
+        {
+            "@id": "iris:OperatorDisplay",
+            "@type": [
+        "owl:Class",
+        "rdfs:Class"
+      ],
+            "rdfs:comment": {
+                "@language": "en",
+                "@value": "OperatorDisplay."
+            },
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "OperatorDisplay."
+            },
+            "rdfs:subClassOf": {
+                "@id": "iris:PassiveDevice"
+            }
+    },
+        {
+            "@id": "iris:ends",
+            "@type": [
+        "owl:DatatypeProperty",
+        "rdf:Property"
+      ],
+            "rdfs:domain": {
+                "@id": "iris:TimeChunk"
+            },
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "ends"
+            },
+            "rdfs:range": {
+                "@id": "xsd:time"
+            }
+    },
+        {
+            "@id": "iris:statusName",
+            "@type": [
+        "owl:FunctionalProperty",
+        "rdf:Property",
+        "owl:DatatypeProperty"
+      ],
+            "rdfs:domain": {
+                "@id": "iris:ServiceStatus"
+            },
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "statusName"
+            },
+            "rdfs:range": {
+                "@id": "rdfs:Literal"
+            }
+    },
+        {
+            "@id": "iris:Device",
+            "@type": [
+        "rdfs:Class",
+        "owl:Class"
+      ],
+            "rdfs:comment": {
+                "@language": "en",
+                "@value": "A device representation."
+            },
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "Device."
+            },
+            "rdfs:subClassOf": [
+                {
+                    "@id": "foaf:Agent"
+        },
+                {
+                    "@id": "dcterms:Agent"
+        }
+      ]
+    },
+        {
+            "@id": "iris:Offering",
+            "owl:equivalentClass": {
+                "@id": "gr:Offering"
+            }
+    },
+        {
+            "@id": "iris:includes",
+            "owl:equivalentProperty": {
+                "@id": "gr:includes"
+            }
+    },
+        {
+            "@id": "iris:member",
+            "owl:equivalentProperty": {
+                "@id": "org:member"
+            }
+    },
+        {
+            "@id": "iris:",
+            "@type": "owl:Ontology",
+            "dcterms:created": {
+                "@type": "xsd:date",
+                "@value": "2015-09-16"
+            },
+            "dcterms:title": {
+                "@language": "en",
+                "@value": "Domain ontology for IRIS EQ"
+            },
+            "owl:versionInfo": "0.1",
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "Domain ontology for IRIS EQ"
+            }
+    },
+        {
+            "@id": "iris:Operator",
+            "@type": [
+        "rdfs:Class",
+        "owl:Class"
+      ],
+            "rdfs:subClassOf": {
+                "@id": "iris:Employee"
+            }
+    },
+        {
+            "@id": "iris:unitOf",
+            "owl:equivalentProperty": {
+                "@id": "org:unitOf"
+            }
+    },
+        {
+            "@id": "iris:middleName",
+            "@type": [
+        "rdf:Property",
+        "owl:DatatypeProperty"
+      ],
+            "rdfs:comment": {
+                "@language": "en",
+                "@value": "Middle name of a person."
+            },
+            "rdfs:domain": {
+                "@id": "iris:Person"
+            },
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "middleName"
+            },
+            "rdfs:range": {
+                "@id": "rdfs:Literal"
+            },
+            "rdfs:subPropertyOf": {
+                "@id": "foaf:givenName"
+            }
+    },
+        {
+            "@id": "iris:Department",
+            "@type": [
+        "owl:Class",
+        "rdfs:Class"
+      ],
+            "owl:equivalentClass": {
+                "@id": "_:ub108bL64C25"
+            },
+            "rdfs:subClassOf": {
+                "@id": "org:OrganizationalUnit"
+            }
+    },
+        {
+            "@id": "iris:ContactCenter",
+            "@type": [
+        "rdfs:Class",
+        "owl:Class"
+      ],
+            "rdfs:subClassOf": {
+                "@id": "iris:Employee"
+            }
+    },
+        {
+            "@id": "iris:hasProvider",
+            "@type": [
+        "rdf:Property",
+        "owl:ObjectProperty"
+      ],
+            "owl:equivalentProperty": {
+                "@id": "schema:provider"
+            },
+            "rdfs:domain": {
+                "@id": "iris:Service"
+            },
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "hasProvider"
+            },
+            "rdfs:range": {
+                "@id": "_:ub108bL327C32"
+            }
+    },
+        {
+            "@id": "iris:Thursday",
+            "owl:sameAs": {
+                "@id": "gr:Thursday"
+            }
+    },
+        {
+            "@id": "iris:organization",
+            "owl:equivalentProperty": {
+                "@id": "org:organization"
+            }
+    },
+        {
+            "@id": "iris:RoomDisplay",
+            "@type": [
+        "rdfs:Class",
+        "owl:Class"
+      ],
+            "rdfs:comment": {
+                "@language": "en",
+                "@value": "RoomDisplay."
+            },
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "RoomDisplay."
+            },
+            "rdfs:subClassOf": {
+                "@id": "iris:PassiveDevice"
+            }
+    },
+        {
+            "@id": "iris:Location",
+            "owl:equivalentClass": {
+                "@id": "gr:Location"
+            }
+    },
+        {
+            "@id": "iris:action",
+            "@type": [
+        "owl:ObjectProperty",
+        "owl:FunctionalProperty",
+        "rdf:Property"
+      ],
+            "rdfs:domain": {
+                "@id": "iris:Permission"
+            },
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "action"
+            },
+            "rdfs:range": {
+                "@id": "iris:Action"
+            }
+    }
+  ]
+}

@@ -1,0 +1,896 @@
+{
+    "@context": {
+        "dct": "http://purl.org/dc/terms/",
+        "dcterms": "http://purl.org/dc/terms/",
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "rmf": "file:///iris/vocabulary/basic#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
+    },
+    "@graph": [
+        {
+            "@id": "rmf:Volume",
+            "@type": [
+        "rdfs:Class",
+        "owl:Class"
+      ],
+            "rdfs:comment": {
+                "@language": "en",
+                "@value": "A volume representation."
+            },
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "Volume"
+            }
+    },
+        {
+            "@id": "rmf:hasPart",
+            "@type": [
+        "owl:ObjectProperty",
+        "rdf:Property"
+      ],
+            "owl:inverseOf": {
+                "@id": "rmf:partOf"
+            },
+            "rdfs:comment": {
+                "@language": "en",
+                "@value": "The property that determines that concept has an other concept as its part."
+            },
+            "rdfs:domain": {
+                "@id": "rmf:Concept"
+            },
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "hasPart"
+            },
+            "rdfs:range": {
+                "@id": "rmf:Concept"
+            }
+    },
+        {
+            "@id": "rmf:hasAttribute",
+            "@type": [
+        "rdf:Property",
+        "owl:ObjectProperty"
+      ],
+            "owl:inverseOf": {
+                "@id": "rmf:attributeOf"
+            },
+            "rdfs:comment": {
+                "@language": "en",
+                "@value": "The property that determines that concept contains an other concept as an attribute."
+            },
+            "rdfs:domain": {
+                "@id": "rmf:Concept"
+            },
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "hasAttribute"
+            },
+            "rdfs:range": {
+                "@id": "rmf:ComplexResourceSource"
+            },
+            "rdfs:subPropertyOf": {
+                "@id": "rmf:hasPart"
+            }
+    },
+        {
+            "@id": "rmf:Factory",
+            "@type": [
+        "rdfs:Class",
+        "owl:Class"
+      ],
+            "rdfs:comment": {
+                "@language": "en",
+                "@value": "A Factory representation."
+            },
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "Factory"
+            }
+    },
+        {
+            "@id": "rmf:historyStart",
+            "@type": [
+        "owl:DatatypeProperty",
+        "rdf:Property"
+      ],
+            "rdfs:comment": {
+                "@language": "en",
+                "@value": "The point where current History starts."
+            },
+            "rdfs:domain": {
+                "@id": "rmf:History"
+            },
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "historyStart"
+            },
+            "rdfs:range": {
+                "@id": "xsd:date"
+            }
+    },
+        {
+            "@id": "rmf:Concept",
+            "@type": [
+        "rdfs:Class",
+        "owl:Class"
+      ],
+            "rdfs:comment": {
+                "@language": "en",
+                "@value": "A class of rmf concepts."
+            },
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "Concept"
+            }
+    },
+        {
+            "@id": "rmf:contentState",
+            "@type": [
+        "owl:ObjectProperty",
+        "rdf:Property"
+      ],
+            "rdfs:comment": {
+                "@language": "en",
+                "@value": "The property that determines that current volume is bound to content."
+            },
+            "rdfs:domain": {
+                "@id": "rmf:Content"
+            },
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "contentState"
+            },
+            "rdfs:range": {
+                "@id": "rmf:Volume"
+            }
+    },
+        {
+            "@id": "rmf:Function",
+            "@type": [
+        "rdfs:Class",
+        "owl:Class"
+      ],
+            "rdfs:comment": {
+                "@language": "en",
+                "@value": "A Function representation."
+            },
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "Function"
+            }
+    },
+        {
+            "@id": "rmf:PointOfView",
+            "@type": [
+        "rdfs:Class",
+        "owl:Class"
+      ],
+            "rdfs:comment": {
+                "@language": "en",
+                "@value": "A class of rmf points of view."
+            },
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "PointOfView"
+            },
+            "rdfs:subClassOf": {
+                "@id": "rmf:ComplexResourceSource"
+            }
+    },
+        {
+            "@id": "_:ub110bL32C26",
+            "@type": "owl:Class",
+            "owl:intersectionOf": {
+                "@list": [
+                    {
+                        "@id": "_:ub110bL34C38"
+          },
+                    {
+                        "@id": "_:ub110bL38C14"
+          }
+        ]
+            }
+    },
+        {
+            "@id": "rmf:attributeOf",
+            "@type": [
+        "rdf:Property",
+        "owl:ObjectProperty"
+      ],
+            "owl:propertyDisjointWith": {
+                "@id": "rmf:hasContainer"
+            },
+            "rdfs:comment": {
+                "@language": "en",
+                "@value": "The property that determines that concept is an attribute of another concept."
+            },
+            "rdfs:domain": {
+                "@id": "rmf:ComplexResourceSource"
+            },
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "attributeOf"
+            },
+            "rdfs:range": {
+                "@id": "rmf:Concept"
+            },
+            "rdfs:subPropertyOf": {
+                "@id": "rmf:partOf"
+            }
+    },
+        {
+            "@id": "rmf:ResourceSource",
+            "@type": [
+        "rdfs:Class",
+        "owl:Class"
+      ],
+            "rdfs:comment": {
+                "@language": "en",
+                "@value": "A class of rmf complex resource sources."
+            },
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "ResourceSource"
+            },
+            "rdfs:subClassOf": {
+                "@id": "rmf:ComplexResourceSource"
+            }
+    },
+        {
+            "@id": "rmf:algorithm",
+            "@type": [
+        "owl:ObjectProperty",
+        "rdf:Property",
+        "owl:FunctionalProperty"
+      ],
+            "rdfs:comment": {
+                "@language": "en",
+                "@value": "The property that determines that current function is a mediator algorithm."
+            },
+            "rdfs:domain": {
+                "@id": "rmf:Mediator"
+            },
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "algorithm"
+            },
+            "rdfs:range": {
+                "@id": "rmf:Function"
+            }
+    },
+        {
+            "@id": "rmf:History",
+            "@type": [
+        "owl:Class",
+        "rdfs:Class"
+      ],
+            "rdfs:comment": {
+                "@language": "en",
+                "@value": "A History representation."
+            },
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "History"
+            }
+    },
+        {
+            "@id": "rmf:ResourceSourceCollection",
+            "@type": [
+        "owl:Class",
+        "rdfs:Class"
+      ],
+            "rdfs:comment": {
+                "@language": "en",
+                "@value": "A class of rmf resource source collections."
+            },
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "ResourceSourceCollection"
+            },
+            "rdfs:subClassOf": {
+                "@id": "rmf:ComplexResourceSource"
+            }
+    },
+        {
+            "@id": "rmf:HistoryEntry",
+            "@type": [
+        "owl:Class",
+        "rdfs:Class"
+      ],
+            "rdfs:comment": {
+                "@language": "en",
+                "@value": "A History Entry representation."
+            },
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "HistoryEntry"
+            }
+    },
+        {
+            "@id": "_:ub110bL152C28",
+            "@type": "owl:Class",
+            "owl:oneOf": {
+                "@list": [
+                    {
+                        "@id": "rmf:Factory"
+          },
+                    {
+                        "@id": "rmf:Function"
+          },
+                    {
+                        "@id": "rmf:Concept"
+          }
+        ]
+            }
+    },
+        {
+            "@id": "rmf:historyEnd",
+            "@type": [
+        "owl:DatatypeProperty",
+        "rdf:Property"
+      ],
+            "rdfs:comment": {
+                "@language": "en",
+                "@value": "The point where current History ends."
+            },
+            "rdfs:domain": {
+                "@id": "rmf:History"
+            },
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "historyStart"
+            },
+            "rdfs:range": {
+                "@id": "xsd:date"
+            }
+    },
+        {
+            "@id": "rmf:Promised",
+            "@type": [
+        "owl:Class",
+        "rdfs:Class"
+      ],
+            "rdfs:comment": {
+                "@language": "en",
+                "@value": "A promised volume state representation."
+            },
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "Promised"
+            },
+            "rdfs:subClassOf": {
+                "@id": "rmf:VolumeState"
+            }
+    },
+        {
+            "@id": "rmf:containerOf",
+            "@type": [
+        "owl:ObjectProperty",
+        "rdf:Property"
+      ],
+            "owl:inverseOf": {
+                "@id": "rmf:hasContainer"
+            },
+            "owl:propertyDisjointWith": {
+                "@id": "rmf:hasAttribute"
+            },
+            "rdfs:comment": {
+                "@language": "en",
+                "@value": "The property that determines that concept contains an other concept."
+            },
+            "rdfs:domain": {
+                "@id": "rmf:ComplexResourceSource"
+            },
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "containerOf"
+            },
+            "rdfs:range": {
+                "@id": "rmf:Concept"
+            },
+            "rdfs:subPropertyOf": {
+                "@id": "rmf:hasPart"
+            }
+    },
+        {
+            "@id": "rmf:partOf",
+            "@type": [
+        "owl:ObjectProperty",
+        "rdf:Property"
+      ],
+            "rdfs:comment": {
+                "@language": "en",
+                "@value": "The property that determines that concept is a part of another concept."
+            },
+            "rdfs:domain": {
+                "@id": "rmf:Concept"
+            },
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "partOf"
+            },
+            "rdfs:range": {
+                "@id": "rmf:Concept"
+            }
+    },
+        {
+            "@id": "rmf:argument",
+            "@type": [
+        "rdf:Property",
+        "owl:ObjectProperty"
+      ],
+            "rdfs:comment": {
+                "@language": "en",
+                "@value": "The property that determines that current concept is a mediator algorithm argument."
+            },
+            "rdfs:domain": {
+                "@id": "rmf:Mediator"
+            },
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "argument"
+            },
+            "rdfs:range": {
+                "@id": "rmf:Concept"
+            }
+    },
+        {
+            "@id": "rmf:volumeState",
+            "@type": [
+        "owl:ObjectProperty",
+        "rdf:Property"
+      ],
+            "rdfs:comment": {
+                "@language": "en",
+                "@value": "The property that determines that current volume is bound to content."
+            },
+            "rdfs:domain": {
+                "@id": "rmf:Volume"
+            },
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "volumeState"
+            },
+            "rdfs:range": {
+                "@id": "rmf:VolumeState"
+            }
+    },
+        {
+            "@id": "rmf:inductor",
+            "@type": [
+        "owl:ObjectProperty",
+        "rdf:Property"
+      ],
+            "rdfs:comment": {
+                "@language": "en",
+                "@value": "The property that describes a content state inductor."
+            },
+            "rdfs:domain": {
+                "@id": "rmf:Content"
+            },
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "inductor"
+            },
+            "rdfs:range": {
+                "@id": "_:ub110bL152C28"
+            }
+    },
+        {
+            "@id": "rmf:",
+            "@type": "owl:Ontology",
+            "dcterms:created": {
+                "@type": "xsd:date",
+                "@value": "2015-09-23"
+            },
+            "dcterms:title": {
+                "@language": "en",
+                "@value": "Basic ontology for IRIS EQ"
+            },
+            "owl:versionInfo": "0.1",
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "Basic ontology for IRIS EQ"
+            }
+    },
+        {
+            "@id": "rmf:Available",
+            "@type": [
+        "owl:Class",
+        "rdfs:Class"
+      ],
+            "rdfs:comment": {
+                "@language": "en",
+                "@value": "An available volume state representation."
+            },
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "Available"
+            },
+            "rdfs:subClassOf": {
+                "@id": "rmf:VolumeState"
+            }
+    },
+        {
+            "@id": "rmf:BasicResourceSource",
+            "@type": [
+        "owl:Class",
+        "rdfs:Class"
+      ],
+            "owl:disjointWith": {
+                "@id": "rmf:ComplexResourceSource"
+            },
+            "owl:equivalentClass": {
+                "@id": "_:ub110bL32C26"
+            },
+            "rdfs:comment": {
+                "@language": "en",
+                "@value": "A class of rmf basic resource sources."
+            },
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "BasicResourceSource"
+            },
+            "rdfs:subClassOf": {
+                "@id": "rmf:Concept"
+            }
+    },
+        {
+            "@id": "rmf:Query",
+            "@type": [
+        "owl:Class",
+        "rdfs:Class"
+      ],
+            "rdfs:comment": {
+                "@language": "en",
+                "@value": "A Query representation."
+            },
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "Query"
+            }
+    },
+        {
+            "@id": "rmf:hasEntry",
+            "@type": [
+        "rdf:Property",
+        "owl:ObjectProperty"
+      ],
+            "rdfs:comment": {
+                "@language": "en",
+                "@value": "Indicates that current entry belongs to History object."
+            },
+            "rdfs:domain": {
+                "@id": "rmf:History"
+            },
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "historyStart"
+            },
+            "rdfs:range": {
+                "@id": "rmf:HistoryEntry"
+            }
+    },
+        {
+            "@id": "rmf:Content",
+            "@type": [
+        "owl:Class",
+        "rdfs:Class"
+      ],
+            "rdfs:comment": {
+                "@language": "en",
+                "@value": "A resource source content representation."
+            },
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "Content"
+            }
+    },
+        {
+            "@id": "rmf:hasContent",
+            "@type": [
+        "owl:ObjectProperty",
+        "rdf:Property"
+      ],
+            "rdfs:comment": {
+                "@language": "en",
+                "@value": "The property that determines a content of current concept instance."
+            },
+            "rdfs:domain": {
+                "@id": "rmf:Concept"
+            },
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "hasContent"
+            },
+            "rdfs:range": {
+                "@id": "rmf:Content"
+            }
+    },
+        {
+            "@id": "rmf:Mediator",
+            "@type": [
+        "owl:Class",
+        "rdfs:Class"
+      ],
+            "rdfs:comment": {
+                "@language": "en",
+                "@value": "A Mediator representation."
+            },
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "Mediator"
+            }
+    },
+        {
+            "@id": "_:ub110bL38C14",
+            "@type": "owl:Restriction",
+            "owl:cardinality": {
+                "@type": "xsd:nonNegativeInteger",
+                "@value": "0"
+            },
+            "owl:onProperty": {
+                "@id": "rmf:containerOf"
+            }
+    },
+        {
+            "@id": "rmf:mediator",
+            "@type": [
+        "rdf:Property",
+        "owl:FunctionalProperty",
+        "owl:ObjectProperty"
+      ],
+            "owl:propertyDisjointWith": {
+                "@id": "rmf:ingredient"
+            },
+            "rdfs:comment": {
+                "@language": "en",
+                "@value": "The property that determines that mediator is a main mediator for current factory."
+            },
+            "rdfs:domain": {
+                "@id": "rmf:Factory"
+            },
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "mediator"
+            },
+            "rdfs:range": {
+                "@id": "rmf:Mediator"
+            }
+    },
+        {
+            "@id": "rmf:subContentOf",
+            "@type": [
+        "rdf:Property",
+        "owl:TransitiveProperty",
+        "owl:ObjectProperty"
+      ],
+            "rdfs:comment": {
+                "@language": "en",
+                "@value": "The property that describes a complex content."
+            },
+            "rdfs:domain": {
+                "@id": "rmf:Content"
+            },
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "subContentOf"
+            },
+            "rdfs:range": {
+                "@id": "rmf:Content"
+            }
+    },
+        {
+            "@id": "rmf:NotAvailable",
+            "@type": [
+        "owl:Class",
+        "rdfs:Class"
+      ],
+            "rdfs:comment": {
+                "@language": "en",
+                "@value": "A non-available volume state representation."
+            },
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "NotAvailable"
+            },
+            "rdfs:subClassOf": {
+                "@id": "rmf:VolumeState"
+            }
+    },
+        {
+            "@id": "rmf:entryOf",
+            "@type": [
+        "rdf:Property",
+        "owl:ObjectProperty"
+      ],
+            "rdfs:comment": {
+                "@language": "en",
+                "@value": "Indicates that current entry belongs to History object."
+            },
+            "rdfs:domain": {
+                "@id": "rmf:HistoryEntry"
+            },
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "historyStart"
+            },
+            "rdfs:range": {
+                "@id": "rmf:History"
+            }
+    },
+        {
+            "@id": "rmf:contentOf",
+            "@type": [
+        "owl:ObjectProperty",
+        "rdf:Property"
+      ],
+            "owl:inverseOf": {
+                "@id": "rmf:hasContent"
+            },
+            "rdfs:comment": {
+                "@language": "en",
+                "@value": "The property that determines a content of current concept instance."
+            },
+            "rdfs:domain": {
+                "@id": "rmf:Content"
+            },
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "contentOf"
+            },
+            "rdfs:range": {
+                "@id": "rmf:Concept"
+            }
+    },
+        {
+            "@id": "rmf:ResourceSourceBox",
+            "@type": [
+        "owl:Class",
+        "rdfs:Class"
+      ],
+            "rdfs:comment": {
+                "@language": "en",
+                "@value": "A class of rmf resource source boxes."
+            },
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "ResourceSourceBox"
+            },
+            "rdfs:subClassOf": {
+                "@id": "rmf:ComplexResourceSource"
+            }
+    },
+        {
+            "@id": "rmf:queryTo",
+            "@type": [
+        "owl:ObjectProperty",
+        "rdf:Property"
+      ],
+            "rdfs:comment": {
+                "@language": "en",
+                "@value": "The property that determines that current volume is bound to content."
+            },
+            "rdfs:domain": {
+                "@id": "rmf:Query"
+            },
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "queryTo"
+            },
+            "rdfs:range": {
+                "@id": "rmf:Concept"
+            }
+    },
+        {
+            "@id": "rmf:Reserved",
+            "@type": [
+        "rdfs:Class",
+        "owl:Class"
+      ],
+            "rdfs:comment": {
+                "@language": "en",
+                "@value": "A reserved volume state representation."
+            },
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "Reserved"
+            },
+            "rdfs:subClassOf": {
+                "@id": "rmf:VolumeState"
+            }
+    },
+        {
+            "@id": "_:ub110bL34C38",
+            "@type": "owl:Restriction",
+            "owl:cardinality": {
+                "@type": "xsd:nonNegativeInteger",
+                "@value": "0"
+            },
+            "owl:onProperty": {
+                "@id": "rmf:attributeOf"
+            }
+    },
+        {
+            "@id": "rmf:hasContainer",
+            "@type": [
+        "owl:ObjectProperty",
+        "rdf:Property"
+      ],
+            "rdfs:comment": {
+                "@language": "en",
+                "@value": "The property that determines that concept is contained in another concept."
+            },
+            "rdfs:domain": {
+                "@id": "rmf:Concept"
+            },
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "hasContainer"
+            },
+            "rdfs:range": {
+                "@id": "rmf:ComplexResourceSource"
+            },
+            "rdfs:subPropertyOf": {
+                "@id": "rmf:partOf"
+            }
+    },
+        {
+            "@id": "rmf:ComplexResourceSource",
+            "@type": [
+        "rdfs:Class",
+        "owl:Class"
+      ],
+            "rdfs:comment": {
+                "@language": "en",
+                "@value": "A class of rmf complex resource sources."
+            },
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "ComplexResourceSource"
+            },
+            "rdfs:subClassOf": {
+                "@id": "rmf:Concept"
+            }
+    },
+        {
+            "@id": "rmf:VolumeState",
+            "@type": [
+        "rdfs:Class",
+        "owl:Class"
+      ],
+            "rdfs:comment": {
+                "@language": "en",
+                "@value": "A volume state representation."
+            },
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "State"
+            }
+    },
+        {
+            "@id": "rmf:ingredient",
+            "@type": [
+        "rdf:Property",
+        "owl:ObjectProperty"
+      ],
+            "rdfs:comment": {
+                "@language": "en",
+                "@value": "The property that determines that mediator is an ingredient for current factory."
+            },
+            "rdfs:domain": {
+                "@id": "rmf:Factory"
+            },
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "ingredient"
+            },
+            "rdfs:range": {
+                "@id": "rmf:Mediator"
+            }
+    }
+  ]
+}
