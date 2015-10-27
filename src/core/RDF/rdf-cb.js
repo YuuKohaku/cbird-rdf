@@ -34,7 +34,8 @@ class CBStoreBucket extends Bucket {
             throw new Error("Insufficient vocabulary information.");
         this.vocabulary = {
             basic: null,
-            domain: null
+            domain: null,
+            context: null
         };
         if (!from_fs) {
             return Promise.props({
@@ -44,6 +45,7 @@ class CBStoreBucket extends Bucket {
                 .then((res) => {
                     this.vocabulary.basic = res.basic.value;
                     this.vocabulary.domain = res.domain.value;
+                    this.vocabulary.context = _.merge(res.basic.value["@context"], res.domain.value["@context"]);
                     return Promise.resolve(this);
                 });
         } else {
@@ -54,6 +56,7 @@ class CBStoreBucket extends Bucket {
                 .then((res) => {
                     this.vocabulary.basic = res.basic;
                     this.vocabulary.domain = res.domain;
+                    this.vocabulary.context = _.merge(res.basic["@context"], res.domain["@context"]);
                     return Promise.resolve(this);
                 })
                 .catch(SyntaxError, (e) => {
@@ -65,7 +68,8 @@ class CBStoreBucket extends Bucket {
         }
     }
 
-    store(triples, options = {}) {
+    //merges given triples with existing
+    upsertNodes(triples, options = {}) {
         let promises = {};
         let data = {};
         return jsonld.promises.expand(triples)
@@ -80,29 +84,47 @@ class CBStoreBucket extends Bucket {
                             return this.upsert(key, _.merge(value, data[key]), options);
                         });
                 });
-                return Promise.all(promises);
+                return Promise.props(promises);
             })
             .catch((err) => {
                 throw new Error("Unable to store data: ", err.message);
             });
     }
 
+    //replaces existing nodes with given ones
     replaceNodes(triples, options = {}) {
         let promises = {};
-        let data = {};
         return jsonld.promises.expand(triples)
             .then((res) => {
                 _.map(res, (val) => {
-                    data[val["@id"]] = val;
                     promises[val["@id"]] =
-                        this.upsert(val["@id"], val, options);
+                        this.replace(val["@id"], val, options);
                 });
-                return Promise.all(promises);
+                return Promise.props(promises);
             })
             .catch((err) => {
                 throw new Error("Unable to store data: ", err.message);
             });
+    }
 
+    getNodes(subjects) {
+        let promises = [];
+        let keys = _.isArray(subjects) ? subjects : [subjects];
+        return this.getMulti(keys)
+            .then((res) => {
+                _.map(res, (val) => {
+                    promises.push(jsonld.promises.compact(val.value, this.vocabulary.context));
+                });
+                return Promise.all(promises);
+            });
+    }
+
+    removeNodes(subjects) {
+        let keys = _.isArray(subjects) ? subjects : [subjects];
+        let promises = _.map((keys, (key) => {
+            return this.remove(key);
+        }));
+        return Promise.all(promises);
     }
 
     insert(subject, value, options = {}) {

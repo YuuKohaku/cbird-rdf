@@ -56,6 +56,7 @@ describe('Bucket initialization', function () {
             });
             expect(p).to.eventually.have.deep.property('vocabulary.domain').which.is.not.empty;
             expect(p).to.eventually.have.deep.property('vocabulary.basic').which.is.not.empty;
+            expect(p).to.eventually.have.deep.property('vocabulary.context').which.is.not.empty;
         });
         it('should load vocabularies from filesystem', function () {
             var p = bucket.setVocabulary({
@@ -69,27 +70,52 @@ describe('Bucket initialization', function () {
     });
 });
 describe('Operations', function () {
-    describe('#store', function () {
-        var rabbit = extriples[3];
-        var tpname = "file://test#testprop";
-        var tpval = 42;
-        var testprop = {};
-        testprop[tpname] = tpval;
-
-        it('should merge data', function () {
+    var rabbit = extriples[3];
+    var tpname = "file://test#testprop";
+    var tpval = 42;
+    var testprop = {};
+    testprop[tpname] = tpval;
+    describe('#upsertNodes', function () {
+        it('should merge data', function (done) {
             var put = _.merge(_.cloneDeep(rabbit), testprop);
-            var p = bucket.store(put)
+            var p = bucket.upsertNodes(put)
                 .then(function (res) {
                     return bucket.get(put["@id"]);
+                })
+                .then(function (res) {
+                    if (res.value[tpname][0]["@value"] != tpval) throw new Error("Incorrect value");
+                    done();
+                })
+                .catch(function (err) {
+                    done(err);
                 });
-            expect(p).to.eventually.have.deep.property("value." + tpname + '.@value').which.is.equal(42);
         });
-        it('should replace data', function () {
+    });
+    describe('#replaceNodes', function () {
+        it('should replace data', function (done) {
             var p = bucket.replaceNodes(rabbit, {}, true)
                 .then(function (res) {
                     return bucket.get(rabbit["@id"]);
+                })
+                .then(function (res) {
+                    if (res.value[tpname]) throw new Error("Incorrect value");
+                    done();
+                })
+                .catch(function (err) {
+                    done(err);
                 });
-            expect(p).to.eventually.not.have.deep.property("value." + tpname + '.@value');
+        });
+    });
+    describe('#getNodes', function () {
+        it('should get data', function (done) {
+            var p = bucket.getNodes(rabbit["@id"])
+                .then(function (res) {
+                    if (res[0]["@id"] != rabbit["@id"]) throw new Error("Incorrect value");
+                    done();
+                })
+                .catch(function (err) {
+                    done(err);
+                });
         });
     });
 });
