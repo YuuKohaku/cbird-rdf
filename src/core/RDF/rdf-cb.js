@@ -2,7 +2,8 @@
 let _ = require("lodash");
 let Promise = require("bluebird");
 let jsonld = require("jsonld");
-var fs = Promise.promisifyAll(require("fs"));
+let fs = Promise.promisifyAll(require("fs"));
+let path = require("path");
 
 let Couchbird = require("Couchbird");
 let Bucket = Couchbird.Bucket;
@@ -25,6 +26,8 @@ class CBStore {
 }
 
 class CBStoreBucket extends Bucket {
+
+    /////////////////////////////////vocabulary installation//////////////////////////
     setVocabulary({
         domain: domain_voc,
         basic: basic_voc,
@@ -68,20 +71,17 @@ class CBStoreBucket extends Bucket {
         }
     }
 
-    //merges given triples with existing
+    /////////////////////////Nodes operations//////////////////////////////
+    //nodes upsert
     upsertNodes(triples, options = {}) {
         let promises = {};
-        let data = {};
         return jsonld.promises.expand(triples)
             .then((res) => {
                 _.map(res, (val) => {
-                    data[val["@id"]] = val;
                     promises[val["@id"]] =
-                        this.get(val["@id"])
-                        .then((doc) => {
-                            let value = doc.value;
-                            let key = value["@id"];
-                            return this.upsert(key, _.merge(value, data[key]), options);
+                        this.upsert(val["@id"], val, options)
+                        .catch((err) => {
+                            return Promise.resolve(err);
                         });
                 });
                 return Promise.props(promises);
@@ -98,7 +98,10 @@ class CBStoreBucket extends Bucket {
             .then((res) => {
                 _.map(res, (val) => {
                     promises[val["@id"]] =
-                        this.replace(val["@id"], val, options);
+                        this.replace(val["@id"], val, options)
+                        .catch((err) => {
+                            return Promise.resolve(err);
+                        });
                 });
                 return Promise.props(promises);
             })
@@ -113,17 +116,19 @@ class CBStoreBucket extends Bucket {
         return this.getMulti(keys)
             .then((res) => {
                 _.map(res, (val) => {
-                    promises.push(jsonld.promises.compact(val.value, this.vocabulary.context));
+                    promises.push(val.value);
                 });
                 return Promise.all(promises);
             });
     }
 
+    //!! possibly this will make other docs invalid because of non-existent node
     removeNodes(subjects) {
         let keys = _.isArray(subjects) ? subjects : [subjects];
-        let promises = _.map((keys, (key) => {
-            return this.remove(key);
-        }));
+        let promises = [];
+        _.map(keys, (key) => {
+            promises.push(this.remove(key));
+        });
         return Promise.all(promises);
     }
 
@@ -150,11 +155,9 @@ class CBStoreBucket extends Bucket {
     unlock(subject, cas, options = {}) {
         return super.unlock(subject, cas, options);
     }
-
     getAndTouch(subject, expiry, options = {}) {
         return super.getAndTouch(subject, expiry, options);
     }
-
     touch(subject, expiry, options = {}) {
         return super.touch(subject, options);
     }
@@ -163,10 +166,35 @@ class CBStoreBucket extends Bucket {
         return super.getMulti(subjects);
     }
 
-    //!! possibly this will make other docs invalid because of non-existent node
     remove(subject, options = {}) {
         return super.remove(subject, options);
     }
+
+    /////////////////////Views functions////////////////////////
+    //Views installation
+    //default-views.json by default
+    installViews(fname) {
+        let mgr = this.manager();
+
+        return fs.readFileAsync(fname)
+            .then((res) => {
+                let doc = JSON.parse(res);
+                let promises = [];
+                for (var i in doc) {
+                    promises.push(mgr.upsertDesignDocument(i, doc[i]));
+                }
+                return Promise.all(promises);
+            })
+            .catch((err) => {
+                throw new Error("Unable to install views from ", fname);
+            });
+    }
+
+    //Doc query section
+
+    //Statement query section
+
+    //N1QL
 
 }
 
