@@ -12,7 +12,6 @@ let Bucket = Couchbird.Bucket;
 class CBStore {
     constructor(config, reinit) {
         this.couchbird = Couchbird(config, reinit);
-        this.buckets = {};
         return this;
     }
 
@@ -191,10 +190,74 @@ class CBStoreBucket extends Bucket {
     }
 
     //Doc query section
+    //leaving these functions non-unified in case of need for different processing
+
+    getDocBySubject(subject) {
+        let keys = _.isArray(subject) ? subject : [subject];
+        let query = Couchbird.ViewQuery.from("rdf", "subject")
+            .keys(keys)
+            .custom({
+                inclusive_end: true
+            })
+            .include_docs(true);
+        return this.view(query).then((res) => {
+            return _.reduce(res, (acc, val) => {
+                acc[val.key] = val.doc;
+                return acc;
+            }, {});
+        });
+    }
+
+    getDocByProperty(subject) {
+        let keys = _.isArray(subject) ? subject : [subject];
+        let query = Couchbird.ViewQuery.from("rdf", "predicate")
+            .keys(keys)
+            .custom({
+                inclusive_end: true
+            })
+            .include_docs(true);
+        return this.view(query).then((res) => {
+            return _.reduce(res, (acc, val) => {
+                acc[val.key] = val.doc;
+                return acc;
+            }, {});
+        });
+    }
+
+    getDocByObject(subject) {
+        let keys = _.isArray(subject) ? subject : [subject];
+        let query = Couchbird.ViewQuery.from("rdf", "object")
+            .keys(keys)
+            .custom({
+                inclusive_end: true
+            })
+            .include_docs(true);
+        return this.view(query).then((res) => {
+            return _.reduce(res, (acc, val) => {
+                acc[val.key] = val.doc;
+                return acc;
+            }, {});
+        });
+    }
 
     //Statement query section
-
-    //N1QL
+    getStatementBySubject(subject) {
+            let keys = _.isArray(subject) ? subject : [subject];
+            let query = Couchbird.ViewQuery.from("rdf", "jsonld-subject")
+                .keys(keys)
+                .custom({
+                    inclusive_end: true
+                })
+                .reduce(true)
+                .group(true);
+            return this.view(query).then((res) => {
+                return _.reduce(res, (acc, val) => {
+                    acc[val.key] = val.value;
+                    return acc;
+                }, {});
+            });
+        }
+        //N1QL
 
 }
 

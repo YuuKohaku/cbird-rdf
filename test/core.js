@@ -25,8 +25,6 @@ describe('Database initialization', function () {
             expect(db).to.have.property('couchbird').with.property('_server_ip', '127.0.0.1');
             expect(db).to.have.property('couchbird').with.property('_n1ql', '127.0.0.1:8093');
             expect(db).to.have.property('couchbird').with.property('_cluster').which.is.not.empty;
-            expect(db).to.have.property('couchbird').with.property('ViewQuery').which.is.not.empty;
-            expect(db).to.have.property('couchbird').with.property('N1qlQuery').which.is.not.empty;
         });
     });
     describe('with config', function () {
@@ -36,8 +34,6 @@ describe('Database initialization', function () {
             expect(db).to.have.property('couchbird').with.property('_server_ip', cfg.couchbird.server_ip);
             expect(db).to.have.property('couchbird').with.property('_n1ql', cfg.couchbird.n1ql);
             expect(db).to.have.property('couchbird').with.property('_cluster').which.is.not.empty;
-            expect(db).to.have.property('couchbird').with.property('ViewQuery').which.is.not.empty;
-            expect(db).to.have.property('couchbird').with.property('N1qlQuery').which.is.not.empty;
         });
     });
 });
