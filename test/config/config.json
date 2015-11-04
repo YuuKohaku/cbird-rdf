@@ -5,8 +5,8 @@
     },
     "bucket": "rdf",
     "vocabulary": {
-        "basic": "iris/vocabulary/basic",
-        "domain": "iris/vocabulary/domain",
+        "basic": "iris://vocabulary/basic",
+        "domain": "iris://vocabulary/domain",
         "fs": false
     }
 }

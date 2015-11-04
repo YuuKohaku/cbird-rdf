@@ -172,8 +172,9 @@ class CBStoreBucket extends Bucket {
     /////////////////////Views functions////////////////////////
     //Views installation
     //default-views.json by default
-    installViews(fname) {
+    installViews(filename) {
         let mgr = this.manager();
+        let fname = _.isString(filename) ? filename : path.resolve(__dirname, "default/views.json");
 
         return fs.readFileAsync(fname)
             .then((res) => {
@@ -186,6 +187,20 @@ class CBStoreBucket extends Bucket {
             })
             .catch((err) => {
                 return Promise.reject(new Error("Unable to install views from ", fname));
+            });
+    }
+
+    uninstallViews(names) {
+        let mgr = this.manager();
+        let keys = _.isArray(names) ? names : [names];
+        let promises = [];
+
+        for (var i in keys) {
+            promises.push(mgr.removeDesignDocument(keys[i]));
+        }
+        return Promise.all(promises)
+            .catch((err) => {
+                return Promise.reject(new Error("Unable to uninstall views  ", names));
             });
     }
 

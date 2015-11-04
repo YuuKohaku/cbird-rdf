@@ -5,14 +5,13 @@ var chaiAsPromised = require("chai-as-promised");
 
 chai.use(chaiAsPromised);
 
-var Couchbase = require("couchbase");
 var path = require("path");
 var _ = require("lodash");
-var RDFcb = require("../build/core/RDF");
+var RDFcb = require("../build").RDF;
 
-var cfg = require("./config.json");
-var triples = require("./data.json");
-var extriples = require("./data_expanded.json");
+var cfg = require("./config/config.json");
+var triples = require("./data/data.json");
+var extriples = require("./data/data_expanded.json");
 
 var db = new RDFcb();
 var bucket = db.bucket(cfg.bucket);;

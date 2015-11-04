@@ -5,14 +5,13 @@ var chaiAsPromised = require("chai-as-promised");
 
 chai.use(chaiAsPromised);
 
-var Couchbase = require("couchbase");
 var path = require("path");
 var _ = require("lodash");
-var RDFcb = require("../build/core/RDF");
+var RDFcb = require("../build").RDF;
 
-var cfg = require("./config.json");
-var triples = require("./data.json");
-var extriples = require("./data_expanded.json");
+var cfg = require("./config/config.json");
+var triples = require("./data/data.json");
+var extriples = require("./data/data_expanded.json");
 
 var db = null;
 var bucket = null;
@@ -46,22 +45,20 @@ describe('Bucket initialization', function () {
     });
     describe('vocabularies loading', function () {
         it('should load vocabularies  from database', function () {
-            var p = bucket.setVocabulary({
-                domain: "iris://vocabulary/domain",
-                basic: "iris://vocabulary/basic"
-            });
+            var p = bucket.setVocabulary(cfg.vocabulary);
             expect(p).to.eventually.have.deep.property('vocabulary.domain').which.is.not.empty;
             expect(p).to.eventually.have.deep.property('vocabulary.basic').which.is.not.empty;
             expect(p).to.eventually.have.deep.property('vocabulary.context').which.is.not.empty;
         });
         it('should load vocabularies from filesystem', function () {
             var p = bucket.setVocabulary({
-                domain: path.resolve(__dirname, "iris_domain.json"),
-                basic: path.resolve(__dirname, "iris_basic.json"),
+                domain: path.resolve(__dirname, "data/iris_domain.json"),
+                basic: path.resolve(__dirname, "data/iris_basic.json"),
                 fs: true
             });
             expect(p).to.eventually.have.deep.property('vocabulary.domain').which.is.not.empty;
             expect(p).to.eventually.have.deep.property('vocabulary.basic').which.is.not.empty;
+            expect(p).to.eventually.have.deep.property('vocabulary.context').which.is.not.empty;
         });
     });
 });

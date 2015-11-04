@@ -9,12 +9,9 @@ var Couchbird = require("Couchbird");
 var path = require("path");
 var _ = require("lodash");
 var ps = require("jsonld").promises;
-var RDFcb = require("../build/core/RDF");
+var RDFcb = require("../build").RDF;
 
-var cfg = require("./config.json");
-var triples = require("./data.json");
-var extriples = require("./data_expanded.json");
-var defviews = require("../config/default-views.json");
+var cfg = require("./config/config.json");
 
 var db = new RDFcb();
 var bucket = db.bucket(cfg.bucket);;

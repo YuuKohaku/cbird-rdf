@@ -12,6 +12,9 @@ let Promise = require("bluebird");
 let fs = Promise.promisifyAll(require("fs"));
 let _ = require("lodash");
 
+let RDFcb = require("../build");
+console.log(RDFcb);
+
 let ps = jsonld.promises;
 let expand = require("./utils/expand");
 let getviews = require("./utils/get-views");
@@ -19,7 +22,7 @@ let setviews = require("./utils/set-views");
 let jld = require("./utils/jsonld");
 
 //expand("./test/data.json");
-getviews(Couchbird, "./examples/output/out.json");
+//getviews(Couchbird, "./examples/output/out.json");
 //setviews(Couchbird, "./examples/output/out.json");
 
 

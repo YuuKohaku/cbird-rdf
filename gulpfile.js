@@ -3,16 +3,23 @@ var gulp = require("gulp");
 var babel = require("gulp-babel");
 var minify = require('gulp-minify');
 
-gulp.task("default", function () {
-    return gulp.src(["src/**/*.js", "examples/**/*.js"])
+gulp.task('default', ['json', 'js']);
+
+gulp.task("js", function () {
+    return gulp.src(["src/**/*.js"])
         .pipe(babel({
             blacklist: ['bluebirdCoroutines', 'regenerator']
         }))
         .pipe(gulp.dest("build"));
 });
 
+gulp.task("json", function () {
+    return gulp.src(["src/**/*.json"])
+        .pipe(gulp.dest("build"));
+});
+
 gulp.task("ex", function () {
-    return gulp.src(["src/**/*.js", "examples/**/*.js"])
+    return gulp.src(["src/**/*.js"])
         .pipe(babel({
             blacklist: ['bluebirdCoroutines', 'regenerator']
         }))
@@ -24,7 +31,7 @@ gulp.task("ex", function () {
 
 
 gulp.task('compress', function () {
-    gulp.src('examples/utils/jsonld.js')
+    gulp.src('dev-util/utils/jsonld.js')
         .pipe(minify({}))
         .pipe(gulp.dest('build/compressed'))
 });

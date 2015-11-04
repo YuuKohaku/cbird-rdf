@@ -5,16 +5,16 @@ var chaiAsPromised = require("chai-as-promised");
 
 chai.use(chaiAsPromised);
 
-var Couchbase = require("couchbase");
 var path = require("path");
 var _ = require("lodash");
 var ps = require("jsonld").promises;
-var RDFcb = require("../build/core/RDF");
+var RDFcb = require("../build").RDF;
 
-var cfg = require("./config.json");
-var triples = require("./data.json");
-var extriples = require("./data_expanded.json");
-var defviews = require("../config/default-views.json");
+var cfg = require("./config/config.json");
+var triples = require("./data/data.json");
+var extriples = require("./data/data_expanded.json");
+var testviews = require("./config/views.json");
+var defviews = require("../build/RDF/default/views.json");
 
 var db = new RDFcb();
 var bucket = db.bucket(cfg.bucket);;
@@ -45,14 +45,46 @@ describe('Views', function () {
         return bucket.upsertNodes([rabbit, mouse]);
     });
     describe('#installViews', function () {
-        it('should upsert views', function (done) {
-            var p = bucket.installViews(path.resolve(__dirname, "../config/default-views.json"))
+        it('should upsert default views', function (done) {
+            var p = bucket.installViews()
                 .then(function (res) {
                     return mgr.getDesignDocuments();
                 })
                 .then(function (res) {
                     for (var i in defviews) {
                         if (!_.eq(res[i], defviews[i])) throw new Error("Incorrect value");
+                    }
+                    done();
+                })
+                .catch(function (err) {
+                    done(err);
+                });
+        });
+        it('should upsert views', function (done) {
+            var p = bucket.installViews(path.resolve(__dirname, "./config/views.json"))
+                .then(function (res) {
+                    return mgr.getDesignDocuments();
+                })
+                .then(function (res) {
+                    for (var i in testviews) {
+                        if (!_.eq(res[i], testviews[i])) throw new Error("Incorrect value");
+                    }
+                    done();
+                })
+                .catch(function (err) {
+                    done(err);
+                });
+        });
+    });
+    describe('#uninstallViews', function () {
+        it('should remove views', function (done) {
+            var p = bucket.uninstallViews(_.keys(testviews))
+                .then(function (res) {
+                    return mgr.getDesignDocuments();
+                })
+                .then(function (res) {
+                    for (var i in testviews) {
+                        if (res[i]) done(new Error("Incorrect value"));
                     }
                     done();
                 })
