@@ -85,9 +85,9 @@ describe('Views', function () {
                 });
         });
     });
-    describe('#getDocByProperty', function () {
+    describe('#getDocByPredicate', function () {
         it('should get corresponding docs', function (done) {
-            var p = bucket.getDocByProperty('http://wonderland#color')
+            var p = bucket.getDocByPredicate('http://wonderland#color')
                 .then(function (res) {
                     if (!_.eq(res['http://wonderland#color'], rabbit)) throw new Error("Incorrect value");
                     done();
@@ -101,8 +101,33 @@ describe('Views', function () {
         it('should get corresponding docs', function (done) {
             var p = bucket.getStatementBySubject([mouse["@id"], rabbit["@id"]])
                 .then(function (res) {
-                    console.log(rdfmouse)
-                    if (!_.eq(res[mouse["@id"]], rdfmouse)) throw new Error("Incorrect value");
+                    for (var i in rdfmouse) {
+                        if (!_.findWhere(res[mouse["@id"]], rdfmouse[i])) throw new Error("Incorrect value");
+                    }
+                    done();
+                })
+                .catch(function (err) {
+                    done(err);
+                });
+        });
+    });
+    describe('#getStatementByPredicate', function () {
+        it('should get corresponding docs', function (done) {
+            var p = bucket.getStatementByPredicate('http://wonderland#name')
+                .then(function (res) {
+                    if (!_.findWhere(rdfmouse, res['http://wonderland#name'][0])) throw new Error("Incorrect value");
+                    done();
+                })
+                .catch(function (err) {
+                    done(err);
+                });
+        });
+    });
+    describe('#getStatementByObject', function () {
+        it('should get corresponding docs', function (done) {
+            var p = bucket.getStatementByObject('http://wonderland#Mouse')
+                .then(function (res) {
+                    if (!_.findWhere(rdfmouse, res['http://wonderland#Mouse'][0])) throw new Error("Incorrect value");
                     done();
                 })
                 .catch(function (err) {

@@ -1,0 +1,54 @@
+{
+    "dev_history_ts": {
+        "views": {
+            "history_ts": {
+                "map": "function (doc, meta) {\n  var parts = meta.id.split(\"/\");\n  if(parts[0] == \"history\"){\n    var data = {};\n    var ts = parseInt(parts[parts.length-1]);\n    var date = (new Date(ts*1000)).toUTCString();\n    var id = parts.slice(2,parts.length-1).join(\"/\");\n    data.resource = id;\n    data.ts = date;\n     data.owner = parts[1];\n    data.changes = doc;\n   emit(ts, data);\n  }\n}"
+            }
+        }
+    },
+    "dev_linker": {
+        "views": {
+            "object_links": {
+                "map": "function (doc, meta) {\n  var parts = meta.id.split(\"/\");\n  if(parts[0] == \"link\")\n  {\n    parts.shift();\n    var data = {id: meta.id,\n                value: doc};\n     emit(parts, data);\n  }\n}",
+                "reduce": "function(keys, vals){\n  var out = [];\n  for(var i in vals){\n    out.push(vals[i]);\n  }\n  return out;\n}"
+            },
+            "object_links1": {
+                "map": "function (doc, meta) {\n  var id = meta.id.split(\"/\");\n  if(id[0] == \"link\"){\n  id.shift();\n  emit(id, meta.id);  \n  }\n}",
+                "reduce": "function(keys, vals, rereduce){\n  var out = [];\n  for(k in vals){\n    out.push(vals[k]);\n  }\n  return out;\n}"
+            }
+        }
+    },
+    "dev_object": {
+        "views": {
+            "type": {
+                "map": "function (doc, meta) {\n  var parts = meta.id.split(\"/\");\n  var type = parts[0];\n  emit(type, doc);\n}"
+            }
+        }
+    },
+    "history_ts": {
+        "views": {
+            "history_ts": {
+                "map": "function (doc, meta) {\n  var parts = meta.id.split(\"/\");\n  if(parts[0] == \"history\"){\n    var data = {};\n    var ts = parseInt(parts[parts.length-1]);\n    var date = (new Date(ts*1000)).toUTCString();\n    var id = parts.slice(2,parts.length-1).join(\"/\");\n    data.resource = id;\n    data.ts = date;\n     data.owner = parts[1];\n    data.changes = doc;\n   emit(ts, data);\n  }\n}"
+            }
+        }
+    },
+    "linker": {
+        "views": {
+            "object_links": {
+                "map": "function (doc, meta) {\n  var parts = meta.id.split(\"/\");\n  if(parts[0] == \"link\")\n  {\n    parts.shift();\n    var data = {id: meta.id,\n                value: doc};\n     emit(parts, data);\n  }\n}",
+                "reduce": "function(keys, vals){\n  var out = [];\n  for(var i in vals){\n    out.push(vals[i]);\n  }\n  return out;\n}"
+            },
+            "object_links1": {
+                "map": "function (doc, meta) {\n  var id = meta.id.split(\"/\");\n  if(id[0] == \"link\"){\n  id.shift();\n  emit(id, meta.id);  \n  }\n}",
+                "reduce": "function(keys, vals, rereduce){\n  var out = [];\n  for(k in vals){\n    out.push(vals[k]);\n  }\n  return out;\n}"
+            }
+        }
+    },
+    "object": {
+        "views": {
+            "type": {
+                "map": "function (doc, meta) {\n  var parts = meta.id.split(\"/\");\n  var type = parts[0];\n  emit(type, doc);\n}"
+            }
+        }
+    }
+}

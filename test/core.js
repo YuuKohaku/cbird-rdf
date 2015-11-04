@@ -47,8 +47,8 @@ describe('Bucket initialization', function () {
     describe('vocabularies loading', function () {
         it('should load vocabularies  from database', function () {
             var p = bucket.setVocabulary({
-                domain: "iris/vocabulary/domain",
-                basic: "iris/vocabulary/basic"
+                domain: "iris://vocabulary/domain",
+                basic: "iris://vocabulary/basic"
             });
             expect(p).to.eventually.have.deep.property('vocabulary.domain').which.is.not.empty;
             expect(p).to.eventually.have.deep.property('vocabulary.basic').which.is.not.empty;

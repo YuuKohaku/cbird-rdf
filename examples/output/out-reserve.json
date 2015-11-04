@@ -1,0 +1,16 @@
+{
+    "dev_history_ts": {
+        "views": {
+            "history_ts": {
+                "map": "function (doc, meta) {\n  var parts = meta.id.split(\"/\");\n  if(parts[0] == \"history\"){\n    var data = {};\n    var ts = parseInt(parts[parts.length-1]);\n    var date = (new Date(ts*1000)).toUTCString();\n    var id = parts.slice(2,parts.length-1).join(\"/\");\n    data.resource = id;\n    data.ts = date;\n     data.owner = parts[1];\n    data.changes = doc;\n   emit(ts, data);\n  }\n}"
+            }
+        }
+    },
+    "history_ts": {
+        "views": {
+            "history_ts": {
+                "map": "function (doc, meta) {\n  var parts = meta.id.split(\"/\");\n  if(parts[0] == \"history\"){\n    var data = {};\n    var ts = parseInt(parts[parts.length-1]);\n    var date = (new Date(ts*1000)).toUTCString();\n    var id = parts.slice(2,parts.length-1).join(\"/\");\n    data.resource = id;\n    data.ts = date;\n     data.owner = parts[1];\n    data.changes = doc;\n   emit(ts, data);\n  }\n}"
+            }
+        }
+    }
+}

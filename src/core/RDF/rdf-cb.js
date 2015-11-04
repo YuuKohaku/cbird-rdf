@@ -33,7 +33,7 @@ class CBStoreBucket extends Bucket {
         fs: from_fs
     }) {
         if (!domain_voc || !basic_voc)
-            throw new Error("Insufficient vocabulary information.");
+            return Promise.reject(new Error("Insufficient vocabulary information."));
         this.vocabulary = {
             basic: null,
             domain: null,
@@ -62,10 +62,10 @@ class CBStoreBucket extends Bucket {
                     return Promise.resolve(this);
                 })
                 .catch(SyntaxError, (e) => {
-                    throw new Error("Invalid json in vocabulary files: ", e.message);
+                    return Promise.reject(new Error("Invalid json in vocabulary files: ", e.message));
                 })
                 .catch(Promise.OperationalError, (e) => {
-                    throw new Error("Unable to read vocabulary file: ", e.message);
+                    return Promise.reject(new Error("Unable to read vocabulary file: ", e.message));
                 });
         }
     }
@@ -86,7 +86,7 @@ class CBStoreBucket extends Bucket {
                 return Promise.props(promises);
             })
             .catch((err) => {
-                throw new Error("Unable to store data: ", err.message);
+                return Promise.reject(new Error("Unable to store data: ", err.message));
             });
     }
 
@@ -105,7 +105,7 @@ class CBStoreBucket extends Bucket {
                 return Promise.props(promises);
             })
             .catch((err) => {
-                throw new Error("Unable to store data: ", err.message);
+                return Promise.reject(new Error("Unable to store data: ", err.message));
             });
     }
 
@@ -185,7 +185,7 @@ class CBStoreBucket extends Bucket {
                 return Promise.all(promises);
             })
             .catch((err) => {
-                throw new Error("Unable to install views from ", fname);
+                return Promise.reject(new Error("Unable to install views from ", fname));
             });
     }
 
@@ -200,15 +200,16 @@ class CBStoreBucket extends Bucket {
                 inclusive_end: true
             })
             .include_docs(true);
-        return this.view(query).then((res) => {
-            return _.reduce(res, (acc, val) => {
-                acc[val.key] = val.doc;
-                return acc;
-            }, {});
-        });
+        return this.view(query)
+            .then((res) => {
+                return _.reduce(res, (acc, val) => {
+                    acc[val.key] = val.doc;
+                    return acc;
+                }, {});
+            });
     }
 
-    getDocByProperty(subject) {
+    getDocByPredicate(subject) {
         let keys = _.isArray(subject) ? subject : [subject];
         let query = Couchbird.ViewQuery.from("rdf", "predicate")
             .keys(keys)
@@ -216,12 +217,13 @@ class CBStoreBucket extends Bucket {
                 inclusive_end: true
             })
             .include_docs(true);
-        return this.view(query).then((res) => {
-            return _.reduce(res, (acc, val) => {
-                acc[val.key] = val.doc;
-                return acc;
-            }, {});
-        });
+        return this.view(query)
+            .then((res) => {
+                return _.reduce(res, (acc, val) => {
+                    acc[val.key] = val.doc;
+                    return acc;
+                }, {});
+            });
     }
 
     getDocByObject(subject) {
@@ -232,32 +234,145 @@ class CBStoreBucket extends Bucket {
                 inclusive_end: true
             })
             .include_docs(true);
-        return this.view(query).then((res) => {
-            return _.reduce(res, (acc, val) => {
-                acc[val.key] = val.doc;
-                return acc;
-            }, {});
-        });
+        return this.view(query)
+            .then((res) => {
+                return _.reduce(res, (acc, val) => {
+                    acc[val.key] = val.doc;
+                    return acc;
+                }, {});
+            });
     }
 
     //Statement query section
     getStatementBySubject(subject) {
+        let keys = _.isArray(subject) ? subject : [subject];
+        let query = Couchbird.ViewQuery.from("rdf", "jsonld-subject")
+            .keys(keys)
+            .custom({
+                inclusive_end: true
+            })
+            .reduce(true)
+            .group(true);
+        return this.view(query)
+            .then((res) => {
+                return _.reduce(res, (acc, val) => {
+                    acc[val.key] = val.value;
+                    return acc;
+                }, {});
+            });
+    }
+    getStatementByPredicate(subject) {
+        let keys = _.isArray(subject) ? subject : [subject];
+        let query = Couchbird.ViewQuery.from("rdf", "jsonld-predicate")
+            .keys(keys)
+            .custom({
+                inclusive_end: true
+            })
+            .reduce(true)
+            .group(true);
+        return this.view(query)
+            .then((res) => {
+                return _.reduce(res, (acc, val) => {
+                    acc[val.key] = val.value;
+                    return acc;
+                }, {});
+            });
+    }
+    getStatementByObject(subject) {
             let keys = _.isArray(subject) ? subject : [subject];
-            let query = Couchbird.ViewQuery.from("rdf", "jsonld-subject")
+            let query = Couchbird.ViewQuery.from("rdf", "jsonld-object")
                 .keys(keys)
                 .custom({
                     inclusive_end: true
                 })
                 .reduce(true)
                 .group(true);
-            return this.view(query).then((res) => {
-                return _.reduce(res, (acc, val) => {
-                    acc[val.key] = val.value;
-                    return acc;
-                }, {});
-            });
+            return this.view(query)
+                .then((res) => {
+                    return _.reduce(res, (acc, val) => {
+                        acc[val.key] = val.value;
+                        return acc;
+                    }, {});
+                });
         }
         //N1QL
+        //expand with querybytriple with ?s ?p ?o
+    queryByTriple({
+        subject: s,
+        predicate: p,
+        object: o
+    }) {
+        if (!s && !p && !o) {
+            return Promise.resolve([]);
+        }
+        if (s && !_.isString(s) || p && !_.isString(p) || o && !_.isString(o)) {
+            return Promise.reject(new Error("All passed values must be strings."));
+        }
+
+        let qstr = "SELECT * FROM `" + this.bucket_name + "` AS doc ";
+        let params = [];
+        if (s && !p && !o) {
+            qstr += "USE KEYS $1";
+            params = [[s]];
+        }
+        if (!s && p && !o) {
+            //until they fix this bug with forward-slash escaping 
+            qstr += "WHERE $1 IN object_names(doc);";
+            params = [p];
+        }
+        if (!s && !p && o) {
+            qstr += "WHERE $1 WITHIN doc;"
+            params = [o];
+        }
+        if (s && p && !o) {
+            //until they fix this bug with forward-slash escaping 
+            qstr += "USE KEYS $1 WHERE $2 IN object_names(doc);";
+            params = [[s], p];
+        }
+        if (s && !p && o) {
+            qstr += "USE KEYS $1 WHERE $2 WITHIN doc;";
+            params = [[s], o];
+        }
+        if (!s && p && o) {
+            //INJECTION WARNING! Need to correct this later.
+            qstr += "WHERE $1 WITHIN doc.`" + p + "`;";
+            params = [o];
+        }
+        if (s && p && o) {
+            //INJECTION WARNING! Need to correct this later.
+            qstr += "USE KEYS $1 WHERE $2 WITHIN doc.`" + p + "`;";
+            params = [[s], o];
+        }
+        let query = Couchbird.N1qlQuery.fromString(qstr);
+        return this.N1QL(query, params)
+            .then((res) => {
+                return _.map(res, (val) => {
+                    return val.doc;
+                });
+            });
+    }
+
+    queryBySubject(val) {
+        return this.queryByTriple({
+            subject: val,
+            predicate: false,
+            object: false
+        });
+    }
+    queryByPredicate(val) {
+        return this.queryByTriple({
+            subject: false,
+            predicate: val,
+            object: false
+        });
+    }
+    queryByObject(val) {
+        return this.queryByTriple({
+            subject: false,
+            predicate: false,
+            object: val
+        });
+    }
 
 }
 
