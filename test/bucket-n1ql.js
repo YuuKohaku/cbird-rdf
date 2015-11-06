@@ -48,7 +48,7 @@ describe('N1QL', function () {
         it('should return corresponding docs', function (done) {
             var p = bucket.queryBySubject(rabbit["@id"])
                 .then(function (res) {
-                    if (!_.findWhere(res, rabbit)) throw new Error("Incorrect response");
+                    expect(res).to.deep.include(rabbit);
                     done();
                 })
                 .catch(function (err) {
@@ -60,7 +60,7 @@ describe('N1QL', function () {
         it('should return corresponding docs', function (done) {
             var p = bucket.queryByPredicate('http://wonderland#color')
                 .then(function (res) {
-                    if (!_.findWhere(res, rabbit)) throw new Error("Incorrect response");
+                    expect(res).to.deep.include(rabbit);
                     done();
                 })
                 .catch(function (err) {
@@ -72,7 +72,7 @@ describe('N1QL', function () {
         it('should return corresponding docs', function (done) {
             var p = bucket.queryByObject('http://wonderland#white')
                 .then(function (res) {
-                    if (!_.findWhere(res, rabbit)) throw new Error("Incorrect response");
+                    expect(res).to.deep.include(rabbit);
                     done();
                 })
                 .catch(function (err) {
@@ -88,7 +88,7 @@ describe('N1QL', function () {
                     object: false
                 })
                 .then(function (res) {
-                    if (!_.findWhere(res, rabbit)) throw new Error("Incorrect response");
+                    expect(res).to.deep.include(rabbit);
                     done();
                 })
                 .catch(function (err) {
@@ -104,7 +104,7 @@ describe('N1QL', function () {
                     object: 'http://wonderland#white'
                 })
                 .then(function (res) {
-                    if (!_.findWhere(res, rabbit)) throw new Error("Incorrect response");
+                    expect(res).to.deep.include(rabbit);
                     done();
                 })
                 .catch(function (err) {
@@ -120,7 +120,7 @@ describe('N1QL', function () {
                     object: "http://wonderland#Rabbit"
                 })
                 .then(function (res) {
-                    if (!_.findWhere(res, rabbit)) throw new Error("Incorrect response");
+                    expect(res).to.deep.include(rabbit);
                     done();
                 })
                 .catch(function (err) {
@@ -136,7 +136,7 @@ describe('N1QL', function () {
                     object: "http://wonderland#Rabbit"
                 })
                 .then(function (res) {
-                    if (!_.findWhere(res, rabbit)) throw new Error("Incorrect response");
+                    expect(res).to.deep.include(rabbit);
                     done();
                 })
                 .catch(function (err) {
@@ -152,7 +152,7 @@ describe('N1QL', function () {
                     object: false
                 })
                 .then(function (res) {
-                    if (!_.isEmpty(res) || !_.isArray(res)) throw new Error("Incorrect response");
+                    expect(res).to.be.instanceof(Array).and.to.be.empty;
                     done();
                 })
                 .catch(function (err) {

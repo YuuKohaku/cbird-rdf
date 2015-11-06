@@ -9,7 +9,7 @@ let Couchbird = require("Couchbird");
 let Bucket = Couchbird.Bucket;
 
 
-class CBStore {
+class CBStorage {
     constructor(config, reinit) {
         this.couchbird = Couchbird(config, reinit);
         return this;
@@ -19,12 +19,12 @@ class CBStore {
     bucket(bname) {
         if (!this.couchbird)
             throw new Error("Database is not connected");
-        return this.couchbird.bucket(bname, CBStoreBucket);
+        return this.couchbird.bucket(bname, CBStorageBucket);
     }
 
 }
 
-class CBStoreBucket extends Bucket {
+class CBStorageBucket extends Bucket {
 
     /////////////////////////////////vocabulary installation//////////////////////////
     setVocabulary({
@@ -78,10 +78,7 @@ class CBStoreBucket extends Bucket {
             .then((res) => {
                 _.map(res, (val) => {
                     promises[val["@id"]] =
-                        this.upsert(val["@id"], val, options)
-                        .catch((err) => {
-                            return Promise.resolve(err);
-                        });
+                        this.upsert(val["@id"], val, options);
                 });
                 return Promise.props(promises);
             })
@@ -99,7 +96,7 @@ class CBStoreBucket extends Bucket {
                     promises[val["@id"]] =
                         this.replace(val["@id"], val, options)
                         .catch((err) => {
-                            return Promise.resolve(err);
+                            return Promise.resolve(false);
                         });
                 });
                 return Promise.props(promises);
@@ -110,63 +107,29 @@ class CBStoreBucket extends Bucket {
     }
 
     getNodes(subjects) {
-        let promises = [];
+        let promises = {};
         let keys = _.isArray(subjects) ? subjects : [subjects];
-        return this.getMulti(keys)
-            .then((res) => {
-                _.map(res, (val) => {
-                    promises.push(val.value);
+        _.map(keys, (key) => {
+            promises[key] =
+                this.get(key)
+                .catch((err) => {
+                    return Promise.resolve(undefined);
                 });
-                return Promise.all(promises);
-            });
+        });
+        return Promise.props(promises);
     }
 
     //!! possibly this will make other docs invalid because of non-existent node
     removeNodes(subjects) {
         let keys = _.isArray(subjects) ? subjects : [subjects];
-        let promises = [];
+        let promises = {};
         _.map(keys, (key) => {
-            promises.push(this.remove(key));
+            promises[key] = this.remove(key)
+                .catch((err) => {
+                    return Promise.resolve(false);
+                });
         });
-        return Promise.all(promises);
-    }
-
-    insert(subject, value, options = {}) {
-        return super.insert(subject, value, options);
-    }
-
-    upsert(subject, value, options = {}) {
-        return super.upsert(subject, value, options);
-    }
-
-    replace(subject, value, options = {}) {
-        return super.replace(subject, value, options);
-    }
-
-    get(subject, options = {}) {
-        return super.get(subject, options);
-    }
-
-    getAndLock(subject, options = {}) {
-        return super.getAndLock(subject, options);
-    }
-
-    unlock(subject, cas, options = {}) {
-        return super.unlock(subject, cas, options);
-    }
-    getAndTouch(subject, expiry, options = {}) {
-        return super.getAndTouch(subject, expiry, options);
-    }
-    touch(subject, expiry, options = {}) {
-        return super.touch(subject, options);
-    }
-
-    getMulti(subjects) {
-        return super.getMulti(subjects);
-    }
-
-    remove(subject, options = {}) {
-        return super.remove(subject, options);
+        return Promise.props(promises);
     }
 
     /////////////////////Views functions////////////////////////
@@ -391,4 +354,4 @@ class CBStoreBucket extends Bucket {
 
 }
 
-module.exports = CBStore;
+module.exports = CBStorage;

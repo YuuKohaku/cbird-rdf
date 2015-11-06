@@ -1,6 +1,6 @@
 'use strict';
 
-var _get = function get(_x12, _x13, _x14) { var _again = true; _function: while (_again) { var object = _x12, property = _x13, receiver = _x14; desc = parent = getter = undefined; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x12 = parent; _x13 = property; _x14 = receiver; _again = true; continue _function; } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+var _get = function get(_x3, _x4, _x5) { var _again = true; _function: while (_again) { var object = _x3, property = _x4, receiver = _x5; desc = parent = getter = undefined; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x3 = parent; _x4 = property; _x5 = receiver; _again = true; continue _function; } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
 
 var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
 
@@ -17,35 +17,35 @@ var path = require("path");
 var Couchbird = require("Couchbird");
 var Bucket = Couchbird.Bucket;
 
-var CBStore = (function () {
-    function CBStore(config, reinit) {
-        _classCallCheck(this, CBStore);
+var CBStorage = (function () {
+    function CBStorage(config, reinit) {
+        _classCallCheck(this, CBStorage);
 
         this.couchbird = Couchbird(config, reinit);
         return this;
     }
 
-    _createClass(CBStore, [{
+    _createClass(CBStorage, [{
         key: "bucket",
         value: function bucket(bname) {
             if (!this.couchbird) throw new Error("Database is not connected");
-            return this.couchbird.bucket(bname, CBStoreBucket);
+            return this.couchbird.bucket(bname, CBStorageBucket);
         }
     }]);
 
-    return CBStore;
+    return CBStorage;
 })();
 
-var CBStoreBucket = (function (_Bucket) {
-    _inherits(CBStoreBucket, _Bucket);
+var CBStorageBucket = (function (_Bucket) {
+    _inherits(CBStorageBucket, _Bucket);
 
-    function CBStoreBucket() {
-        _classCallCheck(this, CBStoreBucket);
+    function CBStorageBucket() {
+        _classCallCheck(this, CBStorageBucket);
 
-        _get(Object.getPrototypeOf(CBStoreBucket.prototype), "constructor", this).apply(this, arguments);
+        _get(Object.getPrototypeOf(CBStorageBucket.prototype), "constructor", this).apply(this, arguments);
     }
 
-    _createClass(CBStoreBucket, [{
+    _createClass(CBStorageBucket, [{
         key: "setVocabulary",
 
         /////////////////////////////////vocabulary installation//////////////////////////
@@ -64,8 +64,8 @@ var CBStoreBucket = (function (_Bucket) {
             };
             if (!from_fs) {
                 return Promise.props({
-                    domain: _get(Object.getPrototypeOf(CBStoreBucket.prototype), "get", this).call(this, domain_voc),
-                    basic: _get(Object.getPrototypeOf(CBStoreBucket.prototype), "get", this).call(this, basic_voc)
+                    domain: _get(Object.getPrototypeOf(CBStorageBucket.prototype), "get", this).call(this, domain_voc),
+                    basic: _get(Object.getPrototypeOf(CBStorageBucket.prototype), "get", this).call(this, basic_voc)
                 }).then(function (res) {
                     _this.vocabulary.basic = res.basic.value;
                     _this.vocabulary.domain = res.domain.value;
@@ -101,9 +101,7 @@ var CBStoreBucket = (function (_Bucket) {
             var promises = {};
             return jsonld.promises.expand(triples).then(function (res) {
                 _.map(res, function (val) {
-                    promises[val["@id"]] = _this2.upsert(val["@id"], val, options)["catch"](function (err) {
-                        return Promise.resolve(err);
-                    });
+                    promises[val["@id"]] = _this2.upsert(val["@id"], val, options);
                 });
                 return Promise.props(promises);
             })["catch"](function (err) {
@@ -123,7 +121,7 @@ var CBStoreBucket = (function (_Bucket) {
             return jsonld.promises.expand(triples).then(function (res) {
                 _.map(res, function (val) {
                     promises[val["@id"]] = _this3.replace(val["@id"], val, options)["catch"](function (err) {
-                        return Promise.resolve(err);
+                        return Promise.resolve(false);
                     });
                 });
                 return Promise.props(promises);
@@ -134,96 +132,32 @@ var CBStoreBucket = (function (_Bucket) {
     }, {
         key: "getNodes",
         value: function getNodes(subjects) {
-            var promises = [];
+            var _this4 = this;
+
+            var promises = {};
             var keys = _.isArray(subjects) ? subjects : [subjects];
-            return this.getMulti(keys).then(function (res) {
-                _.map(res, function (val) {
-                    promises.push(val.value);
+            _.map(keys, function (key) {
+                promises[key] = _this4.get(key)["catch"](function (err) {
+                    return Promise.resolve(undefined);
                 });
-                return Promise.all(promises);
             });
+            return Promise.props(promises);
         }
 
         //!! possibly this will make other docs invalid because of non-existent node
     }, {
         key: "removeNodes",
         value: function removeNodes(subjects) {
-            var _this4 = this;
+            var _this5 = this;
 
             var keys = _.isArray(subjects) ? subjects : [subjects];
-            var promises = [];
+            var promises = {};
             _.map(keys, function (key) {
-                promises.push(_this4.remove(key));
+                promises[key] = _this5.remove(key)["catch"](function (err) {
+                    return Promise.resolve(false);
+                });
             });
-            return Promise.all(promises);
-        }
-    }, {
-        key: "insert",
-        value: function insert(subject, value) {
-            var options = arguments.length <= 2 || arguments[2] === undefined ? {} : arguments[2];
-
-            return _get(Object.getPrototypeOf(CBStoreBucket.prototype), "insert", this).call(this, subject, value, options);
-        }
-    }, {
-        key: "upsert",
-        value: function upsert(subject, value) {
-            var options = arguments.length <= 2 || arguments[2] === undefined ? {} : arguments[2];
-
-            return _get(Object.getPrototypeOf(CBStoreBucket.prototype), "upsert", this).call(this, subject, value, options);
-        }
-    }, {
-        key: "replace",
-        value: function replace(subject, value) {
-            var options = arguments.length <= 2 || arguments[2] === undefined ? {} : arguments[2];
-
-            return _get(Object.getPrototypeOf(CBStoreBucket.prototype), "replace", this).call(this, subject, value, options);
-        }
-    }, {
-        key: "get",
-        value: function get(subject) {
-            var options = arguments.length <= 1 || arguments[1] === undefined ? {} : arguments[1];
-
-            return _get(Object.getPrototypeOf(CBStoreBucket.prototype), "get", this).call(this, subject, options);
-        }
-    }, {
-        key: "getAndLock",
-        value: function getAndLock(subject) {
-            var options = arguments.length <= 1 || arguments[1] === undefined ? {} : arguments[1];
-
-            return _get(Object.getPrototypeOf(CBStoreBucket.prototype), "getAndLock", this).call(this, subject, options);
-        }
-    }, {
-        key: "unlock",
-        value: function unlock(subject, cas) {
-            var options = arguments.length <= 2 || arguments[2] === undefined ? {} : arguments[2];
-
-            return _get(Object.getPrototypeOf(CBStoreBucket.prototype), "unlock", this).call(this, subject, cas, options);
-        }
-    }, {
-        key: "getAndTouch",
-        value: function getAndTouch(subject, expiry) {
-            var options = arguments.length <= 2 || arguments[2] === undefined ? {} : arguments[2];
-
-            return _get(Object.getPrototypeOf(CBStoreBucket.prototype), "getAndTouch", this).call(this, subject, expiry, options);
-        }
-    }, {
-        key: "touch",
-        value: function touch(subject, expiry) {
-            var options = arguments.length <= 2 || arguments[2] === undefined ? {} : arguments[2];
-
-            return _get(Object.getPrototypeOf(CBStoreBucket.prototype), "touch", this).call(this, subject, options);
-        }
-    }, {
-        key: "getMulti",
-        value: function getMulti(subjects) {
-            return _get(Object.getPrototypeOf(CBStoreBucket.prototype), "getMulti", this).call(this, subjects);
-        }
-    }, {
-        key: "remove",
-        value: function remove(subject) {
-            var options = arguments.length <= 1 || arguments[1] === undefined ? {} : arguments[1];
-
-            return _get(Object.getPrototypeOf(CBStoreBucket.prototype), "remove", this).call(this, subject, options);
+            return Promise.props(promises);
         }
 
         /////////////////////Views functions////////////////////////
@@ -437,7 +371,7 @@ var CBStoreBucket = (function (_Bucket) {
         }
     }]);
 
-    return CBStoreBucket;
+    return CBStorageBucket;
 })(Bucket);
 
-module.exports = CBStore;
+module.exports = CBStorage;

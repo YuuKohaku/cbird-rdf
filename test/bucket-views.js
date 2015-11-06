@@ -97,7 +97,7 @@ describe('Views', function () {
         it('should get corresponding docs', function (done) {
             var p = bucket.getDocBySubject(rabbit["@id"])
                 .then(function (res) {
-                    if (!_.eq(res[rabbit["@id"]], rabbit)) throw new Error("Incorrect value");
+                    expect(res).to.have.property(rabbit["@id"]).which.is.eql(rabbit);
                     done();
                 })
                 .catch(function (err) {
@@ -109,7 +109,7 @@ describe('Views', function () {
         it('should get corresponding docs', function (done) {
             var p = bucket.getDocByObject("http://wonderland#white")
                 .then(function (res) {
-                    if (!_.eq(res["http://wonderland#white"], rabbit)) throw new Error("Incorrect value");
+                    expect(res).to.have.property("http://wonderland#white").which.is.eql(rabbit);
                     done();
                 })
                 .catch(function (err) {
@@ -121,7 +121,7 @@ describe('Views', function () {
         it('should get corresponding docs', function (done) {
             var p = bucket.getDocByPredicate('http://wonderland#color')
                 .then(function (res) {
-                    if (!_.eq(res['http://wonderland#color'], rabbit)) throw new Error("Incorrect value");
+                    expect(res).to.have.property('http://wonderland#color').which.is.eql(rabbit);
                     done();
                 })
                 .catch(function (err) {
@@ -133,9 +133,7 @@ describe('Views', function () {
         it('should get corresponding docs', function (done) {
             var p = bucket.getStatementBySubject([mouse["@id"], rabbit["@id"]])
                 .then(function (res) {
-                    for (var i in rdfmouse) {
-                        if (!_.findWhere(res[mouse["@id"]], rdfmouse[i])) throw new Error("Incorrect value");
-                    }
+                    expect(res).to.have.property(mouse["@id"]).which.deep.include.members(rdfmouse);
                     done();
                 })
                 .catch(function (err) {
@@ -147,7 +145,8 @@ describe('Views', function () {
         it('should get corresponding docs', function (done) {
             var p = bucket.getStatementByPredicate('http://wonderland#name')
                 .then(function (res) {
-                    if (!_.findWhere(rdfmouse, res['http://wonderland#name'][0])) throw new Error("Incorrect value");
+                    expect(res).to.have.deep.property("http://wonderland#name" + "[0]");
+                    expect(rdfmouse).to.deep.include(res['http://wonderland#name'][0]);
                     done();
                 })
                 .catch(function (err) {
@@ -159,7 +158,8 @@ describe('Views', function () {
         it('should get corresponding docs', function (done) {
             var p = bucket.getStatementByObject('http://wonderland#Mouse')
                 .then(function (res) {
-                    if (!_.findWhere(rdfmouse, res['http://wonderland#Mouse'][0])) throw new Error("Incorrect value");
+                    expect(res).to.have.deep.property("http://wonderland#Mouse" + "[0]");
+                    expect(rdfmouse).to.deep.include(res['http://wonderland#Mouse'][0]);
                     done();
                 })
                 .catch(function (err) {

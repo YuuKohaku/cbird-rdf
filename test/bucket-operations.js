@@ -34,7 +34,7 @@ describe('Operations', function () {
                     return bucket.get(put["@id"]);
                 })
                 .then(function (res) {
-                    if (res.value[tpname][0]["@value"] != tpval) throw new Error("Incorrect value");
+                    expect(res.value).to.have.deep.property(`${tpname}[0]`).with.property("@value", tpval);
                     done();
                 })
                 .catch(function (err) {
@@ -49,17 +49,18 @@ describe('Operations', function () {
                     return bucket.get(rabbit["@id"]);
                 })
                 .then(function (res) {
-                    if (res.value[tpname]) throw new Error("Incorrect value");
+                    expect(res.value).to.not.have.property(tpname);
+                    expect(res.value).to.be.eql(rabbit);
                     done();
                 })
                 .catch(function (err) {
                     done(err);
                 });
         });
-        it('should return Error object on non-existent data', function (done) {
+        it('should return false on non-existent data', function (done) {
             var p = bucket.replaceNodes(nonex)
                 .then(function (res) {
-                    if (!/The key does not exist on the server/.test(res[nonex["@id"]].message)) throw new Error("Incorrect behaviour");
+                    expect(res[nonex["@id"]]).to.be.false;
                     done();
                 })
                 .catch(function (err) {
@@ -71,7 +72,17 @@ describe('Operations', function () {
         it('should get data', function (done) {
             var p = bucket.getNodes(rabbit["@id"])
                 .then(function (res) {
-                    if (res[0]["@id"] != rabbit["@id"]) throw new Error("Incorrect value");
+                    expect(res).to.have.deep.property(`${rabbit["@id"]}.value`).which.is.eql(rabbit);
+                    done();
+                })
+                .catch(function (err) {
+                    done(err);
+                });
+        });
+        it('should return undefined on non-existent', function (done) {
+            var p = bucket.getNodes(nonex["@id"])
+                .then(function (res) {
+                    expect(res[0]).to.be.undefined;
                     done();
                 })
                 .catch(function (err) {
@@ -86,12 +97,22 @@ describe('Operations', function () {
                     return bucket.get(rabbit["@id"]);
                 })
                 .then(function (res) {
-                    done(new Error("Value exists: ", res));
+                    done(new Error("Incorrect behaviour"));
                 })
                 .catch(function (err) {
                     if (!/The key does not exist on the server/.test(err.message))
                         done(new Error("Incorrect behaviour: ", err.message));
                     done();
+                });
+        });
+        it('should return false on non-existent', function (done) {
+            var p = bucket.removeNodes(nonex["@id"])
+                .then(function (res) {
+                    expect(res[nonex["@id"]]).to.be.false;
+                    done();
+                })
+                .catch(function (err) {
+                    done(err);
                 });
         });
     });

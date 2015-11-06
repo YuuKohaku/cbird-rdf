@@ -40,7 +40,7 @@ describe('Bucket initialization', function () {
     describe('connection', function () {
         it('should connect to bucket', function () {
             bucket = db.bucket(cfg.bucket);
-            expect(db).to.have.property('couchbird').with.deep.property('_buckets.' + cfg.bucket).which.is.eql(bucket).and.not.empty;
+            expect(db).to.have.property('couchbird').with.deep.property('_buckets.' + cfg.bucket).which.is.instanceof(require("Couchbird").Bucket).and.is.eql(bucket);
         });
     });
     describe('vocabularies loading', function () {
