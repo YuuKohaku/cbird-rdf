@@ -1,4 +1,4 @@
 module.exports = {
     Model: require("./Model"),
-    RDF: require("./RDF")
+    LD: require("./LD")
 };

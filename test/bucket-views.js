@@ -8,13 +8,13 @@ chai.use(chaiAsPromised);
 var path = require("path");
 var _ = require("lodash");
 var ps = require("jsonld").promises;
-var RDFcb = require("../build").RDF;
+var RDFcb = require("../build").LD;
 
 var cfg = require("./config/config.json");
 var triples = require("./data/data.json");
 var extriples = require("./data/data_expanded.json");
 var testviews = require("./config/views.json");
-var defviews = require("../build/RDF/default/views.json");
+var defviews = require("../build/LD/default/views.json");
 
 var db = new RDFcb();
 var bucket = db.bucket(cfg.bucket);;

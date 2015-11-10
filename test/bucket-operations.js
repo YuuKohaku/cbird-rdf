@@ -7,7 +7,7 @@ chai.use(chaiAsPromised);
 
 var path = require("path");
 var _ = require("lodash");
-var RDFcb = require("../build").RDF;
+var RDFcb = require("../build").LD;
 
 var cfg = require("./config/config.json");
 var triples = require("./data/data.json");

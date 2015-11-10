@@ -8,22 +8,6 @@ let path = require("path");
 let Couchbird = require("Couchbird");
 let Bucket = Couchbird.Bucket;
 
-
-class CBStorage {
-    constructor(config, reinit) {
-        this.couchbird = Couchbird(config, reinit);
-        return this;
-    }
-
-
-    bucket(bname) {
-        if (!this.couchbird)
-            throw new Error("Database is not connected");
-        return this.couchbird.bucket(bname, CBStorageBucket);
-    }
-
-}
-
 class CBStorageBucket extends Bucket {
 
     /////////////////////////////////vocabulary installation//////////////////////////
@@ -294,7 +278,7 @@ class CBStorageBucket extends Bucket {
             params = [[s]];
         }
         if (!s && p && !o) {
-            //until they fix this bug with forward-slash escaping 
+            //until they fix this bug with forward-slash escaping
             qstr += "WHERE $1 IN object_names(doc);";
             params = [p];
         }
@@ -303,7 +287,7 @@ class CBStorageBucket extends Bucket {
             params = [o];
         }
         if (s && p && !o) {
-            //until they fix this bug with forward-slash escaping 
+            //until they fix this bug with forward-slash escaping
             qstr += "USE KEYS $1 WHERE $2 IN object_names(doc);";
             params = [[s], p];
         }
@@ -354,4 +338,4 @@ class CBStorageBucket extends Bucket {
 
 }
 
-module.exports = CBStorage;
+module.exports = CBStorageBucket;

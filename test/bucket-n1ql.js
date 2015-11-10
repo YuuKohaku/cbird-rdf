@@ -9,7 +9,7 @@ var Couchbird = require("Couchbird");
 var path = require("path");
 var _ = require("lodash");
 var ps = require("jsonld").promises;
-var RDFcb = require("../build").RDF;
+var RDFcb = require("../build").LD;
 
 var cfg = require("./config/config.json");
 

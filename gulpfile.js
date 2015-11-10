@@ -18,16 +18,17 @@ gulp.task("json", function () {
         .pipe(gulp.dest("build"));
 });
 
-gulp.task("ex", function () {
-    return gulp.src(["src/**/*.js"])
-        .pipe(babel({
-            blacklist: ['bluebirdCoroutines', 'regenerator']
-        }))
-        .pipe(gulp.dest("build"))
-        .on('end', function () {
-            require("./build/app");
-        });
-});
+gulp.task("dev", ['default'],
+    function () {
+        return gulp.src(["dev-util/**/*.js"])
+            .pipe(babel({
+                blacklist: ['bluebirdCoroutines', 'regenerator']
+            }))
+            .pipe(gulp.dest("build/dev-util"))
+            .on('end', function () {
+                require("./build/dev-util/app");
+            });
+    });
 
 
 gulp.task('compress', function () {
