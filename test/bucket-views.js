@@ -1,6 +1,6 @@
 'use strict'
 var chai = require('chai'),
-    expect = chai.expect;
+	expect = chai.expect;
 var chaiAsPromised = require("chai-as-promised");
 
 chai.use(chaiAsPromised);
@@ -20,152 +20,152 @@ var db = new RDFcb();
 var bucket = db.bucket(cfg.bucket);;
 var mgr = bucket.manager();
 
-describe('Views', function () {
-    var rabbit = {
-        "@id": "http://wonderland#whiterabbit",
-        "@type": ["http://wonderland#Rabbit"],
-        'http://wonderland#color': [{
-            "@id": "http://wonderland#white"
+describe('Views', function() {
+	var rabbit = {
+		"@id": "http://wonderland#whiterabbit",
+		"@type": ["http://wonderland#Rabbit"],
+		'http://wonderland#color': [{
+			"@id": "http://wonderland#white"
         }]
-    };
-    var mouse = {
-        "@id": "http://wonderland#sleepymouse",
-        "@type": ["http://wonderland#Mouse"],
-        'http://wonderland#name': [{
-            "@value": "Sonja"
+	};
+	var mouse = {
+		"@id": "http://wonderland#sleepymouse",
+		"@type": ["http://wonderland#Mouse"],
+		'http://wonderland#name': [{
+			"@value": "Sonja"
         }]
-    };
-    var rdfmouse = false;
-    before(function () {
-        return ps.toRDF(mouse).then(function (res) {
-            rdfmouse = res["@default"];
-        });
-    });
-    beforeEach(function () {
-        return bucket.upsertNodes([rabbit, mouse]);
-    });
-    describe('#installViews', function () {
-        it('should upsert default views', function (done) {
-            var p = bucket.installViews()
-                .then(function (res) {
-                    return mgr.getDesignDocuments();
-                })
-                .then(function (res) {
-                    for (var i in defviews) {
-                        if (!_.eq(res[i], defviews[i])) throw new Error("Incorrect value");
-                    }
-                    done();
-                })
-                .catch(function (err) {
-                    done(err);
-                });
-        });
-        it('should upsert views', function (done) {
-            var p = bucket.installViews(path.resolve(__dirname, "./config/views.json"))
-                .then(function (res) {
-                    return mgr.getDesignDocuments();
-                })
-                .then(function (res) {
-                    for (var i in testviews) {
-                        if (!_.eq(res[i], testviews[i])) throw new Error("Incorrect value");
-                    }
-                    done();
-                })
-                .catch(function (err) {
-                    done(err);
-                });
-        });
-    });
-    describe('#uninstallViews', function () {
-        it('should remove views', function (done) {
-            var p = bucket.uninstallViews(_.keys(testviews))
-                .then(function (res) {
-                    return mgr.getDesignDocuments();
-                })
-                .then(function (res) {
-                    for (var i in testviews) {
-                        if (res[i]) done(new Error("Incorrect value"));
-                    }
-                    done();
-                })
-                .catch(function (err) {
-                    done(err);
-                });
-        });
-    });
-    describe('#getDocBySubject', function () {
-        it('should get corresponding docs', function (done) {
-            var p = bucket.getDocBySubject(rabbit["@id"])
-                .then(function (res) {
-                    expect(res).to.have.property(rabbit["@id"]).which.is.eql(rabbit);
-                    done();
-                })
-                .catch(function (err) {
-                    done(err);
-                });
-        });
-    });
-    describe('#getDocByObject', function () {
-        it('should get corresponding docs', function (done) {
-            var p = bucket.getDocByObject("http://wonderland#white")
-                .then(function (res) {
-                    expect(res).to.have.property("http://wonderland#white").which.is.eql(rabbit);
-                    done();
-                })
-                .catch(function (err) {
-                    done(err);
-                });
-        });
-    });
-    describe('#getDocByPredicate', function () {
-        it('should get corresponding docs', function (done) {
-            var p = bucket.getDocByPredicate('http://wonderland#color')
-                .then(function (res) {
-                    expect(res).to.have.property('http://wonderland#color').which.is.eql(rabbit);
-                    done();
-                })
-                .catch(function (err) {
-                    done(err);
-                });
-        });
-    });
-    describe('#getStatementBySubject', function () {
-        it('should get corresponding docs', function (done) {
-            var p = bucket.getStatementBySubject([mouse["@id"], rabbit["@id"]])
-                .then(function (res) {
-                    expect(res).to.have.property(mouse["@id"]).which.deep.include.members(rdfmouse);
-                    done();
-                })
-                .catch(function (err) {
-                    done(err);
-                });
-        });
-    });
-    describe('#getStatementByPredicate', function () {
-        it('should get corresponding docs', function (done) {
-            var p = bucket.getStatementByPredicate('http://wonderland#name')
-                .then(function (res) {
-                    expect(res).to.have.deep.property("http://wonderland#name" + "[0]");
-                    expect(rdfmouse).to.deep.include(res['http://wonderland#name'][0]);
-                    done();
-                })
-                .catch(function (err) {
-                    done(err);
-                });
-        });
-    });
-    describe('#getStatementByObject', function () {
-        it('should get corresponding docs', function (done) {
-            var p = bucket.getStatementByObject('http://wonderland#Mouse')
-                .then(function (res) {
-                    expect(res).to.have.deep.property("http://wonderland#Mouse" + "[0]");
-                    expect(rdfmouse).to.deep.include(res['http://wonderland#Mouse'][0]);
-                    done();
-                })
-                .catch(function (err) {
-                    done(err);
-                });
-        });
-    });
+	};
+	var rdfmouse = false;
+	before(function() {
+		return ps.toRDF(mouse).then(function(res) {
+			rdfmouse = res["@default"];
+		});
+	});
+	beforeEach(function() {
+		return bucket.upsertNodes([rabbit, mouse]);
+	});
+	describe('#installViews', function() {
+		it('should upsert default views', function(done) {
+			var p = bucket.installViews()
+				.then(function(res) {
+					return mgr.getDesignDocuments();
+				})
+				.then(function(res) {
+					for (var i in defviews) {
+						if (!_.eq(res[i], defviews[i])) throw new Error("Incorrect value");
+					}
+					done();
+				})
+				.catch(function(err) {
+					done(err);
+				});
+		});
+		it('should upsert views', function(done) {
+			var p = bucket.installViews(path.resolve(__dirname, "./config/views.json"))
+				.then(function(res) {
+					return mgr.getDesignDocuments();
+				})
+				.then(function(res) {
+					for (var i in testviews) {
+						if (!_.eq(res[i], testviews[i])) throw new Error("Incorrect value");
+					}
+					done();
+				})
+				.catch(function(err) {
+					done(err);
+				});
+		});
+	});
+	describe('#uninstallViews', function() {
+		it('should remove views', function(done) {
+			var p = bucket.uninstallViews(_.keys(testviews))
+				.then(function(res) {
+					return mgr.getDesignDocuments();
+				})
+				.then(function(res) {
+					for (var i in testviews) {
+						if (res[i]) done(new Error("Incorrect value"));
+					}
+					done();
+				})
+				.catch(function(err) {
+					done(err);
+				});
+		});
+	});
+	describe('##View.bySubject', function() {
+		it('should get corresponding docs', function(done) {
+			var p = bucket.View.bySubject(rabbit["@id"])
+				.then(function(res) {
+					expect(res).to.have.property(rabbit["@id"]).which.is.eql(rabbit);
+					done();
+				})
+				.catch(function(err) {
+					done(err);
+				});
+		});
+	});
+	describe('##View.byObject', function() {
+		it('should get corresponding docs', function(done) {
+			var p = bucket.View.byObject("http://wonderland#white")
+				.then(function(res) {
+					expect(res).to.have.property("http://wonderland#white").which.is.eql(rabbit);
+					done();
+				})
+				.catch(function(err) {
+					done(err);
+				});
+		});
+	});
+	describe('##View.byPredicate', function() {
+		it('should get corresponding docs', function(done) {
+			var p = bucket.View.byPredicate('http://wonderland#color')
+				.then(function(res) {
+					expect(res).to.have.property('http://wonderland#color').which.is.eql(rabbit);
+					done();
+				})
+				.catch(function(err) {
+					done(err);
+				});
+		});
+	});
+	describe('##Statement.bySubject', function() {
+		it('should get corresponding docs', function(done) {
+			var p = bucket.Statement.bySubject([mouse["@id"], rabbit["@id"]])
+				.then(function(res) {
+					expect(res).to.have.property(mouse["@id"]).which.deep.include.members(rdfmouse);
+					done();
+				})
+				.catch(function(err) {
+					done(err);
+				});
+		});
+	});
+	describe('##Statement.byPredicate', function() {
+		it('should get corresponding docs', function(done) {
+			var p = bucket.Statement.byPredicate('http://wonderland#name')
+				.then(function(res) {
+					expect(res).to.have.deep.property("http://wonderland#name" + "[0]");
+					expect(rdfmouse).to.deep.include(res['http://wonderland#name'][0]);
+					done();
+				})
+				.catch(function(err) {
+					done(err);
+				});
+		});
+	});
+	describe('##Statement.byObject', function() {
+		it('should get corresponding docs', function(done) {
+			var p = bucket.Statement.byObject('http://wonderland#Mouse')
+				.then(function(res) {
+					expect(res).to.have.deep.property("http://wonderland#Mouse" + "[0]");
+					expect(rdfmouse).to.deep.include(res['http://wonderland#Mouse'][0]);
+					done();
+				})
+				.catch(function(err) {
+					done(err);
+				});
+		});
+	});
 
 });

@@ -17,342 +17,200 @@ var path = require("path");
 var Couchbird = require("Couchbird");
 var Bucket = Couchbird.Bucket;
 
+var locate_ifaces = function locate_ifaces(names) {
+	var result = {};
+	if (!_.isArray(names)) return result;
+	for (var i in names) {
+		var iface = null;
+		try {
+			iface = require("./Query/" + names[i]);
+			result[names[i]] = iface;
+		} catch (e) {
+			iface = null;
+		}
+	}
+	return result;
+};
+
 var CBStorageBucket = (function (_Bucket) {
-    _inherits(CBStorageBucket, _Bucket);
+	_inherits(CBStorageBucket, _Bucket);
 
-    function CBStorageBucket() {
-        _classCallCheck(this, CBStorageBucket);
+	function CBStorageBucket() {
+		_classCallCheck(this, CBStorageBucket);
 
-        _get(Object.getPrototypeOf(CBStorageBucket.prototype), "constructor", this).apply(this, arguments);
-    }
+		for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+			args[_key] = arguments[_key];
+		}
 
-    _createClass(CBStorageBucket, [{
-        key: "setVocabulary",
+		_get(Object.getPrototypeOf(CBStorageBucket.prototype), "constructor", this).apply(this, args);
+		this.assignQueryInterfaces(['View', 'Statement', 'N1ql']);
+	}
 
-        /////////////////////////////////vocabulary installation//////////////////////////
-        value: function setVocabulary(_ref) {
-            var _this = this;
+	/////////////////////////////////vocabulary installation//////////////////////////
 
-            var domain_voc = _ref.domain;
-            var basic_voc = _ref.basic;
-            var from_fs = _ref.fs;
+	_createClass(CBStorageBucket, [{
+		key: "setVocabulary",
+		value: function setVocabulary(_ref) {
+			var _this = this;
 
-            if (!domain_voc || !basic_voc) return Promise.reject(new Error("Insufficient vocabulary information."));
-            this.vocabulary = {
-                basic: null,
-                domain: null,
-                context: null
-            };
-            if (!from_fs) {
-                return Promise.props({
-                    domain: _get(Object.getPrototypeOf(CBStorageBucket.prototype), "get", this).call(this, domain_voc),
-                    basic: _get(Object.getPrototypeOf(CBStorageBucket.prototype), "get", this).call(this, basic_voc)
-                }).then(function (res) {
-                    _this.vocabulary.basic = res.basic.value;
-                    _this.vocabulary.domain = res.domain.value;
-                    _this.vocabulary.context = _.merge(res.basic.value["@context"], res.domain.value["@context"]);
-                    return Promise.resolve(_this);
-                });
-            } else {
-                return Promise.props({
-                    domain: fs.readFileAsync(domain_voc).then(JSON.parse),
-                    basic: fs.readFileAsync(basic_voc).then(JSON.parse)
-                }).then(function (res) {
-                    _this.vocabulary.basic = res.basic;
-                    _this.vocabulary.domain = res.domain;
-                    _this.vocabulary.context = _.merge(res.basic["@context"], res.domain["@context"]);
-                    return Promise.resolve(_this);
-                })["catch"](SyntaxError, function (e) {
-                    return Promise.reject(new Error("Invalid json in vocabulary files: ", e.message));
-                })["catch"](Promise.OperationalError, function (e) {
-                    return Promise.reject(new Error("Unable to read vocabulary file: ", e.message));
-                });
-            }
-        }
+			var domain_voc = _ref.domain;
+			var basic_voc = _ref.basic;
+			var from_fs = _ref.fs;
 
-        /////////////////////////Nodes operations//////////////////////////////
-        //nodes upsert
-    }, {
-        key: "upsertNodes",
-        value: function upsertNodes(triples) {
-            var _this2 = this;
+			if (!domain_voc || !basic_voc) return Promise.reject(new Error("Insufficient vocabulary information."));
+			this.vocabulary = {
+				basic: null,
+				domain: null,
+				context: null
+			};
+			if (!from_fs) {
+				return Promise.props({
+					domain: _get(Object.getPrototypeOf(CBStorageBucket.prototype), "get", this).call(this, domain_voc),
+					basic: _get(Object.getPrototypeOf(CBStorageBucket.prototype), "get", this).call(this, basic_voc)
+				}).then(function (res) {
+					_this.vocabulary.basic = res.basic.value;
+					_this.vocabulary.domain = res.domain.value;
+					_this.vocabulary.context = _.merge(res.basic.value["@context"], res.domain.value["@context"]);
+					return Promise.resolve(_this);
+				});
+			} else {
+				return Promise.props({
+					domain: fs.readFileAsync(domain_voc).then(JSON.parse),
+					basic: fs.readFileAsync(basic_voc).then(JSON.parse)
+				}).then(function (res) {
+					_this.vocabulary.basic = res.basic;
+					_this.vocabulary.domain = res.domain;
+					_this.vocabulary.context = _.merge(res.basic["@context"], res.domain["@context"]);
+					return Promise.resolve(_this);
+				})["catch"](SyntaxError, function (e) {
+					return Promise.reject(new Error("Invalid json in vocabulary files: ", e.message));
+				})["catch"](Promise.OperationalError, function (e) {
+					return Promise.reject(new Error("Unable to read vocabulary file: ", e.message));
+				});
+			}
+		}
 
-            var options = arguments.length <= 1 || arguments[1] === undefined ? {} : arguments[1];
+		///////////////////////////Query/////////////////////////////////////////
+	}, {
+		key: "assignQueryInterfaces",
+		value: function assignQueryInterfaces(names) {
+			var _this2 = this;
 
-            var promises = {};
-            return jsonld.promises.expand(triples).then(function (res) {
-                _.map(res, function (val) {
-                    promises[val["@id"]] = _this2.upsert(val["@id"], val, options);
-                });
-                return Promise.props(promises);
-            })["catch"](function (err) {
-                return Promise.reject(new Error("Unable to store data: ", err.message));
-            });
-        }
+			var result = locate_ifaces(names);
+			_.assign(this, result, function (cur, query_class) {
+				return new query_class(_this2);
+			});
+		}
 
-        //replaces existing nodes with given ones
-    }, {
-        key: "replaceNodes",
-        value: function replaceNodes(triples) {
-            var _this3 = this;
+		/////////////////////////Nodes operations//////////////////////////////
+		//nodes upsert
+	}, {
+		key: "upsertNodes",
+		value: function upsertNodes(triples) {
+			var _this3 = this;
 
-            var options = arguments.length <= 1 || arguments[1] === undefined ? {} : arguments[1];
+			var options = arguments.length <= 1 || arguments[1] === undefined ? {} : arguments[1];
 
-            var promises = {};
-            return jsonld.promises.expand(triples).then(function (res) {
-                _.map(res, function (val) {
-                    promises[val["@id"]] = _this3.replace(val["@id"], val, options)["catch"](function (err) {
-                        return Promise.resolve(false);
-                    });
-                });
-                return Promise.props(promises);
-            })["catch"](function (err) {
-                return Promise.reject(new Error("Unable to store data: ", err.message));
-            });
-        }
-    }, {
-        key: "getNodes",
-        value: function getNodes(subjects) {
-            var _this4 = this;
+			var promises = {};
+			return jsonld.promises.expand(triples).then(function (res) {
+				_.map(res, function (val) {
+					promises[val["@id"]] = _this3.upsert(val["@id"], val, options);
+				});
+				return Promise.props(promises);
+			})["catch"](function (err) {
+				return Promise.reject(new Error("Unable to store data: ", err.message));
+			});
+		}
 
-            var promises = {};
-            var keys = _.isArray(subjects) ? subjects : [subjects];
-            _.map(keys, function (key) {
-                promises[key] = _this4.get(key)["catch"](function (err) {
-                    return Promise.resolve(undefined);
-                });
-            });
-            return Promise.props(promises);
-        }
+		//replaces existing nodes with given ones
+	}, {
+		key: "replaceNodes",
+		value: function replaceNodes(triples) {
+			var _this4 = this;
 
-        //!! possibly this will make other docs invalid because of non-existent node
-    }, {
-        key: "removeNodes",
-        value: function removeNodes(subjects) {
-            var _this5 = this;
+			var options = arguments.length <= 1 || arguments[1] === undefined ? {} : arguments[1];
 
-            var keys = _.isArray(subjects) ? subjects : [subjects];
-            var promises = {};
-            _.map(keys, function (key) {
-                promises[key] = _this5.remove(key)["catch"](function (err) {
-                    return Promise.resolve(false);
-                });
-            });
-            return Promise.props(promises);
-        }
+			var promises = {};
+			return jsonld.promises.expand(triples).then(function (res) {
+				_.map(res, function (val) {
+					promises[val["@id"]] = _this4.replace(val["@id"], val, options)["catch"](function (err) {
+						return Promise.resolve(false);
+					});
+				});
+				return Promise.props(promises);
+			})["catch"](function (err) {
+				return Promise.reject(new Error("Unable to store data: ", err.message));
+			});
+		}
+	}, {
+		key: "getNodes",
+		value: function getNodes(subjects) {
+			var _this5 = this;
 
-        /////////////////////Views functions////////////////////////
-        //Views installation
-        //default-views.json by default
-    }, {
-        key: "installViews",
-        value: function installViews(filename) {
-            var mgr = this.manager();
-            var fname = _.isString(filename) ? filename : path.resolve(__dirname, "default/views.json");
+			var promises = {};
+			var keys = _.isArray(subjects) ? subjects : [subjects];
+			_.map(keys, function (key) {
+				promises[key] = _this5.get(key)["catch"](function (err) {
+					return Promise.resolve(undefined);
+				});
+			});
+			return Promise.props(promises);
+		}
 
-            return fs.readFileAsync(fname).then(function (res) {
-                var doc = JSON.parse(res);
-                var promises = [];
-                for (var i in doc) {
-                    promises.push(mgr.upsertDesignDocument(i, doc[i]));
-                }
-                return Promise.all(promises);
-            })["catch"](function (err) {
-                return Promise.reject(new Error("Unable to install views from ", fname));
-            });
-        }
-    }, {
-        key: "uninstallViews",
-        value: function uninstallViews(names) {
-            var mgr = this.manager();
-            var keys = _.isArray(names) ? names : [names];
-            var promises = [];
+		//!! possibly this will make other docs invalid because of non-existent node
+	}, {
+		key: "removeNodes",
+		value: function removeNodes(subjects) {
+			var _this6 = this;
 
-            for (var i in keys) {
-                promises.push(mgr.removeDesignDocument(keys[i]));
-            }
-            return Promise.all(promises)["catch"](function (err) {
-                return Promise.reject(new Error("Unable to uninstall views  ", names));
-            });
-        }
+			var keys = _.isArray(subjects) ? subjects : [subjects];
+			var promises = {};
+			_.map(keys, function (key) {
+				promises[key] = _this6.remove(key)["catch"](function (err) {
+					return Promise.resolve(false);
+				});
+			});
+			return Promise.props(promises);
+		}
 
-        //Doc query section
-        //leaving these functions non-unified in case of need for different processing
+		/////////////////////Views functions///////////////////////////
+		//Views installation
+		//default-views.json by default
 
-    }, {
-        key: "getDocBySubject",
-        value: function getDocBySubject(subject) {
-            var keys = _.isArray(subject) ? subject : [subject];
-            var query = Couchbird.ViewQuery.from("rdf", "subject").keys(keys).custom({
-                inclusive_end: true
-            }).include_docs(true);
-            return this.view(query).then(function (res) {
-                return _.reduce(res, function (acc, val) {
-                    acc[val.key] = val.doc;
-                    return acc;
-                }, {});
-            });
-        }
-    }, {
-        key: "getDocByPredicate",
-        value: function getDocByPredicate(subject) {
-            var keys = _.isArray(subject) ? subject : [subject];
-            var query = Couchbird.ViewQuery.from("rdf", "predicate").keys(keys).custom({
-                inclusive_end: true
-            }).include_docs(true);
-            return this.view(query).then(function (res) {
-                return _.reduce(res, function (acc, val) {
-                    acc[val.key] = val.doc;
-                    return acc;
-                }, {});
-            });
-        }
-    }, {
-        key: "getDocByObject",
-        value: function getDocByObject(subject) {
-            var keys = _.isArray(subject) ? subject : [subject];
-            var query = Couchbird.ViewQuery.from("rdf", "object").keys(keys).custom({
-                inclusive_end: true
-            }).include_docs(true);
-            return this.view(query).then(function (res) {
-                return _.reduce(res, function (acc, val) {
-                    acc[val.key] = val.doc;
-                    return acc;
-                }, {});
-            });
-        }
+	}, {
+		key: "installViews",
+		value: function installViews(filename) {
+			var mgr = this.manager();
+			var fname = _.isString(filename) ? filename : path.resolve(__dirname, "default/views.json");
 
-        //Statement query section
-    }, {
-        key: "getStatementBySubject",
-        value: function getStatementBySubject(subject) {
-            var keys = _.isArray(subject) ? subject : [subject];
-            var query = Couchbird.ViewQuery.from("rdf", "jsonld-subject").keys(keys).custom({
-                inclusive_end: true
-            }).reduce(true).group(true);
-            return this.view(query).then(function (res) {
-                return _.reduce(res, function (acc, val) {
-                    acc[val.key] = val.value;
-                    return acc;
-                }, {});
-            });
-        }
-    }, {
-        key: "getStatementByPredicate",
-        value: function getStatementByPredicate(subject) {
-            var keys = _.isArray(subject) ? subject : [subject];
-            var query = Couchbird.ViewQuery.from("rdf", "jsonld-predicate").keys(keys).custom({
-                inclusive_end: true
-            }).reduce(true).group(true);
-            return this.view(query).then(function (res) {
-                return _.reduce(res, function (acc, val) {
-                    acc[val.key] = val.value;
-                    return acc;
-                }, {});
-            });
-        }
-    }, {
-        key: "getStatementByObject",
-        value: function getStatementByObject(subject) {
-            var keys = _.isArray(subject) ? subject : [subject];
-            var query = Couchbird.ViewQuery.from("rdf", "jsonld-object").keys(keys).custom({
-                inclusive_end: true
-            }).reduce(true).group(true);
-            return this.view(query).then(function (res) {
-                return _.reduce(res, function (acc, val) {
-                    acc[val.key] = val.value;
-                    return acc;
-                }, {});
-            });
-        }
+			return fs.readFileAsync(fname).then(function (res) {
+				var doc = JSON.parse(res);
+				var promises = [];
+				for (var i in doc) {
+					promises.push(mgr.upsertDesignDocument(i, doc[i]));
+				}
+				return Promise.all(promises);
+			})["catch"](function (err) {
+				return Promise.reject(new Error("Unable to install views from ", fname));
+			});
+		}
+	}, {
+		key: "uninstallViews",
+		value: function uninstallViews(names) {
+			var mgr = this.manager();
+			var keys = _.isArray(names) ? names : [names];
+			var promises = [];
 
-        //N1QL
-        //expand with querybytriple with ?s ?p ?o
-    }, {
-        key: "queryByTriple",
-        value: function queryByTriple(_ref2) {
-            var s = _ref2.subject;
-            var p = _ref2.predicate;
-            var o = _ref2.object;
+			for (var i in keys) {
+				promises.push(mgr.removeDesignDocument(keys[i]));
+			}
+			return Promise.all(promises)["catch"](function (err) {
+				return Promise.reject(new Error("Unable to uninstall views  ", names));
+			});
+		}
+	}]);
 
-            if (!s && !p && !o) {
-                return Promise.resolve([]);
-            }
-            if (s && !_.isString(s) || p && !_.isString(p) || o && !_.isString(o)) {
-                return Promise.reject(new Error("All passed values must be strings."));
-            }
-
-            var qstr = "SELECT * FROM `" + this.bucket_name + "` AS doc ";
-            var params = [];
-            if (s && !p && !o) {
-                qstr += "USE KEYS $1";
-                params = [[s]];
-            }
-            if (!s && p && !o) {
-                //until they fix this bug with forward-slash escaping
-                qstr += "WHERE $1 IN object_names(doc);";
-                params = [p];
-            }
-            if (!s && !p && o) {
-                qstr += "WHERE $1 WITHIN doc;";
-                params = [o];
-            }
-            if (s && p && !o) {
-                //until they fix this bug with forward-slash escaping
-                qstr += "USE KEYS $1 WHERE $2 IN object_names(doc);";
-                params = [[s], p];
-            }
-            if (s && !p && o) {
-                qstr += "USE KEYS $1 WHERE $2 WITHIN doc;";
-                params = [[s], o];
-            }
-            if (!s && p && o) {
-                //INJECTION WARNING! Need to correct this later.
-                qstr += "WHERE $1 WITHIN doc.`" + p + "`;";
-                params = [o];
-            }
-            if (s && p && o) {
-                //INJECTION WARNING! Need to correct this later.
-                qstr += "USE KEYS $1 WHERE $2 WITHIN doc.`" + p + "`;";
-                params = [[s], o];
-            }
-            var query = Couchbird.N1qlQuery.fromString(qstr);
-            return this.N1QL(query, params).then(function (res) {
-                return _.map(res, function (val) {
-                    return val.doc;
-                });
-            });
-        }
-    }, {
-        key: "queryBySubject",
-        value: function queryBySubject(val) {
-            return this.queryByTriple({
-                subject: val,
-                predicate: false,
-                object: false
-            });
-        }
-    }, {
-        key: "queryByPredicate",
-        value: function queryByPredicate(val) {
-            return this.queryByTriple({
-                subject: false,
-                predicate: val,
-                object: false
-            });
-        }
-    }, {
-        key: "queryByObject",
-        value: function queryByObject(val) {
-            return this.queryByTriple({
-                subject: false,
-                predicate: false,
-                object: val
-            });
-        }
-    }]);
-
-    return CBStorageBucket;
+	return CBStorageBucket;
 })(Bucket);
 
 module.exports = CBStorageBucket;
