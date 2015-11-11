@@ -10,7 +10,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 var _ = require("lodash");
 var Promise = require("bluebird");
-var jsonld = require("jsonld");
+var jsonld = require("jsonld").promises;
 var fs = Promise.promisifyAll(require("fs"));
 var path = require("path");
 
@@ -102,7 +102,7 @@ var CBStorageBucket = (function (_Bucket) {
 			});
 		}
 
-		/////////////////////////Nodes operations//////////////////////////////
+		/////////////////////////mass nodes operations//////////////////////////////
 		//nodes upsert
 	}, {
 		key: "upsertNodes",
@@ -112,7 +112,7 @@ var CBStorageBucket = (function (_Bucket) {
 			var options = arguments.length <= 1 || arguments[1] === undefined ? {} : arguments[1];
 
 			var promises = {};
-			return jsonld.promises.expand(triples).then(function (res) {
+			return jsonld.expand(triples).then(function (res) {
 				_.map(res, function (val) {
 					promises[val["@id"]] = _this3.upsert(val["@id"], val, options);
 				});
@@ -131,7 +131,7 @@ var CBStorageBucket = (function (_Bucket) {
 			var options = arguments.length <= 1 || arguments[1] === undefined ? {} : arguments[1];
 
 			var promises = {};
-			return jsonld.promises.expand(triples).then(function (res) {
+			return jsonld.expand(triples).then(function (res) {
 				_.map(res, function (val) {
 					promises[val["@id"]] = _this4.replace(val["@id"], val, options)["catch"](function (err) {
 						return Promise.resolve(false);

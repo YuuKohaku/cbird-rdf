@@ -8,22 +8,22 @@ var Bucket = require('./Bucket');
 var Couchbird = require("Couchbird");
 
 var CBStorage = (function () {
-    function CBStorage(config, reinit) {
-        _classCallCheck(this, CBStorage);
+	function CBStorage(config, reinit) {
+		_classCallCheck(this, CBStorage);
 
-        this.couchbird = Couchbird(config, reinit);
-        return this;
-    }
+		this.couchbird = Couchbird(config, reinit);
+		return this;
+	}
 
-    _createClass(CBStorage, [{
-        key: 'bucket',
-        value: function bucket(bname) {
-            if (!this.couchbird) throw new Error("Database is not connected");
-            return this.couchbird.bucket(bname, Bucket);
-        }
-    }]);
+	_createClass(CBStorage, [{
+		key: 'bucket',
+		value: function bucket(bname) {
+			if (!this.couchbird) throw new Error("Database is not connected");
+			return this.couchbird.bucket(bname, Bucket);
+		}
+	}]);
 
-    return CBStorage;
+	return CBStorage;
 })();
 
 module.exports = CBStorage;

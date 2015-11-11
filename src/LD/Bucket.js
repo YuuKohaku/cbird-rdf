@@ -1,7 +1,7 @@
 'use strict'
 let _ = require("lodash");
 let Promise = require("bluebird");
-let jsonld = require("jsonld");
+let jsonld = require("jsonld").promises;
 let fs = Promise.promisifyAll(require("fs"));
 let path = require("path");
 
@@ -23,6 +23,7 @@ let locate_ifaces = function(names) {
 	}
 	return result;
 }
+
 class CBStorageBucket extends Bucket {
 	constructor(...args) {
 		super(...args);
@@ -76,16 +77,17 @@ class CBStorageBucket extends Bucket {
 		}
 		///////////////////////////Query/////////////////////////////////////////
 	assignQueryInterfaces(names) {
-			let result = locate_ifaces(names);
-			_.assign(this, result, (cur, query_class) => {
-				return new query_class(this);
-			});
-		}
-		/////////////////////////Nodes operations//////////////////////////////
-		//nodes upsert
+		let result = locate_ifaces(names);
+		_.assign(this, result, (cur, query_class) => {
+			return new query_class(this);
+		});
+	}
+
+	/////////////////////////mass nodes operations//////////////////////////////
+	//nodes upsert
 	upsertNodes(triples, options = {}) {
 		let promises = {};
-		return jsonld.promises.expand(triples)
+		return jsonld.expand(triples)
 			.then((res) => {
 				_.map(res, (val) => {
 					promises[val["@id"]] =
@@ -101,7 +103,7 @@ class CBStorageBucket extends Bucket {
 	//replaces existing nodes with given ones
 	replaceNodes(triples, options = {}) {
 		let promises = {};
-		return jsonld.promises.expand(triples)
+		return jsonld.expand(triples)
 			.then((res) => {
 				_.map(res, (val) => {
 					promises[val["@id"]] =
