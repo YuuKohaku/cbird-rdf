@@ -18,34 +18,40 @@ let setviews = require("./utils/set-views");
 let jld = require("./utils/jsonld");
 
 //expand("./test/data.json");
-//getviews(Couchbird, "./examples/output/out.json");
+getviews(Couchbird, "./dev-util/output/out.json");
 //setviews(Couchbird, "./examples/output/out.json");
-
 
 //jld.toRDF(extriples[6], function (err, res) {
 //    console.log(res["@default"])
 //})
 
-let base = "iris://data#plan";
-let cb = new RDFcb({
-	server_ip: "127.0.0.1",
-	n1ql: "127.0.0.1:8093"
-});
-let bucket = cb.bucket("rdf");
-let nodes = {};
-
-for (var i = 0; i < 1000; i++) {
-	let node = {
-		"@id": undefined,
-		"@type": "iris://vocabulary/domain#Plan",
-		"iris://vocabulary/domain#hasPlanDescription": JSON.stringify([[10, 20], [30, 50]])
-	};
-	nodes[base + i] = _.assign(_.cloneDeep(node), {
-		"@id": base + i
-	});
-}
-
-bucket.upsertNodes(_.values(nodes))
-	.then((res) => {
-		console.log(res);
-	})
+// let cb = new RDFcb({
+// 	server_ip: "127.0.0.1",
+// 	n1ql: "127.0.0.1:8093"
+// });
+//
+// let bucket = cb.bucket("rdf");
+//
+// let base = "iris://data#plan";
+//
+// let nodes = {};
+//
+// for(var i = 0; i < 1000; i++) {
+// 	let node = {
+// 		"@id": undefined,
+// 		"@type": "iris://vocabulary/domain#Plan",
+// 		"iris://vocabulary/domain#hasPlanDescription": JSON.stringify([
+// 			[10, 20],
+// 			[30, 50]
+// 		])
+// 	};
+// 	nodes[base + i] = _.assign(_.cloneDeep(node), {
+// 		"@id": base + i
+// 	});
+// }
+//
+// bucket.upsertNodes(_.values(nodes)).then((res) => {}).then((res) => {
+// 	return bucket.removeNodes(_.keys(nodes));
+// }).then((res) => {
+// 	console.log(res);
+// })

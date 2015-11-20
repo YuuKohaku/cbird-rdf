@@ -11,6 +11,15 @@ function _inherits(subClass, superClass) { if (typeof superClass !== 'function' 
 var _ = require('lodash');
 var Abstract = require('./Abstract');
 var ViewQuery = require("Couchbird").ViewQuery;
+var Promise = require("bluebird");
+
+function invertCharCase(ch) {
+	var tmp = ch.toUpperCase();
+	if (tmp === ch) {
+		return ch.toLowerCase();
+	}
+	return tmp;
+}
 
 var JsonLDViewQuery = (function (_Abstract) {
 	_inherits(JsonLDViewQuery, _Abstract);
@@ -64,6 +73,84 @@ var JsonLDViewQuery = (function (_Abstract) {
 					acc[val.key] = val.value;
 					return acc;
 				}, {});
+			});
+		}
+	}, {
+		key: 'byTriple',
+		value: function byTriple(_ref) {
+			var _ref$subject = _ref.subject;
+			var s = _ref$subject === undefined ? null : _ref$subject;
+			var _ref$predicate = _ref.predicate;
+			var p = _ref$predicate === undefined ? null : _ref$predicate;
+			var _ref$object = _ref.object;
+			var o = _ref$object === undefined ? null : _ref$object;
+
+			if (s && !_.isString(s) || p && !_.isString(p) || o && !_.isString(o)) {
+				return Promise.reject(new Error("All passed values must be strings."));
+			}
+
+			if (!s && !p && !o) {
+				return Promise.resolve([]);
+			}
+
+			if (s && !p && o) {
+				return this.bySubject(s).then(function (res) {
+					var data = _.filter(res[s], function (val) {
+						return _.eq(val.object.value, o);
+					});
+					return Promise.resolve(data);
+				});
+			}
+			if (!s && p && !o) {
+				return this.byPredicate(p).then(function (res) {
+					return Promise.resolve(res[p]);
+				});
+			}
+			if (!s && p && o) {
+				return this.byPredicate(p).then(function (res) {
+					var data = _.filter(res[p], function (val) {
+						return _.eq(val.object.value, o);
+					});
+					return Promise.resolve(data);
+				});
+			}
+			if (!s && !p && o) {
+				return this.byObject(o).then(function (res) {
+					return Promise.resolve(res[o]);
+				});
+			}
+			if (s && !p && !o) {
+				return this.bySubject(s).then(function (res) {
+					return Promise.resolve(res[s]);
+				});
+			}
+
+			var query = ViewQuery.from(this._db.bucket_name, "jsonld").reduce(true).custom({
+				inclusive_end: true
+			});
+			var end = null;
+			var endkey = "";
+
+			if (s && p && !o) {
+				// couchbase magic
+				end = p.charCodeAt(p.length - 1);
+				end++;
+				endkey = p.slice(0, p.length - 1) + invertCharCase(String.fromCharCode(end));
+
+				query.group_level(2).range([s, p], [s, endkey], true);
+			}
+			if (s && p && o) {
+				// couchbase magic
+				end = o.charCodeAt(o.length - 1);
+				end++;
+				endkey = o.slice(0, o.length - 1) + invertCharCase(String.fromCharCode(end));
+
+				query.group_level(3).range([s, p, o], [s, p, o], true);
+			}
+			return this._db.view(query).then(function (res) {
+				return _.flatten(_.map(res, function (val) {
+					return val.value;
+				}));
 			});
 		}
 	}]);

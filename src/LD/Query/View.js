@@ -56,6 +56,13 @@ class LDViewQuery extends Abstract {
 			});
 	}
 
+	byTriple({
+		subject: subject = null,
+		predicate: predicate = null,
+		object: object = null
+	}) {
+		//@TODO
+	}
 }
 
 module.exports = LDViewQuery;

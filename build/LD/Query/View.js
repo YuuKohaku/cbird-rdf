@@ -63,9 +63,21 @@ var LDViewQuery = (function (_Abstract) {
 				}, {});
 			});
 		}
+	}, {
+		key: 'byTriple',
+		value: function byTriple(_ref) {
+			var _ref$subject = _ref.subject;
+			var subject = _ref$subject === undefined ? null : _ref$subject;
+			var _ref$predicate = _ref.predicate;
+			var predicate = _ref$predicate === undefined ? null : _ref$predicate;
+			var _ref$object = _ref.object;
+			var object = _ref$object === undefined ? null : _ref$object;
+		}
 	}]);
 
 	return LDViewQuery;
 })(Abstract);
+
+//@TODO
 
 module.exports = LDViewQuery;

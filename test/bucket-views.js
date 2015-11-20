@@ -26,14 +26,14 @@ describe('Views', function() {
 		"@type": ["http://wonderland#Rabbit"],
 		'http://wonderland#color': [{
 			"@id": "http://wonderland#white"
-        }]
+		}]
 	};
 	var mouse = {
 		"@id": "http://wonderland#sleepymouse",
 		"@type": ["http://wonderland#Mouse"],
 		'http://wonderland#name': [{
 			"@value": "Sonja"
-        }]
+		}]
 	};
 	var rdfmouse = false;
 	before(function() {
@@ -51,8 +51,8 @@ describe('Views', function() {
 					return mgr.getDesignDocuments();
 				})
 				.then(function(res) {
-					for (var i in defviews) {
-						if (!_.eq(res[i], defviews[i])) throw new Error("Incorrect value");
+					for(var i in defviews) {
+						if(!_.eq(res[i], defviews[i])) throw new Error("Incorrect value");
 					}
 					done();
 				})
@@ -66,8 +66,8 @@ describe('Views', function() {
 					return mgr.getDesignDocuments();
 				})
 				.then(function(res) {
-					for (var i in testviews) {
-						if (!_.eq(res[i], testviews[i])) throw new Error("Incorrect value");
+					for(var i in testviews) {
+						if(!_.eq(res[i], testviews[i])) throw new Error("Incorrect value");
 					}
 					done();
 				})
@@ -83,8 +83,8 @@ describe('Views', function() {
 					return mgr.getDesignDocuments();
 				})
 				.then(function(res) {
-					for (var i in testviews) {
-						if (res[i]) done(new Error("Incorrect value"));
+					for(var i in testviews) {
+						if(res[i]) done(new Error("Incorrect value"));
 					}
 					done();
 				})
@@ -167,5 +167,149 @@ describe('Views', function() {
 				});
 		});
 	});
-
+	describe('##Statement.byTriple {?s ?p ?o})', function() {
+		it('should return an empty array', function(done) {
+			var p = bucket.Statement.byTriple({})
+				.then(function(res) {
+					expect(res).to.be.instanceof(Array).and.to.be.empty;
+					done();
+				})
+				.catch(function(err) {
+					done(err);
+				});
+		});
+	});
+	describe('##Statement.byTriple {s ?p ?o})', function() {
+		it('should get corresponding docs', function(done) {
+			var p = bucket.Statement.byTriple({
+					subject: mouse["@id"]
+				})
+				.then(function(res) {
+					expect(res).to.be.not.empty;
+					expect(res).to.deep.include.members(rdfmouse);
+					done();
+				})
+				.catch(function(err) {
+					done(err);
+				});
+		});
+	});
+	describe('##Statement.byTriple {?s p ?o})', function() {
+		it('should get corresponding docs', function(done) {
+			var p = bucket.Statement.byTriple({
+					predicate: 'http://wonderland#name'
+				})
+				.then(function(res) {
+					expect(res).to.be.not.empty;
+					expect(rdfmouse).to.deep.include.members(res);
+					for(var i in res) {
+						expect(res[i].predicate.value).to.equal('http://wonderland#name');
+					}
+					done();
+				})
+				.catch(function(err) {
+					done(err);
+				});
+		});
+	});
+	describe('##Statement.byTriple {?s ?p o})', function() {
+		it('should get corresponding docs', function(done) {
+			var p = bucket.Statement.byTriple({
+					object: 'http://wonderland#Mouse'
+				})
+				.then(function(res) {
+					expect(res).to.be.not.empty;
+					expect(rdfmouse).to.deep.include.members(res);
+					for(var i in res) {
+						expect(res[i].object.value).to.equal('http://wonderland#Mouse');
+					}
+					done();
+				})
+				.catch(function(err) {
+					done(err);
+				});
+		});
+	});
+	describe('##Statement.byTriple {s ?p o})', function() {
+		it('should get corresponding docs', function(done) {
+			var p = bucket.Statement.byTriple({
+					subject: mouse["@id"],
+					object: 'http://wonderland#Mouse'
+				})
+				.then(function(res) {
+					expect(res).to.be.not.empty;
+					expect(rdfmouse).to.deep.include.members(res);
+					for(var i in res) {
+						expect(res[i].subject.value).to.equal(mouse["@id"]);
+						expect(res[i].object.value).to.equal('http://wonderland#Mouse');
+					}
+					done();
+				})
+				.catch(function(err) {
+					done(err);
+				});
+		});
+	});
+	describe('##Statement.byTriple {?s p o})', function() {
+		it('should get corresponding docs', function(done) {
+			var p = bucket.Statement.byTriple({
+					predicate: 'http://wonderland#name',
+					object: 'Sonja'
+				})
+				.then(function(res) {
+					expect(res).to.be.not.empty;
+					expect(rdfmouse).to.deep.include.members(res);
+					for(var i in res) {
+						expect(res[i].predicate.value).to.equal('http://wonderland#name');
+						expect(res[i].object.value).to.equal('Sonja');
+					}
+					done();
+				})
+				.catch(function(err) {
+					done(err);
+				});
+		});
+	});
+	describe('##Statement.byTriple {s p ?o})', function() {
+		it('should get corresponding docs', function(done) {
+			var p = bucket.Statement.byTriple({
+					subject: mouse["@id"],
+					predicate: 'http://wonderland#name'
+				})
+				.then(function(res) {
+					expect(res).to.be.not.empty;
+					expect(rdfmouse).to.deep.include.members(res);
+					for(var i in res) {
+						expect(res[i].predicate.value).to.equal('http://wonderland#name');
+						expect(res[i].subject.value).to.equal(mouse["@id"]);
+					}
+					done();
+				})
+				.catch(function(err) {
+					done(err);
+				});
+		});
+	});
+	describe('##Statement.byTriple {s p o})', function() {
+		it('should get corresponding docs', function(done) {
+			var p = bucket.Statement.byTriple({
+					subject: mouse["@id"],
+					predicate: 'http://wonderland#name',
+					object: 'Sonja'
+				})
+				.then(function(res) {
+					expect(res).to.be.not.empty;
+					expect(rdfmouse).to.deep.include.members(res);
+					for(var i in res) {
+						expect(res[i].object.value).to.equal('Sonja');
+						expect(res[i].predicate.value).to.equal('http://wonderland#name');
+						expect(res[i].subject.value).to.equal(mouse["@id"]);
+					}
+					done();
+				})
+				.catch(function(err) {
+					done(err);
+				});
+		});
+	});
 });

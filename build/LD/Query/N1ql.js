@@ -27,34 +27,37 @@ var N1qlLDQuery = (function (_Abstract) {
 		value: function bySubject(val) {
 			return this.byTriple({
 				subject: val,
-				predicate: false,
-				object: false
+				predicate: null,
+				object: null
 			});
 		}
 	}, {
 		key: 'byPredicate',
 		value: function byPredicate(val) {
 			return this.byTriple({
-				subject: false,
+				subject: null,
 				predicate: val,
-				object: false
+				object: null
 			});
 		}
 	}, {
 		key: 'byObject',
 		value: function byObject(val) {
 			return this.byTriple({
-				subject: false,
-				predicate: false,
+				subject: null,
+				predicate: null,
 				object: val
 			});
 		}
 	}, {
 		key: 'byTriple',
 		value: function byTriple(_ref) {
-			var s = _ref.subject;
-			var p = _ref.predicate;
-			var o = _ref.object;
+			var _ref$subject = _ref.subject;
+			var s = _ref$subject === undefined ? null : _ref$subject;
+			var _ref$predicate = _ref.predicate;
+			var p = _ref$predicate === undefined ? null : _ref$predicate;
+			var _ref$object = _ref.object;
+			var o = _ref$object === undefined ? null : _ref$object;
 
 			if (!s && !p && !o) {
 				return Promise.resolve([]);
