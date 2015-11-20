@@ -27,7 +27,7 @@ class JsonLDViewQuery extends Abstract {
 		return this._db.view(query)
 			.then((res) => {
 				return _.reduce(res, (acc, val) => {
-					acc[val.key] = val.value;
+					acc[val.key] = _.flatten(val.value);
 					return acc;
 				}, {});
 			});
@@ -46,7 +46,7 @@ class JsonLDViewQuery extends Abstract {
 		return this._db.view(query)
 			.then((res) => {
 				return _.reduce(res, (acc, val) => {
-					acc[val.key] = val.value;
+					acc[val.key] = _.flatten(val.value);
 					return acc;
 				}, {});
 			});
@@ -65,7 +65,7 @@ class JsonLDViewQuery extends Abstract {
 		return this._db.view(query)
 			.then((res) => {
 				return _.reduce(res, (acc, val) => {
-					acc[val.key] = val.value;
+					acc[val.key] = _.flatten(val.value);
 					return acc;
 				}, {});
 			});

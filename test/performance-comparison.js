@@ -42,7 +42,7 @@ describe('Performance comparison', function() {
 	});
 
 	after(function() {
-		return Promise.all([bucket.removeNodes(_.keys(nodes)), bucket.remove(base)]);
+		// return Promise.all([bucket.removeNodes(_.keys(nodes)), bucket.remove(base)]);
 	});
 	describe('Get single-doc plans', function() {
 		it('should get plans doc', function(done) {
@@ -68,14 +68,20 @@ describe('Performance comparison', function() {
 					done(err);
 				});
 		});
-		// it('should get plan docs by View', function(done) {
-		// 	bucket.View.
-		// 		.then(function(res) {
-		// 			done();
-		// 		})
-		// 		.catch(function(err) {
-		// 			done(err);
-		// 		});
-		// });
+		it('should get plan docs by LDStatement View', function(done) {
+			bucket.Statement.byTriple({
+					predicate: 'http://www.w3.org/1999/02/22-rdf-syntax-ns#type',
+					object: "iris://vocabulary/domain#Plan"
+				})
+				.then(function(res) {
+					return bucket.getNodes(_.pluck(res, 'subject.value'));
+				})
+				.then(function(res) {
+					done();
+				})
+				.catch(function(err) {
+					done(err);
+				});
+		});
 	});
 });

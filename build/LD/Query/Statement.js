@@ -40,7 +40,7 @@ var JsonLDViewQuery = (function (_Abstract) {
 
 			return this._db.view(query).then(function (res) {
 				return _.reduce(res, function (acc, val) {
-					acc[val.key] = val.value;
+					acc[val.key] = _.flatten(val.value);
 					return acc;
 				}, {});
 			});
@@ -55,7 +55,7 @@ var JsonLDViewQuery = (function (_Abstract) {
 
 			return this._db.view(query).then(function (res) {
 				return _.reduce(res, function (acc, val) {
-					acc[val.key] = val.value;
+					acc[val.key] = _.flatten(val.value);
 					return acc;
 				}, {});
 			});
@@ -70,7 +70,7 @@ var JsonLDViewQuery = (function (_Abstract) {
 
 			return this._db.view(query).then(function (res) {
 				return _.reduce(res, function (acc, val) {
-					acc[val.key] = val.value;
+					acc[val.key] = _.flatten(val.value);
 					return acc;
 				}, {});
 			});
