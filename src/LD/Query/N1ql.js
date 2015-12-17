@@ -31,6 +31,7 @@ class N1qlLDQuery extends Abstract {
 	}
 
 	byTriple({
+		select: prop = null,
 		subject: s = null,
 		predicate: p = null,
 		object: o = null
@@ -41,8 +42,9 @@ class N1qlLDQuery extends Abstract {
 		if(s && !_.isString(s) || p && !_.isString(p) || o && !_.isString(o)) {
 			return Promise.reject(new Error("All passed values must be strings."));
 		}
+		let sel = prop || "*";
 
-		let qstr = "SELECT * FROM `" + this._db.bucket_name + "` AS doc ";
+		let qstr = "SELECT `" + sel + "` FROM `" + this._db.bucket_name + "` AS doc ";
 		let params = [];
 		if(s && !p && !o) {
 			qstr += "USE KEYS $1";
