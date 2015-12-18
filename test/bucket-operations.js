@@ -68,6 +68,34 @@ describe('Operations', function () {
                 });
         });
     });
+    describe('#insertNodes', function () {
+        it('should insert data', function (done) {
+            var p = bucket.remove(rabbit["@id"])
+                .then(function (res) {
+                    return bucket.insertNodes(rabbit);
+                })
+                .then(function (res) {
+                    return bucket.get(rabbit["@id"]);
+                })
+                .then(function (res) {
+                    expect(res.value).to.be.eql(rabbit);
+                    done();
+                })
+                .catch(function (err) {
+                    done(err);
+                });
+        });
+        it('should return false on existing data', function (done) {
+            var p = bucket.insertNodes(rabbit)
+                .then(function (res) {
+                    expect(res[rabbit["@id"]]).to.be.false;
+                    done();
+                })
+                .catch(function (err) {
+                    done(err);
+                });
+        });
+    });
     describe('#getNodes', function () {
         it('should get data', function (done) {
             var p = bucket.getNodes(rabbit["@id"])
@@ -82,7 +110,7 @@ describe('Operations', function () {
         it('should return undefined on non-existent', function (done) {
             var p = bucket.getNodes(nonex["@id"])
                 .then(function (res) {
-                    expect(res[0]).to.be.undefined;
+                    expect(res[nonex["@id"]]).to.be.undefined;
                     done();
                 })
                 .catch(function (err) {
@@ -97,12 +125,11 @@ describe('Operations', function () {
                     return bucket.get(rabbit["@id"]);
                 })
                 .then(function (res) {
-                    done(new Error("Incorrect behaviour"));
+                    expect(res).to.be.undefined;
+                    done();
                 })
                 .catch(function (err) {
-                    if (!/The key does not exist on the server/.test(err.message))
-                        done(new Error("Incorrect behaviour: ", err.message));
-                    done();
+                    done(err);
                 });
         });
         it('should return false on non-existent', function (done) {
