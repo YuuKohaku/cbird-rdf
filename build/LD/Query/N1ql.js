@@ -52,6 +52,8 @@ var N1qlLDQuery = (function (_Abstract) {
 	}, {
 		key: 'byTriple',
 		value: function byTriple(_ref) {
+			var _ref$select = _ref.select;
+			var prop = _ref$select === undefined ? null : _ref$select;
 			var _ref$subject = _ref.subject;
 			var s = _ref$subject === undefined ? null : _ref$subject;
 			var _ref$predicate = _ref.predicate;
@@ -65,8 +67,9 @@ var N1qlLDQuery = (function (_Abstract) {
 			if (s && !_.isString(s) || p && !_.isString(p) || o && !_.isString(o)) {
 				return Promise.reject(new Error("All passed values must be strings."));
 			}
+			var sel = prop || "*";
 
-			var qstr = "SELECT * FROM `" + this._db.bucket_name + "` AS doc ";
+			var qstr = "SELECT `" + sel + "` FROM `" + this._db.bucket_name + "` AS doc ";
 			var params = [];
 			if (s && !p && !o) {
 				qstr += "USE KEYS $1";
