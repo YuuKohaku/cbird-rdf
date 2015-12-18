@@ -10,14 +10,14 @@ let Bucket = Couchbird.Bucket;
 
 let locate_ifaces = function(names) {
 	let result = {};
-	if (!_.isArray(names))
+	if(!_.isArray(names))
 		return result;
-	for (var i in names) {
+	for(var i in names) {
 		let iface = null;
 		try {
 			iface = require(`./Query/${names[i]}`);
 			result[names[i]] = iface;
-		} catch (e) {
+		} catch(e) {
 			iface = null;
 		}
 	}
@@ -36,14 +36,14 @@ class CBStorageBucket extends Bucket {
 			basic: basic_voc,
 			fs: from_fs
 		}) {
-			if (!domain_voc || !basic_voc)
+			if(!domain_voc || !basic_voc)
 				return Promise.reject(new Error("Insufficient vocabulary information."));
 			this.vocabulary = {
 				basic: null,
 				domain: null,
 				context: null
 			};
-			if (!from_fs) {
+			if(!from_fs) {
 				return Promise.props({
 						domain: super.get(domain_voc),
 						basic: super.get(basic_voc)
@@ -157,7 +157,7 @@ class CBStorageBucket extends Bucket {
 			.then((res) => {
 				let doc = JSON.parse(res);
 				let promises = [];
-				for (var i in doc) {
+				for(var i in doc) {
 					promises.push(mgr.upsertDesignDocument(i, doc[i]));
 				}
 				return Promise.all(promises);
@@ -172,7 +172,7 @@ class CBStorageBucket extends Bucket {
 		let keys = _.isArray(names) ? names : [names];
 		let promises = [];
 
-		for (var i in keys) {
+		for(var i in keys) {
 			promises.push(mgr.removeDesignDocument(keys[i]));
 		}
 		return Promise.all(promises)
@@ -181,6 +181,77 @@ class CBStorageBucket extends Bucket {
 			});
 	}
 
+	/////////////////////Inherited///////////////////////////
+
+	insert(subject, value, options = {}) {
+		return super.insert(subject, value, options)
+			.catch((err) => {
+				return Promise.resolve(undefined);
+			});
+	}
+
+	upsert(subject, value, options = {}) {
+		return super.upsert(subject, value, options)
+			.catch((err) => {
+				return Promise.resolve(undefined);
+			});
+	}
+	replace(subject, value, options = {}) {
+		return super.replace(subject, value, options)
+			.catch((err) => {
+				return Promise.resolve(undefined);
+			});
+	}
+
+	get(subject, options = {}) {
+		return super.get(subject, options)
+			.catch((err) => {
+				return Promise.resolve(undefined);
+			});
+	}
+
+	getAndLock(subject, options = {}) {
+		return super.getAndLock(subject, options)
+			.catch((err) => {
+				return Promise.resolve(undefined);
+			});
+	}
+
+	unlock(subject, cas, options = {}) {
+		return super.unlock(subject, cas, options)
+			.catch((err) => {
+				return Promise.resolve(undefined);
+			});
+	}
+
+	getAndTouch(subject, expiry, options = {}) {
+		return super.getAndTouch(subject, expiry, options)
+			.catch((err) => {
+				return Promise.resolve(undefined);
+			});
+	}
+
+	touch(subject, expiry, options = {}) {
+		return super.touch(subject, options)
+			.catch((err) => {
+				return Promise.resolve(undefined);
+			});
+	}
+
+	getMulti(subjects) {
+		return super.getMulti(subjects)
+			.catch((err) => {
+				return Promise.resolve(undefined);
+			});
+	}
+
+	//!! possibly this will make other docs invalid because of non-existent node
+	remove(subject, options = {}) {
+		return super.remove(subject, options)
+			.catch((err) => {
+				return Promise.resolve(undefined);
+			});
+	}
 }
 
 module.exports = CBStorageBucket;
