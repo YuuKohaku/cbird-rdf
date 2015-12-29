@@ -19,19 +19,20 @@ bucket.enableN1ql();
 var mgr = bucket.manager();
 
 describe('N1QL', function() {
+	this.timeout(5000);
 	var rabbit = {
 		"@id": "http://wonderland#whiterabbit",
 		"@type": ["http://wonderland#Rabbit"],
 		'http://wonderland#color': [{
 			"@id": "http://wonderland#white"
-        }]
+		}]
 	};
 	var mouse = {
 		"@id": "http://wonderland#sleepymouse",
 		"@type": ["http://wonderland#Mouse"],
 		'http://wonderland#name': [{
 			"@value": "Sonja"
-        }]
+		}]
 	};
 	var rdfmouse = false;
 	before(function() {
@@ -171,7 +172,7 @@ describe('N1QL', function() {
 					done(new Error("Incorrect response"));
 				})
 				.catch(function(err) {
-					if (!/All passed values must be strings/.test(err.message))
+					if(!/All passed values must be strings/.test(err.message))
 						done(new Error("Incorrect behaviour"));
 					done();
 				});

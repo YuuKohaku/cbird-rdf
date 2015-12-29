@@ -14,105 +14,105 @@ var N1qlQuery = require("Couchbird").N1qlQuery;
 var Promise = require("bluebird");
 
 var N1qlLDQuery = (function (_Abstract) {
-    _inherits(N1qlLDQuery, _Abstract);
+	_inherits(N1qlLDQuery, _Abstract);
 
-    function N1qlLDQuery() {
-        _classCallCheck(this, N1qlLDQuery);
+	function N1qlLDQuery() {
+		_classCallCheck(this, N1qlLDQuery);
 
-        _get(Object.getPrototypeOf(N1qlLDQuery.prototype), 'constructor', this).apply(this, arguments);
-    }
+		_get(Object.getPrototypeOf(N1qlLDQuery.prototype), 'constructor', this).apply(this, arguments);
+	}
 
-    _createClass(N1qlLDQuery, [{
-        key: 'bySubject',
-        value: function bySubject(val) {
-            return this.byTriple({
-                subject: val,
-                predicate: null,
-                object: null
-            });
-        }
-    }, {
-        key: 'byPredicate',
-        value: function byPredicate(val) {
-            return this.byTriple({
-                subject: null,
-                predicate: val,
-                object: null
-            });
-        }
-    }, {
-        key: 'byObject',
-        value: function byObject(val) {
-            return this.byTriple({
-                subject: null,
-                predicate: null,
-                object: val
-            });
-        }
-    }, {
-        key: 'byTriple',
-        value: function byTriple(_ref) {
-            var _ref$select = _ref.select;
-            var prop = _ref$select === undefined ? null : _ref$select;
-            var _ref$subject = _ref.subject;
-            var s = _ref$subject === undefined ? null : _ref$subject;
-            var _ref$predicate = _ref.predicate;
-            var p = _ref$predicate === undefined ? null : _ref$predicate;
-            var _ref$object = _ref.object;
-            var o = _ref$object === undefined ? null : _ref$object;
+	_createClass(N1qlLDQuery, [{
+		key: 'bySubject',
+		value: function bySubject(val) {
+			return this.byTriple({
+				subject: val,
+				predicate: null,
+				object: null
+			});
+		}
+	}, {
+		key: 'byPredicate',
+		value: function byPredicate(val) {
+			return this.byTriple({
+				subject: null,
+				predicate: val,
+				object: null
+			});
+		}
+	}, {
+		key: 'byObject',
+		value: function byObject(val) {
+			return this.byTriple({
+				subject: null,
+				predicate: null,
+				object: val
+			});
+		}
+	}, {
+		key: 'byTriple',
+		value: function byTriple(_ref) {
+			var _ref$select = _ref.select;
+			var prop = _ref$select === undefined ? null : _ref$select;
+			var _ref$subject = _ref.subject;
+			var s = _ref$subject === undefined ? null : _ref$subject;
+			var _ref$predicate = _ref.predicate;
+			var p = _ref$predicate === undefined ? null : _ref$predicate;
+			var _ref$object = _ref.object;
+			var o = _ref$object === undefined ? null : _ref$object;
 
-            if (!s && !p && !o) {
-                return Promise.resolve([]);
-            }
-            if (s && !_.isString(s) || p && !_.isString(p) || o && !_.isString(o)) {
-                return Promise.reject(new Error("All passed values must be strings."));
-            }
-            var sel = prop || "*";
+			if (!s && !p && !o) {
+				return Promise.resolve([]);
+			}
+			if (s && !_.isString(s) || p && !_.isString(p) || o && !_.isString(o)) {
+				return Promise.reject(new Error("All passed values must be strings."));
+			}
+			var sel = prop || "*";
 
-            var qstr = "SELECT " + sel + " FROM `" + this._db.bucket_name + "` AS doc ";
-            var params = [];
-            if (s && !p && !o) {
-                qstr += "USE KEYS $1";
-                params = [[s]];
-            }
-            if (!s && p && !o) {
-                //until they fix this bug with forward-slash escaping
-                qstr += "WHERE $1 IN object_names(doc);";
-                params = [p];
-            }
-            if (!s && !p && o) {
-                qstr += "WHERE $1 WITHIN doc;";
-                params = [o];
-            }
-            if (s && p && !o) {
-                //until they fix this bug with forward-slash escaping
-                qstr += "USE KEYS $1 WHERE $2 IN object_names(doc);";
-                params = [[s], p];
-            }
-            if (s && !p && o) {
-                qstr += "USE KEYS $1 WHERE $2 WITHIN doc;";
-                params = [[s], o];
-            }
-            if (!s && p && o) {
-                //INJECTION WARNING! Need to correct this later.
-                qstr += "WHERE $1 WITHIN doc.`" + p + "`;";
-                params = [o];
-            }
-            if (s && p && o) {
-                //INJECTION WARNING! Need to correct this later.
-                qstr += "USE KEYS $1 WHERE $2 WITHIN doc.`" + p + "`;";
-                params = [[s], o];
-            }
-            var query = N1qlQuery.fromString(qstr);
-            return this._db.N1QL(query, params).then(function (res) {
-                return _.map(res, function (val) {
-                    return val.doc;
-                });
-            });
-        }
-    }]);
+			var qstr = "SELECT * FROM `" + this._db.bucket_name + "` AS doc ";
+			var params = [];
+			if (s && !p && !o) {
+				qstr += "USE KEYS $1";
+				params = [[s]];
+			}
+			if (!s && p && !o) {
+				//until they fix this bug with forward-slash escaping
+				qstr += "WHERE $1 IN object_names(doc);";
+				params = [p];
+			}
+			if (!s && !p && o) {
+				qstr += "WHERE $1 WITHIN doc;";
+				params = [o];
+			}
+			if (s && p && !o) {
+				//until they fix this bug with forward-slash escaping
+				qstr += "USE KEYS $1 WHERE $2 IN object_names(doc);";
+				params = [[s], p];
+			}
+			if (s && !p && o) {
+				qstr += "USE KEYS $1 WHERE $2 WITHIN doc;";
+				params = [[s], o];
+			}
+			if (!s && p && o) {
+				//INJECTION WARNING! Need to correct this later.
+				qstr += "WHERE $1 WITHIN doc.`" + p + "`;";
+				params = [o];
+			}
+			if (s && p && o) {
+				//INJECTION WARNING! Need to correct this later.
+				qstr += "USE KEYS $1 WHERE $2 WITHIN doc.`" + p + "`;";
+				params = [[s], o];
+			}
+			var query = N1qlQuery.fromString(qstr);
+			return this._db.N1QL(query, params).then(function (res) {
+				return _.map(res, function (val) {
+					return val.doc;
+				});
+			});
+		}
+	}]);
 
-    return N1qlLDQuery;
+	return N1qlLDQuery;
 })(Abstract);
 
 module.exports = N1qlLDQuery;

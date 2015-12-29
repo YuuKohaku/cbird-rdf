@@ -21,6 +21,7 @@ var bucket = db.bucket(cfg.bucket);;
 var mgr = bucket.manager();
 
 describe('Views', function() {
+	this.timeout(5000);
 	var rabbit = {
 		"@id": "http://wonderland#whiterabbit",
 		"@type": ["http://wonderland#Rabbit"],
