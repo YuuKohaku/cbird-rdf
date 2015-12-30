@@ -1,368 +1,248 @@
-[
-    {
-        "@id": "iris://data/#_x2",
-        "@type": [
-            "http://www.w3.org/2006/time#DurationDescription"
-        ],
-        "http://www.w3.org/2006/time#minutes": [
-            {
-                "@type": "http://www.w3.org/2001/XMLSchema#decimal",
-                "@value": "20"
-            }
-        ]
-    },
-    {
-        "@id": "iris://data/#department1",
-        "@type": [
-            "iris://vocabulary/domain#Department"
-        ],
-        "iris://vocabulary/domain#unitOf": [
-            {
-                "@id": "iris://data/#office1"
-            }
-        ],
-        "http://www.w3.org/2000/01/rdf-schema#label": [
-            {
-                "@value": "Department 1"
-            }
-        ]
-    },
-    {
-        "@id": "iris://data/#human2",
-        "@type": [
-            "iris://vocabulary/domain#Person"
-        ],
-        "iris://vocabulary/domain#firstName": [
-            {
-                "@language": "en",
-                "@value": "Maria"
-            }
-        ],
-        "iris://vocabulary/domain#lastName": [
-            {
-                "@language": "en",
-                "@value": "Medvedeva"
-            }
-        ],
-        "iris://vocabulary/domain#login": [
-            {
-                "@language": "en",
-                "@value": "MASHA"
-            }
-        ],
-        "iris://vocabulary/domain#middleName": [
-            {
-                "@language": "en",
-                "@value": "Ivanovna"
-            }
-        ],
-        "iris://vocabulary/domain#password": [
-            {
-                "@value": "654321"
-            }
-        ],
-        "iris://vocabulary/domain#provides": [
-            {
-                "@id": "iris://data/#service2"
-            }
-        ]
-    },
-    {
-        "@id": "iris://data/#human1",
-        "@type": [
-            "iris://vocabulary/domain#Person"
-        ],
-        "iris://vocabulary/domain#firstName": [
-            {
-                "@language": "en",
-                "@value": "Vasisualy"
-            }
-        ],
-        "iris://vocabulary/domain#lastName": [
-            {
-                "@language": "en",
-                "@value": "Ivanov"
-            }
-        ],
-        "iris://vocabulary/domain#login": [
-            {
-                "@language": "en",
-                "@value": "vasyoQ"
-            }
-        ],
-        "iris://vocabulary/domain#middleName": [
-            {
-                "@language": "en",
-                "@value": "Ivanovich"
-            }
-        ],
-        "iris://vocabulary/domain#password": [
-            {
-                "@value": "123456"
-            }
-        ],
-        "iris://vocabulary/domain#provides": [
-            {
-                "@id": "iris://data/#service1"
-            },
-            {
-                "@id": "iris://data/#service2"
-            }
-        ]
-    },
-    {
-        "@id": "_:ub158bL55C2",
-        "@type": [
-            "iris://vocabulary/domain#Membership"
-        ],
-        "iris://vocabulary/domain#member": [
-            {
-                "@id": "iris://data/#human2"
-            }
-        ],
-        "iris://vocabulary/domain#organization": [
-            {
-                "@id": "iris://data/#department1"
-            }
-        ],
-        "iris://vocabulary/domain#role": [
-            {
-                "@id": "iris://vocabulary/domain#Operator"
-            }
-        ]
-    },
-    {
-        "@id": "iris://data/#service2",
-        "@type": [
-            "iris://vocabulary/domain#Service"
-        ],
-        "iris://vocabulary/domain#codeFRGU": [
-            {
-                "@value": "Smth"
-            }
-        ],
-        "iris://vocabulary/domain#deptCodeFRGU": [
-            {
-                "@value": "Smth"
-            }
-        ],
-        "iris://vocabulary/domain#liveOperationTime": [
-            {
-                "@id": "iris://data/#_x2"
-            }
-        ],
-        "iris://vocabulary/domain#order": [
-            {
-                "@type": "http://www.w3.org/2001/XMLSchema#decimal",
-                "@value": "6"
-            }
-        ],
-        "iris://vocabulary/domain#prebookInterval": [
-            {
-                "@id": "iris://data/#_x3"
-            }
-        ],
-        "iris://vocabulary/domain#prebookOperationTime": [
-            {
-                "@id": "iris://data/#_x2"
-            }
-        ],
-        "iris://vocabulary/domain#prebookPercentage": [
-            {
-                "@type": "http://www.w3.org/2001/XMLSchema#decimal",
-                "@value": "50"
-            }
-        ],
-        "iris://vocabulary/domain#prebookTodayPercentage": [
-            {
-                "@type": "http://www.w3.org/2001/XMLSchema#decimal",
-                "@value": "20"
-            }
-        ],
-        "iris://vocabulary/domain#prefix": [
-            {
-                "@value": "Smth"
-            }
-        ],
-        "iris://vocabulary/domain#priority": [
-            {
-                "@type": "http://www.w3.org/2001/XMLSchema#decimal",
-                "@value": "3"
-            }
-        ],
-        "iris://vocabulary/domain#serviceCodeEPGU": [
-            {
-                "@value": "Smth"
-            }
-        ]
-    },
-    {
-        "@id": "iris://data/#service1",
-        "@type": [
-            "iris://vocabulary/domain#Service"
-        ],
-        "iris://vocabulary/domain#codeFRGU": [
-            {
-                "@value": "Smth"
-            }
-        ],
-        "iris://vocabulary/domain#deptCodeFRGU": [
-            {
-                "@value": "Smth"
-            }
-        ],
-        "iris://vocabulary/domain#liveOperationTime": [
-            {
-                "@id": "iris://data/#_x1"
-            }
-        ],
-        "iris://vocabulary/domain#order": [
-            {
-                "@type": "http://www.w3.org/2001/XMLSchema#decimal",
-                "@value": "1"
-            }
-        ],
-        "iris://vocabulary/domain#prebookInterval": [
-            {
-                "@id": "iris://data/#_x3"
-            }
-        ],
-        "iris://vocabulary/domain#prebookOperationTime": [
-            {
-                "@id": "iris://data/#_x1"
-            }
-        ],
-        "iris://vocabulary/domain#prebookPercentage": [
-            {
-                "@type": "http://www.w3.org/2001/XMLSchema#decimal",
-                "@value": "45"
-            }
-        ],
-        "iris://vocabulary/domain#prebookTodayPercentage": [
-            {
-                "@type": "http://www.w3.org/2001/XMLSchema#decimal",
-                "@value": "15"
-            }
-        ],
-        "iris://vocabulary/domain#prefix": [
-            {
-                "@value": "Smth"
-            }
-        ],
-        "iris://vocabulary/domain#priority": [
-            {
-                "@type": "http://www.w3.org/2001/XMLSchema#decimal",
-                "@value": "1"
-            }
-        ],
-        "iris://vocabulary/domain#serviceCodeEPGU": [
-            {
-                "@value": "Smth"
-            }
-        ]
-    },
-    {
-        "@id": "iris://data/#_x3",
-        "@type": [
-            "http://www.w3.org/2006/time#DurationDescription"
-        ],
-        "http://www.w3.org/2006/time#days": [
-            {
-                "@type": "http://www.w3.org/2001/XMLSchema#decimal",
-                "@value": "2"
-            }
-        ]
-    },
-    {
-        "@id": "iris://data/#office1",
-        "@type": [
-            "iris://vocabulary/domain#Office"
-        ],
-        "iris://vocabulary/domain#hasUnit": [
-            {
-                "@id": "iris://data/#department1"
-            }
-        ],
-        "http://www.w3.org/2000/01/rdf-schema#label": [
-            {
-                "@value": "Office 1"
-            }
-        ]
-    },
-    {
-        "@id": "iris://data/#_x1",
-        "@type": [
-            "http://www.w3.org/2006/time#DurationDescription"
-        ],
-        "http://www.w3.org/2006/time#minutes": [
-            {
-                "@type": "http://www.w3.org/2001/XMLSchema#decimal",
-                "@value": "15"
-            }
-        ]
-    },
-    {
-        "@id": "_:ub158bL50C2",
-        "@type": [
-            "iris://vocabulary/domain#Membership"
-        ],
-        "iris://vocabulary/domain#member": [
-            {
-                "@id": "iris://data/#human1"
-            }
-        ],
-        "iris://vocabulary/domain#organization": [
-            {
-                "@id": "iris://data/#department1"
-            }
-        ],
-        "iris://vocabulary/domain#role": [
-            {
-                "@id": "iris://vocabulary/domain#Operator"
-            }
-        ]
-    },
-    {
-        "@id": "iris://data/#pc1",
-        "@type": [
-            "iris://vocabulary/domain#AWP"
-        ],
-        "iris://vocabulary/domain#attachedTo": [
-            {
-                "@id": "iris://data/#department1"
-            }
-        ],
-        "iris://vocabulary/domain#deviceOf": [
-            {
-                "@id": "iris://data/#human1"
-            }
-        ]
-    },
-    {
-        "@id": "iris://data/#orgroot",
-        "@type": [
-            "iris://vocabulary/domain#FormalOrganization"
-        ],
-        "iris://vocabulary/domain#hasUnit": [
-            {
-                "@id": "iris://data/#office1"
-            }
-        ]
-    },
-    {
-        "@id": "iris://data/#pc2",
-        "@type": [
-            "iris://vocabulary/domain#AWP"
-        ],
-        "iris://vocabulary/domain#attachedTo": [
-            {
-                "@id": "iris://data/#department1"
-            }
-        ],
-        "iris://vocabulary/domain#deviceOf": [
-            {
-                "@id": "iris://data/#human2"
-            }
-        ]
-    }
-]
+[{
+	"@id": "iris://data/#_x2",
+	"@type": [
+		"http://www.w3.org/2006/time#DurationDescription"
+	],
+	"http://www.w3.org/2006/time#minutes": [{
+		"@type": "http://www.w3.org/2001/XMLSchema#decimal",
+		"@value": "20"
+	}]
+}, {
+	"@id": "iris://data/#department1",
+	"@type": [
+		"iris://vocabulary/domain#Department"
+	],
+	"iris://vocabulary/domain#unitOf": [{
+		"@id": "iris://data/#office1"
+	}],
+	"http://www.w3.org/2000/01/rdf-schema#label": [{
+		"@value": "Department 1"
+	}]
+}, {
+	"@id": "iris://data/#human2",
+	"@type": [
+		"iris://vocabulary/domain#Employee"
+	],
+	"iris://vocabulary/domain#firstName": [{
+		"@language": "en",
+		"@value": "Maria"
+	}],
+	"iris://vocabulary/domain#lastName": [{
+		"@language": "en",
+		"@value": "Medvedeva"
+	}],
+	"iris://vocabulary/domain#login": [{
+		"@language": "en",
+		"@value": "MASHA"
+	}],
+	"iris://vocabulary/domain#middleName": [{
+		"@language": "en",
+		"@value": "Ivanovna"
+	}],
+	"iris://vocabulary/domain#password": [{
+		"@value": "654321"
+	}],
+	"iris://vocabulary/domain#provides": [{
+		"@id": "iris://data/#service2"
+	}]
+}, {
+	"@id": "iris://data/#human1",
+	"@type": [
+		"iris://vocabulary/domain#Employee"
+	],
+	"iris://vocabulary/domain#firstName": [{
+		"@language": "en",
+		"@value": "Vasisualy"
+	}],
+	"iris://vocabulary/domain#lastName": [{
+		"@language": "en",
+		"@value": "Ivanov"
+	}],
+	"iris://vocabulary/domain#login": [{
+		"@language": "en",
+		"@value": "vasyoQ"
+	}],
+	"iris://vocabulary/domain#middleName": [{
+		"@language": "en",
+		"@value": "Ivanovich"
+	}],
+	"iris://vocabulary/domain#password": [{
+		"@value": "123456"
+	}],
+	"iris://vocabulary/domain#provides": [{
+		"@id": "iris://data/#service1"
+	}, {
+		"@id": "iris://data/#service2"
+	}]
+}, {
+	"@id": "_:ub158bL55C2",
+	"@type": [
+		"iris://vocabulary/domain#Membership"
+	],
+	"iris://vocabulary/domain#member": [{
+		"@id": "iris://data/#human2"
+	}],
+	"iris://vocabulary/domain#organization": [{
+		"@id": "iris://data/#department1"
+	}],
+	"iris://vocabulary/domain#role": [{
+		"@id": "iris://vocabulary/domain#Operator"
+	}]
+}, {
+	"@id": "iris://data/#service2",
+	"@type": [
+		"iris://vocabulary/domain#Service"
+	],
+	"iris://vocabulary/domain#codeFRGU": [{
+		"@value": "Smth"
+	}],
+	"iris://vocabulary/domain#deptCodeFRGU": [{
+		"@value": "Smth"
+	}],
+	"iris://vocabulary/domain#liveOperationTime": [{
+		"@id": "iris://data/#_x2"
+	}],
+	"iris://vocabulary/domain#order": [{
+		"@type": "http://www.w3.org/2001/XMLSchema#decimal",
+		"@value": "6"
+	}],
+	"iris://vocabulary/domain#prebookInterval": [{
+		"@id": "iris://data/#_x3"
+	}],
+	"iris://vocabulary/domain#prebookOperationTime": [{
+		"@id": "iris://data/#_x2"
+	}],
+	"iris://vocabulary/domain#prebookPercentage": [{
+		"@type": "http://www.w3.org/2001/XMLSchema#decimal",
+		"@value": "50"
+	}],
+	"iris://vocabulary/domain#prebookTodayPercentage": [{
+		"@type": "http://www.w3.org/2001/XMLSchema#decimal",
+		"@value": "20"
+	}],
+	"iris://vocabulary/domain#prefix": [{
+		"@value": "Smth"
+	}],
+	"iris://vocabulary/domain#priority": [{
+		"@type": "http://www.w3.org/2001/XMLSchema#decimal",
+		"@value": "3"
+	}],
+	"iris://vocabulary/domain#serviceCodeEPGU": [{
+		"@value": "Smth"
+	}]
+}, {
+	"@id": "iris://data/#service1",
+	"@type": [
+		"iris://vocabulary/domain#Service"
+	],
+	"iris://vocabulary/domain#codeFRGU": [{
+		"@value": "Smth"
+	}],
+	"iris://vocabulary/domain#deptCodeFRGU": [{
+		"@value": "Smth"
+	}],
+	"iris://vocabulary/domain#liveOperationTime": [{
+		"@id": "iris://data/#_x1"
+	}],
+	"iris://vocabulary/domain#order": [{
+		"@type": "http://www.w3.org/2001/XMLSchema#decimal",
+		"@value": "1"
+	}],
+	"iris://vocabulary/domain#prebookInterval": [{
+		"@id": "iris://data/#_x3"
+	}],
+	"iris://vocabulary/domain#prebookOperationTime": [{
+		"@id": "iris://data/#_x1"
+	}],
+	"iris://vocabulary/domain#prebookPercentage": [{
+		"@type": "http://www.w3.org/2001/XMLSchema#decimal",
+		"@value": "45"
+	}],
+	"iris://vocabulary/domain#prebookTodayPercentage": [{
+		"@type": "http://www.w3.org/2001/XMLSchema#decimal",
+		"@value": "15"
+	}],
+	"iris://vocabulary/domain#prefix": [{
+		"@value": "Smth"
+	}],
+	"iris://vocabulary/domain#priority": [{
+		"@type": "http://www.w3.org/2001/XMLSchema#decimal",
+		"@value": "1"
+	}],
+	"iris://vocabulary/domain#serviceCodeEPGU": [{
+		"@value": "Smth"
+	}]
+}, {
+	"@id": "iris://data/#_x3",
+	"@type": [
+		"http://www.w3.org/2006/time#DurationDescription"
+	],
+	"http://www.w3.org/2006/time#days": [{
+		"@type": "http://www.w3.org/2001/XMLSchema#decimal",
+		"@value": "2"
+	}]
+}, {
+	"@id": "iris://data/#office1",
+	"@type": [
+		"iris://vocabulary/domain#Office"
+	],
+	"iris://vocabulary/domain#hasUnit": [{
+		"@id": "iris://data/#department1"
+	}],
+	"http://www.w3.org/2000/01/rdf-schema#label": [{
+		"@value": "Office 1"
+	}]
+}, {
+	"@id": "iris://data/#_x1",
+	"@type": [
+		"http://www.w3.org/2006/time#DurationDescription"
+	],
+	"http://www.w3.org/2006/time#minutes": [{
+		"@type": "http://www.w3.org/2001/XMLSchema#decimal",
+		"@value": "15"
+	}]
+}, {
+	"@id": "_:ub158bL50C2",
+	"@type": [
+		"iris://vocabulary/domain#Membership"
+	],
+	"iris://vocabulary/domain#member": [{
+		"@id": "iris://data/#human1"
+	}],
+	"iris://vocabulary/domain#organization": [{
+		"@id": "iris://data/#department1"
+	}],
+	"iris://vocabulary/domain#role": [{
+		"@id": "iris://vocabulary/domain#Operator"
+	}]
+}, {
+	"@id": "iris://data/#pc1",
+	"@type": [
+		"iris://vocabulary/domain#AWP"
+	],
+	"iris://vocabulary/domain#attachedTo": [{
+		"@id": "iris://data/#department1"
+	}],
+	"iris://vocabulary/domain#deviceOf": [{
+		"@id": "iris://data/#human1"
+	}]
+}, {
+	"@id": "iris://data/#orgroot",
+	"@type": [
+		"iris://vocabulary/domain#FormalOrganization"
+	],
+	"iris://vocabulary/domain#hasUnit": [{
+		"@id": "iris://data/#office1"
+	}]
+}, {
+	"@id": "iris://data/#pc2",
+	"@type": [
+		"iris://vocabulary/domain#AWP"
+	],
+	"iris://vocabulary/domain#attachedTo": [{
+		"@id": "iris://data/#department1"
+	}],
+	"iris://vocabulary/domain#deviceOf": [{
+		"@id": "iris://data/#human2"
+	}]
+}]
