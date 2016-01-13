@@ -74,7 +74,7 @@ describe('Performance comparison', function() {
 					object: "iris://vocabulary/domain#Plan"
 				})
 				.then(function(res) {
-					return bucket.getNodes(_.pluck(res, 'subject.value'));
+					return bucket.getNodes(_.map(res, 'subject.value'));
 				})
 				.then(function(res) {
 					done();
