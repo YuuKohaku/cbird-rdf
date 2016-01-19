@@ -16,6 +16,10 @@
 		"couchbird",
 		"RDF"
 	],
+	"babel": {
+		"presets": ["node5"],
+		"babelrc": false
+	},
 	"author": "V.",
 	"license": "ISC",
 	"bugs": {
@@ -30,6 +34,7 @@
 		"make-error": "^1.0.2"
 	},
 	"devDependencies": {
+		"babel-preset-node5": "^10.3.0",
 		"chai": "^3.3.0",
 		"chai-as-promised": "^5.1.0",
 		"gulp": "^3.8.11",
