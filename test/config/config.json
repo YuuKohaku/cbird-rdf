@@ -1,12 +1,12 @@
 {
-    "couchbird": {
-        "server_ip": "192.168.1.2",
-        "n1ql": "192.168.1.2:8093"
-    },
-    "bucket": "rdf",
-    "vocabulary": {
-        "basic": "iris://vocabulary/basic",
-        "domain": "iris://vocabulary/domain",
-        "fs": false
-    }
+	"couchbird": {
+		"server_ip": "127.0.0.1",
+		"n1ql": "127.0.0.1:8093"
+	},
+	"bucket": "rdf",
+	"vocabulary": {
+		"basic": "iris://vocabulary/basic",
+		"domain": "iris://vocabulary/domain",
+		"fs": false
+	}
 }

@@ -9,17 +9,17 @@ var Couchbird = require("Couchbird");
 var path = require("path");
 var _ = require("lodash");
 var ps = require("jsonld").promises;
-var RDFcb = require("../build").LD;
+var RDFcb = require("../build/index").LD;
 
 var cfg = require("./config/config.json");
 
-var db = new RDFcb();
+var db = new RDFcb(cfg.couchbird);
 var bucket = db.bucket(cfg.bucket);;
 bucket.enableN1ql();
 var mgr = bucket.manager();
 
 describe('N1QL', function() {
-	this.timeout(5000);
+	this.timeout(10000);
 	var rabbit = {
 		"@id": "http://wonderland#whiterabbit",
 		"@type": ["http://wonderland#Rabbit"],

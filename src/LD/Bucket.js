@@ -78,7 +78,7 @@ class CBStorageBucket extends Bucket {
 		///////////////////////////Query/////////////////////////////////////////
 	assignQueryInterfaces(names) {
 		let result = locate_ifaces(names);
-		_.assign(this, result, (cur, query_class) => {
+		_.assignWith(this, result, (cur, query_class) => {
 			return new query_class(this);
 		});
 	}

@@ -9,7 +9,7 @@ var Couchbird = require("Couchbird");
 var path = require("path");
 var _ = require("lodash");
 var ps = require("jsonld").promises;
-var RDFcb = require("../build").LD;
+var RDFcb = require("../build/index").LD;
 
 var cfg = require("./config/config.json");
 
@@ -18,6 +18,7 @@ var bucket = db.bucket(cfg.bucket);;
 bucket.enableN1ql();
 
 describe('Performance comparison', function() {
+	this.timeout(10000);
 	this.slow(0);
 	let base = "iris://data#plan";
 	let nodes = {};
@@ -37,12 +38,12 @@ describe('Performance comparison', function() {
 	}
 	before(function() {
 		return bucket.N1QL(Couchbird.N1qlQuery.fromString("CREATE PRIMARY INDEX ON " + cfg.bucket + ";")).then(function(res) {
-			return Promise.all([bucket.upsertNodes(_.values(nodes)), bucket.upsert(base, nodes)]);
+			// return Promise.all([bucket.upsertNodes(_.values(nodes)), bucket.upsert(base, nodes)]);
 		})
 	});
 
 	after(function() {
-		// return Promise.all([bucket.removeNodes(_.keys(nodes)), bucket.remove(base)]);
+		return Promise.all([bucket.removeNodes(_.keys(nodes)), bucket.remove(base)]);
 	});
 	describe('Get single-doc plans', function() {
 		it('should get plans doc', function(done) {

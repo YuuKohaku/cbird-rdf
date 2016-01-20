@@ -8,7 +8,7 @@ chai.use(chaiAsPromised);
 var path = require("path");
 var _ = require("lodash");
 var ps = require("jsonld").promises;
-var RDFcb = require("../build").LD;
+var RDFcb = require("../build/index").LD;
 
 var cfg = require("./config/config.json");
 var triples = require("./data/data.json");
@@ -20,8 +20,8 @@ var db = new RDFcb();
 var bucket = db.bucket(cfg.bucket);;
 var mgr = bucket.manager();
 
-describe('Views', function() {
-	this.timeout(5000);
+describe.only('Views', function() {
+	this.timeout(10000);
 	var rabbit = {
 		"@id": "http://wonderland#whiterabbit",
 		"@type": ["http://wonderland#Rabbit"],
@@ -53,7 +53,7 @@ describe('Views', function() {
 				})
 				.then(function(res) {
 					for(var i in defviews) {
-						if(!_.eq(res[i], defviews[i])) throw new Error("Incorrect value");
+						if(!_.isEqual(res[i], defviews[i])) throw new Error("Incorrect value");
 					}
 					done();
 				})
@@ -68,7 +68,7 @@ describe('Views', function() {
 				})
 				.then(function(res) {
 					for(var i in testviews) {
-						if(!_.eq(res[i], testviews[i])) throw new Error("Incorrect value");
+						if(!_.isEqual(res[i], testviews[i])) throw new Error("Incorrect value");
 					}
 					done();
 				})

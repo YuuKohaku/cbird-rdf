@@ -4,7 +4,7 @@
 	"description": "RDF for Couchbird.",
 	"main": "index.js",
 	"scripts": {
-		"test": "mocha ./build/**/*.test.js -r ./build/index.js",
+		"test": "mocha  -r ./test/run.js",
 		"install": "gulp --gulpfile build.js"
 	},
 	"repository": {

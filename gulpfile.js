@@ -3,18 +3,21 @@ var gulp = require("gulp");
 var babel = require("gulp-babel");
 var minify = require('gulp-minify');
 
-gulp.task('default', ['json', 'js']);
-
-gulp.task("js", function() {
-	return gulp.src(["src/**/*.js"])
+gulp.task("es6-js", function() {
+	return gulp.src(["src/**/*.js", "tests/**/*.js"])
 		.pipe(babel())
-		.pipe(gulp.dest("build"));
+		.pipe(gulp.dest("build"))
+		.on('end', function() {
+			console.log('end build');
+		});
 });
 
 gulp.task("json", function() {
-	return gulp.src(["src/**/*.json"])
+	return gulp.src(["src/**/*.json", "tests/**/*.json"])
 		.pipe(gulp.dest("build"));
 });
+
+gulp.task('es6', ['es6-js', 'json']);
 
 gulp.task("dev", ['default'],
 	function() {

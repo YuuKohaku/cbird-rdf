@@ -88,7 +88,7 @@ class JsonLDViewQuery extends Abstract {
 			return this.bySubject(s)
 				.then((res) => {
 					let data = _.filter(res[s], (val) => {
-						return _.eq(val.object.value, o);
+						return _.isEqual(val.object.value, o);
 					});
 					return Promise.resolve(data);
 				});
@@ -103,7 +103,7 @@ class JsonLDViewQuery extends Abstract {
 			return this.byPredicate(p)
 				.then((res) => {
 					let data = _.filter(res[p], (val) => {
-						return _.eq(val.object.value, o);
+						return _.isEqual(val.object.value, o);
 					});
 					return Promise.resolve(data);
 				});
