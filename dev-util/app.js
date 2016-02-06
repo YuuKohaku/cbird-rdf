@@ -13,13 +13,16 @@ let RDFcb = require("..").LD;
 
 let ps = jsonld.promises;
 let expand = require("./utils/expand");
+let raw = require("./utils/rdf-to-raw");
 let getviews = require("./utils/get-views");
 let setviews = require("./utils/set-views");
 let jld = require("./utils/jsonld");
 
-//expand("./test/data.json");
-getviews(Couchbird, "./dev-util/output/out.json");
-//setviews(Couchbird, "./examples/output/out.json");
+
+raw("./test/data/data_expanded.json")
+	//expand("./test/data.json");
+	// getviews(Couchbird, "./dev-util/output/out.json");
+	//setviews(Couchbird, "./examples/output/out.json");
 
 //jld.toRDF(extriples[6], function (err, res) {
 //    console.log(res["@default"])

@@ -1,0 +1,17 @@
+{
+	"ddl_view": {
+		"views": {
+			"view": {
+				"map": "\nfunction (doc, meta) {\n  var stringToUtf8Bytes = function (str) {\n    var utf8 = unescape(encodeURIComponent(str));\n    var bytes = [];\n    for (var i = 0; i < str.length; ++i) {\n        bytes.push(str.charCodeAt(i));\n    }\n    return bytes;\n  };\n\n  emit([160, stringToUtf8Bytes(meta.id)], null);\n}\n// salt: 570107206\n"
+			}
+		},
+		"indexOn": [
+			"(meta(`rdf`).`id`)"
+		],
+		"condition": "",
+		"primaryIndex": true,
+		"options": {
+			"updateMinChanges": 1
+		}
+	},
+}

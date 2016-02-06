@@ -19,7 +19,7 @@ gulp.task("json", function() {
 
 gulp.task('es6', ['es6-js', 'json']);
 
-gulp.task("dev", ['default'],
+gulp.task("dev", ['es6'],
 	function() {
 		return gulp.src(["dev-util/**/*.js"])
 			.pipe(babel())

@@ -1,248 +1,7917 @@
 [{
-	"@id": "iris://data/#_x2",
+	"@id": "iris://data#service-127",
 	"@type": [
-		"http://www.w3.org/2006/time#DurationDescription"
+		"iris://vocabulary/domain#Service"
 	],
-	"http://www.w3.org/2006/time#minutes": [{
-		"@type": "http://www.w3.org/2001/XMLSchema#decimal",
-		"@value": "20"
+	"iris://vocabulary/domain#codeFrgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#deptCodeFrgu": [{
+		"@value": "10000681774"
+	}],
+	"iris://vocabulary/domain#hasProvider": [{
+		"@id": "iris://data#department-1"
+	}],
+	"iris://vocabulary/domain#hasSchedule": [{
+		"@id": "iris://data#schedule-4"
+	}],
+	"iris://vocabulary/domain#liveOperationTime": [{
+		"@value": 1200
+	}],
+	"iris://vocabulary/domain#order": [{
+		"@value": 1
+	}],
+	"iris://vocabulary/domain#prebookInterval": [{
+		"@value": 30
+	}],
+	"iris://vocabulary/domain#prebookOperationTime": [{
+		"@value": 1500
+	}],
+	"iris://vocabulary/domain#prebookPercentage": [{
+		"@value": 100
+	}],
+	"iris://vocabulary/domain#prebookTodayPercentage": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#prefix": [{
+		"@language": "ru",
+		"@value": "ВП"
+	}],
+	"iris://vocabulary/domain#priority": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#serviceCodeEpgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#serviceLabel": [{
+		"@language": "ru",
+		"@value": "СМЕНА НОМЕРА СЧЕТА В КРЕДИТНОЙ ОРГАНИЗАЦИИ"
 	}]
 }, {
-	"@id": "iris://data/#department1",
+	"@id": "iris://data#service-126",
+	"@type": [
+		"iris://vocabulary/domain#Service"
+	],
+	"iris://vocabulary/domain#codeFrgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#deptCodeFrgu": [{
+		"@value": "10000681774"
+	}],
+	"iris://vocabulary/domain#hasProvider": [{
+		"@id": "iris://data#department-1"
+	}],
+	"iris://vocabulary/domain#hasSchedule": [{
+		"@id": "iris://data#schedule-4"
+	}],
+	"iris://vocabulary/domain#liveOperationTime": [{
+		"@value": 1200
+	}],
+	"iris://vocabulary/domain#order": [{
+		"@value": 1
+	}],
+	"iris://vocabulary/domain#prebookInterval": [{
+		"@value": 30
+	}],
+	"iris://vocabulary/domain#prebookOperationTime": [{
+		"@value": 1500
+	}],
+	"iris://vocabulary/domain#prebookPercentage": [{
+		"@value": 100
+	}],
+	"iris://vocabulary/domain#prebookTodayPercentage": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#prefix": [{
+		"@language": "ru",
+		"@value": "ВП"
+	}],
+	"iris://vocabulary/domain#priority": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#serviceCodeEpgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#serviceLabel": [{
+		"@language": "ru",
+		"@value": "ЗАЯВЛЕНИЕ О ДОСТАВКЕ ПЕНСИИ"
+	}]
+}, {
+	"@id": "iris://data#service-125",
+	"@type": [
+		"iris://vocabulary/domain#Service"
+	],
+	"iris://vocabulary/domain#codeFrgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#deptCodeFrgu": [{
+		"@value": "10000681774"
+	}],
+	"iris://vocabulary/domain#hasProvider": [{
+		"@id": "iris://data#department-1"
+	}],
+	"iris://vocabulary/domain#hasSchedule": [{
+		"@id": "iris://data#schedule-4"
+	}],
+	"iris://vocabulary/domain#liveOperationTime": [{
+		"@value": 1200
+	}],
+	"iris://vocabulary/domain#order": [{
+		"@value": 1
+	}],
+	"iris://vocabulary/domain#prebookInterval": [{
+		"@value": 30
+	}],
+	"iris://vocabulary/domain#prebookOperationTime": [{
+		"@value": 1500
+	}],
+	"iris://vocabulary/domain#prebookPercentage": [{
+		"@value": 100
+	}],
+	"iris://vocabulary/domain#prebookTodayPercentage": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#prefix": [{
+		"@language": "ru",
+		"@value": "ВП"
+	}],
+	"iris://vocabulary/domain#priority": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#serviceCodeEpgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#serviceLabel": [{
+		"@language": "ru",
+		"@value": "ФЕДЕРАЛЬНАЯ СОЦИАЛЬНАЯ ДОПЛАТА К ПЕНСИИ"
+	}]
+}, {
+	"@id": "iris://data#service-5",
+	"@type": [
+		"iris://vocabulary/domain#Service"
+	],
+	"iris://vocabulary/domain#codeFrgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#deptCodeFrgu": [{
+		"@value": "2100000010000000934"
+	}],
+	"iris://vocabulary/domain#hasProvider": [{
+		"@id": "iris://data#department-1"
+	}],
+	"iris://vocabulary/domain#hasSchedule": [{
+		"@id": "iris://data#schedule-4"
+	}],
+	"iris://vocabulary/domain#liveOperationTime": [{
+		"@value": 1200
+	}],
+	"iris://vocabulary/domain#order": [{
+		"@value": 1
+	}],
+	"iris://vocabulary/domain#prebookInterval": [{
+		"@value": 30
+	}],
+	"iris://vocabulary/domain#prebookOperationTime": [{
+		"@value": 1500
+	}],
+	"iris://vocabulary/domain#prebookPercentage": [{
+		"@value": 100
+	}],
+	"iris://vocabulary/domain#prebookTodayPercentage": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#prefix": [{
+		"@language": "ru",
+		"@value": "Р"
+	}],
+	"iris://vocabulary/domain#priority": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#serviceCodeEpgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#serviceLabel": [{
+		"@language": "ru",
+		"@value": "ВЫПЛАТЫ НА ПИТАНИЕ РЕБЕНКА"
+	}]
+}, {
+	"@id": "iris://data#membership-2",
+	"@type": [
+		"iris://vocabulary/domain#Membership"
+	],
+	"iris://vocabulary/domain#member": [{
+		"@id": "iris://data#human-2"
+	}],
+	"iris://vocabulary/domain#organization": [{
+		"@id": "iris://data#department-1"
+	}],
+	"iris://vocabulary/domain#role": [{
+		"@id": "iris://vocabulary/domain#Operator"
+	}]
+}, {
+	"@id": "iris://data#membership-1",
+	"@type": [
+		"iris://vocabulary/domain#Membership"
+	],
+	"iris://vocabulary/domain#member": [{
+		"@id": "iris://data#human-1"
+	}],
+	"iris://vocabulary/domain#organization": [{
+		"@id": "iris://data#department-1"
+	}],
+	"iris://vocabulary/domain#role": [{
+		"@id": "iris://vocabulary/domain#Administrator"
+	}]
+}, {
+	"@id": "iris://data#pc-1",
+	"@type": [
+		"iris://vocabulary/domain#Workstation"
+	],
+	"iris://vocabulary/domain#attachedTo": [{
+		"@id": "iris://data#department-1"
+	}],
+	"iris://vocabulary/domain#deviceLabel": [{
+		"@language": "ru",
+		"@value": "Администратор"
+	}],
+	"iris://vocabulary/domain#deviceType": [{
+		"@value": "control-panel"
+	}]
+}, {
+	"@id": "iris://data#service-2",
+	"@type": [
+		"iris://vocabulary/domain#Service"
+	],
+	"iris://vocabulary/domain#codeFrgu": [{
+		"@value": "2100000010000001258"
+	}],
+	"iris://vocabulary/domain#deptCodeFrgu": [{
+		"@value": "2100000010000000934"
+	}],
+	"iris://vocabulary/domain#hasProvider": [{
+		"@id": "iris://data#department-1"
+	}],
+	"iris://vocabulary/domain#hasSchedule": [{
+		"@id": "iris://data#schedule-4"
+	}],
+	"iris://vocabulary/domain#liveOperationTime": [{
+		"@value": 1200
+	}],
+	"iris://vocabulary/domain#order": [{
+		"@value": 1
+	}],
+	"iris://vocabulary/domain#prebookInterval": [{
+		"@value": 30
+	}],
+	"iris://vocabulary/domain#prebookOperationTime": [{
+		"@value": 1500
+	}],
+	"iris://vocabulary/domain#prebookPercentage": [{
+		"@value": 100
+	}],
+	"iris://vocabulary/domain#prebookTodayPercentage": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#prefix": [{
+		"@language": "ru",
+		"@value": "Р"
+	}],
+	"iris://vocabulary/domain#priority": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#serviceCodeEpgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#serviceLabel": [{
+		"@language": "ru",
+		"@value": "ПОСОБИЕ ПО НЕТРУДОСПОСОБНОСТИ ПРИ РОЖДЕНИИ РЕБЕНКА"
+	}]
+}, {
+	"@id": "iris://data#pc-2",
+	"@type": [
+		"iris://vocabulary/domain#Workstation"
+	],
+	"iris://vocabulary/domain#attachedTo": [{
+		"@id": "iris://data#department-1"
+	}],
+	"iris://vocabulary/domain#deviceLabel": [{
+		"@language": "ru",
+		"@value": "Окно 1"
+	}],
+	"iris://vocabulary/domain#shortLabel": [{
+		"@language": "ru",
+		"@value": "1"
+	}],
+	"iris://vocabulary/domain#deviceType": [{
+		"@value": "control-panel"
+	}]
+}, {
+	"@id": "iris://data#megatron-2",
+	"@type": [
+		"iris://vocabulary/domain#SystemEntity"
+	],
+	"iris://vocabulary/domain#defaultWorkstation": [{
+		"@id": "iris://data#rd-1"
+	}],
+	"iris://vocabulary/domain#availableWorkstation": [{
+		"@id": "iris://data#rd-1"
+	}],
+	"iris://vocabulary/domain#login": [{
+		"@language": "en",
+		"@value": "rd"
+	}],
+	"iris://vocabulary/domain#password": [{
+		"@value": "1"
+	}],
+	"iris://vocabulary/domain#state": [{
+		"@value": "inactive"
+	}]
+}, {
+	"@id": "iris://data#megatron-1",
+	"@type": [
+		"iris://vocabulary/domain#SystemEntity"
+	],
+	"iris://vocabulary/domain#defaultWorkstation": [{
+		"@id": "iris://data#term-1"
+	}],
+	"iris://vocabulary/domain#availableWorkstation": [{
+		"@id": "iris://data#term-1"
+	}],
+	"iris://vocabulary/domain#login": [{
+		"@language": "en",
+		"@value": "megatron"
+	}],
+	"iris://vocabulary/domain#password": [{
+		"@value": "1"
+	}],
+	"iris://vocabulary/domain#state": [{
+		"@value": "inactive"
+	}]
+}, {
+	"@id": "iris://data#service-122",
+	"@type": [
+		"iris://vocabulary/domain#Service"
+	],
+	"iris://vocabulary/domain#codeFrgu": [{
+		"@value": "10000002755"
+	}, {
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#deptCodeFrgu": [{
+		"@value": "10000681774"
+	}],
+	"iris://vocabulary/domain#hasProvider": [{
+		"@id": "iris://data#department-1"
+	}],
+	"iris://vocabulary/domain#hasSchedule": [{
+		"@id": "iris://data#schedule-4"
+	}],
+	"iris://vocabulary/domain#liveOperationTime": [{
+		"@value": 1200
+	}],
+	"iris://vocabulary/domain#order": [{
+		"@value": 1
+	}],
+	"iris://vocabulary/domain#prebookInterval": [{
+		"@value": 30
+	}],
+	"iris://vocabulary/domain#prebookOperationTime": [{
+		"@value": 1500
+	}],
+	"iris://vocabulary/domain#prebookPercentage": [{
+		"@value": 100
+	}],
+	"iris://vocabulary/domain#prebookTodayPercentage": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#prefix": [{
+		"@language": "ru",
+		"@value": "ВП"
+	}],
+	"iris://vocabulary/domain#priority": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#serviceCodeEpgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#serviceLabel": [{
+		"@language": "ru",
+		"@value": "КОМПЕНСАЦИЯ ПЕНСИОНЕРАМ ПРОЕЗДА К МЕСТУ ОТДЫХА"
+	}, {
+		"@language": "ru",
+		"@value": "ПОЛУЧЕНИЕ СНИЛС"
+	}]
+}, {
+	"@id": "iris://data#service-34",
+	"@type": [
+		"iris://vocabulary/domain#Service"
+	],
+	"iris://vocabulary/domain#codeFrgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#deptCodeFrgu": [{
+		"@value": "2100000010000002916"
+	}],
+	"iris://vocabulary/domain#hasProvider": [{
+		"@id": "iris://data#department-1"
+	}],
+	"iris://vocabulary/domain#hasSchedule": [{
+		"@id": "iris://data#schedule-4"
+	}],
+	"iris://vocabulary/domain#liveOperationTime": [{
+		"@value": 1200
+	}],
+	"iris://vocabulary/domain#order": [{
+		"@value": 1
+	}],
+	"iris://vocabulary/domain#prebookInterval": [{
+		"@value": 30
+	}],
+	"iris://vocabulary/domain#prebookOperationTime": [{
+		"@value": 1500
+	}],
+	"iris://vocabulary/domain#prebookPercentage": [{
+		"@value": 100
+	}],
+	"iris://vocabulary/domain#prebookTodayPercentage": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#prefix": [{
+		"@language": "ru",
+		"@value": "Д"
+	}],
+	"iris://vocabulary/domain#priority": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#serviceCodeEpgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#serviceLabel": [{
+		"@language": "ru",
+		"@value": "ВЫДАЧА КОПИЙ, ВЫПИСОК, ДОКУМЕНТОВ"
+	}]
+}, {
+	"@id": "iris://data#service-35",
+	"@type": [
+		"iris://vocabulary/domain#Service"
+	],
+	"iris://vocabulary/domain#codeFrgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#deptCodeFrgu": [{
+		"@value": "2100000010000002916"
+	}],
+	"iris://vocabulary/domain#hasProvider": [{
+		"@id": "iris://data#department-1"
+	}],
+	"iris://vocabulary/domain#hasSchedule": [{
+		"@id": "iris://data#schedule-4"
+	}],
+	"iris://vocabulary/domain#liveOperationTime": [{
+		"@value": 1200
+	}],
+	"iris://vocabulary/domain#order": [{
+		"@value": 1
+	}],
+	"iris://vocabulary/domain#prebookInterval": [{
+		"@value": 30
+	}],
+	"iris://vocabulary/domain#prebookOperationTime": [{
+		"@value": 1500
+	}],
+	"iris://vocabulary/domain#prebookPercentage": [{
+		"@value": 100
+	}],
+	"iris://vocabulary/domain#prebookTodayPercentage": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#prefix": [{
+		"@language": "ru",
+		"@value": "Д"
+	}],
+	"iris://vocabulary/domain#priority": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#serviceCodeEpgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#serviceLabel": [{
+		"@language": "ru",
+		"@value": "ВЫДАЧА ВЫПИСОК ИЗ ПОХОЗЯЙСТВЕННЫХ КНИГ"
+	}]
+}, {
+	"@id": "iris://data#service-36",
+	"@type": [
+		"iris://vocabulary/domain#Service"
+	],
+	"iris://vocabulary/domain#codeFrgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#deptCodeFrgu": [{
+		"@value": "2100000010000002916"
+	}],
+	"iris://vocabulary/domain#hasProvider": [{
+		"@id": "iris://data#department-1"
+	}],
+	"iris://vocabulary/domain#hasSchedule": [{
+		"@id": "iris://data#schedule-4"
+	}],
+	"iris://vocabulary/domain#liveOperationTime": [{
+		"@value": 1200
+	}],
+	"iris://vocabulary/domain#order": [{
+		"@value": 1
+	}],
+	"iris://vocabulary/domain#prebookInterval": [{
+		"@value": 30
+	}],
+	"iris://vocabulary/domain#prebookOperationTime": [{
+		"@value": 1500
+	}],
+	"iris://vocabulary/domain#prebookPercentage": [{
+		"@value": 100
+	}],
+	"iris://vocabulary/domain#prebookTodayPercentage": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#prefix": [{
+		"@language": "ru",
+		"@value": "Д"
+	}],
+	"iris://vocabulary/domain#priority": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#serviceCodeEpgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#serviceLabel": [{
+		"@language": "ru",
+		"@value": "ВЫДАЧА ЗАВЕРЕННЫХ КОПИЙ ДОКУМЕНТОВ"
+	}]
+}, {
+	"@id": "iris://data#service-37",
+	"@type": [
+		"iris://vocabulary/domain#Service"
+	],
+	"iris://vocabulary/domain#codeFrgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#deptCodeFrgu": [{
+		"@value": "2100000010000002916"
+	}],
+	"iris://vocabulary/domain#hasProvider": [{
+		"@id": "iris://data#department-1"
+	}],
+	"iris://vocabulary/domain#hasSchedule": [{
+		"@id": "iris://data#schedule-4"
+	}],
+	"iris://vocabulary/domain#liveOperationTime": [{
+		"@value": 1200
+	}],
+	"iris://vocabulary/domain#order": [{
+		"@value": 1
+	}],
+	"iris://vocabulary/domain#prebookInterval": [{
+		"@value": 30
+	}],
+	"iris://vocabulary/domain#prebookOperationTime": [{
+		"@value": 1500
+	}],
+	"iris://vocabulary/domain#prebookPercentage": [{
+		"@value": 100
+	}],
+	"iris://vocabulary/domain#prebookTodayPercentage": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#prefix": [{
+		"@language": "ru",
+		"@value": "Д"
+	}],
+	"iris://vocabulary/domain#priority": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#serviceCodeEpgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#serviceLabel": [{
+		"@language": "ru",
+		"@value": "ВЫПИСКА ИЗ РЕЕСТРА МУН.ИМУЩЕСТВА МУН.РАЙОНА ГОРОДСКОГО ОКРУГА ЧР"
+	}]
+}, {
+	"@id": "iris://data#service-30",
+	"@type": [
+		"iris://vocabulary/domain#Service"
+	],
+	"iris://vocabulary/domain#codeFrgu": [{
+		"@value": "2100000010000005712"
+	}],
+	"iris://vocabulary/domain#deptCodeFrgu": [{
+		"@value": "2100000010000002847"
+	}],
+	"iris://vocabulary/domain#hasProvider": [{
+		"@id": "iris://data#department-1"
+	}],
+	"iris://vocabulary/domain#hasSchedule": [{
+		"@id": "iris://data#schedule-4"
+	}],
+	"iris://vocabulary/domain#liveOperationTime": [{
+		"@value": 1200
+	}],
+	"iris://vocabulary/domain#order": [{
+		"@value": 1
+	}],
+	"iris://vocabulary/domain#prebookInterval": [{
+		"@value": 30
+	}],
+	"iris://vocabulary/domain#prebookOperationTime": [{
+		"@value": 1500
+	}],
+	"iris://vocabulary/domain#prebookPercentage": [{
+		"@value": 100
+	}],
+	"iris://vocabulary/domain#prebookTodayPercentage": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#prefix": [{
+		"@language": "ru",
+		"@value": "Д"
+	}],
+	"iris://vocabulary/domain#priority": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#serviceCodeEpgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#serviceLabel": [{
+		"@language": "ru",
+		"@value": "АПОСТИЛЬ НА ДОКУМЕНТЫ ГРАЖДАНСКОГО СОСТОЯНИЯ"
+	}]
+}, {
+	"@id": "iris://data#service-31",
+	"@type": [
+		"iris://vocabulary/domain#Service"
+	],
+	"iris://vocabulary/domain#codeFrgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#deptCodeFrgu": [{
+		"@value": "2100000010000000934"
+	}],
+	"iris://vocabulary/domain#hasProvider": [{
+		"@id": "iris://data#department-1"
+	}],
+	"iris://vocabulary/domain#hasSchedule": [{
+		"@id": "iris://data#schedule-4"
+	}],
+	"iris://vocabulary/domain#liveOperationTime": [{
+		"@value": 1200
+	}],
+	"iris://vocabulary/domain#order": [{
+		"@value": 1
+	}],
+	"iris://vocabulary/domain#prebookInterval": [{
+		"@value": 30
+	}],
+	"iris://vocabulary/domain#prebookOperationTime": [{
+		"@value": 1500
+	}],
+	"iris://vocabulary/domain#prebookPercentage": [{
+		"@value": 100
+	}],
+	"iris://vocabulary/domain#prebookTodayPercentage": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#prefix": [{
+		"@language": "ru",
+		"@value": "Д"
+	}],
+	"iris://vocabulary/domain#priority": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#serviceCodeEpgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#serviceLabel": [{
+		"@language": "ru",
+		"@value": "ВЫДАЧА УДОСТОВЕРЕНИЯ ПОСТРАДАВШИХ ОТ РАДИАКТ. КАТАСТРОФ ГРАЖДАНАМ И ИХ СЕМЬЯМ"
+	}]
+}, {
+	"@id": "iris://data#service-32",
+	"@type": [
+		"iris://vocabulary/domain#Service"
+	],
+	"iris://vocabulary/domain#codeFrgu": [{
+		"@value": "2100000010000003490"
+	}],
+	"iris://vocabulary/domain#deptCodeFrgu": [{
+		"@value": "2100000010000002776"
+	}],
+	"iris://vocabulary/domain#hasProvider": [{
+		"@id": "iris://data#department-1"
+	}],
+	"iris://vocabulary/domain#hasSchedule": [{
+		"@id": "iris://data#schedule-4"
+	}],
+	"iris://vocabulary/domain#liveOperationTime": [{
+		"@value": 1200
+	}],
+	"iris://vocabulary/domain#order": [{
+		"@value": 1
+	}],
+	"iris://vocabulary/domain#prebookInterval": [{
+		"@value": 30
+	}],
+	"iris://vocabulary/domain#prebookOperationTime": [{
+		"@value": 1500
+	}],
+	"iris://vocabulary/domain#prebookPercentage": [{
+		"@value": 100
+	}],
+	"iris://vocabulary/domain#prebookTodayPercentage": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#prefix": [{
+		"@language": "ru",
+		"@value": "Д"
+	}],
+	"iris://vocabulary/domain#priority": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#serviceCodeEpgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#serviceLabel": [{
+		"@language": "ru",
+		"@value": "ОХОТНИЧИЙ БИЛЕТ"
+	}]
+}, {
+	"@id": "iris://data#service-33",
+	"@type": [
+		"iris://vocabulary/domain#Service"
+	],
+	"iris://vocabulary/domain#codeFrgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#deptCodeFrgu": [{
+		"@value": "2100000010000002916"
+	}],
+	"iris://vocabulary/domain#hasProvider": [{
+		"@id": "iris://data#department-1"
+	}],
+	"iris://vocabulary/domain#hasSchedule": [{
+		"@id": "iris://data#schedule-4"
+	}],
+	"iris://vocabulary/domain#liveOperationTime": [{
+		"@value": 1200
+	}],
+	"iris://vocabulary/domain#order": [{
+		"@value": 1
+	}],
+	"iris://vocabulary/domain#prebookInterval": [{
+		"@value": 30
+	}],
+	"iris://vocabulary/domain#prebookOperationTime": [{
+		"@value": 1500
+	}],
+	"iris://vocabulary/domain#prebookPercentage": [{
+		"@value": 100
+	}],
+	"iris://vocabulary/domain#prebookTodayPercentage": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#prefix": [{
+		"@language": "ru",
+		"@value": "Д"
+	}],
+	"iris://vocabulary/domain#priority": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#serviceCodeEpgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#serviceLabel": [{
+		"@language": "ru",
+		"@value": "ВЫДАЧА СПРАВОК"
+	}]
+}, {
+	"@id": "iris://data#orgroot-1",
+	"@type": [
+		"iris://vocabulary/domain#FormalOrganization"
+	],
+	"iris://vocabulary/domain#hasUnit": [{
+		"@id": "iris://data#office-1"
+	}]
+}, {
+	"@id": "iris://data#service-120",
+	"@type": [
+		"iris://vocabulary/domain#Service"
+	],
+	"iris://vocabulary/domain#codeFrgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#deptCodeFrgu": [{
+		"@value": "10000681774"
+	}],
+	"iris://vocabulary/domain#hasProvider": [{
+		"@id": "iris://data#department-1"
+	}],
+	"iris://vocabulary/domain#hasSchedule": [{
+		"@id": "iris://data#schedule-4"
+	}],
+	"iris://vocabulary/domain#liveOperationTime": [{
+		"@value": 1200
+	}],
+	"iris://vocabulary/domain#order": [{
+		"@value": 1
+	}],
+	"iris://vocabulary/domain#prebookInterval": [{
+		"@value": 30
+	}],
+	"iris://vocabulary/domain#prebookOperationTime": [{
+		"@value": 1500
+	}],
+	"iris://vocabulary/domain#prebookPercentage": [{
+		"@value": 100
+	}],
+	"iris://vocabulary/domain#prebookTodayPercentage": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#prefix": [{
+		"@language": "ru",
+		"@value": "ВП"
+	}],
+	"iris://vocabulary/domain#priority": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#serviceCodeEpgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#serviceLabel": [{
+		"@language": "ru",
+		"@value": "ЗАЯВЛЕНИЕ О НАБОРЕ СОЦИАЛЬНЫХ УСЛУГ"
+	}]
+}, {
+	"@id": "iris://data#service-38",
+	"@type": [
+		"iris://vocabulary/domain#Service"
+	],
+	"iris://vocabulary/domain#codeFrgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#deptCodeFrgu": [{
+		"@value": "2100000010000000294"
+	}],
+	"iris://vocabulary/domain#hasProvider": [{
+		"@id": "iris://data#department-1"
+	}],
+	"iris://vocabulary/domain#hasSchedule": [{
+		"@id": "iris://data#schedule-4"
+	}],
+	"iris://vocabulary/domain#liveOperationTime": [{
+		"@value": 1200
+	}],
+	"iris://vocabulary/domain#order": [{
+		"@value": 1
+	}],
+	"iris://vocabulary/domain#prebookInterval": [{
+		"@value": 30
+	}],
+	"iris://vocabulary/domain#prebookOperationTime": [{
+		"@value": 1500
+	}],
+	"iris://vocabulary/domain#prebookPercentage": [{
+		"@value": 100
+	}],
+	"iris://vocabulary/domain#prebookTodayPercentage": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#prefix": [{
+		"@language": "ru",
+		"@value": "МП"
+	}],
+	"iris://vocabulary/domain#priority": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#serviceCodeEpgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#serviceLabel": [{
+		"@language": "ru",
+		"@value": "РАЗРЕШЕНИЕ НА ИЗУЧЕНИЕ НЕДР ЛЕСНОГО ФОНДА"
+	}]
+}, {
+	"@id": "iris://data#service-39",
+	"@type": [
+		"iris://vocabulary/domain#Service"
+	],
+	"iris://vocabulary/domain#codeFrgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#deptCodeFrgu": [{
+		"@value": "2100000010000000294"
+	}],
+	"iris://vocabulary/domain#hasProvider": [{
+		"@id": "iris://data#department-1"
+	}],
+	"iris://vocabulary/domain#hasSchedule": [{
+		"@id": "iris://data#schedule-4"
+	}],
+	"iris://vocabulary/domain#liveOperationTime": [{
+		"@value": 1200
+	}],
+	"iris://vocabulary/domain#order": [{
+		"@value": 1
+	}],
+	"iris://vocabulary/domain#prebookInterval": [{
+		"@value": 30
+	}],
+	"iris://vocabulary/domain#prebookOperationTime": [{
+		"@value": 1500
+	}],
+	"iris://vocabulary/domain#prebookPercentage": [{
+		"@value": 100
+	}],
+	"iris://vocabulary/domain#prebookTodayPercentage": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#prefix": [{
+		"@language": "ru",
+		"@value": "МП"
+	}],
+	"iris://vocabulary/domain#priority": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#serviceCodeEpgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#serviceLabel": [{
+		"@language": "ru",
+		"@value": "РАЗРЕШЕНИЕ НА ВЫБРОС ВРЕДНЫХ ВЕЩЕСТВ В АТМОСФЕРУ"
+	}]
+}, {
+	"@id": "iris://data#office-1",
+	"@type": [
+		"iris://vocabulary/domain#Office"
+	],
+	"iris://vocabulary/domain#hasUnit": [{
+		"@id": "iris://data#department-1"
+	}],
+	"iris://vocabulary/domain#orgLabel": [{
+		"@language": "ru",
+		"@value": "Офис 1"
+	}],
+	"iris://vocabulary/domain#orgTimezone": [{
+		"@value": "Europe/Moscow"
+	}],
+	"iris://vocabulary/domain#pinCodePrefix": [{
+		"@value": "001"
+	}]
+}, {
+	"@id": "iris://data#service-129",
+	"@type": [
+		"iris://vocabulary/domain#Service"
+	],
+	"iris://vocabulary/domain#codeFrgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#deptCodeFrgu": [{
+		"@value": "10000681774"
+	}],
+	"iris://vocabulary/domain#hasProvider": [{
+		"@id": "iris://data#department-1"
+	}],
+	"iris://vocabulary/domain#hasSchedule": [{
+		"@id": "iris://data#schedule-4"
+	}],
+	"iris://vocabulary/domain#liveOperationTime": [{
+		"@value": 1200
+	}],
+	"iris://vocabulary/domain#order": [{
+		"@value": 1
+	}],
+	"iris://vocabulary/domain#prebookInterval": [{
+		"@value": 30
+	}],
+	"iris://vocabulary/domain#prebookOperationTime": [{
+		"@value": 1500
+	}],
+	"iris://vocabulary/domain#prebookPercentage": [{
+		"@value": 100
+	}],
+	"iris://vocabulary/domain#prebookTodayPercentage": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#prefix": [{
+		"@language": "ru",
+		"@value": "ВП"
+	}],
+	"iris://vocabulary/domain#priority": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#serviceCodeEpgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#serviceLabel": [{
+		"@language": "ru",
+		"@value": "ЗАЯВЛЕНИЕ О ПЛАТЕЖАХ ИЗ ПЕНСИИ"
+	}]
+}, {
+	"@id": "iris://data#service-9",
+	"@type": [
+		"iris://vocabulary/domain#Service"
+	],
+	"iris://vocabulary/domain#codeFrgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#deptCodeFrgu": [{
+		"@value": "2100000010000000934"
+	}],
+	"iris://vocabulary/domain#hasProvider": [{
+		"@id": "iris://data#department-1"
+	}],
+	"iris://vocabulary/domain#hasSchedule": [{
+		"@id": "iris://data#schedule-4"
+	}],
+	"iris://vocabulary/domain#liveOperationTime": [{
+		"@value": 1200
+	}],
+	"iris://vocabulary/domain#order": [{
+		"@value": 1
+	}],
+	"iris://vocabulary/domain#prebookInterval": [{
+		"@value": 30
+	}],
+	"iris://vocabulary/domain#prebookOperationTime": [{
+		"@value": 1500
+	}],
+	"iris://vocabulary/domain#prebookPercentage": [{
+		"@value": 100
+	}],
+	"iris://vocabulary/domain#prebookTodayPercentage": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#prefix": [{
+		"@language": "ru",
+		"@value": "Р"
+	}],
+	"iris://vocabulary/domain#priority": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#serviceCodeEpgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#serviceLabel": [{
+		"@language": "ru",
+		"@value": "ПОСОБИЕ НА РЕБЕНКА ВОЕННОГО"
+	}]
+}, {
+	"@id": "iris://data#service-41",
+	"@type": [
+		"iris://vocabulary/domain#Service"
+	],
+	"iris://vocabulary/domain#codeFrgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#deptCodeFrgu": [{
+		"@value": "10002262092"
+	}],
+	"iris://vocabulary/domain#hasProvider": [{
+		"@id": "iris://data#department-1"
+	}],
+	"iris://vocabulary/domain#hasSchedule": [{
+		"@id": "iris://data#schedule-4"
+	}],
+	"iris://vocabulary/domain#liveOperationTime": [{
+		"@value": 1200
+	}],
+	"iris://vocabulary/domain#order": [{
+		"@value": 1
+	}],
+	"iris://vocabulary/domain#prebookInterval": [{
+		"@value": 30
+	}],
+	"iris://vocabulary/domain#prebookOperationTime": [{
+		"@value": 1500
+	}],
+	"iris://vocabulary/domain#prebookPercentage": [{
+		"@value": 100
+	}],
+	"iris://vocabulary/domain#prebookTodayPercentage": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#prefix": [{
+		"@language": "ru",
+		"@value": "МП"
+	}],
+	"iris://vocabulary/domain#priority": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#serviceCodeEpgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#serviceLabel": [{
+		"@language": "ru",
+		"@value": "УПЛАТА СТРАХОВЫХ ВЗНОСОВ В ФСС"
+	}]
+}, {
+	"@id": "iris://data#service-40",
+	"@type": [
+		"iris://vocabulary/domain#Service"
+	],
+	"iris://vocabulary/domain#codeFrgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#deptCodeFrgu": [{
+		"@value": "2100000010000000294"
+	}],
+	"iris://vocabulary/domain#hasProvider": [{
+		"@id": "iris://data#department-1"
+	}],
+	"iris://vocabulary/domain#hasSchedule": [{
+		"@id": "iris://data#schedule-4"
+	}],
+	"iris://vocabulary/domain#liveOperationTime": [{
+		"@value": 1200
+	}],
+	"iris://vocabulary/domain#order": [{
+		"@value": 1
+	}],
+	"iris://vocabulary/domain#prebookInterval": [{
+		"@value": 30
+	}],
+	"iris://vocabulary/domain#prebookOperationTime": [{
+		"@value": 1500
+	}],
+	"iris://vocabulary/domain#prebookPercentage": [{
+		"@value": 100
+	}],
+	"iris://vocabulary/domain#prebookTodayPercentage": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#prefix": [{
+		"@language": "ru",
+		"@value": "МП"
+	}],
+	"iris://vocabulary/domain#priority": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#serviceCodeEpgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#serviceLabel": [{
+		"@language": "ru",
+		"@value": "ГРАНТ НА РАЗВИТИЕ СЕЛЬСК.ХОЗЯЙСТВА НАЧИНАЮЩИМ ФЕРМЕРАМ"
+	}]
+}, {
+	"@id": "iris://data#service-43",
+	"@type": [
+		"iris://vocabulary/domain#Service"
+	],
+	"iris://vocabulary/domain#codeFrgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#deptCodeFrgu": [{
+		"@value": "2100000010000002916"
+	}],
+	"iris://vocabulary/domain#hasProvider": [{
+		"@id": "iris://data#department-1"
+	}],
+	"iris://vocabulary/domain#hasSchedule": [{
+		"@id": "iris://data#schedule-4"
+	}],
+	"iris://vocabulary/domain#liveOperationTime": [{
+		"@value": 1200
+	}],
+	"iris://vocabulary/domain#order": [{
+		"@value": 1
+	}],
+	"iris://vocabulary/domain#prebookInterval": [{
+		"@value": 30
+	}],
+	"iris://vocabulary/domain#prebookOperationTime": [{
+		"@value": 1500
+	}],
+	"iris://vocabulary/domain#prebookPercentage": [{
+		"@value": 100
+	}],
+	"iris://vocabulary/domain#prebookTodayPercentage": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#prefix": [{
+		"@language": "ru",
+		"@value": "МС"
+	}],
+	"iris://vocabulary/domain#priority": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#serviceCodeEpgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#serviceLabel": [{
+		"@language": "ru",
+		"@value": "РАЗРЕШЕНИЕ НА БРАК В 16 ЛЕТ"
+	}]
+}, {
+	"@id": "iris://data#service-42",
+	"@type": [
+		"iris://vocabulary/domain#Service"
+	],
+	"iris://vocabulary/domain#codeFrgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#deptCodeFrgu": [{
+		"@value": "2100000010000002847"
+	}],
+	"iris://vocabulary/domain#hasProvider": [{
+		"@id": "iris://data#department-1"
+	}],
+	"iris://vocabulary/domain#hasSchedule": [{
+		"@id": "iris://data#schedule-4"
+	}],
+	"iris://vocabulary/domain#liveOperationTime": [{
+		"@value": 1200
+	}],
+	"iris://vocabulary/domain#order": [{
+		"@value": 1
+	}],
+	"iris://vocabulary/domain#prebookInterval": [{
+		"@value": 30
+	}],
+	"iris://vocabulary/domain#prebookOperationTime": [{
+		"@value": 1500
+	}],
+	"iris://vocabulary/domain#prebookPercentage": [{
+		"@value": 100
+	}],
+	"iris://vocabulary/domain#prebookTodayPercentage": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#prefix": [{
+		"@language": "ru",
+		"@value": "МС"
+	}],
+	"iris://vocabulary/domain#priority": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#serviceCodeEpgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#serviceLabel": [{
+		"@language": "ru",
+		"@value": "ЗАКЛЮЧЕНИЕ БРАКА"
+	}]
+}, {
+	"@id": "iris://data#service-45",
+	"@type": [
+		"iris://vocabulary/domain#Service"
+	],
+	"iris://vocabulary/domain#codeFrgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#deptCodeFrgu": [{
+		"@value": "2100000010000002916"
+	}],
+	"iris://vocabulary/domain#hasProvider": [{
+		"@id": "iris://data#department-1"
+	}],
+	"iris://vocabulary/domain#hasSchedule": [{
+		"@id": "iris://data#schedule-4"
+	}],
+	"iris://vocabulary/domain#liveOperationTime": [{
+		"@value": 1200
+	}],
+	"iris://vocabulary/domain#order": [{
+		"@value": 1
+	}],
+	"iris://vocabulary/domain#prebookInterval": [{
+		"@value": 30
+	}],
+	"iris://vocabulary/domain#prebookOperationTime": [{
+		"@value": 1500
+	}],
+	"iris://vocabulary/domain#prebookPercentage": [{
+		"@value": 100
+	}],
+	"iris://vocabulary/domain#prebookTodayPercentage": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#prefix": [{
+		"@language": "ru",
+		"@value": "МС"
+	}],
+	"iris://vocabulary/domain#priority": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#serviceCodeEpgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#serviceLabel": [{
+		"@language": "ru",
+		"@value": "ДОПОЛНИТЕЛЬНОГО ОБРАЗОВАНИЯ"
+	}]
+}, {
+	"@id": "iris://data#service-44",
+	"@type": [
+		"iris://vocabulary/domain#Service"
+	],
+	"iris://vocabulary/domain#codeFrgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#deptCodeFrgu": [{
+		"@value": "2100000010000002916"
+	}],
+	"iris://vocabulary/domain#hasProvider": [{
+		"@id": "iris://data#department-1"
+	}],
+	"iris://vocabulary/domain#hasSchedule": [{
+		"@id": "iris://data#schedule-4"
+	}],
+	"iris://vocabulary/domain#liveOperationTime": [{
+		"@value": 1200
+	}],
+	"iris://vocabulary/domain#order": [{
+		"@value": 1
+	}],
+	"iris://vocabulary/domain#prebookInterval": [{
+		"@value": 30
+	}],
+	"iris://vocabulary/domain#prebookOperationTime": [{
+		"@value": 1500
+	}],
+	"iris://vocabulary/domain#prebookPercentage": [{
+		"@value": 100
+	}],
+	"iris://vocabulary/domain#prebookTodayPercentage": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#prefix": [{
+		"@language": "ru",
+		"@value": "МС"
+	}],
+	"iris://vocabulary/domain#priority": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#serviceCodeEpgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#serviceLabel": [{
+		"@language": "ru",
+		"@value": "БЕСПЛАТНОЕ ОБЩЕЕ ОБРАЗОВАНИЕ"
+	}]
+}, {
+	"@id": "iris://data#service-47",
+	"@type": [
+		"iris://vocabulary/domain#Service"
+	],
+	"iris://vocabulary/domain#codeFrgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#deptCodeFrgu": [{
+		"@value": "2100000010000002916"
+	}],
+	"iris://vocabulary/domain#hasProvider": [{
+		"@id": "iris://data#department-1"
+	}],
+	"iris://vocabulary/domain#hasSchedule": [{
+		"@id": "iris://data#schedule-4"
+	}],
+	"iris://vocabulary/domain#liveOperationTime": [{
+		"@value": 1200
+	}],
+	"iris://vocabulary/domain#order": [{
+		"@value": 1
+	}],
+	"iris://vocabulary/domain#prebookInterval": [{
+		"@value": 30
+	}],
+	"iris://vocabulary/domain#prebookOperationTime": [{
+		"@value": 1500
+	}],
+	"iris://vocabulary/domain#prebookPercentage": [{
+		"@value": 100
+	}],
+	"iris://vocabulary/domain#prebookTodayPercentage": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#prefix": [{
+		"@language": "ru",
+		"@value": "МС"
+	}],
+	"iris://vocabulary/domain#priority": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#serviceCodeEpgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#serviceLabel": [{
+		"@language": "ru",
+		"@value": "ПРИЕМ ЗАЯВЛЕНИЯ О ЗАКЛЮЧЕНИИ БРАКА"
+	}]
+}, {
+	"@id": "iris://data#service-46",
+	"@type": [
+		"iris://vocabulary/domain#Service"
+	],
+	"iris://vocabulary/domain#codeFrgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#deptCodeFrgu": [{
+		"@value": "2100000010000002916"
+	}],
+	"iris://vocabulary/domain#hasProvider": [{
+		"@id": "iris://data#department-1"
+	}],
+	"iris://vocabulary/domain#hasSchedule": [{
+		"@id": "iris://data#schedule-4"
+	}],
+	"iris://vocabulary/domain#liveOperationTime": [{
+		"@value": 1200
+	}],
+	"iris://vocabulary/domain#order": [{
+		"@value": 1
+	}],
+	"iris://vocabulary/domain#prebookInterval": [{
+		"@value": 30
+	}],
+	"iris://vocabulary/domain#prebookOperationTime": [{
+		"@value": 1500
+	}],
+	"iris://vocabulary/domain#prebookPercentage": [{
+		"@value": 100
+	}],
+	"iris://vocabulary/domain#prebookTodayPercentage": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#prefix": [{
+		"@language": "ru",
+		"@value": "МС"
+	}],
+	"iris://vocabulary/domain#priority": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#serviceCodeEpgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#serviceLabel": [{
+		"@language": "ru",
+		"@value": "ИНФОРМАЦИЯ О ПОЛУЧЕНИИ ОБЩЕГО ОБРАЗОВАНИЯ"
+	}]
+}, {
+	"@id": "iris://data#service-49",
+	"@type": [
+		"iris://vocabulary/domain#Service"
+	],
+	"iris://vocabulary/domain#codeFrgu": [{
+		"@value": "10000013628"
+	}],
+	"iris://vocabulary/domain#deptCodeFrgu": [{
+		"@value": "10001739421"
+	}],
+	"iris://vocabulary/domain#hasProvider": [{
+		"@id": "iris://data#department-1"
+	}],
+	"iris://vocabulary/domain#hasSchedule": [{
+		"@id": "iris://data#schedule-4"
+	}],
+	"iris://vocabulary/domain#liveOperationTime": [{
+		"@value": 1200
+	}],
+	"iris://vocabulary/domain#order": [{
+		"@value": 1
+	}],
+	"iris://vocabulary/domain#prebookInterval": [{
+		"@value": 30
+	}],
+	"iris://vocabulary/domain#prebookOperationTime": [{
+		"@value": 1500
+	}],
+	"iris://vocabulary/domain#prebookPercentage": [{
+		"@value": 100
+	}],
+	"iris://vocabulary/domain#prebookTodayPercentage": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#prefix": [{
+		"@language": "ru",
+		"@value": "С"
+	}],
+	"iris://vocabulary/domain#priority": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#serviceCodeEpgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#serviceLabel": [{
+		"@language": "ru",
+		"@value": "СВЕДЕНИЯ ИЗ ГКН"
+	}]
+}, {
+	"@id": "iris://data#service-48",
+	"@type": [
+		"iris://vocabulary/domain#Service"
+	],
+	"iris://vocabulary/domain#codeFrgu": [{
+		"@value": "10000012269"
+	}, {
+		"@value": "10000013633"
+	}],
+	"iris://vocabulary/domain#deptCodeFrgu": [{
+		"@value": "10001739421"
+	}, {
+		"@value": "10001739409"
+	}],
+	"iris://vocabulary/domain#hasProvider": [{
+		"@id": "iris://data#department-1"
+	}],
+	"iris://vocabulary/domain#hasSchedule": [{
+		"@id": "iris://data#schedule-4"
+	}],
+	"iris://vocabulary/domain#liveOperationTime": [{
+		"@value": 1200
+	}],
+	"iris://vocabulary/domain#order": [{
+		"@value": 1
+	}],
+	"iris://vocabulary/domain#prebookInterval": [{
+		"@value": 30
+	}],
+	"iris://vocabulary/domain#prebookOperationTime": [{
+		"@value": 1500
+	}],
+	"iris://vocabulary/domain#prebookPercentage": [{
+		"@value": 100
+	}],
+	"iris://vocabulary/domain#prebookTodayPercentage": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#prefix": [{
+		"@language": "ru",
+		"@value": "С"
+	}],
+	"iris://vocabulary/domain#priority": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#serviceCodeEpgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#serviceLabel": [{
+		"@language": "ru",
+		"@value": "СВЕДЕНИЯ ИЗ ЕГРП"
+	}, {
+		"@language": "ru",
+		"@value": "КАДАСТРОВЫЙ УЧЕТ НЕДВИЖИМОСТИ"
+	}]
+}, {
+	"@id": "iris://data#service-109",
+	"@type": [
+		"iris://vocabulary/domain#Service"
+	],
+	"iris://vocabulary/domain#codeFrgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#deptCodeFrgu": [{
+		"@value": "2100000010000000010"
+	}],
+	"iris://vocabulary/domain#hasProvider": [{
+		"@id": "iris://data#department-1"
+	}],
+	"iris://vocabulary/domain#hasSchedule": [{
+		"@id": "iris://data#schedule-4"
+	}],
+	"iris://vocabulary/domain#liveOperationTime": [{
+		"@value": 1200
+	}],
+	"iris://vocabulary/domain#order": [{
+		"@value": 1
+	}],
+	"iris://vocabulary/domain#prebookInterval": [{
+		"@value": 30
+	}],
+	"iris://vocabulary/domain#prebookOperationTime": [{
+		"@value": 1500
+	}],
+	"iris://vocabulary/domain#prebookPercentage": [{
+		"@value": 100
+	}],
+	"iris://vocabulary/domain#prebookTodayPercentage": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#prefix": [{
+		"@language": "ru",
+		"@value": "О"
+	}],
+	"iris://vocabulary/domain#priority": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#serviceCodeEpgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#serviceLabel": [{
+		"@language": "ru",
+		"@value": "ВОЗМЕЩЕНИЕ БИЗНЕСУ ЗАТРАТ НА УЧАСТИЕ В ВЫСТАВКАХ"
+	}]
+}, {
+	"@id": "iris://data#service-108",
+	"@type": [
+		"iris://vocabulary/domain#Service"
+	],
+	"iris://vocabulary/domain#codeFrgu": [{
+		"@value": "2100000010000002079"
+	}],
+	"iris://vocabulary/domain#deptCodeFrgu": [{
+		"@value": "2100000010000000010"
+	}],
+	"iris://vocabulary/domain#hasProvider": [{
+		"@id": "iris://data#department-1"
+	}],
+	"iris://vocabulary/domain#hasSchedule": [{
+		"@id": "iris://data#schedule-4"
+	}],
+	"iris://vocabulary/domain#liveOperationTime": [{
+		"@value": 1200
+	}],
+	"iris://vocabulary/domain#order": [{
+		"@value": 1
+	}],
+	"iris://vocabulary/domain#prebookInterval": [{
+		"@value": 30
+	}],
+	"iris://vocabulary/domain#prebookOperationTime": [{
+		"@value": 1500
+	}],
+	"iris://vocabulary/domain#prebookPercentage": [{
+		"@value": 100
+	}],
+	"iris://vocabulary/domain#prebookTodayPercentage": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#prefix": [{
+		"@language": "ru",
+		"@value": "О"
+	}],
+	"iris://vocabulary/domain#priority": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#serviceCodeEpgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#serviceLabel": [{
+		"@language": "ru",
+		"@value": "ВОЗМЕЩЕНИЕ БИЗНЕСУ ПРОЦЕНТОВ ПО КРЕДИТАМ"
+	}]
+}, {
+	"@id": "iris://data#service-105",
+	"@type": [
+		"iris://vocabulary/domain#Service"
+	],
+	"iris://vocabulary/domain#codeFrgu": [{
+		"@value": "2100000010000000949"
+	}],
+	"iris://vocabulary/domain#deptCodeFrgu": [{
+		"@value": "2100000010000000934"
+	}],
+	"iris://vocabulary/domain#hasProvider": [{
+		"@id": "iris://data#department-1"
+	}],
+	"iris://vocabulary/domain#hasSchedule": [{
+		"@id": "iris://data#schedule-4"
+	}],
+	"iris://vocabulary/domain#liveOperationTime": [{
+		"@value": 1200
+	}],
+	"iris://vocabulary/domain#order": [{
+		"@value": 1
+	}],
+	"iris://vocabulary/domain#prebookInterval": [{
+		"@value": 30
+	}],
+	"iris://vocabulary/domain#prebookOperationTime": [{
+		"@value": 1500
+	}],
+	"iris://vocabulary/domain#prebookPercentage": [{
+		"@value": 100
+	}],
+	"iris://vocabulary/domain#prebookTodayPercentage": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#prefix": [{
+		"@language": "ru",
+		"@value": "О"
+	}],
+	"iris://vocabulary/domain#priority": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#serviceCodeEpgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#serviceLabel": [{
+		"@language": "ru",
+		"@value": "ЛИЦЕНЗИРОВАНИЕ ДЕЯТ. ПО ОБОРОТУ НАРКОТИЧ. СРЕДСТВ"
+	}]
+}, {
+	"@id": "iris://data#service-104",
+	"@type": [
+		"iris://vocabulary/domain#Service"
+	],
+	"iris://vocabulary/domain#codeFrgu": [{
+		"@value": "2100000010000001292"
+	}],
+	"iris://vocabulary/domain#deptCodeFrgu": [{
+		"@value": "2100000010000001289"
+	}],
+	"iris://vocabulary/domain#hasProvider": [{
+		"@id": "iris://data#department-1"
+	}],
+	"iris://vocabulary/domain#hasSchedule": [{
+		"@id": "iris://data#schedule-4"
+	}],
+	"iris://vocabulary/domain#liveOperationTime": [{
+		"@value": 1200
+	}],
+	"iris://vocabulary/domain#order": [{
+		"@value": 1
+	}],
+	"iris://vocabulary/domain#prebookInterval": [{
+		"@value": 30
+	}],
+	"iris://vocabulary/domain#prebookOperationTime": [{
+		"@value": 1500
+	}],
+	"iris://vocabulary/domain#prebookPercentage": [{
+		"@value": 100
+	}],
+	"iris://vocabulary/domain#prebookTodayPercentage": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#prefix": [{
+		"@language": "ru",
+		"@value": "О"
+	}],
+	"iris://vocabulary/domain#priority": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#serviceCodeEpgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#serviceLabel": [{
+		"@language": "ru",
+		"@value": "АККРЕДИТАЦИЯ ОБРАЗОВАТЕЛЬНЫХ ОРГАНИЗАЦИЙ"
+	}]
+}, {
+	"@id": "iris://data#service-107",
+	"@type": [
+		"iris://vocabulary/domain#Service"
+	],
+	"iris://vocabulary/domain#codeFrgu": [{
+		"@value": "100000010000002251"
+	}],
+	"iris://vocabulary/domain#deptCodeFrgu": [{
+		"@value": "2100000010000000010"
+	}],
+	"iris://vocabulary/domain#hasProvider": [{
+		"@id": "iris://data#department-1"
+	}],
+	"iris://vocabulary/domain#hasSchedule": [{
+		"@id": "iris://data#schedule-4"
+	}],
+	"iris://vocabulary/domain#liveOperationTime": [{
+		"@value": 1200
+	}],
+	"iris://vocabulary/domain#order": [{
+		"@value": 1
+	}],
+	"iris://vocabulary/domain#prebookInterval": [{
+		"@value": 30
+	}],
+	"iris://vocabulary/domain#prebookOperationTime": [{
+		"@value": 1500
+	}],
+	"iris://vocabulary/domain#prebookPercentage": [{
+		"@value": 100
+	}],
+	"iris://vocabulary/domain#prebookTodayPercentage": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#prefix": [{
+		"@language": "ru",
+		"@value": "О"
+	}],
+	"iris://vocabulary/domain#priority": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#serviceCodeEpgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#serviceLabel": [{
+		"@language": "ru",
+		"@value": "ЛИЦЕНЗИРОВАНИЕ ДЕЯТЕЛЬНОСТИ С МЕТАЛЛОЛОМОМ"
+	}]
+}, {
+	"@id": "iris://data#service-106",
+	"@type": [
+		"iris://vocabulary/domain#Service"
+	],
+	"iris://vocabulary/domain#codeFrgu": [{
+		"@value": "2100000010000000018"
+	}],
+	"iris://vocabulary/domain#deptCodeFrgu": [{
+		"@value": "2100000010000000010"
+	}],
+	"iris://vocabulary/domain#hasProvider": [{
+		"@id": "iris://data#department-1"
+	}],
+	"iris://vocabulary/domain#hasSchedule": [{
+		"@id": "iris://data#schedule-4"
+	}],
+	"iris://vocabulary/domain#liveOperationTime": [{
+		"@value": 1200
+	}],
+	"iris://vocabulary/domain#order": [{
+		"@value": 1
+	}],
+	"iris://vocabulary/domain#prebookInterval": [{
+		"@value": 30
+	}],
+	"iris://vocabulary/domain#prebookOperationTime": [{
+		"@value": 1500
+	}],
+	"iris://vocabulary/domain#prebookPercentage": [{
+		"@value": 100
+	}],
+	"iris://vocabulary/domain#prebookTodayPercentage": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#prefix": [{
+		"@language": "ru",
+		"@value": "О"
+	}],
+	"iris://vocabulary/domain#priority": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#serviceCodeEpgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#serviceLabel": [{
+		"@language": "ru",
+		"@value": "ЛИЦЕНЗИЯ НА ПРОДАЖУ АЛКОГОЛЯ"
+	}]
+}, {
+	"@id": "iris://data#service-101",
+	"@type": [
+		"iris://vocabulary/domain#Service"
+	],
+	"iris://vocabulary/domain#codeFrgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#deptCodeFrgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#hasProvider": [{
+		"@id": "iris://data#department-1"
+	}],
+	"iris://vocabulary/domain#hasSchedule": [{
+		"@id": "iris://data#schedule-4"
+	}],
+	"iris://vocabulary/domain#liveOperationTime": [{
+		"@value": 1200
+	}],
+	"iris://vocabulary/domain#order": [{
+		"@value": 1
+	}],
+	"iris://vocabulary/domain#prebookInterval": [{
+		"@value": 30
+	}],
+	"iris://vocabulary/domain#prebookOperationTime": [{
+		"@value": 1500
+	}],
+	"iris://vocabulary/domain#prebookPercentage": [{
+		"@value": 100
+	}],
+	"iris://vocabulary/domain#prebookTodayPercentage": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#prefix": [{
+		"@language": "ru",
+		"@value": "О"
+	}],
+	"iris://vocabulary/domain#priority": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#serviceCodeEpgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#serviceLabel": [{
+		"@language": "ru",
+		"@value": "ПРИЕМ УВЕДОМЛЕНИЯ ОТ ЮР.ЛИЦ О ПРОИЗВОДСТВЕ С.И.З."
+	}]
+}, {
+	"@id": "iris://data#service-100",
+	"@type": [
+		"iris://vocabulary/domain#Service"
+	],
+	"iris://vocabulary/domain#codeFrgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#deptCodeFrgu": [{
+		"@value": "10000681774"
+	}],
+	"iris://vocabulary/domain#hasProvider": [{
+		"@id": "iris://data#department-1"
+	}],
+	"iris://vocabulary/domain#hasSchedule": [{
+		"@id": "iris://data#schedule-4"
+	}],
+	"iris://vocabulary/domain#liveOperationTime": [{
+		"@value": 1200
+	}],
+	"iris://vocabulary/domain#order": [{
+		"@value": 1
+	}],
+	"iris://vocabulary/domain#prebookInterval": [{
+		"@value": 30
+	}],
+	"iris://vocabulary/domain#prebookOperationTime": [{
+		"@value": 1500
+	}],
+	"iris://vocabulary/domain#prebookPercentage": [{
+		"@value": 100
+	}],
+	"iris://vocabulary/domain#prebookTodayPercentage": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#prefix": [{
+		"@language": "ru",
+		"@value": "О"
+	}],
+	"iris://vocabulary/domain#priority": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#serviceCodeEpgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#serviceLabel": [{
+		"@language": "ru",
+		"@value": "ИНФОРМИРОВАНИЕ ПЛАТЕЛЬЩИКОВ О СТРАХОВЫХ ВЗНОСАХ"
+	}]
+}, {
+	"@id": "iris://data#service-103",
+	"@type": [
+		"iris://vocabulary/domain#Service"
+	],
+	"iris://vocabulary/domain#codeFrgu": [{
+		"@value": "100000010000001326"
+	}],
+	"iris://vocabulary/domain#deptCodeFrgu": [{
+		"@value": "2100000010000001289"
+	}],
+	"iris://vocabulary/domain#hasProvider": [{
+		"@id": "iris://data#department-1"
+	}],
+	"iris://vocabulary/domain#hasSchedule": [{
+		"@id": "iris://data#schedule-4"
+	}],
+	"iris://vocabulary/domain#liveOperationTime": [{
+		"@value": 1200
+	}],
+	"iris://vocabulary/domain#order": [{
+		"@value": 1
+	}],
+	"iris://vocabulary/domain#prebookInterval": [{
+		"@value": 30
+	}],
+	"iris://vocabulary/domain#prebookOperationTime": [{
+		"@value": 1500
+	}],
+	"iris://vocabulary/domain#prebookPercentage": [{
+		"@value": 100
+	}],
+	"iris://vocabulary/domain#prebookTodayPercentage": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#prefix": [{
+		"@language": "ru",
+		"@value": "О"
+	}],
+	"iris://vocabulary/domain#priority": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#serviceCodeEpgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#serviceLabel": [{
+		"@language": "ru",
+		"@value": "ЛИЦЕНЗИРОВАНИЕ ОБРАЗОВАТЕЛЬНЫХ ОРГАНИЗАЦИЙ"
+	}]
+}, {
+	"@id": "iris://data#service-102",
+	"@type": [
+		"iris://vocabulary/domain#Service"
+	],
+	"iris://vocabulary/domain#codeFrgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#deptCodeFrgu": [{
+		"@value": "2100000010000007757"
+	}],
+	"iris://vocabulary/domain#hasProvider": [{
+		"@id": "iris://data#department-1"
+	}],
+	"iris://vocabulary/domain#hasSchedule": [{
+		"@id": "iris://data#schedule-4"
+	}],
+	"iris://vocabulary/domain#liveOperationTime": [{
+		"@value": 1200
+	}],
+	"iris://vocabulary/domain#order": [{
+		"@value": 1
+	}],
+	"iris://vocabulary/domain#prebookInterval": [{
+		"@value": 30
+	}],
+	"iris://vocabulary/domain#prebookOperationTime": [{
+		"@value": 1500
+	}],
+	"iris://vocabulary/domain#prebookPercentage": [{
+		"@value": 100
+	}],
+	"iris://vocabulary/domain#prebookTodayPercentage": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#prefix": [{
+		"@language": "ru",
+		"@value": "О"
+	}],
+	"iris://vocabulary/domain#priority": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#serviceCodeEpgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#serviceLabel": [{
+		"@language": "ru",
+		"@value": "РАЗРЕШЕНИЕ НА ПЕРЕВОЗКУ ПАССАЖИРОВ (ТАКСИ)"
+	}]
+}, {
+	"@id": "iris://data#service-85",
+	"@type": [
+		"iris://vocabulary/domain#Service"
+	],
+	"iris://vocabulary/domain#codeFrgu": [{
+		"@value": "10000020393"
+	}],
+	"iris://vocabulary/domain#deptCodeFrgu": [{
+		"@value": "10001300319"
+	}],
+	"iris://vocabulary/domain#hasProvider": [{
+		"@id": "iris://data#department-1"
+	}],
+	"iris://vocabulary/domain#hasSchedule": [{
+		"@id": "iris://data#schedule-4"
+	}],
+	"iris://vocabulary/domain#liveOperationTime": [{
+		"@value": 1200
+	}],
+	"iris://vocabulary/domain#order": [{
+		"@value": 1
+	}],
+	"iris://vocabulary/domain#prebookInterval": [{
+		"@value": 30
+	}],
+	"iris://vocabulary/domain#prebookOperationTime": [{
+		"@value": 1500
+	}],
+	"iris://vocabulary/domain#prebookPercentage": [{
+		"@value": 100
+	}],
+	"iris://vocabulary/domain#prebookTodayPercentage": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#prefix": [{
+		"@language": "ru",
+		"@value": "М"
+	}],
+	"iris://vocabulary/domain#priority": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#serviceCodeEpgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#serviceLabel": [{
+		"@language": "ru",
+		"@value": "РЕГИСТРАЦИЯ И СНЯТИЕ С УЧЕТА ПО МЕСТУ ЖИТЕЛЬСТВА ПО МЕСТУ ПРЕБЫВАНИЯ"
+	}]
+}, {
+	"@id": "iris://data#service-84",
+	"@type": [
+		"iris://vocabulary/domain#Service"
+	],
+	"iris://vocabulary/domain#codeFrgu": [{
+		"@value": "10000027991"
+	}],
+	"iris://vocabulary/domain#deptCodeFrgu": [{
+		"@value": "10001300319"
+	}],
+	"iris://vocabulary/domain#hasProvider": [{
+		"@id": "iris://data#department-1"
+	}],
+	"iris://vocabulary/domain#hasSchedule": [{
+		"@id": "iris://data#schedule-4"
+	}],
+	"iris://vocabulary/domain#liveOperationTime": [{
+		"@value": 1200
+	}],
+	"iris://vocabulary/domain#order": [{
+		"@value": 1
+	}],
+	"iris://vocabulary/domain#prebookInterval": [{
+		"@value": 30
+	}],
+	"iris://vocabulary/domain#prebookOperationTime": [{
+		"@value": 1500
+	}],
+	"iris://vocabulary/domain#prebookPercentage": [{
+		"@value": 100
+	}],
+	"iris://vocabulary/domain#prebookTodayPercentage": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#prefix": [{
+		"@language": "ru",
+		"@value": "М"
+	}],
+	"iris://vocabulary/domain#priority": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#serviceCodeEpgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#serviceLabel": [{
+		"@language": "ru",
+		"@value": "УЧЕТ ИНОСТРАНЦЕВ ПО МЕСТУ ПРЕБЫВАНИЯ"
+	}]
+}, {
+	"@id": "iris://data#service-87",
+	"@type": [
+		"iris://vocabulary/domain#Service"
+	],
+	"iris://vocabulary/domain#codeFrgu": [{
+		"@value": "2100000010000001235"
+	}],
+	"iris://vocabulary/domain#deptCodeFrgu": [{
+		"@value": "2100000010000000934"
+	}],
+	"iris://vocabulary/domain#hasProvider": [{
+		"@id": "iris://data#department-1"
+	}],
+	"iris://vocabulary/domain#hasSchedule": [{
+		"@id": "iris://data#schedule-4"
+	}],
+	"iris://vocabulary/domain#liveOperationTime": [{
+		"@value": 1200
+	}],
+	"iris://vocabulary/domain#order": [{
+		"@value": 1
+	}],
+	"iris://vocabulary/domain#prebookInterval": [{
+		"@value": 30
+	}],
+	"iris://vocabulary/domain#prebookOperationTime": [{
+		"@value": 1500
+	}],
+	"iris://vocabulary/domain#prebookPercentage": [{
+		"@value": 100
+	}],
+	"iris://vocabulary/domain#prebookTodayPercentage": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#prefix": [{
+		"@language": "ru",
+		"@value": "У"
+	}],
+	"iris://vocabulary/domain#priority": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#serviceCodeEpgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#serviceLabel": [{
+		"@language": "ru",
+		"@value": "ВЫПЛАТЫ СЕМЬЯМ ПОГИБШИХ ВОЕННЫХ НА ОПЛАТУ ЖИЛЬЯ"
+	}]
+}, {
+	"@id": "iris://data#service-86",
+	"@type": [
+		"iris://vocabulary/domain#Service"
+	],
+	"iris://vocabulary/domain#codeFrgu": [{
+		"@value": "2100000010000007714"
+	}],
+	"iris://vocabulary/domain#deptCodeFrgu": [{
+		"@value": "2100000010000000934"
+	}],
+	"iris://vocabulary/domain#hasProvider": [{
+		"@id": "iris://data#department-1"
+	}],
+	"iris://vocabulary/domain#hasSchedule": [{
+		"@id": "iris://data#schedule-4"
+	}],
+	"iris://vocabulary/domain#liveOperationTime": [{
+		"@value": 1200
+	}],
+	"iris://vocabulary/domain#order": [{
+		"@value": 1
+	}],
+	"iris://vocabulary/domain#prebookInterval": [{
+		"@value": 30
+	}],
+	"iris://vocabulary/domain#prebookOperationTime": [{
+		"@value": 1500
+	}],
+	"iris://vocabulary/domain#prebookPercentage": [{
+		"@value": 100
+	}],
+	"iris://vocabulary/domain#prebookTodayPercentage": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#prefix": [{
+		"@language": "ru",
+		"@value": "У"
+	}],
+	"iris://vocabulary/domain#priority": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#serviceCodeEpgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#serviceLabel": [{
+		"@language": "ru",
+		"@value": "ПОСОБИЕ НА ПОГРЕБЕНИЕ УМЕРШИХ"
+	}]
+}, {
+	"@id": "iris://data#service-81",
+	"@type": [
+		"iris://vocabulary/domain#Service"
+	],
+	"iris://vocabulary/domain#codeFrgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#deptCodeFrgu": [{
+		"@value": "2100000010000001449"
+	}],
+	"iris://vocabulary/domain#hasProvider": [{
+		"@id": "iris://data#department-1"
+	}],
+	"iris://vocabulary/domain#hasSchedule": [{
+		"@id": "iris://data#schedule-4"
+	}],
+	"iris://vocabulary/domain#liveOperationTime": [{
+		"@value": 1200
+	}],
+	"iris://vocabulary/domain#order": [{
+		"@value": 1
+	}],
+	"iris://vocabulary/domain#prebookInterval": [{
+		"@value": 30
+	}],
+	"iris://vocabulary/domain#prebookOperationTime": [{
+		"@value": 1500
+	}],
+	"iris://vocabulary/domain#prebookPercentage": [{
+		"@value": 100
+	}],
+	"iris://vocabulary/domain#prebookTodayPercentage": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#prefix": [{
+		"@language": "ru",
+		"@value": "ПР"
+	}],
+	"iris://vocabulary/domain#priority": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#serviceCodeEpgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#serviceLabel": [{
+		"@language": "ru",
+		"@value": "АДАПТАЦИЯ БЕЗРАБОТНЫХ ГРАЖДАН НА РЫНКЕ ТРУДА"
+	}]
+}, {
+	"@id": "iris://data#service-80",
+	"@type": [
+		"iris://vocabulary/domain#Service"
+	],
+	"iris://vocabulary/domain#codeFrgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#deptCodeFrgu": [{
+		"@value": "2100000010000001449"
+	}],
+	"iris://vocabulary/domain#hasProvider": [{
+		"@id": "iris://data#department-1"
+	}],
+	"iris://vocabulary/domain#hasSchedule": [{
+		"@id": "iris://data#schedule-4"
+	}],
+	"iris://vocabulary/domain#liveOperationTime": [{
+		"@value": 1200
+	}],
+	"iris://vocabulary/domain#order": [{
+		"@value": 1
+	}],
+	"iris://vocabulary/domain#prebookInterval": [{
+		"@value": 30
+	}],
+	"iris://vocabulary/domain#prebookOperationTime": [{
+		"@value": 1500
+	}],
+	"iris://vocabulary/domain#prebookPercentage": [{
+		"@value": 100
+	}],
+	"iris://vocabulary/domain#prebookTodayPercentage": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#prefix": [{
+		"@language": "ru",
+		"@value": "ПР"
+	}],
+	"iris://vocabulary/domain#priority": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#serviceCodeEpgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#serviceLabel": [{
+		"@language": "ru",
+		"@value": "ТРУДОУСТРОЙСТВО НЕСОВЕРШЕННОЛЕТНИХ, БЕЗРАБОТНЫХ"
+	}]
+}, {
+	"@id": "iris://data#service-83",
+	"@type": [
+		"iris://vocabulary/domain#Service"
+	],
+	"iris://vocabulary/domain#codeFrgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#deptCodeFrgu": [{
+		"@value": "2100000010000001449"
+	}],
+	"iris://vocabulary/domain#hasProvider": [{
+		"@id": "iris://data#department-1"
+	}],
+	"iris://vocabulary/domain#hasSchedule": [{
+		"@id": "iris://data#schedule-4"
+	}],
+	"iris://vocabulary/domain#liveOperationTime": [{
+		"@value": 1200
+	}],
+	"iris://vocabulary/domain#order": [{
+		"@value": 1
+	}],
+	"iris://vocabulary/domain#prebookInterval": [{
+		"@value": 30
+	}],
+	"iris://vocabulary/domain#prebookOperationTime": [{
+		"@value": 1500
+	}],
+	"iris://vocabulary/domain#prebookPercentage": [{
+		"@value": 100
+	}],
+	"iris://vocabulary/domain#prebookTodayPercentage": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#prefix": [{
+		"@language": "ru",
+		"@value": "ПР"
+	}],
+	"iris://vocabulary/domain#priority": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#serviceCodeEpgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#serviceLabel": [{
+		"@language": "ru",
+		"@value": "ТРУДОУСТРОЙСТВО ПРИ ПЕРЕСЕЛЕНИИ"
+	}]
+}, {
+	"@id": "iris://data#service-82",
+	"@type": [
+		"iris://vocabulary/domain#Service"
+	],
+	"iris://vocabulary/domain#codeFrgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#deptCodeFrgu": [{
+		"@value": "2100000010000001449"
+	}],
+	"iris://vocabulary/domain#hasProvider": [{
+		"@id": "iris://data#department-1"
+	}],
+	"iris://vocabulary/domain#hasSchedule": [{
+		"@id": "iris://data#schedule-4"
+	}],
+	"iris://vocabulary/domain#liveOperationTime": [{
+		"@value": 1200
+	}],
+	"iris://vocabulary/domain#order": [{
+		"@value": 1
+	}],
+	"iris://vocabulary/domain#prebookInterval": [{
+		"@value": 30
+	}],
+	"iris://vocabulary/domain#prebookOperationTime": [{
+		"@value": 1500
+	}],
+	"iris://vocabulary/domain#prebookPercentage": [{
+		"@value": 100
+	}],
+	"iris://vocabulary/domain#prebookTodayPercentage": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#prefix": [{
+		"@language": "ru",
+		"@value": "ПР"
+	}],
+	"iris://vocabulary/domain#priority": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#serviceCodeEpgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#serviceLabel": [{
+		"@language": "ru",
+		"@value": "СОДЕЙСТВИЕ В САМО ЗАНЯТОСТИ ГРАЖДАН"
+	}]
+}, {
+	"@id": "iris://data#service-89",
+	"@type": [
+		"iris://vocabulary/domain#Service"
+	],
+	"iris://vocabulary/domain#codeFrgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#deptCodeFrgu": [{
+		"@value": "2100000010000000934"
+	}],
+	"iris://vocabulary/domain#hasProvider": [{
+		"@id": "iris://data#department-1"
+	}],
+	"iris://vocabulary/domain#hasSchedule": [{
+		"@id": "iris://data#schedule-4"
+	}],
+	"iris://vocabulary/domain#liveOperationTime": [{
+		"@value": 1200
+	}],
+	"iris://vocabulary/domain#order": [{
+		"@value": 1
+	}],
+	"iris://vocabulary/domain#prebookInterval": [{
+		"@value": 30
+	}],
+	"iris://vocabulary/domain#prebookOperationTime": [{
+		"@value": 1500
+	}],
+	"iris://vocabulary/domain#prebookPercentage": [{
+		"@value": 100
+	}],
+	"iris://vocabulary/domain#prebookTodayPercentage": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#prefix": [{
+		"@language": "ru",
+		"@value": "У"
+	}],
+	"iris://vocabulary/domain#priority": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#serviceCodeEpgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#serviceLabel": [{
+		"@language": "ru",
+		"@value": "ПОСОБИЕ НА ПОГРЕБЕНИЕ ПОГИБШИХ В РЕЗУЛЬТАТЕ КАТАСТРОФЫ НА ЧЕРНОБЫЛЬСКОЙ АЭС"
+	}]
+}, {
+	"@id": "iris://data#service-88",
+	"@type": [
+		"iris://vocabulary/domain#Service"
+	],
+	"iris://vocabulary/domain#codeFrgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#deptCodeFrgu": [{
+		"@value": "2100000010000000934"
+	}],
+	"iris://vocabulary/domain#hasProvider": [{
+		"@id": "iris://data#department-1"
+	}],
+	"iris://vocabulary/domain#hasSchedule": [{
+		"@id": "iris://data#schedule-4"
+	}],
+	"iris://vocabulary/domain#liveOperationTime": [{
+		"@value": 1200
+	}],
+	"iris://vocabulary/domain#order": [{
+		"@value": 1
+	}],
+	"iris://vocabulary/domain#prebookInterval": [{
+		"@value": 30
+	}],
+	"iris://vocabulary/domain#prebookOperationTime": [{
+		"@value": 1500
+	}],
+	"iris://vocabulary/domain#prebookPercentage": [{
+		"@value": 100
+	}],
+	"iris://vocabulary/domain#prebookTodayPercentage": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#prefix": [{
+		"@language": "ru",
+		"@value": "У"
+	}],
+	"iris://vocabulary/domain#priority": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#serviceCodeEpgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#serviceLabel": [{
+		"@language": "ru",
+		"@value": "ПОСОБИЕ ДЕТЯМ ПОГИБШИХ СОТРУДНИКОВ ОИВ И ОТД. КАТЕГ. ВОЕННЫХ"
+	}]
+}, {
+	"@id": "iris://data#service-18",
+	"@type": [
+		"iris://vocabulary/domain#Service"
+	],
+	"iris://vocabulary/domain#codeFrgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#deptCodeFrgu": [{
+		"@value": "2100000010000002916"
+	}],
+	"iris://vocabulary/domain#hasProvider": [{
+		"@id": "iris://data#department-1"
+	}],
+	"iris://vocabulary/domain#hasSchedule": [{
+		"@id": "iris://data#schedule-4"
+	}],
+	"iris://vocabulary/domain#liveOperationTime": [{
+		"@value": 1200
+	}],
+	"iris://vocabulary/domain#order": [{
+		"@value": 1
+	}],
+	"iris://vocabulary/domain#prebookInterval": [{
+		"@value": 30
+	}],
+	"iris://vocabulary/domain#prebookOperationTime": [{
+		"@value": 1500
+	}],
+	"iris://vocabulary/domain#prebookPercentage": [{
+		"@value": 100
+	}],
+	"iris://vocabulary/domain#prebookTodayPercentage": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#prefix": [{
+		"@language": "ru",
+		"@value": "Ж"
+	}],
+	"iris://vocabulary/domain#priority": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#serviceCodeEpgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#serviceLabel": [{
+		"@language": "ru",
+		"@value": "ЗАКЛЮЧЕНИЕ ДОГОВОРОВ СОЦИАЛЬНОГО НАЙМА ЖИЛЫХ ПОМЕЩЕНИЙ"
+	}]
+}, {
+	"@id": "iris://data#service-19",
+	"@type": [
+		"iris://vocabulary/domain#Service"
+	],
+	"iris://vocabulary/domain#codeFrgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#deptCodeFrgu": [{
+		"@value": "2100000010000002916"
+	}],
+	"iris://vocabulary/domain#hasProvider": [{
+		"@id": "iris://data#department-1"
+	}],
+	"iris://vocabulary/domain#hasSchedule": [{
+		"@id": "iris://data#schedule-4"
+	}],
+	"iris://vocabulary/domain#liveOperationTime": [{
+		"@value": 1200
+	}],
+	"iris://vocabulary/domain#order": [{
+		"@value": 1
+	}],
+	"iris://vocabulary/domain#prebookInterval": [{
+		"@value": 30
+	}],
+	"iris://vocabulary/domain#prebookOperationTime": [{
+		"@value": 1500
+	}],
+	"iris://vocabulary/domain#prebookPercentage": [{
+		"@value": 100
+	}],
+	"iris://vocabulary/domain#prebookTodayPercentage": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#prefix": [{
+		"@language": "ru",
+		"@value": "Ж"
+	}],
+	"iris://vocabulary/domain#priority": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#serviceCodeEpgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#serviceLabel": [{
+		"@language": "ru",
+		"@value": "УЧЕТ ГРАЖДАН, НУЖДАЮЩИХСЯ В ЖИЛЫХ ПОМЕЩЕНИЯХ И ИМЕЮЩИХ ПРАВО НА ГОС.ПОДДЕРЖКУ НА СТРОИТЕЛЬСТВО ПРИОБРЕТЕНИЕ ЖИЛЫХ ПОМЕЩЕНИЙ"
+	}]
+}, {
+	"@id": "iris://data#service-16",
+	"@type": [
+		"iris://vocabulary/domain#Service"
+	],
+	"iris://vocabulary/domain#codeFrgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#deptCodeFrgu": [{
+		"@value": "2100000010000002916"
+	}],
+	"iris://vocabulary/domain#hasProvider": [{
+		"@id": "iris://data#department-1"
+	}],
+	"iris://vocabulary/domain#hasSchedule": [{
+		"@id": "iris://data#schedule-4"
+	}],
+	"iris://vocabulary/domain#liveOperationTime": [{
+		"@value": 1200
+	}],
+	"iris://vocabulary/domain#order": [{
+		"@value": 1
+	}],
+	"iris://vocabulary/domain#prebookInterval": [{
+		"@value": 30
+	}],
+	"iris://vocabulary/domain#prebookOperationTime": [{
+		"@value": 1500
+	}],
+	"iris://vocabulary/domain#prebookPercentage": [{
+		"@value": 100
+	}],
+	"iris://vocabulary/domain#prebookTodayPercentage": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#prefix": [{
+		"@language": "ru",
+		"@value": "Ж"
+	}],
+	"iris://vocabulary/domain#priority": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#serviceCodeEpgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#serviceLabel": [{
+		"@language": "ru",
+		"@value": "ПРЕДОСТАВЛЕНИЕ ГРАЖДАНАМ ЖИЛЫХ ПОМЕЩЕНИЙ МУН. СПЕЦИАЛ. ЖИЛ. ФОНДА МАНЕВРЕННОГО, СЛУЖЕБНОГО"
+	}]
+}, {
+	"@id": "iris://data#service-17",
+	"@type": [
+		"iris://vocabulary/domain#Service"
+	],
+	"iris://vocabulary/domain#codeFrgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#deptCodeFrgu": [{
+		"@value": "2100000010000002916"
+	}],
+	"iris://vocabulary/domain#hasProvider": [{
+		"@id": "iris://data#department-1"
+	}],
+	"iris://vocabulary/domain#hasSchedule": [{
+		"@id": "iris://data#schedule-4"
+	}],
+	"iris://vocabulary/domain#liveOperationTime": [{
+		"@value": 1200
+	}],
+	"iris://vocabulary/domain#order": [{
+		"@value": 1
+	}],
+	"iris://vocabulary/domain#prebookInterval": [{
+		"@value": 30
+	}],
+	"iris://vocabulary/domain#prebookOperationTime": [{
+		"@value": 1500
+	}],
+	"iris://vocabulary/domain#prebookPercentage": [{
+		"@value": 100
+	}],
+	"iris://vocabulary/domain#prebookTodayPercentage": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#prefix": [{
+		"@language": "ru",
+		"@value": "Ж"
+	}],
+	"iris://vocabulary/domain#priority": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#serviceCodeEpgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#serviceLabel": [{
+		"@language": "ru",
+		"@value": "ЖИЛЫЕ ПОМЕЩЕНИЯ МАЛОИМУЩИМ ГРАЖДАНАМ ПО ДОГОВОРАМ СОЦИАЛЬНОГО НАЙМА"
+	}]
+}, {
+	"@id": "iris://data#service-14",
+	"@type": [
+		"iris://vocabulary/domain#Service"
+	],
+	"iris://vocabulary/domain#codeFrgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#deptCodeFrgu": [{
+		"@value": "2100000010000002916"
+	}],
+	"iris://vocabulary/domain#hasProvider": [{
+		"@id": "iris://data#department-1"
+	}],
+	"iris://vocabulary/domain#hasSchedule": [{
+		"@id": "iris://data#schedule-4"
+	}],
+	"iris://vocabulary/domain#liveOperationTime": [{
+		"@value": 1200
+	}],
+	"iris://vocabulary/domain#order": [{
+		"@value": 1
+	}],
+	"iris://vocabulary/domain#prebookInterval": [{
+		"@value": 30
+	}],
+	"iris://vocabulary/domain#prebookOperationTime": [{
+		"@value": 1500
+	}],
+	"iris://vocabulary/domain#prebookPercentage": [{
+		"@value": 100
+	}],
+	"iris://vocabulary/domain#prebookTodayPercentage": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#prefix": [{
+		"@language": "ru",
+		"@value": "Ж"
+	}],
+	"iris://vocabulary/domain#priority": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#serviceCodeEpgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#serviceLabel": [{
+		"@language": "ru",
+		"@value": "ВЫДАЧА ГОСУДАРСТВЕННЫХ ЖИЛИЩНЫХ СЕРТИФИКАТОВ"
+	}]
+}, {
+	"@id": "iris://data#service-15",
+	"@type": [
+		"iris://vocabulary/domain#Service"
+	],
+	"iris://vocabulary/domain#codeFrgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#deptCodeFrgu": [{
+		"@value": "2100000010000002916"
+	}],
+	"iris://vocabulary/domain#hasProvider": [{
+		"@id": "iris://data#department-1"
+	}],
+	"iris://vocabulary/domain#hasSchedule": [{
+		"@id": "iris://data#schedule-4"
+	}],
+	"iris://vocabulary/domain#liveOperationTime": [{
+		"@value": 1200
+	}],
+	"iris://vocabulary/domain#order": [{
+		"@value": 1
+	}],
+	"iris://vocabulary/domain#prebookInterval": [{
+		"@value": 30
+	}],
+	"iris://vocabulary/domain#prebookOperationTime": [{
+		"@value": 1500
+	}],
+	"iris://vocabulary/domain#prebookPercentage": [{
+		"@value": 100
+	}],
+	"iris://vocabulary/domain#prebookTodayPercentage": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#prefix": [{
+		"@language": "ru",
+		"@value": "Ж"
+	}],
+	"iris://vocabulary/domain#priority": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#serviceCodeEpgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#serviceLabel": [{
+		"@language": "ru",
+		"@value": "РЕШЕНИЕ О СОГЛАСОВАНИИ ПЕРЕУСТРОЙСТВА И ИЛИ ПЕРЕПЛАНИРОВКИ ЖИЛОГО ПОМЕЩЕНИЯ"
+	}]
+}, {
+	"@id": "iris://data#service-12",
+	"@type": [
+		"iris://vocabulary/domain#Service"
+	],
+	"iris://vocabulary/domain#codeFrgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#deptCodeFrgu": [{
+		"@value": "2100000010000002916"
+	}],
+	"iris://vocabulary/domain#hasProvider": [{
+		"@id": "iris://data#department-1"
+	}],
+	"iris://vocabulary/domain#hasSchedule": [{
+		"@id": "iris://data#schedule-4"
+	}],
+	"iris://vocabulary/domain#liveOperationTime": [{
+		"@value": 1200
+	}],
+	"iris://vocabulary/domain#order": [{
+		"@value": 1
+	}],
+	"iris://vocabulary/domain#prebookInterval": [{
+		"@value": 30
+	}],
+	"iris://vocabulary/domain#prebookOperationTime": [{
+		"@value": 1500
+	}],
+	"iris://vocabulary/domain#prebookPercentage": [{
+		"@value": 100
+	}],
+	"iris://vocabulary/domain#prebookTodayPercentage": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#prefix": [{
+		"@language": "ru",
+		"@value": "Ж"
+	}],
+	"iris://vocabulary/domain#priority": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#serviceCodeEpgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#serviceLabel": [{
+		"@language": "ru",
+		"@value": "ПРИВАТИЗАЦИИ ЖИЛЬЯ, НАХОДЯЩЕГОСЯ В МУНИЦИПАЛЬНОЙ СОБСТВЕННОСТИ"
+	}]
+}, {
+	"@id": "iris://data#service-13",
+	"@type": [
+		"iris://vocabulary/domain#Service"
+	],
+	"iris://vocabulary/domain#codeFrgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#deptCodeFrgu": [{
+		"@value": "2100000010000002916"
+	}],
+	"iris://vocabulary/domain#hasProvider": [{
+		"@id": "iris://data#department-1"
+	}],
+	"iris://vocabulary/domain#hasSchedule": [{
+		"@id": "iris://data#schedule-4"
+	}],
+	"iris://vocabulary/domain#liveOperationTime": [{
+		"@value": 1200
+	}],
+	"iris://vocabulary/domain#order": [{
+		"@value": 1
+	}],
+	"iris://vocabulary/domain#prebookInterval": [{
+		"@value": 30
+	}],
+	"iris://vocabulary/domain#prebookOperationTime": [{
+		"@value": 1500
+	}],
+	"iris://vocabulary/domain#prebookPercentage": [{
+		"@value": 100
+	}],
+	"iris://vocabulary/domain#prebookTodayPercentage": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#prefix": [{
+		"@language": "ru",
+		"@value": "Ж"
+	}],
+	"iris://vocabulary/domain#priority": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#serviceCodeEpgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#serviceLabel": [{
+		"@language": "ru",
+		"@value": "ПОЛУЧЕНИЕ СОЦИАЛЬНОЙ ВЫПЛАТЫ НА ПРИОБРЕТЕНИЕ,СТРОИТЕЛЬСТВО ЖИЛЬЯ МОЛОДЫМ СЕМЬЯМ"
+	}]
+}, {
+	"@id": "iris://data#service-10",
+	"@type": [
+		"iris://vocabulary/domain#Service"
+	],
+	"iris://vocabulary/domain#codeFrgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#deptCodeFrgu": [{
+		"@value": "2100000010000002916"
+	}],
+	"iris://vocabulary/domain#hasProvider": [{
+		"@id": "iris://data#department-1"
+	}],
+	"iris://vocabulary/domain#hasSchedule": [{
+		"@id": "iris://data#schedule-4"
+	}],
+	"iris://vocabulary/domain#liveOperationTime": [{
+		"@value": 1200
+	}],
+	"iris://vocabulary/domain#order": [{
+		"@value": 1
+	}],
+	"iris://vocabulary/domain#prebookInterval": [{
+		"@value": 30
+	}],
+	"iris://vocabulary/domain#prebookOperationTime": [{
+		"@value": 1500
+	}],
+	"iris://vocabulary/domain#prebookPercentage": [{
+		"@value": 100
+	}],
+	"iris://vocabulary/domain#prebookTodayPercentage": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#prefix": [{
+		"@language": "ru",
+		"@value": "Р"
+	}],
+	"iris://vocabulary/domain#priority": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#serviceCodeEpgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#serviceLabel": [{
+		"@language": "ru",
+		"@value": "ЗАПИСЬ В ДЕТСКИЕ САДЫ"
+	}]
+}, {
+	"@id": "iris://data#service-11",
+	"@type": [
+		"iris://vocabulary/domain#Service"
+	],
+	"iris://vocabulary/domain#codeFrgu": [{
+		"@value": "10000011206"
+	}],
+	"iris://vocabulary/domain#deptCodeFrgu": [{
+		"@value": "10001739409"
+	}],
+	"iris://vocabulary/domain#hasProvider": [{
+		"@id": "iris://data#department-1"
+	}],
+	"iris://vocabulary/domain#hasSchedule": [{
+		"@id": "iris://data#schedule-4"
+	}],
+	"iris://vocabulary/domain#liveOperationTime": [{
+		"@value": 1200
+	}],
+	"iris://vocabulary/domain#order": [{
+		"@value": 1
+	}],
+	"iris://vocabulary/domain#prebookInterval": [{
+		"@value": 30
+	}],
+	"iris://vocabulary/domain#prebookOperationTime": [{
+		"@value": 1500
+	}],
+	"iris://vocabulary/domain#prebookPercentage": [{
+		"@value": 100
+	}],
+	"iris://vocabulary/domain#prebookTodayPercentage": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#prefix": [{
+		"@language": "ru",
+		"@value": "Ж"
+	}],
+	"iris://vocabulary/domain#priority": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#serviceCodeEpgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#serviceLabel": [{
+		"@language": "ru",
+		"@value": "РЕГИСТРАЦИЯ ПРАВА НА НЕДВИЖИМОСТЬ"
+	}]
+}, {
+	"@id": "iris://data#human-1",
+	"@type": [
+		"iris://vocabulary/domain#Employee"
+	],
+	"iris://vocabulary/domain#availableWorkstation": [{
+		"@id": "iris://data#pc-1"
+	}],
+	"iris://vocabulary/domain#defaultWorkstation": [{
+		"@id": "iris://data#pc-1"
+	}],
+	"iris://vocabulary/domain#firstName": [{
+		"@language": "ru",
+		"@value": "Иван"
+	}],
+	"iris://vocabulary/domain#hasMembership": [{
+		"@id": "iris://data#membership-1"
+	}],
+	"iris://vocabulary/domain#hasSchedule": [{
+		"@id": "iris://data#schedule-1"
+	}],
+	"iris://vocabulary/domain#lastName": [{
+		"@language": "ru",
+		"@value": "Иванов"
+	}],
+	"iris://vocabulary/domain#login": [{
+		"@language": "en",
+		"@value": "admin"
+	}],
+	"iris://vocabulary/domain#middleName": [{
+		"@language": "ru",
+		"@value": "Иванович"
+	}],
+	"iris://vocabulary/domain#password": [{
+		"@value": "123456"
+	}],
+	"iris://vocabulary/domain#state": [{
+		"@value": "inactive"
+	}]
+}, {
+	"@id": "iris://data#service-96",
+	"@type": [
+		"iris://vocabulary/domain#Service"
+	],
+	"iris://vocabulary/domain#codeFrgu": [{
+		"@value": "10000001306"
+	}],
+	"iris://vocabulary/domain#deptCodeFrgu": [{
+		"@value": "10003714789"
+	}],
+	"iris://vocabulary/domain#hasProvider": [{
+		"@id": "iris://data#department-1"
+	}],
+	"iris://vocabulary/domain#hasSchedule": [{
+		"@id": "iris://data#schedule-4"
+	}],
+	"iris://vocabulary/domain#liveOperationTime": [{
+		"@value": 1200
+	}],
+	"iris://vocabulary/domain#order": [{
+		"@value": 1
+	}],
+	"iris://vocabulary/domain#prebookInterval": [{
+		"@value": 30
+	}],
+	"iris://vocabulary/domain#prebookOperationTime": [{
+		"@value": 1500
+	}],
+	"iris://vocabulary/domain#prebookPercentage": [{
+		"@value": 100
+	}],
+	"iris://vocabulary/domain#prebookTodayPercentage": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#prefix": [{
+		"@language": "ru",
+		"@value": "О"
+	}],
+	"iris://vocabulary/domain#priority": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#serviceCodeEpgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#serviceLabel": [{
+		"@language": "ru",
+		"@value": "ВЫПИСКА ИЗ ЕГРН"
+	}]
+}, {
+	"@id": "iris://data#service-97",
+	"@type": [
+		"iris://vocabulary/domain#Service"
+	],
+	"iris://vocabulary/domain#codeFrgu": [{
+		"@value": "10000001306"
+	}],
+	"iris://vocabulary/domain#deptCodeFrgu": [{
+		"@value": "10003714789"
+	}],
+	"iris://vocabulary/domain#hasProvider": [{
+		"@id": "iris://data#department-1"
+	}],
+	"iris://vocabulary/domain#hasSchedule": [{
+		"@id": "iris://data#schedule-4"
+	}],
+	"iris://vocabulary/domain#liveOperationTime": [{
+		"@value": 1200
+	}],
+	"iris://vocabulary/domain#order": [{
+		"@value": 1
+	}],
+	"iris://vocabulary/domain#prebookInterval": [{
+		"@value": 30
+	}],
+	"iris://vocabulary/domain#prebookOperationTime": [{
+		"@value": 1500
+	}],
+	"iris://vocabulary/domain#prebookPercentage": [{
+		"@value": 100
+	}],
+	"iris://vocabulary/domain#prebookTodayPercentage": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#prefix": [{
+		"@language": "ru",
+		"@value": "О"
+	}],
+	"iris://vocabulary/domain#priority": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#serviceCodeEpgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#serviceLabel": [{
+		"@language": "ru",
+		"@value": "ВЫПИСКА ИЗ ЕГРЮЛ"
+	}]
+}, {
+	"@id": "iris://data#service-94",
+	"@type": [
+		"iris://vocabulary/domain#Service"
+	],
+	"iris://vocabulary/domain#codeFrgu": [{
+		"@value": "10000015911"
+	}],
+	"iris://vocabulary/domain#deptCodeFrgu": [{
+		"@value": "10003714789"
+	}],
+	"iris://vocabulary/domain#hasProvider": [{
+		"@id": "iris://data#department-1"
+	}],
+	"iris://vocabulary/domain#hasSchedule": [{
+		"@id": "iris://data#schedule-4"
+	}],
+	"iris://vocabulary/domain#liveOperationTime": [{
+		"@value": 1200
+	}],
+	"iris://vocabulary/domain#order": [{
+		"@value": 1
+	}],
+	"iris://vocabulary/domain#prebookInterval": [{
+		"@value": 30
+	}],
+	"iris://vocabulary/domain#prebookOperationTime": [{
+		"@value": 1500
+	}],
+	"iris://vocabulary/domain#prebookPercentage": [{
+		"@value": 100
+	}],
+	"iris://vocabulary/domain#prebookTodayPercentage": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#prefix": [{
+		"@language": "ru",
+		"@value": "О"
+	}],
+	"iris://vocabulary/domain#priority": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#serviceCodeEpgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#serviceLabel": [{
+		"@language": "ru",
+		"@value": "РЕГИСТРАЦИЯ ЮР.ЛИЦ, ИП,ФЕРМЕРСКИХ ХОЗЯЙСТВ"
+	}]
+}, {
+	"@id": "iris://data#service-95",
+	"@type": [
+		"iris://vocabulary/domain#Service"
+	],
+	"iris://vocabulary/domain#codeFrgu": [{
+		"@value": "10001760860"
+	}],
+	"iris://vocabulary/domain#deptCodeFrgu": [{
+		"@value": "10003714789"
+	}],
+	"iris://vocabulary/domain#hasProvider": [{
+		"@id": "iris://data#department-1"
+	}],
+	"iris://vocabulary/domain#hasSchedule": [{
+		"@id": "iris://data#schedule-4"
+	}],
+	"iris://vocabulary/domain#liveOperationTime": [{
+		"@value": 1200
+	}],
+	"iris://vocabulary/domain#order": [{
+		"@value": 1
+	}],
+	"iris://vocabulary/domain#prebookInterval": [{
+		"@value": 30
+	}],
+	"iris://vocabulary/domain#prebookOperationTime": [{
+		"@value": 1500
+	}],
+	"iris://vocabulary/domain#prebookPercentage": [{
+		"@value": 100
+	}],
+	"iris://vocabulary/domain#prebookTodayPercentage": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#prefix": [{
+		"@language": "ru",
+		"@value": "О"
+	}],
+	"iris://vocabulary/domain#priority": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#serviceCodeEpgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#serviceLabel": [{
+		"@language": "ru",
+		"@value": "ИНФОРМИРОВАНИЕ О ДЕЙСТВУЮЩИХ НАЛОГАХ И СБОРАХ"
+	}]
+}, {
+	"@id": "iris://data#service-92",
+	"@type": [
+		"iris://vocabulary/domain#Service"
+	],
+	"iris://vocabulary/domain#codeFrgu": [{
+		"@value": "10001294277"
+	}],
+	"iris://vocabulary/domain#deptCodeFrgu": [{
+		"@value": "10002262092"
+	}],
+	"iris://vocabulary/domain#hasProvider": [{
+		"@id": "iris://data#department-1"
+	}],
+	"iris://vocabulary/domain#hasSchedule": [{
+		"@id": "iris://data#schedule-4"
+	}],
+	"iris://vocabulary/domain#liveOperationTime": [{
+		"@value": 1200
+	}],
+	"iris://vocabulary/domain#order": [{
+		"@value": 1
+	}],
+	"iris://vocabulary/domain#prebookInterval": [{
+		"@value": 30
+	}],
+	"iris://vocabulary/domain#prebookOperationTime": [{
+		"@value": 1500
+	}],
+	"iris://vocabulary/domain#prebookPercentage": [{
+		"@value": 100
+	}],
+	"iris://vocabulary/domain#prebookTodayPercentage": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#prefix": [{
+		"@language": "ru",
+		"@value": "О"
+	}],
+	"iris://vocabulary/domain#priority": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#serviceCodeEpgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#serviceLabel": [{
+		"@language": "ru",
+		"@value": "РЕГИСТРАЦИЯ (СНЯТИЕ С УЧЕТА) СТРАХОВАТЕЛЕЙ"
+	}]
+}, {
+	"@id": "iris://data#service-93",
+	"@type": [
+		"iris://vocabulary/domain#Service"
+	],
+	"iris://vocabulary/domain#codeFrgu": [{
+		"@value": "10001294251"
+	}],
+	"iris://vocabulary/domain#deptCodeFrgu": [{
+		"@value": "10002262092"
+	}],
+	"iris://vocabulary/domain#hasProvider": [{
+		"@id": "iris://data#department-1"
+	}],
+	"iris://vocabulary/domain#hasSchedule": [{
+		"@id": "iris://data#schedule-4"
+	}],
+	"iris://vocabulary/domain#liveOperationTime": [{
+		"@value": 1200
+	}],
+	"iris://vocabulary/domain#order": [{
+		"@value": 1
+	}],
+	"iris://vocabulary/domain#prebookInterval": [{
+		"@value": 30
+	}],
+	"iris://vocabulary/domain#prebookOperationTime": [{
+		"@value": 1500
+	}],
+	"iris://vocabulary/domain#prebookPercentage": [{
+		"@value": 100
+	}],
+	"iris://vocabulary/domain#prebookTodayPercentage": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#prefix": [{
+		"@language": "ru",
+		"@value": "О"
+	}],
+	"iris://vocabulary/domain#priority": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#serviceCodeEpgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#serviceLabel": [{
+		"@language": "ru",
+		"@value": "ОТЧЕТ ПО ФОРМЕ 4А ФСС РФ"
+	}]
+}, {
+	"@id": "iris://data#service-90",
+	"@type": [
+		"iris://vocabulary/domain#Service"
+	],
+	"iris://vocabulary/domain#codeFrgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#deptCodeFrgu": [{
+		"@value": "2100000010000002847"
+	}],
+	"iris://vocabulary/domain#hasProvider": [{
+		"@id": "iris://data#department-1"
+	}],
+	"iris://vocabulary/domain#hasSchedule": [{
+		"@id": "iris://data#schedule-4"
+	}],
+	"iris://vocabulary/domain#liveOperationTime": [{
+		"@value": 1200
+	}],
+	"iris://vocabulary/domain#order": [{
+		"@value": 1
+	}],
+	"iris://vocabulary/domain#prebookInterval": [{
+		"@value": 30
+	}],
+	"iris://vocabulary/domain#prebookOperationTime": [{
+		"@value": 1500
+	}],
+	"iris://vocabulary/domain#prebookPercentage": [{
+		"@value": 100
+	}],
+	"iris://vocabulary/domain#prebookTodayPercentage": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#prefix": [{
+		"@language": "ru",
+		"@value": "У"
+	}],
+	"iris://vocabulary/domain#priority": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#serviceCodeEpgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#serviceLabel": [{
+		"@language": "ru",
+		"@value": "РЕГИСТРАЦИЯ СМЕРТИ"
+	}]
+}, {
+	"@id": "iris://data#service-91",
+	"@type": [
+		"iris://vocabulary/domain#Service"
+	],
+	"iris://vocabulary/domain#codeFrgu": [{
+		"@value": "10001294271"
+	}],
+	"iris://vocabulary/domain#deptCodeFrgu": [{
+		"@value": "10002262092"
+	}],
+	"iris://vocabulary/domain#hasProvider": [{
+		"@id": "iris://data#department-1"
+	}],
+	"iris://vocabulary/domain#hasSchedule": [{
+		"@id": "iris://data#schedule-4"
+	}],
+	"iris://vocabulary/domain#liveOperationTime": [{
+		"@value": 1200
+	}],
+	"iris://vocabulary/domain#order": [{
+		"@value": 1
+	}],
+	"iris://vocabulary/domain#prebookInterval": [{
+		"@value": 30
+	}],
+	"iris://vocabulary/domain#prebookOperationTime": [{
+		"@value": 1500
+	}],
+	"iris://vocabulary/domain#prebookPercentage": [{
+		"@value": 100
+	}],
+	"iris://vocabulary/domain#prebookTodayPercentage": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#prefix": [{
+		"@language": "ru",
+		"@value": "О"
+	}],
+	"iris://vocabulary/domain#priority": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#serviceCodeEpgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#serviceLabel": [{
+		"@language": "ru",
+		"@value": "РЕГИСТРАЦИЯ (СНЯТИЕ С УЧЕТА) РАБОТНИКОВ"
+	}]
+}, {
+	"@id": "iris://data#service-98",
+	"@type": [
+		"iris://vocabulary/domain#Service"
+	],
+	"iris://vocabulary/domain#codeFrgu": [{
+		"@value": "10002443284"
+	}],
+	"iris://vocabulary/domain#deptCodeFrgu": [{
+		"@value": "10003714789"
+	}],
+	"iris://vocabulary/domain#hasProvider": [{
+		"@id": "iris://data#department-1"
+	}],
+	"iris://vocabulary/domain#hasSchedule": [{
+		"@id": "iris://data#schedule-4"
+	}],
+	"iris://vocabulary/domain#liveOperationTime": [{
+		"@value": 1200
+	}],
+	"iris://vocabulary/domain#order": [{
+		"@value": 1
+	}],
+	"iris://vocabulary/domain#prebookInterval": [{
+		"@value": 30
+	}],
+	"iris://vocabulary/domain#prebookOperationTime": [{
+		"@value": 1500
+	}],
+	"iris://vocabulary/domain#prebookPercentage": [{
+		"@value": 100
+	}],
+	"iris://vocabulary/domain#prebookTodayPercentage": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#prefix": [{
+		"@language": "ru",
+		"@value": "О"
+	}],
+	"iris://vocabulary/domain#priority": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#serviceCodeEpgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#serviceLabel": [{
+		"@language": "ru",
+		"@value": "ВЫПИСКА ИЗ РЕЕСТРА ДИСКВАЛИФИЦИРОВАННЫХ ЛИЦ"
+	}]
+}, {
+	"@id": "iris://data#service-99",
+	"@type": [
+		"iris://vocabulary/domain#Service"
+	],
+	"iris://vocabulary/domain#codeFrgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#deptCodeFrgu": [{
+		"@value": "10003714789"
+	}],
+	"iris://vocabulary/domain#hasProvider": [{
+		"@id": "iris://data#department-1"
+	}],
+	"iris://vocabulary/domain#hasSchedule": [{
+		"@id": "iris://data#schedule-4"
+	}],
+	"iris://vocabulary/domain#liveOperationTime": [{
+		"@value": 1200
+	}],
+	"iris://vocabulary/domain#order": [{
+		"@value": 1
+	}],
+	"iris://vocabulary/domain#prebookInterval": [{
+		"@value": 30
+	}],
+	"iris://vocabulary/domain#prebookOperationTime": [{
+		"@value": 1500
+	}],
+	"iris://vocabulary/domain#prebookPercentage": [{
+		"@value": 100
+	}],
+	"iris://vocabulary/domain#prebookTodayPercentage": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#prefix": [{
+		"@language": "ru",
+		"@value": "О"
+	}],
+	"iris://vocabulary/domain#priority": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#serviceCodeEpgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#serviceLabel": [{
+		"@language": "ru",
+		"@value": "СПРАВКА ОБ УПЛАЧЕНЫХ НАЛОГАХ И СБОРАХ"
+	}]
+}, {
+	"@id": "iris://data#service-23",
+	"@type": [
+		"iris://vocabulary/domain#Service"
+	],
+	"iris://vocabulary/domain#codeFrgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#deptCodeFrgu": [{
+		"@value": "10000681774"
+	}],
+	"iris://vocabulary/domain#hasProvider": [{
+		"@id": "iris://data#department-1"
+	}],
+	"iris://vocabulary/domain#hasSchedule": [{
+		"@id": "iris://data#schedule-4"
+	}],
+	"iris://vocabulary/domain#liveOperationTime": [{
+		"@value": 1200
+	}],
+	"iris://vocabulary/domain#order": [{
+		"@value": 1
+	}],
+	"iris://vocabulary/domain#prebookInterval": [{
+		"@value": 30
+	}],
+	"iris://vocabulary/domain#prebookOperationTime": [{
+		"@value": 1500
+	}],
+	"iris://vocabulary/domain#prebookPercentage": [{
+		"@value": 100
+	}],
+	"iris://vocabulary/domain#prebookTodayPercentage": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#prefix": [{
+		"@language": "ru",
+		"@value": "Р"
+	}],
+	"iris://vocabulary/domain#priority": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#serviceCodeEpgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#serviceLabel": [{
+		"@language": "ru",
+		"@value": "РАСПОРЯЖЕНИЕ МАТЕРИНСКИМ КАПИТАЛОМ"
+	}]
+}, {
+	"@id": "iris://data#service-22",
+	"@type": [
+		"iris://vocabulary/domain#Service"
+	],
+	"iris://vocabulary/domain#codeFrgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#deptCodeFrgu": [{
+		"@value": "10000681774"
+	}],
+	"iris://vocabulary/domain#hasProvider": [{
+		"@id": "iris://data#department-1"
+	}],
+	"iris://vocabulary/domain#hasSchedule": [{
+		"@id": "iris://data#schedule-4"
+	}],
+	"iris://vocabulary/domain#liveOperationTime": [{
+		"@value": 1200
+	}],
+	"iris://vocabulary/domain#order": [{
+		"@value": 1
+	}],
+	"iris://vocabulary/domain#prebookInterval": [{
+		"@value": 30
+	}],
+	"iris://vocabulary/domain#prebookOperationTime": [{
+		"@value": 1500
+	}],
+	"iris://vocabulary/domain#prebookPercentage": [{
+		"@value": 100
+	}],
+	"iris://vocabulary/domain#prebookTodayPercentage": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#prefix": [{
+		"@language": "ru",
+		"@value": "Р"
+	}],
+	"iris://vocabulary/domain#priority": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#serviceCodeEpgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#serviceLabel": [{
+		"@language": "ru",
+		"@value": "ПОЛУЧЕНИЕ СЕРТИФИКАТА НА МАТЕРИНСКИЙ КАПИТАЛ"
+	}]
+}, {
+	"@id": "iris://data#service-21",
+	"@type": [
+		"iris://vocabulary/domain#Service"
+	],
+	"iris://vocabulary/domain#codeFrgu": [{
+		"@value": "10000000611"
+	}],
+	"iris://vocabulary/domain#deptCodeFrgu": [{
+		"@value": "10001300319"
+	}],
+	"iris://vocabulary/domain#hasProvider": [{
+		"@id": "iris://data#department-1"
+	}],
+	"iris://vocabulary/domain#hasSchedule": [{
+		"@id": "iris://data#schedule-4"
+	}],
+	"iris://vocabulary/domain#liveOperationTime": [{
+		"@value": 1200
+	}],
+	"iris://vocabulary/domain#order": [{
+		"@value": 1
+	}],
+	"iris://vocabulary/domain#prebookInterval": [{
+		"@value": 30
+	}],
+	"iris://vocabulary/domain#prebookOperationTime": [{
+		"@value": 1500
+	}],
+	"iris://vocabulary/domain#prebookPercentage": [{
+		"@value": 100
+	}],
+	"iris://vocabulary/domain#prebookTodayPercentage": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#prefix": [{
+		"@language": "ru",
+		"@value": "З"
+	}],
+	"iris://vocabulary/domain#priority": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#serviceCodeEpgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#serviceLabel": [{
+		"@language": "ru",
+		"@value": "ЗАМЕНА ПАСПОРТА РФ"
+	}]
+}, {
+	"@id": "iris://data#service-20",
+	"@type": [
+		"iris://vocabulary/domain#Service"
+	],
+	"iris://vocabulary/domain#codeFrgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#deptCodeFrgu": [{
+		"@value": "2100000010000002916"
+	}],
+	"iris://vocabulary/domain#hasProvider": [{
+		"@id": "iris://data#department-1"
+	}],
+	"iris://vocabulary/domain#hasSchedule": [{
+		"@id": "iris://data#schedule-4"
+	}],
+	"iris://vocabulary/domain#liveOperationTime": [{
+		"@value": 1200
+	}],
+	"iris://vocabulary/domain#order": [{
+		"@value": 1
+	}],
+	"iris://vocabulary/domain#prebookInterval": [{
+		"@value": 30
+	}],
+	"iris://vocabulary/domain#prebookOperationTime": [{
+		"@value": 1500
+	}],
+	"iris://vocabulary/domain#prebookPercentage": [{
+		"@value": 100
+	}],
+	"iris://vocabulary/domain#prebookTodayPercentage": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#prefix": [{
+		"@language": "ru",
+		"@value": "Ж"
+	}],
+	"iris://vocabulary/domain#priority": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#serviceCodeEpgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#serviceLabel": [{
+		"@language": "ru",
+		"@value": "ПЕРЕВОД ЖИЛОГО ПОМЕЩЕНИЯ В НЕЖИЛОЕ ПОМЕЩЕНИЕ И НЕЖИЛОГО В ЖИЛОЕ"
+	}]
+}, {
+	"@id": "iris://data#service-27",
+	"@type": [
+		"iris://vocabulary/domain#Service"
+	],
+	"iris://vocabulary/domain#codeFrgu": [{
+		"@value": "10001959166"
+	}],
+	"iris://vocabulary/domain#deptCodeFrgu": [{
+		"@value": "10001300319"
+	}],
+	"iris://vocabulary/domain#hasProvider": [{
+		"@id": "iris://data#department-1"
+	}],
+	"iris://vocabulary/domain#hasSchedule": [{
+		"@id": "iris://data#schedule-4"
+	}],
+	"iris://vocabulary/domain#liveOperationTime": [{
+		"@value": 1200
+	}],
+	"iris://vocabulary/domain#order": [{
+		"@value": 1
+	}],
+	"iris://vocabulary/domain#prebookInterval": [{
+		"@value": 30
+	}],
+	"iris://vocabulary/domain#prebookOperationTime": [{
+		"@value": 1500
+	}],
+	"iris://vocabulary/domain#prebookPercentage": [{
+		"@value": 100
+	}],
+	"iris://vocabulary/domain#prebookTodayPercentage": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#prefix": [{
+		"@language": "ru",
+		"@value": "Д"
+	}],
+	"iris://vocabulary/domain#priority": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#serviceCodeEpgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#serviceLabel": [{
+		"@language": "ru",
+		"@value": "ЗАГРАНИЧНЫЙ ПАСПОРТ"
+	}]
+}, {
+	"@id": "iris://data#service-26",
+	"@type": [
+		"iris://vocabulary/domain#Service"
+	],
+	"iris://vocabulary/domain#codeFrgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#deptCodeFrgu": [{
+		"@value": "2100000010000002916"
+	}],
+	"iris://vocabulary/domain#hasProvider": [{
+		"@id": "iris://data#department-1"
+	}],
+	"iris://vocabulary/domain#hasSchedule": [{
+		"@id": "iris://data#schedule-4"
+	}],
+	"iris://vocabulary/domain#liveOperationTime": [{
+		"@value": 1200
+	}],
+	"iris://vocabulary/domain#order": [{
+		"@value": 1
+	}],
+	"iris://vocabulary/domain#prebookInterval": [{
+		"@value": 30
+	}],
+	"iris://vocabulary/domain#prebookOperationTime": [{
+		"@value": 1500
+	}],
+	"iris://vocabulary/domain#prebookPercentage": [{
+		"@value": 100
+	}],
+	"iris://vocabulary/domain#prebookTodayPercentage": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#prefix": [{
+		"@language": "ru",
+		"@value": "Р"
+	}],
+	"iris://vocabulary/domain#priority": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#serviceCodeEpgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#serviceLabel": [{
+		"@language": "ru",
+		"@value": "УЧЕТ МНОГОДЕТНЫХ СЕМЕЙ, ИМЕЮЩИХ ПРАВО НА ПОЛУЧЕНИЕ ЗЕМ. УЧ. БЕСПЛАТНО"
+	}]
+}, {
+	"@id": "iris://data#service-25",
+	"@type": [
+		"iris://vocabulary/domain#Service"
+	],
+	"iris://vocabulary/domain#codeFrgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#deptCodeFrgu": [{
+		"@value": "2100000010000000934"
+	}],
+	"iris://vocabulary/domain#hasProvider": [{
+		"@id": "iris://data#department-1"
+	}],
+	"iris://vocabulary/domain#hasSchedule": [{
+		"@id": "iris://data#schedule-4"
+	}],
+	"iris://vocabulary/domain#liveOperationTime": [{
+		"@value": 1200
+	}],
+	"iris://vocabulary/domain#order": [{
+		"@value": 1
+	}],
+	"iris://vocabulary/domain#prebookInterval": [{
+		"@value": 30
+	}],
+	"iris://vocabulary/domain#prebookOperationTime": [{
+		"@value": 1500
+	}],
+	"iris://vocabulary/domain#prebookPercentage": [{
+		"@value": 100
+	}],
+	"iris://vocabulary/domain#prebookTodayPercentage": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#prefix": [{
+		"@language": "ru",
+		"@value": "Р"
+	}],
+	"iris://vocabulary/domain#priority": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#serviceCodeEpgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#serviceLabel": [{
+		"@language": "ru",
+		"@value": "ПОСОБИЕ НА ТРЕТЬЕГО РЕБЕНКА"
+	}]
+}, {
+	"@id": "iris://data#service-24",
+	"@type": [
+		"iris://vocabulary/domain#Service"
+	],
+	"iris://vocabulary/domain#codeFrgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#deptCodeFrgu": [{
+		"@value": "2100000010000000934"
+	}],
+	"iris://vocabulary/domain#hasProvider": [{
+		"@id": "iris://data#department-1"
+	}],
+	"iris://vocabulary/domain#hasSchedule": [{
+		"@id": "iris://data#schedule-4"
+	}],
+	"iris://vocabulary/domain#liveOperationTime": [{
+		"@value": 1200
+	}],
+	"iris://vocabulary/domain#order": [{
+		"@value": 1
+	}],
+	"iris://vocabulary/domain#prebookInterval": [{
+		"@value": 30
+	}],
+	"iris://vocabulary/domain#prebookOperationTime": [{
+		"@value": 1500
+	}],
+	"iris://vocabulary/domain#prebookPercentage": [{
+		"@value": 100
+	}],
+	"iris://vocabulary/domain#prebookTodayPercentage": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#prefix": [{
+		"@language": "ru",
+		"@value": "Р"
+	}],
+	"iris://vocabulary/domain#priority": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#serviceCodeEpgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#serviceLabel": [{
+		"@language": "ru",
+		"@value": "МАТЕРИНСКИЙ КАПИТАЛ (РЕСПУБЛИКАНСКИЙ)"
+	}]
+}, {
+	"@id": "iris://data#service-29",
+	"@type": [
+		"iris://vocabulary/domain#Service"
+	],
+	"iris://vocabulary/domain#codeFrgu": [{
+		"@value": "2100000010000002847"
+	}],
+	"iris://vocabulary/domain#deptCodeFrgu": [{
+		"@value": "2100000010000002847"
+	}],
+	"iris://vocabulary/domain#hasProvider": [{
+		"@id": "iris://data#department-1"
+	}],
+	"iris://vocabulary/domain#hasSchedule": [{
+		"@id": "iris://data#schedule-4"
+	}],
+	"iris://vocabulary/domain#liveOperationTime": [{
+		"@value": 1200
+	}],
+	"iris://vocabulary/domain#order": [{
+		"@value": 1
+	}],
+	"iris://vocabulary/domain#prebookInterval": [{
+		"@value": 30
+	}],
+	"iris://vocabulary/domain#prebookOperationTime": [{
+		"@value": 1500
+	}],
+	"iris://vocabulary/domain#prebookPercentage": [{
+		"@value": 100
+	}],
+	"iris://vocabulary/domain#prebookTodayPercentage": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#prefix": [{
+		"@language": "ru",
+		"@value": "Д"
+	}],
+	"iris://vocabulary/domain#priority": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#serviceCodeEpgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#serviceLabel": [{
+		"@language": "ru",
+		"@value": "ПОВТОРНОЕ СВИДЕТЕЛЬСТВО О РЕГ. ГРАЖДАНСКОГО СОСТОЯНИЯ"
+	}]
+}, {
+	"@id": "iris://data#service-28",
+	"@type": [
+		"iris://vocabulary/domain#Service"
+	],
+	"iris://vocabulary/domain#codeFrgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#deptCodeFrgu": [{
+		"@value": "2100000010000002847"
+	}],
+	"iris://vocabulary/domain#hasProvider": [{
+		"@id": "iris://data#department-1"
+	}],
+	"iris://vocabulary/domain#hasSchedule": [{
+		"@id": "iris://data#schedule-4"
+	}],
+	"iris://vocabulary/domain#liveOperationTime": [{
+		"@value": 1200
+	}],
+	"iris://vocabulary/domain#order": [{
+		"@value": 1
+	}],
+	"iris://vocabulary/domain#prebookInterval": [{
+		"@value": 30
+	}],
+	"iris://vocabulary/domain#prebookOperationTime": [{
+		"@value": 1500
+	}],
+	"iris://vocabulary/domain#prebookPercentage": [{
+		"@value": 100
+	}],
+	"iris://vocabulary/domain#prebookTodayPercentage": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#prefix": [{
+		"@language": "ru",
+		"@value": "Д"
+	}],
+	"iris://vocabulary/domain#priority": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#serviceCodeEpgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#serviceLabel": [{
+		"@language": "ru",
+		"@value": "РАСТОРЖЕНИЕ БРАКА"
+	}]
+}, {
+	"@id": "iris://data#sg-10",
+	"@type": [
+		"iris://vocabulary/domain#ServiceGroup"
+	],
+	"iris://vocabulary/domain#itemsPerPage": [{
+		"@value": "10"
+	}],
+	"iris://vocabulary/domain#serviceGroupContent": [{
+		"@id": "iris://data#service-85"
+	}, {
+		"@id": "iris://data#service-84"
+	}],
+	"iris://vocabulary/domain#serviceGroupLabel": [{
+		"@language": "ru",
+		"@value": "Смена места жительства"
+	}],
+	"iris://vocabulary/domain#serviceGroupViewName": [{
+		"@value": "base"
+	}]
+}, {
+	"@id": "iris://data#sg-11",
+	"@type": [
+		"iris://vocabulary/domain#ServiceGroup"
+	],
+	"iris://vocabulary/domain#itemsPerPage": [{
+		"@value": "10"
+	}],
+	"iris://vocabulary/domain#serviceGroupContent": [{
+		"@id": "iris://data#service-87"
+	}, {
+		"@id": "iris://data#service-86"
+	}, {
+		"@id": "iris://data#service-88"
+	}, {
+		"@id": "iris://data#service-89"
+	}, {
+		"@id": "iris://data#service-90"
+	}],
+	"iris://vocabulary/domain#serviceGroupLabel": [{
+		"@language": "ru",
+		"@value": "Утрата близкого человека"
+	}],
+	"iris://vocabulary/domain#serviceGroupViewName": [{
+		"@value": "base"
+	}]
+}, {
+	"@id": "iris://data#sg-12",
+	"@type": [
+		"iris://vocabulary/domain#ServiceGroup"
+	],
+	"iris://vocabulary/domain#itemsPerPage": [{
+		"@value": "10"
+	}],
+	"iris://vocabulary/domain#serviceGroupContent": [{
+		"@id": "iris://data#service-94"
+	}, {
+		"@id": "iris://data#service-98"
+	}, {
+		"@id": "iris://data#service-99"
+	}, {
+		"@id": "iris://data#service-107"
+	}, {
+		"@id": "iris://data#service-110"
+	}, {
+		"@id": "iris://data#service-103"
+	}, {
+		"@id": "iris://data#service-112"
+	}, {
+		"@id": "iris://data#service-91"
+	}, {
+		"@id": "iris://data#service-117"
+	}, {
+		"@id": "iris://data#service-100"
+	}, {
+		"@id": "iris://data#service-101"
+	}, {
+		"@id": "iris://data#service-97"
+	}, {
+		"@id": "iris://data#service-106"
+	}, {
+		"@id": "iris://data#service-102"
+	}, {
+		"@id": "iris://data#service-92"
+	}, {
+		"@id": "iris://data#service-114"
+	}, {
+		"@id": "iris://data#service-109"
+	}, {
+		"@id": "iris://data#service-118"
+	}, {
+		"@id": "iris://data#service-96"
+	}, {
+		"@id": "iris://data#service-119"
+	}, {
+		"@id": "iris://data#service-116"
+	}, {
+		"@id": "iris://data#service-105"
+	}, {
+		"@id": "iris://data#service-93"
+	}, {
+		"@id": "iris://data#service-111"
+	}, {
+		"@id": "iris://data#service-108"
+	}, {
+		"@id": "iris://data#service-115"
+	}, {
+		"@id": "iris://data#service-113"
+	}, {
+		"@id": "iris://data#service-104"
+	}, {
+		"@id": "iris://data#service-95"
+	}],
+	"iris://vocabulary/domain#serviceGroupLabel": [{
+		"@language": "ru",
+		"@value": "Открытие своего дела"
+	}],
+	"iris://vocabulary/domain#serviceGroupViewName": [{
+		"@value": "base"
+	}]
+}, {
+	"@id": "iris://data#sg-13",
+	"@type": [
+		"iris://vocabulary/domain#ServiceGroup"
+	],
+	"iris://vocabulary/domain#itemsPerPage": [{
+		"@value": "10"
+	}],
+	"iris://vocabulary/domain#serviceGroupContent": [{
+		"@id": "iris://data#service-124"
+	}, {
+		"@id": "iris://data#service-129"
+	}, {
+		"@id": "iris://data#service-122"
+	}, {
+		"@id": "iris://data#service-128"
+	}, {
+		"@id": "iris://data#service-123"
+	}, {
+		"@id": "iris://data#service-121"
+	}, {
+		"@id": "iris://data#service-125"
+	}, {
+		"@id": "iris://data#service-126"
+	}, {
+		"@id": "iris://data#service-120"
+	}, {
+		"@id": "iris://data#service-130"
+	}, {
+		"@id": "iris://data#service-131"
+	}, {
+		"@id": "iris://data#service-127"
+	}],
+	"iris://vocabulary/domain#serviceGroupLabel": [{
+		"@language": "ru",
+		"@value": "Выход на пенсию"
+	}],
+	"iris://vocabulary/domain#serviceGroupViewName": [{
+		"@value": "base"
+	}]
+}, {
+	"@id": "iris://data#sg-14",
+	"@type": [
+		"iris://vocabulary/domain#ServiceGroup"
+	],
+	"iris://vocabulary/domain#itemsPerPage": [{
+		"@value": "10"
+	}],
+	"iris://vocabulary/domain#serviceGroupContent": [{
+		"@id": "iris://data#service-132"
+	}],
+	"iris://vocabulary/domain#serviceGroupLabel": [{
+		"@language": "ru",
+		"@value": "Прочее"
+	}],
+	"iris://vocabulary/domain#serviceGroupViewName": [{
+		"@value": "base"
+	}]
+}, {
+	"@id": "iris://data#service-6",
+	"@type": [
+		"iris://vocabulary/domain#Service"
+	],
+	"iris://vocabulary/domain#codeFrgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#deptCodeFrgu": [{
+		"@value": "2100000010000000934"
+	}],
+	"iris://vocabulary/domain#hasProvider": [{
+		"@id": "iris://data#department-1"
+	}],
+	"iris://vocabulary/domain#hasSchedule": [{
+		"@id": "iris://data#schedule-4"
+	}],
+	"iris://vocabulary/domain#liveOperationTime": [{
+		"@value": 1200
+	}],
+	"iris://vocabulary/domain#order": [{
+		"@value": 1
+	}],
+	"iris://vocabulary/domain#prebookInterval": [{
+		"@value": 30
+	}],
+	"iris://vocabulary/domain#prebookOperationTime": [{
+		"@value": 1500
+	}],
+	"iris://vocabulary/domain#prebookPercentage": [{
+		"@value": 100
+	}],
+	"iris://vocabulary/domain#prebookTodayPercentage": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#prefix": [{
+		"@language": "ru",
+		"@value": "Р"
+	}],
+	"iris://vocabulary/domain#priority": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#serviceCodeEpgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#serviceLabel": [{
+		"@language": "ru",
+		"@value": "ВЫПЛАТЫ УВОЛЕННЫМ ЖЕНЩИНАМ С ДЕТЬМИ"
+	}]
+}, {
+	"@id": "iris://data#service-7",
+	"@type": [
+		"iris://vocabulary/domain#Service"
+	],
+	"iris://vocabulary/domain#codeFrgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#deptCodeFrgu": [{
+		"@value": "2100000010000000934"
+	}],
+	"iris://vocabulary/domain#hasProvider": [{
+		"@id": "iris://data#department-1"
+	}],
+	"iris://vocabulary/domain#hasSchedule": [{
+		"@id": "iris://data#schedule-4"
+	}],
+	"iris://vocabulary/domain#liveOperationTime": [{
+		"@value": 1200
+	}],
+	"iris://vocabulary/domain#order": [{
+		"@value": 1
+	}],
+	"iris://vocabulary/domain#prebookInterval": [{
+		"@value": 30
+	}],
+	"iris://vocabulary/domain#prebookOperationTime": [{
+		"@value": 1500
+	}],
+	"iris://vocabulary/domain#prebookPercentage": [{
+		"@value": 100
+	}],
+	"iris://vocabulary/domain#prebookTodayPercentage": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#prefix": [{
+		"@language": "ru",
+		"@value": "Р"
+	}],
+	"iris://vocabulary/domain#priority": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#serviceCodeEpgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#serviceLabel": [{
+		"@language": "ru",
+		"@value": "ПОСОБИЕ ПО НЕТРУДОСПОСОБНОСТИ ПО УХОДУ ЗА РЕБЕНКОМ"
+	}]
+}, {
+	"@id": "iris://data#service-4",
+	"@type": [
+		"iris://vocabulary/domain#Service"
+	],
+	"iris://vocabulary/domain#codeFrgu": [{
+		"@value": "2100000010000007718"
+	}],
+	"iris://vocabulary/domain#deptCodeFrgu": [{
+		"@value": "2100000010000000934"
+	}],
+	"iris://vocabulary/domain#hasProvider": [{
+		"@id": "iris://data#department-1"
+	}],
+	"iris://vocabulary/domain#hasSchedule": [{
+		"@id": "iris://data#schedule-4"
+	}],
+	"iris://vocabulary/domain#liveOperationTime": [{
+		"@value": 1200
+	}],
+	"iris://vocabulary/domain#order": [{
+		"@value": 1
+	}],
+	"iris://vocabulary/domain#prebookInterval": [{
+		"@value": 30
+	}],
+	"iris://vocabulary/domain#prebookOperationTime": [{
+		"@value": 1500
+	}],
+	"iris://vocabulary/domain#prebookPercentage": [{
+		"@value": 100
+	}],
+	"iris://vocabulary/domain#prebookTodayPercentage": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#prefix": [{
+		"@language": "ru",
+		"@value": "Р"
+	}],
+	"iris://vocabulary/domain#priority": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#serviceCodeEpgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#serviceLabel": [{
+		"@language": "ru",
+		"@value": "ПОСОБИЕ ПО БЕРЕМЕННОСТИ И РОДАМ"
+	}]
+}, {
+	"@id": "iris://data#service-124",
+	"@type": [
+		"iris://vocabulary/domain#Service"
+	],
+	"iris://vocabulary/domain#codeFrgu": [{
+		"@value": "0"
+	}, {
+		"@value": "10000002758"
+	}],
+	"iris://vocabulary/domain#deptCodeFrgu": [{
+		"@value": "10000681774"
+	}],
+	"iris://vocabulary/domain#hasProvider": [{
+		"@id": "iris://data#department-1"
+	}],
+	"iris://vocabulary/domain#hasSchedule": [{
+		"@id": "iris://data#schedule-4"
+	}],
+	"iris://vocabulary/domain#liveOperationTime": [{
+		"@value": 1200
+	}],
+	"iris://vocabulary/domain#order": [{
+		"@value": 1
+	}],
+	"iris://vocabulary/domain#prebookInterval": [{
+		"@value": 30
+	}],
+	"iris://vocabulary/domain#prebookOperationTime": [{
+		"@value": 1500
+	}],
+	"iris://vocabulary/domain#prebookPercentage": [{
+		"@value": 100
+	}],
+	"iris://vocabulary/domain#prebookTodayPercentage": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#prefix": [{
+		"@language": "ru",
+		"@value": "ВП"
+	}],
+	"iris://vocabulary/domain#priority": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#serviceCodeEpgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#serviceLabel": [{
+		"@language": "ru",
+		"@value": "СОЦ. ОБЕСПЕЧЕНИЕ ЛЕТЧИКАМ, И ШАХТЕРАМ"
+	}, {
+		"@language": "ru",
+		"@value": "ЗАЯВЛЕНИЕ ОБ УСТАНОВЛЕНИИ ПЕНСИИ"
+	}]
+}, {
+	"@id": "iris://data#service-123",
+	"@type": [
+		"iris://vocabulary/domain#Service"
+	],
+	"iris://vocabulary/domain#codeFrgu": [{
+		"@value": "10000002758"
+	}],
+	"iris://vocabulary/domain#deptCodeFrgu": [{
+		"@value": "10000681774"
+	}],
+	"iris://vocabulary/domain#hasProvider": [{
+		"@id": "iris://data#department-1"
+	}],
+	"iris://vocabulary/domain#hasSchedule": [{
+		"@id": "iris://data#schedule-4"
+	}],
+	"iris://vocabulary/domain#liveOperationTime": [{
+		"@value": 1200
+	}],
+	"iris://vocabulary/domain#order": [{
+		"@value": 1
+	}],
+	"iris://vocabulary/domain#prebookInterval": [{
+		"@value": 30
+	}],
+	"iris://vocabulary/domain#prebookOperationTime": [{
+		"@value": 1500
+	}],
+	"iris://vocabulary/domain#prebookPercentage": [{
+		"@value": 100
+	}],
+	"iris://vocabulary/domain#prebookTodayPercentage": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#prefix": [{
+		"@language": "ru",
+		"@value": "ВП"
+	}],
+	"iris://vocabulary/domain#priority": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#serviceCodeEpgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#serviceLabel": [{
+		"@language": "ru",
+		"@value": "ИНФОРМАЦИЯ О СОСТОЯНИИ ЛИЦЕВЫХ СЧЕТОВ"
+	}]
+}, {
+	"@id": "iris://data#service-3",
+	"@type": [
+		"iris://vocabulary/domain#Service"
+	],
+	"iris://vocabulary/domain#codeFrgu": [{
+		"@value": "2100000010000001881"
+	}],
+	"iris://vocabulary/domain#deptCodeFrgu": [{
+		"@value": "2100000010000000934"
+	}],
+	"iris://vocabulary/domain#hasProvider": [{
+		"@id": "iris://data#department-1"
+	}],
+	"iris://vocabulary/domain#hasSchedule": [{
+		"@id": "iris://data#schedule-4"
+	}],
+	"iris://vocabulary/domain#liveOperationTime": [{
+		"@value": 1200
+	}],
+	"iris://vocabulary/domain#order": [{
+		"@value": 1
+	}],
+	"iris://vocabulary/domain#prebookInterval": [{
+		"@value": 30
+	}],
+	"iris://vocabulary/domain#prebookOperationTime": [{
+		"@value": 1500
+	}],
+	"iris://vocabulary/domain#prebookPercentage": [{
+		"@value": 100
+	}],
+	"iris://vocabulary/domain#prebookTodayPercentage": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#prefix": [{
+		"@language": "ru",
+		"@value": "Р"
+	}],
+	"iris://vocabulary/domain#priority": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#serviceCodeEpgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#serviceLabel": [{
+		"@language": "ru",
+		"@value": "ПОСОБИЕ НА РЕБЕНКА"
+	}]
+}, {
+	"@id": "iris://data#service-121",
+	"@type": [
+		"iris://vocabulary/domain#Service"
+	],
+	"iris://vocabulary/domain#codeFrgu": [{
+		"@value": "10000002749"
+	}],
+	"iris://vocabulary/domain#deptCodeFrgu": [{
+		"@value": "10000681774"
+	}],
+	"iris://vocabulary/domain#hasProvider": [{
+		"@id": "iris://data#department-1"
+	}],
+	"iris://vocabulary/domain#hasSchedule": [{
+		"@id": "iris://data#schedule-4"
+	}],
+	"iris://vocabulary/domain#liveOperationTime": [{
+		"@value": 1200
+	}],
+	"iris://vocabulary/domain#order": [{
+		"@value": 1
+	}],
+	"iris://vocabulary/domain#prebookInterval": [{
+		"@value": 30
+	}],
+	"iris://vocabulary/domain#prebookOperationTime": [{
+		"@value": 1500
+	}],
+	"iris://vocabulary/domain#prebookPercentage": [{
+		"@value": 100
+	}],
+	"iris://vocabulary/domain#prebookTodayPercentage": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#prefix": [{
+		"@language": "ru",
+		"@value": "ВП"
+	}],
+	"iris://vocabulary/domain#priority": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#serviceCodeEpgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#serviceLabel": [{
+		"@language": "ru",
+		"@value": "ЗАЯВЛЕНИЕ О ВЫБОРЕ ПЕНСИОННОГО ФОНДА"
+	}]
+}, {
+	"@id": "iris://data#service-1",
+	"@type": [
+		"iris://vocabulary/domain#Service"
+	],
+	"iris://vocabulary/domain#codeFrgu": [{
+		"@value": "2100000010000002847"
+	}],
+	"iris://vocabulary/domain#deptCodeFrgu": [{
+		"@value": "2100000010000000934"
+	}],
+	"iris://vocabulary/domain#hasProvider": [{
+		"@id": "iris://data#department-1"
+	}],
+	"iris://vocabulary/domain#hasSchedule": [{
+		"@id": "iris://data#schedule-4"
+	}],
+	"iris://vocabulary/domain#liveOperationTime": [{
+		"@value": 1200
+	}],
+	"iris://vocabulary/domain#order": [{
+		"@value": 1
+	}],
+	"iris://vocabulary/domain#prebookInterval": [{
+		"@value": 30
+	}],
+	"iris://vocabulary/domain#prebookOperationTime": [{
+		"@value": 1500
+	}],
+	"iris://vocabulary/domain#prebookPercentage": [{
+		"@value": 100
+	}],
+	"iris://vocabulary/domain#prebookTodayPercentage": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#prefix": [{
+		"@language": "ru",
+		"@value": "Р"
+	}],
+	"iris://vocabulary/domain#priority": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#serviceCodeEpgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#serviceLabel": [{
+		"@language": "ru",
+		"@value": "РЕГИСТРАЦИЯ РОЖДЕНИЯ"
+	}]
+}, {
+	"@id": "iris://data#service-8",
+	"@type": [
+		"iris://vocabulary/domain#Service"
+	],
+	"iris://vocabulary/domain#codeFrgu": [{
+		"@value": "2100000010000007723"
+	}],
+	"iris://vocabulary/domain#deptCodeFrgu": [{
+		"@value": "2100000010000000934"
+	}],
+	"iris://vocabulary/domain#hasProvider": [{
+		"@id": "iris://data#department-1"
+	}],
+	"iris://vocabulary/domain#hasSchedule": [{
+		"@id": "iris://data#schedule-4"
+	}],
+	"iris://vocabulary/domain#liveOperationTime": [{
+		"@value": 1200
+	}],
+	"iris://vocabulary/domain#order": [{
+		"@value": 1
+	}],
+	"iris://vocabulary/domain#prebookInterval": [{
+		"@value": 30
+	}],
+	"iris://vocabulary/domain#prebookOperationTime": [{
+		"@value": 1500
+	}],
+	"iris://vocabulary/domain#prebookPercentage": [{
+		"@value": 100
+	}],
+	"iris://vocabulary/domain#prebookTodayPercentage": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#prefix": [{
+		"@language": "ru",
+		"@value": "Р"
+	}],
+	"iris://vocabulary/domain#priority": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#serviceCodeEpgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#serviceLabel": [{
+		"@language": "ru",
+		"@value": "ПОСОБИЕ БЕРЕМЕННОЙ ЖЕНЕ ВОЕННОГО"
+	}]
+}, {
+	"@id": "iris://data#service-128",
+	"@type": [
+		"iris://vocabulary/domain#Service"
+	],
+	"iris://vocabulary/domain#codeFrgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#deptCodeFrgu": [{
+		"@value": "10000681774"
+	}],
+	"iris://vocabulary/domain#hasProvider": [{
+		"@id": "iris://data#department-1"
+	}],
+	"iris://vocabulary/domain#hasSchedule": [{
+		"@id": "iris://data#schedule-4"
+	}],
+	"iris://vocabulary/domain#liveOperationTime": [{
+		"@value": 1200
+	}],
+	"iris://vocabulary/domain#order": [{
+		"@value": 1
+	}],
+	"iris://vocabulary/domain#prebookInterval": [{
+		"@value": 30
+	}],
+	"iris://vocabulary/domain#prebookOperationTime": [{
+		"@value": 1500
+	}],
+	"iris://vocabulary/domain#prebookPercentage": [{
+		"@value": 100
+	}],
+	"iris://vocabulary/domain#prebookTodayPercentage": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#prefix": [{
+		"@language": "ru",
+		"@value": "ВП"
+	}],
+	"iris://vocabulary/domain#priority": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#serviceCodeEpgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#serviceLabel": [{
+		"@language": "ru",
+		"@value": "ЗАПРОС ПЕНСИОННОГО ДЕЛА"
+	}]
+}, {
+	"@id": "iris://data#term-1",
+	"@type": [
+		"iris://vocabulary/domain#Terminal"
+	],
+	"iris://vocabulary/domain#attachedTo": [{
+		"@id": "iris://data#department-1"
+	}],
+	"iris://vocabulary/domain#boundServiceGroups": [{
+		"@id": "iris://data#sg-0"
+	}],
+	"iris://vocabulary/domain#defaultAgent": [{
+		"@id": "iris://data#megatron-1"
+	}],
+	"iris://vocabulary/domain#deviceLabel": [{
+		"@language": "ru",
+		"@value": "Терминал 1"
+	}],
+	"iris://vocabulary/domain#deviceType": [{
+		"@value": "terminal"
+	}]
+}, {
+	"@id": "iris://data#service-78",
+	"@type": [
+		"iris://vocabulary/domain#Service"
+	],
+	"iris://vocabulary/domain#codeFrgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#deptCodeFrgu": [{
+		"@value": "2100000010000001449"
+	}],
+	"iris://vocabulary/domain#hasProvider": [{
+		"@id": "iris://data#department-1"
+	}],
+	"iris://vocabulary/domain#hasSchedule": [{
+		"@id": "iris://data#schedule-4"
+	}],
+	"iris://vocabulary/domain#liveOperationTime": [{
+		"@value": 1200
+	}],
+	"iris://vocabulary/domain#order": [{
+		"@value": 1
+	}],
+	"iris://vocabulary/domain#prebookInterval": [{
+		"@value": 30
+	}],
+	"iris://vocabulary/domain#prebookOperationTime": [{
+		"@value": 1500
+	}],
+	"iris://vocabulary/domain#prebookPercentage": [{
+		"@value": 100
+	}],
+	"iris://vocabulary/domain#prebookTodayPercentage": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#prefix": [{
+		"@language": "ru",
+		"@value": "ПР"
+	}],
+	"iris://vocabulary/domain#priority": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#serviceCodeEpgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#serviceLabel": [{
+		"@language": "ru",
+		"@value": "ПРОФ ОБУЧЕНИЕ БЕЗРАБОТНЫХ"
+	}]
+}, {
+	"@id": "iris://data#service-79",
+	"@type": [
+		"iris://vocabulary/domain#Service"
+	],
+	"iris://vocabulary/domain#codeFrgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#deptCodeFrgu": [{
+		"@value": "2100000010000001449"
+	}],
+	"iris://vocabulary/domain#hasProvider": [{
+		"@id": "iris://data#department-1"
+	}],
+	"iris://vocabulary/domain#hasSchedule": [{
+		"@id": "iris://data#schedule-4"
+	}],
+	"iris://vocabulary/domain#liveOperationTime": [{
+		"@value": 1200
+	}],
+	"iris://vocabulary/domain#order": [{
+		"@value": 1
+	}],
+	"iris://vocabulary/domain#prebookInterval": [{
+		"@value": 30
+	}],
+	"iris://vocabulary/domain#prebookOperationTime": [{
+		"@value": 1500
+	}],
+	"iris://vocabulary/domain#prebookPercentage": [{
+		"@value": 100
+	}],
+	"iris://vocabulary/domain#prebookTodayPercentage": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#prefix": [{
+		"@language": "ru",
+		"@value": "ПР"
+	}],
+	"iris://vocabulary/domain#priority": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#serviceCodeEpgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#serviceLabel": [{
+		"@language": "ru",
+		"@value": "ОРГАНИЗАЦИЯ ОБЩЕСТВЕННЫХ РАБОТ"
+	}]
+}, {
+	"@id": "iris://data#service-70",
+	"@type": [
+		"iris://vocabulary/domain#Service"
+	],
+	"iris://vocabulary/domain#codeFrgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#deptCodeFrgu": [{
+		"@value": "2100000010000002916"
+	}],
+	"iris://vocabulary/domain#hasProvider": [{
+		"@id": "iris://data#department-1"
+	}],
+	"iris://vocabulary/domain#hasSchedule": [{
+		"@id": "iris://data#schedule-4"
+	}],
+	"iris://vocabulary/domain#liveOperationTime": [{
+		"@value": 1200
+	}],
+	"iris://vocabulary/domain#order": [{
+		"@value": 1
+	}],
+	"iris://vocabulary/domain#prebookInterval": [{
+		"@value": 30
+	}],
+	"iris://vocabulary/domain#prebookOperationTime": [{
+		"@value": 1500
+	}],
+	"iris://vocabulary/domain#prebookPercentage": [{
+		"@value": 100
+	}],
+	"iris://vocabulary/domain#prebookTodayPercentage": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#prefix": [{
+		"@language": "ru",
+		"@value": "С"
+	}],
+	"iris://vocabulary/domain#priority": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#serviceCodeEpgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#serviceLabel": [{
+		"@language": "ru",
+		"@value": "ПРИСВОЕНИЕ АДРЕСОВ"
+	}]
+}, {
+	"@id": "iris://data#service-71",
+	"@type": [
+		"iris://vocabulary/domain#Service"
+	],
+	"iris://vocabulary/domain#codeFrgu": [{
+		"@value": "10000003882"
+	}],
+	"iris://vocabulary/domain#deptCodeFrgu": [{
+		"@value": "10001093705"
+	}],
+	"iris://vocabulary/domain#hasProvider": [{
+		"@id": "iris://data#department-1"
+	}],
+	"iris://vocabulary/domain#hasSchedule": [{
+		"@id": "iris://data#schedule-4"
+	}],
+	"iris://vocabulary/domain#liveOperationTime": [{
+		"@value": 1200
+	}],
+	"iris://vocabulary/domain#order": [{
+		"@value": 1
+	}],
+	"iris://vocabulary/domain#prebookInterval": [{
+		"@value": 30
+	}],
+	"iris://vocabulary/domain#prebookOperationTime": [{
+		"@value": 1500
+	}],
+	"iris://vocabulary/domain#prebookPercentage": [{
+		"@value": 100
+	}],
+	"iris://vocabulary/domain#prebookTodayPercentage": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#prefix": [{
+		"@language": "ru",
+		"@value": "ПР"
+	}],
+	"iris://vocabulary/domain#priority": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#serviceCodeEpgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#serviceLabel": [{
+		"@language": "ru",
+		"@value": "СПРАВКА ОБ ОТСУТСТВИИ (НАЛИЧИИ) СУДИМОСТИ"
+	}]
+}, {
+	"@id": "iris://data#service-72",
+	"@type": [
+		"iris://vocabulary/domain#Service"
+	],
+	"iris://vocabulary/domain#codeFrgu": [{
+		"@value": "10001294268"
+	}],
+	"iris://vocabulary/domain#deptCodeFrgu": [{
+		"@value": "10002262092"
+	}],
+	"iris://vocabulary/domain#hasProvider": [{
+		"@id": "iris://data#department-1"
+	}],
+	"iris://vocabulary/domain#hasSchedule": [{
+		"@id": "iris://data#schedule-4"
+	}],
+	"iris://vocabulary/domain#liveOperationTime": [{
+		"@value": 1200
+	}],
+	"iris://vocabulary/domain#order": [{
+		"@value": 1
+	}],
+	"iris://vocabulary/domain#prebookInterval": [{
+		"@value": 30
+	}],
+	"iris://vocabulary/domain#prebookOperationTime": [{
+		"@value": 1500
+	}],
+	"iris://vocabulary/domain#prebookPercentage": [{
+		"@value": 100
+	}],
+	"iris://vocabulary/domain#prebookTodayPercentage": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#prefix": [{
+		"@language": "ru",
+		"@value": "ПР"
+	}],
+	"iris://vocabulary/domain#priority": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#serviceCodeEpgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#serviceLabel": [{
+		"@language": "ru",
+		"@value": "РЕГИСТРАЦИЯ ОМС ПО НЕТРУДОСПОСОБНОСТИ"
+	}]
+}, {
+	"@id": "iris://data#service-73",
+	"@type": [
+		"iris://vocabulary/domain#Service"
+	],
+	"iris://vocabulary/domain#codeFrgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#deptCodeFrgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#hasProvider": [{
+		"@id": "iris://data#department-1"
+	}],
+	"iris://vocabulary/domain#hasSchedule": [{
+		"@id": "iris://data#schedule-4"
+	}],
+	"iris://vocabulary/domain#liveOperationTime": [{
+		"@value": 1200
+	}],
+	"iris://vocabulary/domain#order": [{
+		"@value": 1
+	}],
+	"iris://vocabulary/domain#prebookInterval": [{
+		"@value": 30
+	}],
+	"iris://vocabulary/domain#prebookOperationTime": [{
+		"@value": 1500
+	}],
+	"iris://vocabulary/domain#prebookPercentage": [{
+		"@value": 100
+	}],
+	"iris://vocabulary/domain#prebookTodayPercentage": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#prefix": [{
+		"@language": "ru",
+		"@value": "ПР"
+	}],
+	"iris://vocabulary/domain#priority": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#serviceCodeEpgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#serviceLabel": [{
+		"@language": "ru",
+		"@value": "КОНСУЛЬТАЦИЯ ПО ТРУДОВОМУ ПРАВУ"
+	}]
+}, {
+	"@id": "iris://data#service-74",
+	"@type": [
+		"iris://vocabulary/domain#Service"
+	],
+	"iris://vocabulary/domain#codeFrgu": [{
+		"@value": "2100000010000001482"
+	}],
+	"iris://vocabulary/domain#deptCodeFrgu": [{
+		"@value": "2100000010000001449"
+	}],
+	"iris://vocabulary/domain#hasProvider": [{
+		"@id": "iris://data#department-1"
+	}],
+	"iris://vocabulary/domain#hasSchedule": [{
+		"@id": "iris://data#schedule-4"
+	}],
+	"iris://vocabulary/domain#liveOperationTime": [{
+		"@value": 1200
+	}],
+	"iris://vocabulary/domain#order": [{
+		"@value": 1
+	}],
+	"iris://vocabulary/domain#prebookInterval": [{
+		"@value": 30
+	}],
+	"iris://vocabulary/domain#prebookOperationTime": [{
+		"@value": 1500
+	}],
+	"iris://vocabulary/domain#prebookPercentage": [{
+		"@value": 100
+	}],
+	"iris://vocabulary/domain#prebookTodayPercentage": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#prefix": [{
+		"@language": "ru",
+		"@value": "ПР"
+	}],
+	"iris://vocabulary/domain#priority": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#serviceCodeEpgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#serviceLabel": [{
+		"@language": "ru",
+		"@value": "ИНФОРМАЦИЯ О ПОЛОЖЕНИИ НА РЫНКЕ ТРУДА"
+	}]
+}, {
+	"@id": "iris://data#service-75",
+	"@type": [
+		"iris://vocabulary/domain#Service"
+	],
+	"iris://vocabulary/domain#codeFrgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#deptCodeFrgu": [{
+		"@value": "2100000010000001449"
+	}],
+	"iris://vocabulary/domain#hasProvider": [{
+		"@id": "iris://data#department-1"
+	}],
+	"iris://vocabulary/domain#hasSchedule": [{
+		"@id": "iris://data#schedule-4"
+	}],
+	"iris://vocabulary/domain#liveOperationTime": [{
+		"@value": 1200
+	}],
+	"iris://vocabulary/domain#order": [{
+		"@value": 1
+	}],
+	"iris://vocabulary/domain#prebookInterval": [{
+		"@value": 30
+	}],
+	"iris://vocabulary/domain#prebookOperationTime": [{
+		"@value": 1500
+	}],
+	"iris://vocabulary/domain#prebookPercentage": [{
+		"@value": 100
+	}],
+	"iris://vocabulary/domain#prebookTodayPercentage": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#prefix": [{
+		"@language": "ru",
+		"@value": "ПР"
+	}],
+	"iris://vocabulary/domain#priority": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#serviceCodeEpgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#serviceLabel": [{
+		"@language": "ru",
+		"@value": "ПОИСК РАБОТЫ ИЛИ РАБОТНИКОВ"
+	}]
+}, {
+	"@id": "iris://data#service-76",
+	"@type": [
+		"iris://vocabulary/domain#Service"
+	],
+	"iris://vocabulary/domain#codeFrgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#deptCodeFrgu": [{
+		"@value": "2100000010000001449"
+	}],
+	"iris://vocabulary/domain#hasProvider": [{
+		"@id": "iris://data#department-1"
+	}],
+	"iris://vocabulary/domain#hasSchedule": [{
+		"@id": "iris://data#schedule-4"
+	}],
+	"iris://vocabulary/domain#liveOperationTime": [{
+		"@value": 1200
+	}],
+	"iris://vocabulary/domain#order": [{
+		"@value": 1
+	}],
+	"iris://vocabulary/domain#prebookInterval": [{
+		"@value": 30
+	}],
+	"iris://vocabulary/domain#prebookOperationTime": [{
+		"@value": 1500
+	}],
+	"iris://vocabulary/domain#prebookPercentage": [{
+		"@value": 100
+	}],
+	"iris://vocabulary/domain#prebookTodayPercentage": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#prefix": [{
+		"@language": "ru",
+		"@value": "ПР"
+	}],
+	"iris://vocabulary/domain#priority": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#serviceCodeEpgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#serviceLabel": [{
+		"@language": "ru",
+		"@value": "ПРОФ.ОРИЕНТАЦИЯ ГРАЖДАН"
+	}]
+}, {
+	"@id": "iris://data#service-77",
+	"@type": [
+		"iris://vocabulary/domain#Service"
+	],
+	"iris://vocabulary/domain#codeFrgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#deptCodeFrgu": [{
+		"@value": "2100000010000001449"
+	}],
+	"iris://vocabulary/domain#hasProvider": [{
+		"@id": "iris://data#department-1"
+	}],
+	"iris://vocabulary/domain#hasSchedule": [{
+		"@id": "iris://data#schedule-4"
+	}],
+	"iris://vocabulary/domain#liveOperationTime": [{
+		"@value": 1200
+	}],
+	"iris://vocabulary/domain#order": [{
+		"@value": 1
+	}],
+	"iris://vocabulary/domain#prebookInterval": [{
+		"@value": 30
+	}],
+	"iris://vocabulary/domain#prebookOperationTime": [{
+		"@value": 1500
+	}],
+	"iris://vocabulary/domain#prebookPercentage": [{
+		"@value": 100
+	}],
+	"iris://vocabulary/domain#prebookTodayPercentage": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#prefix": [{
+		"@language": "ru",
+		"@value": "ПР"
+	}],
+	"iris://vocabulary/domain#priority": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#serviceCodeEpgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#serviceLabel": [{
+		"@language": "ru",
+		"@value": "ПСИХОЛОГИЧЕСКАЯ ПОДДЕРЖКА БЕЗРАБОТНЫХ"
+	}]
+}, {
+	"@id": "iris://data#service-118",
+	"@type": [
+		"iris://vocabulary/domain#Service"
+	],
+	"iris://vocabulary/domain#codeFrgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#deptCodeFrgu": [{
+		"@value": "2100000010000002916"
+	}],
+	"iris://vocabulary/domain#hasProvider": [{
+		"@id": "iris://data#department-1"
+	}],
+	"iris://vocabulary/domain#hasSchedule": [{
+		"@id": "iris://data#schedule-4"
+	}],
+	"iris://vocabulary/domain#liveOperationTime": [{
+		"@value": 1200
+	}],
+	"iris://vocabulary/domain#order": [{
+		"@value": 1
+	}],
+	"iris://vocabulary/domain#prebookInterval": [{
+		"@value": 30
+	}],
+	"iris://vocabulary/domain#prebookOperationTime": [{
+		"@value": 1500
+	}],
+	"iris://vocabulary/domain#prebookPercentage": [{
+		"@value": 100
+	}],
+	"iris://vocabulary/domain#prebookTodayPercentage": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#prefix": [{
+		"@language": "ru",
+		"@value": "О"
+	}],
+	"iris://vocabulary/domain#priority": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#serviceCodeEpgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#serviceLabel": [{
+		"@language": "ru",
+		"@value": "РАЗРЕШЕНИЯ, СОГЛАСОВАНИЯ НА ПЕРЕВОЗКУ КРУПНОГАБАРИТНОГО И ТЯЖЕЛОВЕСНОГО ГРУЗА"
+	}]
+}, {
+	"@id": "iris://data#service-119",
+	"@type": [
+		"iris://vocabulary/domain#Service"
+	],
+	"iris://vocabulary/domain#codeFrgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#deptCodeFrgu": [{
+		"@value": "2100000010000002916"
+	}],
+	"iris://vocabulary/domain#hasProvider": [{
+		"@id": "iris://data#department-1"
+	}],
+	"iris://vocabulary/domain#hasSchedule": [{
+		"@id": "iris://data#schedule-4"
+	}],
+	"iris://vocabulary/domain#liveOperationTime": [{
+		"@value": 1200
+	}],
+	"iris://vocabulary/domain#order": [{
+		"@value": 1
+	}],
+	"iris://vocabulary/domain#prebookInterval": [{
+		"@value": 30
+	}],
+	"iris://vocabulary/domain#prebookOperationTime": [{
+		"@value": 1500
+	}],
+	"iris://vocabulary/domain#prebookPercentage": [{
+		"@value": 100
+	}],
+	"iris://vocabulary/domain#prebookTodayPercentage": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#prefix": [{
+		"@language": "ru",
+		"@value": "О"
+	}],
+	"iris://vocabulary/domain#priority": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#serviceCodeEpgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#serviceLabel": [{
+		"@language": "ru",
+		"@value": "ПРАВО НА ОКАЗАНИЕ УСЛУГ ПО ПЕРЕВОЗКЕ ПАССАЖИРОВ АВТОМОБИЛЬНЫМ ТРАНСПОРТОМ"
+	}]
+}, {
+	"@id": "iris://data#service-112",
+	"@type": [
+		"iris://vocabulary/domain#Service"
+	],
+	"iris://vocabulary/domain#codeFrgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#deptCodeFrgu": [{
+		"@value": "2100000010000000594"
+	}],
+	"iris://vocabulary/domain#hasProvider": [{
+		"@id": "iris://data#department-1"
+	}],
+	"iris://vocabulary/domain#hasSchedule": [{
+		"@id": "iris://data#schedule-4"
+	}],
+	"iris://vocabulary/domain#liveOperationTime": [{
+		"@value": 1200
+	}],
+	"iris://vocabulary/domain#order": [{
+		"@value": 1
+	}],
+	"iris://vocabulary/domain#prebookInterval": [{
+		"@value": 30
+	}],
+	"iris://vocabulary/domain#prebookOperationTime": [{
+		"@value": 1500
+	}],
+	"iris://vocabulary/domain#prebookPercentage": [{
+		"@value": 100
+	}],
+	"iris://vocabulary/domain#prebookTodayPercentage": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#prefix": [{
+		"@language": "ru",
+		"@value": "О"
+	}],
+	"iris://vocabulary/domain#priority": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#serviceCodeEpgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#serviceLabel": [{
+		"@language": "ru",
+		"@value": "ПРЕДОСТАВЛЕНИЕ ЗЕМЕЛЬ ДЛЯ ФЕРМЕРСКОГО ХОЗ-ВА"
+	}]
+}, {
+	"@id": "iris://data#service-113",
+	"@type": [
+		"iris://vocabulary/domain#Service"
+	],
+	"iris://vocabulary/domain#codeFrgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#deptCodeFrgu": [{
+		"@value": "2100000010000000594"
+	}],
+	"iris://vocabulary/domain#hasProvider": [{
+		"@id": "iris://data#department-1"
+	}],
+	"iris://vocabulary/domain#hasSchedule": [{
+		"@id": "iris://data#schedule-4"
+	}],
+	"iris://vocabulary/domain#liveOperationTime": [{
+		"@value": 1200
+	}],
+	"iris://vocabulary/domain#order": [{
+		"@value": 1
+	}],
+	"iris://vocabulary/domain#prebookInterval": [{
+		"@value": 30
+	}],
+	"iris://vocabulary/domain#prebookOperationTime": [{
+		"@value": 1500
+	}],
+	"iris://vocabulary/domain#prebookPercentage": [{
+		"@value": 100
+	}],
+	"iris://vocabulary/domain#prebookTodayPercentage": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#prefix": [{
+		"@language": "ru",
+		"@value": "О"
+	}],
+	"iris://vocabulary/domain#priority": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#serviceCodeEpgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#serviceLabel": [{
+		"@language": "ru",
+		"@value": "ПЕРЕДАЧА ИМУЩЕСТВА ЧР, БЕЗВОЗМЕЗДНО"
+	}]
+}, {
+	"@id": "iris://data#service-110",
+	"@type": [
+		"iris://vocabulary/domain#Service"
+	],
+	"iris://vocabulary/domain#codeFrgu": [{
+		"@value": "2100000010000002116"
+	}],
+	"iris://vocabulary/domain#deptCodeFrgu": [{
+		"@value": "2100000010000000010"
+	}],
+	"iris://vocabulary/domain#hasProvider": [{
+		"@id": "iris://data#department-1"
+	}],
+	"iris://vocabulary/domain#hasSchedule": [{
+		"@id": "iris://data#schedule-4"
+	}],
+	"iris://vocabulary/domain#liveOperationTime": [{
+		"@value": 1200
+	}],
+	"iris://vocabulary/domain#order": [{
+		"@value": 1
+	}],
+	"iris://vocabulary/domain#prebookInterval": [{
+		"@value": 30
+	}],
+	"iris://vocabulary/domain#prebookOperationTime": [{
+		"@value": 1500
+	}],
+	"iris://vocabulary/domain#prebookPercentage": [{
+		"@value": 100
+	}],
+	"iris://vocabulary/domain#prebookTodayPercentage": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#prefix": [{
+		"@language": "ru",
+		"@value": "О"
+	}],
+	"iris://vocabulary/domain#priority": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#serviceCodeEpgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#serviceLabel": [{
+		"@language": "ru",
+		"@value": "СУБСИДИЯ БИЗНЕСУ НА ПЕРВЫЙ ВЗНОС ПО ДОГОВОРУ ЛИЗИНГА"
+	}]
+}, {
+	"@id": "iris://data#service-111",
+	"@type": [
+		"iris://vocabulary/domain#Service"
+	],
+	"iris://vocabulary/domain#codeFrgu": [{
+		"@value": "2100000010000002650"
+	}],
+	"iris://vocabulary/domain#deptCodeFrgu": [{
+		"@value": "2100000010000000010"
+	}],
+	"iris://vocabulary/domain#hasProvider": [{
+		"@id": "iris://data#department-1"
+	}],
+	"iris://vocabulary/domain#hasSchedule": [{
+		"@id": "iris://data#schedule-4"
+	}],
+	"iris://vocabulary/domain#liveOperationTime": [{
+		"@value": 1200
+	}],
+	"iris://vocabulary/domain#order": [{
+		"@value": 1
+	}],
+	"iris://vocabulary/domain#prebookInterval": [{
+		"@value": 30
+	}],
+	"iris://vocabulary/domain#prebookOperationTime": [{
+		"@value": 1500
+	}],
+	"iris://vocabulary/domain#prebookPercentage": [{
+		"@value": 100
+	}],
+	"iris://vocabulary/domain#prebookTodayPercentage": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#prefix": [{
+		"@language": "ru",
+		"@value": "О"
+	}],
+	"iris://vocabulary/domain#priority": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#serviceCodeEpgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#serviceLabel": [{
+		"@language": "ru",
+		"@value": "СУБСИДИЯ БИЗНЕСУ НА РАЗВИТИЕ НАРОДНЫХ РЕМЕСЕЛ И ПРОИЗВОДСТВО СУВЕНИРОВ"
+	}]
+}, {
+	"@id": "iris://data#service-116",
+	"@type": [
+		"iris://vocabulary/domain#Service"
+	],
+	"iris://vocabulary/domain#codeFrgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#deptCodeFrgu": [{
+		"@value": "2100000010000000594"
+	}],
+	"iris://vocabulary/domain#hasProvider": [{
+		"@id": "iris://data#department-1"
+	}],
+	"iris://vocabulary/domain#hasSchedule": [{
+		"@id": "iris://data#schedule-4"
+	}],
+	"iris://vocabulary/domain#liveOperationTime": [{
+		"@value": 1200
+	}],
+	"iris://vocabulary/domain#order": [{
+		"@value": 1
+	}],
+	"iris://vocabulary/domain#prebookInterval": [{
+		"@value": 30
+	}],
+	"iris://vocabulary/domain#prebookOperationTime": [{
+		"@value": 1500
+	}],
+	"iris://vocabulary/domain#prebookPercentage": [{
+		"@value": 100
+	}],
+	"iris://vocabulary/domain#prebookTodayPercentage": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#prefix": [{
+		"@language": "ru",
+		"@value": "О"
+	}],
+	"iris://vocabulary/domain#priority": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#serviceCodeEpgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#serviceLabel": [{
+		"@language": "ru",
+		"@value": "ПЕРЕДАЧА ИМУЩЕСТВА ЧР В АРЕНДУ"
+	}]
+}, {
+	"@id": "iris://data#service-117",
+	"@type": [
+		"iris://vocabulary/domain#Service"
+	],
+	"iris://vocabulary/domain#codeFrgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#deptCodeFrgu": [{
+		"@value": "2100000010000002916"
+	}],
+	"iris://vocabulary/domain#hasProvider": [{
+		"@id": "iris://data#department-1"
+	}],
+	"iris://vocabulary/domain#hasSchedule": [{
+		"@id": "iris://data#schedule-4"
+	}],
+	"iris://vocabulary/domain#liveOperationTime": [{
+		"@value": 1200
+	}],
+	"iris://vocabulary/domain#order": [{
+		"@value": 1
+	}],
+	"iris://vocabulary/domain#prebookInterval": [{
+		"@value": 30
+	}],
+	"iris://vocabulary/domain#prebookOperationTime": [{
+		"@value": 1500
+	}],
+	"iris://vocabulary/domain#prebookPercentage": [{
+		"@value": 100
+	}],
+	"iris://vocabulary/domain#prebookTodayPercentage": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#prefix": [{
+		"@language": "ru",
+		"@value": "О"
+	}],
+	"iris://vocabulary/domain#priority": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#serviceCodeEpgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#serviceLabel": [{
+		"@language": "ru",
+		"@value": "СПЕЦ. РАЗРЕШЕНИЕ НА ДВИЖЕНИЕ ПО АВТОДОРОГАМ Т/C, ПЕРЕВОЗЯЩИХ ОПАСНЫЕ ГРУЗЫ"
+	}]
+}, {
+	"@id": "iris://data#service-114",
+	"@type": [
+		"iris://vocabulary/domain#Service"
+	],
+	"iris://vocabulary/domain#codeFrgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#deptCodeFrgu": [{
+		"@value": "2100000010000000594"
+	}],
+	"iris://vocabulary/domain#hasProvider": [{
+		"@id": "iris://data#department-1"
+	}],
+	"iris://vocabulary/domain#hasSchedule": [{
+		"@id": "iris://data#schedule-4"
+	}],
+	"iris://vocabulary/domain#liveOperationTime": [{
+		"@value": 1200
+	}],
+	"iris://vocabulary/domain#order": [{
+		"@value": 1
+	}],
+	"iris://vocabulary/domain#prebookInterval": [{
+		"@value": 30
+	}],
+	"iris://vocabulary/domain#prebookOperationTime": [{
+		"@value": 1500
+	}],
+	"iris://vocabulary/domain#prebookPercentage": [{
+		"@value": 100
+	}],
+	"iris://vocabulary/domain#prebookTodayPercentage": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#prefix": [{
+		"@language": "ru",
+		"@value": "О"
+	}],
+	"iris://vocabulary/domain#priority": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#serviceCodeEpgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#serviceLabel": [{
+		"@language": "ru",
+		"@value": "ПЕРЕДАЧА ЗЕМЕЛЬ ЧР, В АРЕНДУ"
+	}]
+}, {
+	"@id": "iris://data#service-115",
+	"@type": [
+		"iris://vocabulary/domain#Service"
+	],
+	"iris://vocabulary/domain#codeFrgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#deptCodeFrgu": [{
+		"@value": "2100000010000000594"
+	}],
+	"iris://vocabulary/domain#hasProvider": [{
+		"@id": "iris://data#department-1"
+	}],
+	"iris://vocabulary/domain#hasSchedule": [{
+		"@id": "iris://data#schedule-4"
+	}],
+	"iris://vocabulary/domain#liveOperationTime": [{
+		"@value": 1200
+	}],
+	"iris://vocabulary/domain#order": [{
+		"@value": 1
+	}],
+	"iris://vocabulary/domain#prebookInterval": [{
+		"@value": 30
+	}],
+	"iris://vocabulary/domain#prebookOperationTime": [{
+		"@value": 1500
+	}],
+	"iris://vocabulary/domain#prebookPercentage": [{
+		"@value": 100
+	}],
+	"iris://vocabulary/domain#prebookTodayPercentage": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#prefix": [{
+		"@language": "ru",
+		"@value": "О"
+	}],
+	"iris://vocabulary/domain#priority": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#serviceCodeEpgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#serviceLabel": [{
+		"@language": "ru",
+		"@value": "ПЕРЕДАЧА ИМУЩЕСТВА ЧР В ДОВЕРИТЕЛЬНОЕ УПРАВЛЕНИЕ"
+	}]
+}, {
+	"@id": "iris://data#sg-8",
+	"@type": [
+		"iris://vocabulary/domain#ServiceGroup"
+	],
+	"iris://vocabulary/domain#itemsPerPage": [{
+		"@value": "10"
+	}],
+	"iris://vocabulary/domain#serviceGroupContent": [{
+		"@id": "iris://data#service-64"
+	}, {
+		"@id": "iris://data#service-62"
+	}, {
+		"@id": "iris://data#service-49"
+	}, {
+		"@id": "iris://data#service-51"
+	}, {
+		"@id": "iris://data#service-55"
+	}, {
+		"@id": "iris://data#service-68"
+	}, {
+		"@id": "iris://data#service-65"
+	}, {
+		"@id": "iris://data#service-54"
+	}, {
+		"@id": "iris://data#service-58"
+	}, {
+		"@id": "iris://data#service-60"
+	}, {
+		"@id": "iris://data#service-52"
+	}, {
+		"@id": "iris://data#service-57"
+	}, {
+		"@id": "iris://data#service-67"
+	}, {
+		"@id": "iris://data#service-56"
+	}, {
+		"@id": "iris://data#service-69"
+	}, {
+		"@id": "iris://data#service-61"
+	}, {
+		"@id": "iris://data#service-48"
+	}, {
+		"@id": "iris://data#service-53"
+	}, {
+		"@id": "iris://data#service-70"
+	}, {
+		"@id": "iris://data#service-50"
+	}, {
+		"@id": "iris://data#service-63"
+	}, {
+		"@id": "iris://data#service-59"
+	}, {
+		"@id": "iris://data#service-66"
+	}],
+	"iris://vocabulary/domain#serviceGroupLabel": [{
+		"@language": "ru",
+		"@value": "Индивидуальное жилищное строительство"
+	}],
+	"iris://vocabulary/domain#serviceGroupViewName": [{
+		"@value": "base"
+	}]
+}, {
+	"@id": "iris://data#sg-9",
+	"@type": [
+		"iris://vocabulary/domain#ServiceGroup"
+	],
+	"iris://vocabulary/domain#itemsPerPage": [{
+		"@value": "10"
+	}],
+	"iris://vocabulary/domain#serviceGroupContent": [{
+		"@id": "iris://data#service-76"
+	}, {
+		"@id": "iris://data#service-81"
+	}, {
+		"@id": "iris://data#service-83"
+	}, {
+		"@id": "iris://data#service-79"
+	}, {
+		"@id": "iris://data#service-80"
+	}, {
+		"@id": "iris://data#service-77"
+	}, {
+		"@id": "iris://data#service-75"
+	}, {
+		"@id": "iris://data#service-72"
+	}, {
+		"@id": "iris://data#service-71"
+	}, {
+		"@id": "iris://data#service-82"
+	}, {
+		"@id": "iris://data#service-73"
+	}, {
+		"@id": "iris://data#service-78"
+	}, {
+		"@id": "iris://data#service-74"
+	}],
+	"iris://vocabulary/domain#serviceGroupLabel": [{
+		"@language": "ru",
+		"@value": "Потеря или поиск работы"
+	}],
+	"iris://vocabulary/domain#serviceGroupViewName": [{
+		"@value": "base"
+	}]
+}, {
+	"@id": "iris://data#sg-4",
+	"@type": [
+		"iris://vocabulary/domain#ServiceGroup"
+	],
+	"iris://vocabulary/domain#itemsPerPage": [{
+		"@value": "10"
+	}],
+	"iris://vocabulary/domain#serviceGroupContent": [{
+		"@id": "iris://data#service-26"
+	}, {
+		"@id": "iris://data#service-25"
+	}, {
+		"@id": "iris://data#service-23"
+	}, {
+		"@id": "iris://data#service-24"
+	}, {
+		"@id": "iris://data#service-22"
+	}],
+	"iris://vocabulary/domain#serviceGroupLabel": [{
+		"@language": "ru",
+		"@value": "Рождение второго, третьего ребенка"
+	}],
+	"iris://vocabulary/domain#serviceGroupViewName": [{
+		"@value": "base"
+	}]
+}, {
+	"@id": "iris://data#sg-5",
+	"@type": [
+		"iris://vocabulary/domain#ServiceGroup"
+	],
+	"iris://vocabulary/domain#itemsPerPage": [{
+		"@value": "10"
+	}],
+	"iris://vocabulary/domain#serviceGroupContent": [{
+		"@id": "iris://data#service-27"
+	}, {
+		"@id": "iris://data#service-30"
+	}, {
+		"@id": "iris://data#service-34"
+	}, {
+		"@id": "iris://data#service-35"
+	}, {
+		"@id": "iris://data#service-31"
+	}, {
+		"@id": "iris://data#service-32"
+	}, {
+		"@id": "iris://data#service-28"
+	}, {
+		"@id": "iris://data#service-36"
+	}, {
+		"@id": "iris://data#service-29"
+	}, {
+		"@id": "iris://data#service-33"
+	}, {
+		"@id": "iris://data#service-37"
+	}],
+	"iris://vocabulary/domain#serviceGroupLabel": [{
+		"@language": "ru",
+		"@value": "Получение документов"
+	}],
+	"iris://vocabulary/domain#serviceGroupViewName": [{
+		"@value": "base"
+	}]
+}, {
+	"@id": "iris://data#sg-6",
+	"@type": [
+		"iris://vocabulary/domain#ServiceGroup"
+	],
+	"iris://vocabulary/domain#itemsPerPage": [{
+		"@value": "10"
+	}],
+	"iris://vocabulary/domain#serviceGroupContent": [{
+		"@id": "iris://data#service-41"
+	}, {
+		"@id": "iris://data#service-39"
+	}, {
+		"@id": "iris://data#service-40"
+	}, {
+		"@id": "iris://data#service-38"
+	}],
+	"iris://vocabulary/domain#serviceGroupLabel": [{
+		"@language": "ru",
+		"@value": "Малое предпринимательство"
+	}],
+	"iris://vocabulary/domain#serviceGroupViewName": [{
+		"@value": "base"
+	}]
+}, {
+	"@id": "iris://data#sg-7",
+	"@type": [
+		"iris://vocabulary/domain#ServiceGroup"
+	],
+	"iris://vocabulary/domain#itemsPerPage": [{
+		"@value": "10"
+	}],
+	"iris://vocabulary/domain#serviceGroupContent": [{
+		"@id": "iris://data#service-44"
+	}, {
+		"@id": "iris://data#service-43"
+	}, {
+		"@id": "iris://data#service-42"
+	}, {
+		"@id": "iris://data#service-47"
+	}, {
+		"@id": "iris://data#service-45"
+	}, {
+		"@id": "iris://data#service-46"
+	}],
+	"iris://vocabulary/domain#serviceGroupLabel": [{
+		"@language": "ru",
+		"@value": "Молодая семья"
+	}],
+	"iris://vocabulary/domain#serviceGroupViewName": [{
+		"@value": "base"
+	}]
+}, {
+	"@id": "iris://data#sg-0",
+	"@type": [
+		"iris://vocabulary/domain#ServiceGroup"
+	],
+	"iris://vocabulary/domain#itemsPerPage": [{
+		"@value": "15"
+	}],
+	"iris://vocabulary/domain#serviceGroupContent": [{
+		"@id": "iris://data#sg-4"
+	}, {
+		"@id": "iris://data#sg-8"
+	}, {
+		"@id": "iris://data#sg-3"
+	}, {
+		"@id": "iris://data#sg-2"
+	}, {
+		"@id": "iris://data#sg-14"
+	}, {
+		"@id": "iris://data#sg-6"
+	}, {
+		"@id": "iris://data#sg-7"
+	}, {
+		"@id": "iris://data#sg-10"
+	}, {
+		"@id": "iris://data#sg-5"
+	}, {
+		"@id": "iris://data#sg-13"
+	}, {
+		"@id": "iris://data#sg-1"
+	}, {
+		"@id": "iris://data#sg-9"
+	}, {
+		"@id": "iris://data#sg-11"
+	}, {
+		"@id": "iris://data#sg-12"
+	}],
+	"iris://vocabulary/domain#serviceGroupLabel": [{
+		"@language": "ru",
+		"@value": "Рождение ребенка"
+	}],
+	"iris://vocabulary/domain#serviceGroupOrder": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#serviceGroupViewName": [{
+		"@value": "base"
+	}]
+}, {
+	"@id": "iris://data#sg-1",
+	"@type": [
+		"iris://vocabulary/domain#ServiceGroup"
+	],
+	"iris://vocabulary/domain#itemsPerPage": [{
+		"@value": "10"
+	}],
+	"iris://vocabulary/domain#serviceGroupContent": [{
+		"@id": "iris://data#service-3"
+	}, {
+		"@id": "iris://data#service-1"
+	}, {
+		"@id": "iris://data#service-9"
+	}, {
+		"@id": "iris://data#service-5"
+	}, {
+		"@id": "iris://data#service-4"
+	}, {
+		"@id": "iris://data#service-6"
+	}, {
+		"@id": "iris://data#service-8"
+	}, {
+		"@id": "iris://data#service-10"
+	}, {
+		"@id": "iris://data#service-7"
+	}, {
+		"@id": "iris://data#service-2"
+	}],
+	"iris://vocabulary/domain#serviceGroupLabel": [{
+		"@language": "ru",
+		"@value": "Рождение ребенка"
+	}],
+	"iris://vocabulary/domain#serviceGroupViewName": [{
+		"@value": "base"
+	}]
+}, {
+	"@id": "iris://data#sg-2",
+	"@type": [
+		"iris://vocabulary/domain#ServiceGroup"
+	],
+	"iris://vocabulary/domain#itemsPerPage": [{
+		"@value": "10"
+	}],
+	"iris://vocabulary/domain#serviceGroupContent": [{
+		"@id": "iris://data#service-19"
+	}, {
+		"@id": "iris://data#service-11"
+	}, {
+		"@id": "iris://data#service-20"
+	}, {
+		"@id": "iris://data#service-18"
+	}, {
+		"@id": "iris://data#service-12"
+	}, {
+		"@id": "iris://data#service-16"
+	}, {
+		"@id": "iris://data#service-17"
+	}, {
+		"@id": "iris://data#service-13"
+	}, {
+		"@id": "iris://data#service-15"
+	}, {
+		"@id": "iris://data#service-14"
+	}],
+	"iris://vocabulary/domain#serviceGroupLabel": [{
+		"@language": "ru",
+		"@value": "Приобретение жилого помещения"
+	}],
+	"iris://vocabulary/domain#serviceGroupViewName": [{
+		"@value": "base"
+	}]
+}, {
+	"@id": "iris://data#sg-3",
+	"@type": [
+		"iris://vocabulary/domain#ServiceGroup"
+	],
+	"iris://vocabulary/domain#itemsPerPage": [{
+		"@value": "10"
+	}],
+	"iris://vocabulary/domain#serviceGroupContent": [{
+		"@id": "iris://data#service-21"
+	}],
+	"iris://vocabulary/domain#serviceGroupLabel": [{
+		"@language": "ru",
+		"@value": "Замена документов"
+	}],
+	"iris://vocabulary/domain#serviceGroupViewName": [{
+		"@value": "base"
+	}]
+}, {
+	"@id": "iris://data#schedule-4",
+	"@type": [
+		"iris://vocabulary/domain#Schedule"
+	],
+	"iris://vocabulary/domain#hasDay": [{
+		"@id": "iris://vocabulary/domain#Wednesday"
+	}, {
+		"@id": "iris://vocabulary/domain#Friday"
+	}, {
+		"@id": "iris://vocabulary/domain#Thursday"
+	}, {
+		"@id": "iris://vocabulary/domain#Saturday"
+	}, {
+		"@id": "iris://vocabulary/domain#Tuesday"
+	}, {
+		"@id": "iris://vocabulary/domain#Monday"
+	}],
+	"iris://vocabulary/domain#hasTimeDescription": [{
+		"@value": "[{\"data\":[[32400, 50000]], \"state\": \"a\"}, {\"data\":[[50400, 64800]], \"state\": \"a\"}]"
+	}],
+	"iris://vocabulary/domain#scheduleOf": [{
+		"@id": "iris://data#service-30"
+	}, {
+		"@id": "iris://data#service-78"
+	}, {
+		"@id": "iris://data#service-79"
+	}, {
+		"@id": "iris://data#service-84"
+	}, {
+		"@id": "iris://data#service-15"
+	}, {
+		"@id": "iris://data#service-73"
+	}, {
+		"@id": "iris://data#service-121"
+	}, {
+		"@id": "iris://data#service-61"
+	}, {
+		"@id": "iris://data#service-116"
+	}, {
+		"@id": "iris://data#service-26"
+	}, {
+		"@id": "iris://data#service-126"
+	}, {
+		"@id": "iris://data#service-74"
+	}, {
+		"@id": "iris://data#service-92"
+	}, {
+		"@id": "iris://data#service-9"
+	}, {
+		"@id": "iris://data#service-5"
+	}, {
+		"@id": "iris://data#service-46"
+	}, {
+		"@id": "iris://data#service-22"
+	}, {
+		"@id": "iris://data#service-43"
+	}, {
+		"@id": "iris://data#service-71"
+	}, {
+		"@id": "iris://data#service-75"
+	}, {
+		"@id": "iris://data#service-40"
+	}, {
+		"@id": "iris://data#service-83"
+	}, {
+		"@id": "iris://data#service-115"
+	}, {
+		"@id": "iris://data#service-90"
+	}, {
+		"@id": "iris://data#service-111"
+	}, {
+		"@id": "iris://data#service-34"
+	}, {
+		"@id": "iris://data#service-4"
+	}, {
+		"@id": "iris://data#service-88"
+	}, {
+		"@id": "iris://data#service-99"
+	}, {
+		"@id": "iris://data#service-69"
+	}, {
+		"@id": "iris://data#service-76"
+	}, {
+		"@id": "iris://data#service-31"
+	}, {
+		"@id": "iris://data#service-27"
+	}, {
+		"@id": "iris://data#service-66"
+	}, {
+		"@id": "iris://data#service-42"
+	}, {
+		"@id": "iris://data#service-50"
+	}, {
+		"@id": "iris://data#service-85"
+	}, {
+		"@id": "iris://data#service-125"
+	}, {
+		"@id": "iris://data#service-64"
+	}, {
+		"@id": "iris://data#service-39"
+	}, {
+		"@id": "iris://data#service-24"
+	}, {
+		"@id": "iris://data#service-56"
+	}, {
+		"@id": "iris://data#service-7"
+	}, {
+		"@id": "iris://data#service-53"
+	}, {
+		"@id": "iris://data#service-109"
+	}, {
+		"@id": "iris://data#service-93"
+	}, {
+		"@id": "iris://data#service-72"
+	}, {
+		"@id": "iris://data#service-60"
+	}, {
+		"@id": "iris://data#service-32"
+	}, {
+		"@id": "iris://data#service-96"
+	}, {
+		"@id": "iris://data#service-65"
+	}, {
+		"@id": "iris://data#service-97"
+	}, {
+		"@id": "iris://data#service-118"
+	}, {
+		"@id": "iris://data#service-132"
+	}, {
+		"@id": "iris://data#service-62"
+	}, {
+		"@id": "iris://data#service-41"
+	}, {
+		"@id": "iris://data#service-105"
+	}, {
+		"@id": "iris://data#service-102"
+	}, {
+		"@id": "iris://data#service-21"
+	}, {
+		"@id": "iris://data#service-122"
+	}, {
+		"@id": "iris://data#service-47"
+	}, {
+		"@id": "iris://data#service-91"
+	}, {
+		"@id": "iris://data#service-38"
+	}, {
+		"@id": "iris://data#service-33"
+	}, {
+		"@id": "iris://data#service-18"
+	}, {
+		"@id": "iris://data#service-103"
+	}, {
+		"@id": "iris://data#service-77"
+	}, {
+		"@id": "iris://data#service-54"
+	}, {
+		"@id": "iris://data#service-89"
+	}, {
+		"@id": "iris://data#service-67"
+	}, {
+		"@id": "iris://data#service-87"
+	}, {
+		"@id": "iris://data#service-107"
+	}, {
+		"@id": "iris://data#service-130"
+	}, {
+		"@id": "iris://data#service-94"
+	}, {
+		"@id": "iris://data#service-19"
+	}, {
+		"@id": "iris://data#service-36"
+	}, {
+		"@id": "iris://data#service-80"
+	}, {
+		"@id": "iris://data#service-6"
+	}, {
+		"@id": "iris://data#service-49"
+	}, {
+		"@id": "iris://data#service-59"
+	}, {
+		"@id": "iris://data#service-86"
+	}, {
+		"@id": "iris://data#service-20"
+	}, {
+		"@id": "iris://data#service-117"
+	}, {
+		"@id": "iris://data#service-8"
+	}, {
+		"@id": "iris://data#service-58"
+	}, {
+		"@id": "iris://data#service-113"
+	}, {
+		"@id": "iris://data#service-51"
+	}, {
+		"@id": "iris://data#service-13"
+	}, {
+		"@id": "iris://data#service-11"
+	}, {
+		"@id": "iris://data#service-82"
+	}, {
+		"@id": "iris://data#service-44"
+	}, {
+		"@id": "iris://data#service-124"
+	}, {
+		"@id": "iris://data#service-104"
+	}, {
+		"@id": "iris://data#service-63"
+	}, {
+		"@id": "iris://data#service-128"
+	}, {
+		"@id": "iris://data#service-3"
+	}, {
+		"@id": "iris://data#service-48"
+	}, {
+		"@id": "iris://data#service-14"
+	}, {
+		"@id": "iris://data#service-68"
+	}, {
+		"@id": "iris://data#service-55"
+	}, {
+		"@id": "iris://data#service-1"
+	}, {
+		"@id": "iris://data#service-28"
+	}, {
+		"@id": "iris://data#service-108"
+	}, {
+		"@id": "iris://data#service-123"
+	}, {
+		"@id": "iris://data#service-100"
+	}, {
+		"@id": "iris://data#service-16"
+	}, {
+		"@id": "iris://data#service-35"
+	}, {
+		"@id": "iris://data#service-2"
+	}, {
+		"@id": "iris://data#service-10"
+	}, {
+		"@id": "iris://data#service-95"
+	}, {
+		"@id": "iris://data#service-112"
+	}, {
+		"@id": "iris://data#service-110"
+	}, {
+		"@id": "iris://data#service-12"
+	}, {
+		"@id": "iris://data#service-114"
+	}, {
+		"@id": "iris://data#service-81"
+	}, {
+		"@id": "iris://data#service-98"
+	}, {
+		"@id": "iris://data#service-101"
+	}, {
+		"@id": "iris://data#service-45"
+	}, {
+		"@id": "iris://data#service-23"
+	}, {
+		"@id": "iris://data#service-17"
+	}, {
+		"@id": "iris://data#service-52"
+	}, {
+		"@id": "iris://data#service-129"
+	}, {
+		"@id": "iris://data#service-37"
+	}, {
+		"@id": "iris://data#service-106"
+	}, {
+		"@id": "iris://data#service-127"
+	}, {
+		"@id": "iris://data#service-120"
+	}, {
+		"@id": "iris://data#service-119"
+	}, {
+		"@id": "iris://data#service-29"
+	}, {
+		"@id": "iris://data#service-57"
+	}, {
+		"@id": "iris://data#service-25"
+	}, {
+		"@id": "iris://data#service-131"
+	}, {
+		"@id": "iris://data#service-70"
+	}]
+}, {
+	"@id": "iris://data#schedule-3",
+	"@type": [
+		"iris://vocabulary/domain#Schedule"
+	],
+	"iris://vocabulary/domain#hasDay": [{
+		"@id": "iris://vocabulary/domain#Thursday"
+	}, {
+		"@id": "iris://vocabulary/domain#Saturday"
+	}, {
+		"@id": "iris://vocabulary/domain#Monday"
+	}, {
+		"@id": "iris://vocabulary/domain#Wednesday"
+	}, {
+		"@id": "iris://vocabulary/domain#Friday"
+	}, {
+		"@id": "iris://vocabulary/domain#Tuesday"
+	}],
+	"iris://vocabulary/domain#hasTimeDescription": [{
+		"@value": "[{\"data\":[[32400, 46800]], \"state\": \"a\"}, {\"data\":[[50400, 64800]], \"state\": \"a\"}]"
+	}],
+	"iris://vocabulary/domain#scheduleOf": [{
+		"@id": "iris://data#department-1"
+	}]
+}, {
+	"@id": "iris://data#schedule-2",
+	"@type": [
+		"iris://vocabulary/domain#Schedule"
+	],
+	"iris://vocabulary/domain#hasDay": [{
+		"@id": "iris://vocabulary/domain#Wednesday"
+	}, {
+		"@id": "iris://vocabulary/domain#Tuesday"
+	}, {
+		"@id": "iris://vocabulary/domain#Monday"
+	}, {
+		"@id": "iris://vocabulary/domain#Thursday"
+	}, {
+		"@id": "iris://vocabulary/domain#Saturday"
+	}, {
+		"@id": "iris://vocabulary/domain#Friday"
+	}],
+	"iris://vocabulary/domain#hasTimeDescription": [{
+		"@value": "[{\"data\":[[0, 46800]], \"state\": \"a\"}, {\"data\":[[46800, 86400]], \"state\": \"a\"}]"
+	}],
+	"iris://vocabulary/domain#scheduleOf": [{
+		"@id": "iris://data#human-2"
+	}]
+}, {
+	"@id": "iris://data#schedule-1",
+	"@type": [
+		"iris://vocabulary/domain#Schedule"
+	],
+	"iris://vocabulary/domain#hasDay": [{
+		"@id": "iris://vocabulary/domain#Thursday"
+	}, {
+		"@id": "iris://vocabulary/domain#Monday"
+	}, {
+		"@id": "iris://vocabulary/domain#Tuesday"
+	}, {
+		"@id": "iris://vocabulary/domain#Friday"
+	}, {
+		"@id": "iris://vocabulary/domain#Saturday"
+	}, {
+		"@id": "iris://vocabulary/domain#Wednesday"
+	}],
+	"iris://vocabulary/domain#hasTimeDescription": [{
+		"@value": "[{\"data\":[[32400, 46800]], \"state\": \"a\"}, {\"data\":[[50400, 64800]], \"state\": \"a\"}]"
+	}],
+	"iris://vocabulary/domain#scheduleOf": [{
+		"@id": "iris://data#human-1"
+	}]
+}, {
+	"@id": "iris://data#department-1",
 	"@type": [
 		"iris://vocabulary/domain#Department"
 	],
+	"iris://vocabulary/domain#hasSchedule": [{
+		"@id": "iris://data#schedule-3"
+	}],
+	"iris://vocabulary/domain#orgLabel": [{
+		"@language": "ru",
+		"@value": "Отдел 1"
+	}],
+	"iris://vocabulary/domain#pinCodePrefix": [{
+		"@value": "001"
+	}],
 	"iris://vocabulary/domain#unitOf": [{
-		"@id": "iris://data/#office1"
-	}],
-	"http://www.w3.org/2000/01/rdf-schema#label": [{
-		"@value": "Department 1"
+		"@id": "iris://data#office-1"
 	}]
 }, {
-	"@id": "iris://data/#human2",
+	"@id": "iris://data#human-2",
 	"@type": [
 		"iris://vocabulary/domain#Employee"
 	],
 	"iris://vocabulary/domain#firstName": [{
-		"@language": "en",
-		"@value": "Maria"
+		"@language": "ru",
+		"@value": "Лариса"
+	}],
+	"iris://vocabulary/domain#availableWorkstation": [{
+		"@id": "iris://data#pc-2"
+	}],
+	"iris://vocabulary/domain#defaultWorkstation": [{
+		"@id": "iris://data#pc-2"
+	}],
+	"iris://vocabulary/domain#hasMembership": [{
+		"@id": "iris://data#membership-2"
+	}],
+	"iris://vocabulary/domain#hasSchedule": [{
+		"@id": "iris://data#schedule-2"
 	}],
 	"iris://vocabulary/domain#lastName": [{
-		"@language": "en",
-		"@value": "Medvedeva"
+		"@language": "ru",
+		"@value": "Васильева"
 	}],
 	"iris://vocabulary/domain#login": [{
 		"@language": "en",
-		"@value": "MASHA"
+		"@value": "oper"
 	}],
 	"iris://vocabulary/domain#middleName": [{
-		"@language": "en",
-		"@value": "Ivanovna"
-	}],
-	"iris://vocabulary/domain#password": [{
-		"@value": "654321"
-	}],
-	"iris://vocabulary/domain#provides": [{
-		"@id": "iris://data/#service2"
-	}]
-}, {
-	"@id": "iris://data/#human1",
-	"@type": [
-		"iris://vocabulary/domain#Employee"
-	],
-	"iris://vocabulary/domain#firstName": [{
-		"@language": "en",
-		"@value": "Vasisualy"
-	}],
-	"iris://vocabulary/domain#lastName": [{
-		"@language": "en",
-		"@value": "Ivanov"
-	}],
-	"iris://vocabulary/domain#login": [{
-		"@language": "en",
-		"@value": "vasyoQ"
-	}],
-	"iris://vocabulary/domain#middleName": [{
-		"@language": "en",
-		"@value": "Ivanovich"
+		"@language": "ru",
+		"@value": "Ивановна"
 	}],
 	"iris://vocabulary/domain#password": [{
 		"@value": "123456"
 	}],
 	"iris://vocabulary/domain#provides": [{
-		"@id": "iris://data/#service1"
+		"@id": "iris://data#service-111"
 	}, {
-		"@id": "iris://data/#service2"
+		"@id": "iris://data#service-90"
+	}, {
+		"@id": "iris://data#service-112"
+	}, {
+		"@id": "iris://data#service-115"
+	}, {
+		"@id": "iris://data#service-125"
+	}, {
+		"@id": "iris://data#service-55"
+	}, {
+		"@id": "iris://data#service-68"
+	}, {
+		"@id": "iris://data#service-14"
+	}, {
+		"@id": "iris://data#service-65"
+	}, {
+		"@id": "iris://data#service-128"
+	}, {
+		"@id": "iris://data#service-31"
+	}, {
+		"@id": "iris://data#service-22"
+	}, {
+		"@id": "iris://data#service-46"
+	}, {
+		"@id": "iris://data#service-6"
+	}, {
+		"@id": "iris://data#service-44"
+	}, {
+		"@id": "iris://data#service-80"
+	}, {
+		"@id": "iris://data#service-4"
+	}, {
+		"@id": "iris://data#service-19"
+	}, {
+		"@id": "iris://data#service-83"
+	}, {
+		"@id": "iris://data#service-129"
+	}, {
+		"@id": "iris://data#service-15"
+	}, {
+		"@id": "iris://data#service-10"
+	}, {
+		"@id": "iris://data#service-8"
+	}, {
+		"@id": "iris://data#service-89"
+	}, {
+		"@id": "iris://data#service-2"
+	}, {
+		"@id": "iris://data#service-43"
+	}, {
+		"@id": "iris://data#service-59"
+	}, {
+		"@id": "iris://data#service-33"
+	}, {
+		"@id": "iris://data#service-5"
+	}, {
+		"@id": "iris://data#service-98"
+	}, {
+		"@id": "iris://data#service-9"
+	}, {
+		"@id": "iris://data#service-57"
+	}, {
+		"@id": "iris://data#service-67"
+	}, {
+		"@id": "iris://data#service-126"
+	}, {
+		"@id": "iris://data#service-120"
+	}, {
+		"@id": "iris://data#service-61"
+	}, {
+		"@id": "iris://data#service-105"
+	}, {
+		"@id": "iris://data#service-87"
+	}, {
+		"@id": "iris://data#service-41"
+	}, {
+		"@id": "iris://data#service-74"
+	}, {
+		"@id": "iris://data#service-23"
+	}, {
+		"@id": "iris://data#service-45"
+	}, {
+		"@id": "iris://data#service-78"
+	}, {
+		"@id": "iris://data#service-30"
+	}, {
+		"@id": "iris://data#service-32"
+	}, {
+		"@id": "iris://data#service-12"
+	}, {
+		"@id": "iris://data#service-47"
+	}, {
+		"@id": "iris://data#service-38"
+	}, {
+		"@id": "iris://data#service-53"
+	}, {
+		"@id": "iris://data#service-106"
+	}, {
+		"@id": "iris://data#service-102"
+	}, {
+		"@id": "iris://data#service-35"
+	}, {
+		"@id": "iris://data#service-131"
+	}, {
+		"@id": "iris://data#service-52"
+	}, {
+		"@id": "iris://data#service-123"
+	}, {
+		"@id": "iris://data#service-96"
+	}, {
+		"@id": "iris://data#service-114"
+	}, {
+		"@id": "iris://data#service-50"
+	}, {
+		"@id": "iris://data#service-109"
+	}, {
+		"@id": "iris://data#service-42"
+	}, {
+		"@id": "iris://data#service-70"
+	}, {
+		"@id": "iris://data#service-24"
+	}, {
+		"@id": "iris://data#service-124"
+	}, {
+		"@id": "iris://data#service-39"
+	}, {
+		"@id": "iris://data#service-75"
+	}, {
+		"@id": "iris://data#service-99"
+	}, {
+		"@id": "iris://data#service-34"
+	}, {
+		"@id": "iris://data#service-108"
+	}, {
+		"@id": "iris://data#service-64"
+	}, {
+		"@id": "iris://data#service-51"
+	}, {
+		"@id": "iris://data#service-84"
+	}, {
+		"@id": "iris://data#service-1"
+	}, {
+		"@id": "iris://data#service-48"
+	}, {
+		"@id": "iris://data#service-117"
+	}, {
+		"@id": "iris://data#service-66"
+	}, {
+		"@id": "iris://data#service-63"
+	}, {
+		"@id": "iris://data#service-27"
+	}, {
+		"@id": "iris://data#service-49"
+	}, {
+		"@id": "iris://data#service-92"
+	}, {
+		"@id": "iris://data#service-11"
+	}, {
+		"@id": "iris://data#service-26"
+	}, {
+		"@id": "iris://data#service-13"
+	}, {
+		"@id": "iris://data#service-103"
+	}, {
+		"@id": "iris://data#service-91"
+	}, {
+		"@id": "iris://data#service-40"
+	}, {
+		"@id": "iris://data#service-54"
+	}, {
+		"@id": "iris://data#service-71"
+	}, {
+		"@id": "iris://data#service-86"
+	}, {
+		"@id": "iris://data#service-25"
+	}, {
+		"@id": "iris://data#service-36"
+	}, {
+		"@id": "iris://data#service-29"
+	}, {
+		"@id": "iris://data#service-119"
+	}, {
+		"@id": "iris://data#service-122"
+	}, {
+		"@id": "iris://data#service-116"
+	}, {
+		"@id": "iris://data#service-94"
+	}, {
+		"@id": "iris://data#service-130"
+	}, {
+		"@id": "iris://data#service-107"
+	}, {
+		"@id": "iris://data#service-21"
+	}, {
+		"@id": "iris://data#service-121"
+	}, {
+		"@id": "iris://data#service-79"
+	}, {
+		"@id": "iris://data#service-77"
+	}, {
+		"@id": "iris://data#service-18"
+	}, {
+		"@id": "iris://data#service-81"
+	}, {
+		"@id": "iris://data#service-113"
+	}, {
+		"@id": "iris://data#service-110"
+	}, {
+		"@id": "iris://data#service-7"
+	}, {
+		"@id": "iris://data#service-127"
+	}, {
+		"@id": "iris://data#service-69"
+	}, {
+		"@id": "iris://data#service-73"
+	}, {
+		"@id": "iris://data#service-37"
+	}, {
+		"@id": "iris://data#service-58"
+	}, {
+		"@id": "iris://data#service-17"
+	}, {
+		"@id": "iris://data#service-16"
+	}, {
+		"@id": "iris://data#service-100"
+	}, {
+		"@id": "iris://data#service-101"
+	}, {
+		"@id": "iris://data#service-132"
+	}, {
+		"@id": "iris://data#service-118"
+	}, {
+		"@id": "iris://data#service-97"
+	}, {
+		"@id": "iris://data#service-28"
+	}, {
+		"@id": "iris://data#service-60"
+	}, {
+		"@id": "iris://data#service-72"
+	}, {
+		"@id": "iris://data#service-85"
+	}, {
+		"@id": "iris://data#service-93"
+	}, {
+		"@id": "iris://data#service-3"
+	}, {
+		"@id": "iris://data#service-56"
+	}, {
+		"@id": "iris://data#service-104"
+	}, {
+		"@id": "iris://data#service-95"
+	}, {
+		"@id": "iris://data#service-76"
+	}, {
+		"@id": "iris://data#service-20"
+	}, {
+		"@id": "iris://data#service-82"
+	}, {
+		"@id": "iris://data#service-88"
+	}, {
+		"@id": "iris://data#service-62"
+	}],
+	"iris://vocabulary/domain#state": [{
+		"@value": "active"
 	}]
 }, {
-	"@id": "_:ub158bL55C2",
+	"@id": "iris://data#rd-1",
 	"@type": [
-		"iris://vocabulary/domain#Membership"
+		"iris://vocabulary/domain#Roomdisplay"
 	],
-	"iris://vocabulary/domain#member": [{
-		"@id": "iris://data/#human2"
+	"iris://vocabulary/domain#attachedTo": [{
+		"@id": "iris://data#department-1"
 	}],
-	"iris://vocabulary/domain#organization": [{
-		"@id": "iris://data/#department1"
+	"iris://vocabulary/domain#defaultAgent": [{
+		"@id": "iris://data#megatron-2"
 	}],
-	"iris://vocabulary/domain#role": [{
-		"@id": "iris://vocabulary/domain#Operator"
+	"iris://vocabulary/domain#deviceLabel": [{
+		"@language": "ru",
+		"@value": "Диплей 1"
+	}],
+	"iris://vocabulary/domain#deviceType": [{
+		"@value": "roomdisplay"
 	}]
 }, {
-	"@id": "iris://data/#service2",
+	"@id": "iris://data#service-52",
 	"@type": [
 		"iris://vocabulary/domain#Service"
 	],
-	"iris://vocabulary/domain#codeFRGU": [{
-		"@value": "Smth"
+	"iris://vocabulary/domain#codeFrgu": [{
+		"@value": "10000068913"
 	}],
-	"iris://vocabulary/domain#deptCodeFRGU": [{
-		"@value": "Smth"
+	"iris://vocabulary/domain#deptCodeFrgu": [{
+		"@value": "10000373692"
+	}],
+	"iris://vocabulary/domain#hasProvider": [{
+		"@id": "iris://data#department-1"
+	}],
+	"iris://vocabulary/domain#hasSchedule": [{
+		"@id": "iris://data#schedule-4"
 	}],
 	"iris://vocabulary/domain#liveOperationTime": [{
-		"@id": "iris://data/#_x2"
+		"@value": 1200
 	}],
 	"iris://vocabulary/domain#order": [{
-		"@type": "http://www.w3.org/2001/XMLSchema#decimal",
-		"@value": "6"
+		"@value": 1
 	}],
 	"iris://vocabulary/domain#prebookInterval": [{
-		"@id": "iris://data/#_x3"
+		"@value": 30
 	}],
 	"iris://vocabulary/domain#prebookOperationTime": [{
-		"@id": "iris://data/#_x2"
+		"@value": 1500
 	}],
 	"iris://vocabulary/domain#prebookPercentage": [{
-		"@type": "http://www.w3.org/2001/XMLSchema#decimal",
-		"@value": "50"
+		"@value": 100
 	}],
 	"iris://vocabulary/domain#prebookTodayPercentage": [{
-		"@type": "http://www.w3.org/2001/XMLSchema#decimal",
-		"@value": "20"
+		"@value": 0
 	}],
 	"iris://vocabulary/domain#prefix": [{
-		"@value": "Smth"
+		"@language": "ru",
+		"@value": "С"
 	}],
 	"iris://vocabulary/domain#priority": [{
-		"@type": "http://www.w3.org/2001/XMLSchema#decimal",
-		"@value": "3"
+		"@value": 0
 	}],
-	"iris://vocabulary/domain#serviceCodeEPGU": [{
-		"@value": "Smth"
+	"iris://vocabulary/domain#serviceCodeEpgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#serviceLabel": [{
+		"@language": "ru",
+		"@value": "ПРЕДОСТАВЛЕНИЕ ФЕДЕРАЛЬНОГО ЗЕМ.УЧ, НА ТОРГАХ"
 	}]
 }, {
-	"@id": "iris://data/#service1",
+	"@id": "iris://data#service-53",
 	"@type": [
 		"iris://vocabulary/domain#Service"
 	],
-	"iris://vocabulary/domain#codeFRGU": [{
-		"@value": "Smth"
+	"iris://vocabulary/domain#codeFrgu": [{
+		"@value": "10000069147"
 	}],
-	"iris://vocabulary/domain#deptCodeFRGU": [{
-		"@value": "Smth"
+	"iris://vocabulary/domain#deptCodeFrgu": [{
+		"@value": "10000373692"
+	}],
+	"iris://vocabulary/domain#hasProvider": [{
+		"@id": "iris://data#department-1"
+	}],
+	"iris://vocabulary/domain#hasSchedule": [{
+		"@id": "iris://data#schedule-4"
 	}],
 	"iris://vocabulary/domain#liveOperationTime": [{
-		"@id": "iris://data/#_x1"
+		"@value": 1200
 	}],
 	"iris://vocabulary/domain#order": [{
-		"@type": "http://www.w3.org/2001/XMLSchema#decimal",
-		"@value": "1"
+		"@value": 1
 	}],
 	"iris://vocabulary/domain#prebookInterval": [{
-		"@id": "iris://data/#_x3"
+		"@value": 30
 	}],
 	"iris://vocabulary/domain#prebookOperationTime": [{
-		"@id": "iris://data/#_x1"
+		"@value": 1500
 	}],
 	"iris://vocabulary/domain#prebookPercentage": [{
-		"@type": "http://www.w3.org/2001/XMLSchema#decimal",
-		"@value": "45"
+		"@value": 100
 	}],
 	"iris://vocabulary/domain#prebookTodayPercentage": [{
-		"@type": "http://www.w3.org/2001/XMLSchema#decimal",
-		"@value": "15"
+		"@value": 0
 	}],
 	"iris://vocabulary/domain#prefix": [{
-		"@value": "Smth"
+		"@language": "ru",
+		"@value": "С"
 	}],
 	"iris://vocabulary/domain#priority": [{
-		"@type": "http://www.w3.org/2001/XMLSchema#decimal",
-		"@value": "1"
+		"@value": 0
 	}],
-	"iris://vocabulary/domain#serviceCodeEPGU": [{
-		"@value": "Smth"
-	}]
-}, {
-	"@id": "iris://data/#_x3",
-	"@type": [
-		"http://www.w3.org/2006/time#DurationDescription"
-	],
-	"http://www.w3.org/2006/time#days": [{
-		"@type": "http://www.w3.org/2001/XMLSchema#decimal",
-		"@value": "2"
-	}]
-}, {
-	"@id": "iris://data/#office1",
-	"@type": [
-		"iris://vocabulary/domain#Office"
-	],
-	"iris://vocabulary/domain#hasUnit": [{
-		"@id": "iris://data/#department1"
+	"iris://vocabulary/domain#serviceCodeEpgu": [{
+		"@value": "0"
 	}],
-	"http://www.w3.org/2000/01/rdf-schema#label": [{
-		"@value": "Office 1"
+	"iris://vocabulary/domain#serviceLabel": [{
+		"@language": "ru",
+		"@value": "ВЫПИСКА ИЗ РЕЕСТРА ФЕДЕРАЛЬНОГО ИМУЩЕСТВА"
 	}]
 }, {
-	"@id": "iris://data/#_x1",
+	"@id": "iris://data#service-50",
 	"@type": [
-		"http://www.w3.org/2006/time#DurationDescription"
+		"iris://vocabulary/domain#Service"
 	],
-	"http://www.w3.org/2006/time#minutes": [{
-		"@type": "http://www.w3.org/2001/XMLSchema#decimal",
-		"@value": "15"
-	}]
-}, {
-	"@id": "_:ub158bL50C2",
-	"@type": [
-		"iris://vocabulary/domain#Membership"
-	],
-	"iris://vocabulary/domain#member": [{
-		"@id": "iris://data/#human1"
+	"iris://vocabulary/domain#codeFrgu": [{
+		"@value": "10000068975"
 	}],
-	"iris://vocabulary/domain#organization": [{
-		"@id": "iris://data/#department1"
+	"iris://vocabulary/domain#deptCodeFrgu": [{
+		"@value": "10000373692"
 	}],
-	"iris://vocabulary/domain#role": [{
-		"@id": "iris://vocabulary/domain#Operator"
+	"iris://vocabulary/domain#hasProvider": [{
+		"@id": "iris://data#department-1"
+	}],
+	"iris://vocabulary/domain#hasSchedule": [{
+		"@id": "iris://data#schedule-4"
+	}],
+	"iris://vocabulary/domain#liveOperationTime": [{
+		"@value": 1200
+	}],
+	"iris://vocabulary/domain#order": [{
+		"@value": 1
+	}],
+	"iris://vocabulary/domain#prebookInterval": [{
+		"@value": 30
+	}],
+	"iris://vocabulary/domain#prebookOperationTime": [{
+		"@value": 1500
+	}],
+	"iris://vocabulary/domain#prebookPercentage": [{
+		"@value": 100
+	}],
+	"iris://vocabulary/domain#prebookTodayPercentage": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#prefix": [{
+		"@language": "ru",
+		"@value": "С"
+	}],
+	"iris://vocabulary/domain#priority": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#serviceCodeEpgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#serviceLabel": [{
+		"@language": "ru",
+		"@value": "СОГЛАСОВАНИЕ ПРЕДОСТАВЛЕНИЯ ФЕДЕРАЛЬНОГО ЗЕМ.УЧ"
 	}]
 }, {
-	"@id": "iris://data/#pc1",
+	"@id": "iris://data#service-51",
 	"@type": [
-		"iris://vocabulary/domain#AWP"
+		"iris://vocabulary/domain#Service"
 	],
-	"iris://vocabulary/domain#attachedTo": [{
-		"@id": "iris://data/#department1"
+	"iris://vocabulary/domain#codeFrgu": [{
+		"@value": "10000373692"
 	}],
-	"iris://vocabulary/domain#deviceOf": [{
-		"@id": "iris://data/#human1"
+	"iris://vocabulary/domain#deptCodeFrgu": [{
+		"@value": "10000373692"
+	}],
+	"iris://vocabulary/domain#hasProvider": [{
+		"@id": "iris://data#department-1"
+	}],
+	"iris://vocabulary/domain#hasSchedule": [{
+		"@id": "iris://data#schedule-4"
+	}],
+	"iris://vocabulary/domain#liveOperationTime": [{
+		"@value": 1200
+	}],
+	"iris://vocabulary/domain#order": [{
+		"@value": 1
+	}],
+	"iris://vocabulary/domain#prebookInterval": [{
+		"@value": 30
+	}],
+	"iris://vocabulary/domain#prebookOperationTime": [{
+		"@value": 1500
+	}],
+	"iris://vocabulary/domain#prebookPercentage": [{
+		"@value": 100
+	}],
+	"iris://vocabulary/domain#prebookTodayPercentage": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#prefix": [{
+		"@language": "ru",
+		"@value": "С"
+	}],
+	"iris://vocabulary/domain#priority": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#serviceCodeEpgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#serviceLabel": [{
+		"@language": "ru",
+		"@value": "ПРЕДОСТАВЛЕНИЕ ФЕДЕРАЛЬНОГО ЗЕМ.УЧ, БЕЗ ТОРГОВ"
 	}]
 }, {
-	"@id": "iris://data/#orgroot",
+	"@id": "iris://data#service-56",
 	"@type": [
-		"iris://vocabulary/domain#FormalOrganization"
+		"iris://vocabulary/domain#Service"
 	],
-	"iris://vocabulary/domain#hasUnit": [{
-		"@id": "iris://data/#office1"
+	"iris://vocabulary/domain#codeFrgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#deptCodeFrgu": [{
+		"@value": "2100000010000000385"
+	}],
+	"iris://vocabulary/domain#hasProvider": [{
+		"@id": "iris://data#department-1"
+	}],
+	"iris://vocabulary/domain#hasSchedule": [{
+		"@id": "iris://data#schedule-4"
+	}],
+	"iris://vocabulary/domain#liveOperationTime": [{
+		"@value": 1200
+	}],
+	"iris://vocabulary/domain#order": [{
+		"@value": 1
+	}],
+	"iris://vocabulary/domain#prebookInterval": [{
+		"@value": 30
+	}],
+	"iris://vocabulary/domain#prebookOperationTime": [{
+		"@value": 1500
+	}],
+	"iris://vocabulary/domain#prebookPercentage": [{
+		"@value": 100
+	}],
+	"iris://vocabulary/domain#prebookTodayPercentage": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#prefix": [{
+		"@language": "ru",
+		"@value": "С"
+	}],
+	"iris://vocabulary/domain#priority": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#serviceCodeEpgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#serviceLabel": [{
+		"@language": "ru",
+		"@value": "РАЗРЕШЕНИЕ НА ВВОД ОБЪЕКТА В ЭКСПЛУАТАЦИЮ НА ТЕРРИТОРИИ ДВУХ И БОЛЕЕ МУН.РАЙОНОВ"
 	}]
 }, {
-	"@id": "iris://data/#pc2",
+	"@id": "iris://data#service-57",
 	"@type": [
-		"iris://vocabulary/domain#AWP"
+		"iris://vocabulary/domain#Service"
 	],
-	"iris://vocabulary/domain#attachedTo": [{
-		"@id": "iris://data/#department1"
+	"iris://vocabulary/domain#codeFrgu": [{
+		"@value": "0"
 	}],
-	"iris://vocabulary/domain#deviceOf": [{
-		"@id": "iris://data/#human2"
+	"iris://vocabulary/domain#deptCodeFrgu": [{
+		"@value": "2100000010000000385"
+	}],
+	"iris://vocabulary/domain#hasProvider": [{
+		"@id": "iris://data#department-1"
+	}],
+	"iris://vocabulary/domain#hasSchedule": [{
+		"@id": "iris://data#schedule-4"
+	}],
+	"iris://vocabulary/domain#liveOperationTime": [{
+		"@value": 1200
+	}],
+	"iris://vocabulary/domain#order": [{
+		"@value": 1
+	}],
+	"iris://vocabulary/domain#prebookInterval": [{
+		"@value": 30
+	}],
+	"iris://vocabulary/domain#prebookOperationTime": [{
+		"@value": 1500
+	}],
+	"iris://vocabulary/domain#prebookPercentage": [{
+		"@value": 100
+	}],
+	"iris://vocabulary/domain#prebookTodayPercentage": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#prefix": [{
+		"@language": "ru",
+		"@value": "С"
+	}],
+	"iris://vocabulary/domain#priority": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#serviceCodeEpgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#serviceLabel": [{
+		"@language": "ru",
+		"@value": "РАЗРЕШЕНИЕ НА СТРОИТЕЛЬСТВО ОБЪЕКТА НА ТЕРРИТОРИИ ДВУХ И БОЛЕЕ МУН.РАЙОНОВ"
+	}]
+}, {
+	"@id": "iris://data#service-54",
+	"@type": [
+		"iris://vocabulary/domain#Service"
+	],
+	"iris://vocabulary/domain#codeFrgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#deptCodeFrgu": [{
+		"@value": "2100000010000000594"
+	}],
+	"iris://vocabulary/domain#hasProvider": [{
+		"@id": "iris://data#department-1"
+	}],
+	"iris://vocabulary/domain#hasSchedule": [{
+		"@id": "iris://data#schedule-4"
+	}],
+	"iris://vocabulary/domain#liveOperationTime": [{
+		"@value": 1200
+	}],
+	"iris://vocabulary/domain#order": [{
+		"@value": 1
+	}],
+	"iris://vocabulary/domain#prebookInterval": [{
+		"@value": 30
+	}],
+	"iris://vocabulary/domain#prebookOperationTime": [{
+		"@value": 1500
+	}],
+	"iris://vocabulary/domain#prebookPercentage": [{
+		"@value": 100
+	}],
+	"iris://vocabulary/domain#prebookTodayPercentage": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#prefix": [{
+		"@language": "ru",
+		"@value": "С"
+	}],
+	"iris://vocabulary/domain#priority": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#serviceCodeEpgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#serviceLabel": [{
+		"@language": "ru",
+		"@value": "ИНФОРМАЦИЯ ИЗ РЕЕСТРА ГОС ИМУЩЕСТВА ЧР"
+	}]
+}, {
+	"@id": "iris://data#service-55",
+	"@type": [
+		"iris://vocabulary/domain#Service"
+	],
+	"iris://vocabulary/domain#codeFrgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#deptCodeFrgu": [{
+		"@value": "2100000010000000594"
+	}],
+	"iris://vocabulary/domain#hasProvider": [{
+		"@id": "iris://data#department-1"
+	}],
+	"iris://vocabulary/domain#hasSchedule": [{
+		"@id": "iris://data#schedule-4"
+	}],
+	"iris://vocabulary/domain#liveOperationTime": [{
+		"@value": 1200
+	}],
+	"iris://vocabulary/domain#order": [{
+		"@value": 1
+	}],
+	"iris://vocabulary/domain#prebookInterval": [{
+		"@value": 30
+	}],
+	"iris://vocabulary/domain#prebookOperationTime": [{
+		"@value": 1500
+	}],
+	"iris://vocabulary/domain#prebookPercentage": [{
+		"@value": 100
+	}],
+	"iris://vocabulary/domain#prebookTodayPercentage": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#prefix": [{
+		"@language": "ru",
+		"@value": "С"
+	}],
+	"iris://vocabulary/domain#priority": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#serviceCodeEpgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#serviceLabel": [{
+		"@language": "ru",
+		"@value": "СОГЛАСОВАНИЕ РАСПОЛОЖЕНИЯ ЗЕМЕЛЬ НА КАДАСТРОВОМ ПЛАНЕ"
+	}]
+}, {
+	"@id": "iris://data#service-58",
+	"@type": [
+		"iris://vocabulary/domain#Service"
+	],
+	"iris://vocabulary/domain#codeFrgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#deptCodeFrgu": [{
+		"@value": "2100000010000002916"
+	}],
+	"iris://vocabulary/domain#hasProvider": [{
+		"@id": "iris://data#department-1"
+	}],
+	"iris://vocabulary/domain#hasSchedule": [{
+		"@id": "iris://data#schedule-4"
+	}],
+	"iris://vocabulary/domain#liveOperationTime": [{
+		"@value": 1200
+	}],
+	"iris://vocabulary/domain#order": [{
+		"@value": 1
+	}],
+	"iris://vocabulary/domain#prebookInterval": [{
+		"@value": 30
+	}],
+	"iris://vocabulary/domain#prebookOperationTime": [{
+		"@value": 1500
+	}],
+	"iris://vocabulary/domain#prebookPercentage": [{
+		"@value": 100
+	}],
+	"iris://vocabulary/domain#prebookTodayPercentage": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#prefix": [{
+		"@language": "ru",
+		"@value": "С"
+	}],
+	"iris://vocabulary/domain#priority": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#serviceCodeEpgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#serviceLabel": [{
+		"@language": "ru",
+		"@value": "РАЗРЕШЕНИЕ НА ВВОД ОБЪЕКТА В ЭКСПЛУАТАЦИЮ"
+	}]
+}, {
+	"@id": "iris://data#service-59",
+	"@type": [
+		"iris://vocabulary/domain#Service"
+	],
+	"iris://vocabulary/domain#codeFrgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#deptCodeFrgu": [{
+		"@value": "2100000010000002916"
+	}],
+	"iris://vocabulary/domain#hasProvider": [{
+		"@id": "iris://data#department-1"
+	}],
+	"iris://vocabulary/domain#hasSchedule": [{
+		"@id": "iris://data#schedule-4"
+	}],
+	"iris://vocabulary/domain#liveOperationTime": [{
+		"@value": 1200
+	}],
+	"iris://vocabulary/domain#order": [{
+		"@value": 1
+	}],
+	"iris://vocabulary/domain#prebookInterval": [{
+		"@value": 30
+	}],
+	"iris://vocabulary/domain#prebookOperationTime": [{
+		"@value": 1500
+	}],
+	"iris://vocabulary/domain#prebookPercentage": [{
+		"@value": 100
+	}],
+	"iris://vocabulary/domain#prebookTodayPercentage": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#prefix": [{
+		"@language": "ru",
+		"@value": "С"
+	}],
+	"iris://vocabulary/domain#priority": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#serviceCodeEpgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#serviceLabel": [{
+		"@language": "ru",
+		"@value": "РАЗРЕШЕНИЕ НА СТРОИТЕЛЬСТВО, РЕКОНСТРУКЦИЮ ОБЪЕКТОВ КАП. СТРОИТЕЛЬСТВА И ИНДИВИДУАЛЬНОЕ СТРОИТЕЛЬСТВО"
+	}]
+}, {
+	"@id": "iris://data#service-130",
+	"@type": [
+		"iris://vocabulary/domain#Service"
+	],
+	"iris://vocabulary/domain#codeFrgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#deptCodeFrgu": [{
+		"@value": "10000681774"
+	}],
+	"iris://vocabulary/domain#hasProvider": [{
+		"@id": "iris://data#department-1"
+	}],
+	"iris://vocabulary/domain#hasSchedule": [{
+		"@id": "iris://data#schedule-4"
+	}],
+	"iris://vocabulary/domain#liveOperationTime": [{
+		"@value": 1200
+	}],
+	"iris://vocabulary/domain#order": [{
+		"@value": 1
+	}],
+	"iris://vocabulary/domain#prebookInterval": [{
+		"@value": 30
+	}],
+	"iris://vocabulary/domain#prebookOperationTime": [{
+		"@value": 1500
+	}],
+	"iris://vocabulary/domain#prebookPercentage": [{
+		"@value": 100
+	}],
+	"iris://vocabulary/domain#prebookTodayPercentage": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#prefix": [{
+		"@language": "ru",
+		"@value": "ВП"
+	}],
+	"iris://vocabulary/domain#priority": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#serviceCodeEpgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#serviceLabel": [{
+		"@language": "ru",
+		"@value": "СПРАВКА О РАЗМЕРЕ ПЕНСИИ"
+	}]
+}, {
+	"@id": "iris://data#service-131",
+	"@type": [
+		"iris://vocabulary/domain#Service"
+	],
+	"iris://vocabulary/domain#codeFrgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#deptCodeFrgu": [{
+		"@value": "2100000010000000934"
+	}],
+	"iris://vocabulary/domain#hasProvider": [{
+		"@id": "iris://data#department-1"
+	}],
+	"iris://vocabulary/domain#hasSchedule": [{
+		"@id": "iris://data#schedule-4"
+	}],
+	"iris://vocabulary/domain#liveOperationTime": [{
+		"@value": 1200
+	}],
+	"iris://vocabulary/domain#order": [{
+		"@value": 1
+	}],
+	"iris://vocabulary/domain#prebookInterval": [{
+		"@value": 30
+	}],
+	"iris://vocabulary/domain#prebookOperationTime": [{
+		"@value": 1500
+	}],
+	"iris://vocabulary/domain#prebookPercentage": [{
+		"@value": 100
+	}],
+	"iris://vocabulary/domain#prebookTodayPercentage": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#prefix": [{
+		"@language": "ru",
+		"@value": "ВП"
+	}],
+	"iris://vocabulary/domain#priority": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#serviceCodeEpgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#serviceLabel": [{
+		"@language": "ru",
+		"@value": "ЗАПИСЬ В ОЧЕРЕДЬ В ПАНСИОНАТЫ"
+	}]
+}, {
+	"@id": "iris://data#service-132",
+	"@type": [
+		"iris://vocabulary/domain#Service"
+	],
+	"iris://vocabulary/domain#codeFrgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#deptCodeFrgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#hasProvider": [{
+		"@id": "iris://data#department-1"
+	}],
+	"iris://vocabulary/domain#hasSchedule": [{
+		"@id": "iris://data#schedule-4"
+	}],
+	"iris://vocabulary/domain#liveOperationTime": [{
+		"@value": 1200
+	}],
+	"iris://vocabulary/domain#order": [{
+		"@value": 1
+	}],
+	"iris://vocabulary/domain#prebookInterval": [{
+		"@value": 30
+	}],
+	"iris://vocabulary/domain#prebookOperationTime": [{
+		"@value": 1500
+	}],
+	"iris://vocabulary/domain#prebookPercentage": [{
+		"@value": 100
+	}],
+	"iris://vocabulary/domain#prebookTodayPercentage": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#priority": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#serviceCodeEpgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#serviceLabel": [{
+		"@language": "ru",
+		"@value": "ДОСТУП К ПОРТАЛУ ГОСУСЛУГИ.РФ"
+	}]
+}, {
+	"@id": "iris://data#webwidget-1",
+	"@type": [
+		"iris://vocabulary/domain#SystemEntity"
+	],
+	"iris://vocabulary/domain#login": [{
+		"@language": "en",
+		"@value": "webwidget"
+	}],
+	"iris://vocabulary/domain#password": [{
+		"@value": "123456"
+	}]
+}, {
+	"@id": "iris://data#service-67",
+	"@type": [
+		"iris://vocabulary/domain#Service"
+	],
+	"iris://vocabulary/domain#codeFrgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#deptCodeFrgu": [{
+		"@value": "2100000010000002916"
+	}],
+	"iris://vocabulary/domain#hasProvider": [{
+		"@id": "iris://data#department-1"
+	}],
+	"iris://vocabulary/domain#hasSchedule": [{
+		"@id": "iris://data#schedule-4"
+	}],
+	"iris://vocabulary/domain#liveOperationTime": [{
+		"@value": 1200
+	}],
+	"iris://vocabulary/domain#order": [{
+		"@value": 1
+	}],
+	"iris://vocabulary/domain#prebookInterval": [{
+		"@value": 30
+	}],
+	"iris://vocabulary/domain#prebookOperationTime": [{
+		"@value": 1500
+	}],
+	"iris://vocabulary/domain#prebookPercentage": [{
+		"@value": 100
+	}],
+	"iris://vocabulary/domain#prebookTodayPercentage": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#prefix": [{
+		"@language": "ru",
+		"@value": "С"
+	}],
+	"iris://vocabulary/domain#priority": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#serviceCodeEpgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#serviceLabel": [{
+		"@language": "ru",
+		"@value": "ПОДГОТОВКА И ВЫДАЧА СХЕМЫ РАСПОЛОЖЕНИЯ ЗЕМ.УЧ. НА КАДАСТРОВОМ КВАРТАЛЕ"
+	}]
+}, {
+	"@id": "iris://data#service-66",
+	"@type": [
+		"iris://vocabulary/domain#Service"
+	],
+	"iris://vocabulary/domain#codeFrgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#deptCodeFrgu": [{
+		"@value": "2100000010000002916"
+	}],
+	"iris://vocabulary/domain#hasProvider": [{
+		"@id": "iris://data#department-1"
+	}],
+	"iris://vocabulary/domain#hasSchedule": [{
+		"@id": "iris://data#schedule-4"
+	}],
+	"iris://vocabulary/domain#liveOperationTime": [{
+		"@value": 1200
+	}],
+	"iris://vocabulary/domain#order": [{
+		"@value": 1
+	}],
+	"iris://vocabulary/domain#prebookInterval": [{
+		"@value": 30
+	}],
+	"iris://vocabulary/domain#prebookOperationTime": [{
+		"@value": 1500
+	}],
+	"iris://vocabulary/domain#prebookPercentage": [{
+		"@value": 100
+	}],
+	"iris://vocabulary/domain#prebookTodayPercentage": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#prefix": [{
+		"@language": "ru",
+		"@value": "С"
+	}],
+	"iris://vocabulary/domain#priority": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#serviceCodeEpgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#serviceLabel": [{
+		"@language": "ru",
+		"@value": "ПРЕДОСТАВЛЕНИЕ ЗЕМ.УЧ. ДЛЯ ЦЕЛЕЙ, НЕ СВЯЗАННЫХ СО СТРОИТЕЛЬСТВОМ"
+	}]
+}, {
+	"@id": "iris://data#service-65",
+	"@type": [
+		"iris://vocabulary/domain#Service"
+	],
+	"iris://vocabulary/domain#codeFrgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#deptCodeFrgu": [{
+		"@value": "2100000010000002916"
+	}],
+	"iris://vocabulary/domain#hasProvider": [{
+		"@id": "iris://data#department-1"
+	}],
+	"iris://vocabulary/domain#hasSchedule": [{
+		"@id": "iris://data#schedule-4"
+	}],
+	"iris://vocabulary/domain#liveOperationTime": [{
+		"@value": 1200
+	}],
+	"iris://vocabulary/domain#order": [{
+		"@value": 1
+	}],
+	"iris://vocabulary/domain#prebookInterval": [{
+		"@value": 30
+	}],
+	"iris://vocabulary/domain#prebookOperationTime": [{
+		"@value": 1500
+	}],
+	"iris://vocabulary/domain#prebookPercentage": [{
+		"@value": 100
+	}],
+	"iris://vocabulary/domain#prebookTodayPercentage": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#prefix": [{
+		"@language": "ru",
+		"@value": "С"
+	}],
+	"iris://vocabulary/domain#priority": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#serviceCodeEpgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#serviceLabel": [{
+		"@language": "ru",
+		"@value": "ПРЕДОСТАВЛЕНИЕ ЗЕМЕЛЬНОГО УЧАСТКА, НАХОДЯЩЕГОСЯ В МУН. СОБСТВЕННОСТИ, НА ТОРГАХ"
+	}]
+}, {
+	"@id": "iris://data#service-64",
+	"@type": [
+		"iris://vocabulary/domain#Service"
+	],
+	"iris://vocabulary/domain#codeFrgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#deptCodeFrgu": [{
+		"@value": "2100000010000002916"
+	}],
+	"iris://vocabulary/domain#hasProvider": [{
+		"@id": "iris://data#department-1"
+	}],
+	"iris://vocabulary/domain#hasSchedule": [{
+		"@id": "iris://data#schedule-4"
+	}],
+	"iris://vocabulary/domain#liveOperationTime": [{
+		"@value": 1200
+	}],
+	"iris://vocabulary/domain#order": [{
+		"@value": 1
+	}],
+	"iris://vocabulary/domain#prebookInterval": [{
+		"@value": 30
+	}],
+	"iris://vocabulary/domain#prebookOperationTime": [{
+		"@value": 1500
+	}],
+	"iris://vocabulary/domain#prebookPercentage": [{
+		"@value": 100
+	}],
+	"iris://vocabulary/domain#prebookTodayPercentage": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#prefix": [{
+		"@language": "ru",
+		"@value": "С"
+	}],
+	"iris://vocabulary/domain#priority": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#serviceCodeEpgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#serviceLabel": [{
+		"@language": "ru",
+		"@value": "ПРЕДОСТАВЛЕНИЕ ЗЕМЕЛЬНОГО УЧАСТКА, НАХОДЯЩЕГОСЯ В МУН. СОБСТВЕННОСТИ, БЕЗ ТОРГОВ"
+	}]
+}, {
+	"@id": "iris://data#service-63",
+	"@type": [
+		"iris://vocabulary/domain#Service"
+	],
+	"iris://vocabulary/domain#codeFrgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#deptCodeFrgu": [{
+		"@value": "2100000010000002916"
+	}],
+	"iris://vocabulary/domain#hasProvider": [{
+		"@id": "iris://data#department-1"
+	}],
+	"iris://vocabulary/domain#hasSchedule": [{
+		"@id": "iris://data#schedule-4"
+	}],
+	"iris://vocabulary/domain#liveOperationTime": [{
+		"@value": 1200
+	}],
+	"iris://vocabulary/domain#order": [{
+		"@value": 1
+	}],
+	"iris://vocabulary/domain#prebookInterval": [{
+		"@value": 30
+	}],
+	"iris://vocabulary/domain#prebookOperationTime": [{
+		"@value": 1500
+	}],
+	"iris://vocabulary/domain#prebookPercentage": [{
+		"@value": 100
+	}],
+	"iris://vocabulary/domain#prebookTodayPercentage": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#prefix": [{
+		"@language": "ru",
+		"@value": "С"
+	}],
+	"iris://vocabulary/domain#priority": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#serviceCodeEpgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#serviceLabel": [{
+		"@language": "ru",
+		"@value": "СОГЛАСОВАНИЕ ПРЕДОСТАВЛЕНИЯ ЗЕМЕЛЬНОГО УЧАСТКА"
+	}]
+}, {
+	"@id": "iris://data#service-62",
+	"@type": [
+		"iris://vocabulary/domain#Service"
+	],
+	"iris://vocabulary/domain#codeFrgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#deptCodeFrgu": [{
+		"@value": "2100000010000002916"
+	}],
+	"iris://vocabulary/domain#hasProvider": [{
+		"@id": "iris://data#department-1"
+	}],
+	"iris://vocabulary/domain#hasSchedule": [{
+		"@id": "iris://data#schedule-4"
+	}],
+	"iris://vocabulary/domain#liveOperationTime": [{
+		"@value": 1200
+	}],
+	"iris://vocabulary/domain#order": [{
+		"@value": 1
+	}],
+	"iris://vocabulary/domain#prebookInterval": [{
+		"@value": 30
+	}],
+	"iris://vocabulary/domain#prebookOperationTime": [{
+		"@value": 1500
+	}],
+	"iris://vocabulary/domain#prebookPercentage": [{
+		"@value": 100
+	}],
+	"iris://vocabulary/domain#prebookTodayPercentage": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#prefix": [{
+		"@language": "ru",
+		"@value": "С"
+	}],
+	"iris://vocabulary/domain#priority": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#serviceCodeEpgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#serviceLabel": [{
+		"@language": "ru",
+		"@value": "ИЗМЕНЕНИЕ ЦЕЛЕВОГО НАЗНАЧЕНИЯ ЗЕМЕЛЬНОГО УЧАСТКА"
+	}]
+}, {
+	"@id": "iris://data#service-61",
+	"@type": [
+		"iris://vocabulary/domain#Service"
+	],
+	"iris://vocabulary/domain#codeFrgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#deptCodeFrgu": [{
+		"@value": "2100000010000002916"
+	}],
+	"iris://vocabulary/domain#hasProvider": [{
+		"@id": "iris://data#department-1"
+	}],
+	"iris://vocabulary/domain#hasSchedule": [{
+		"@id": "iris://data#schedule-4"
+	}],
+	"iris://vocabulary/domain#liveOperationTime": [{
+		"@value": 1200
+	}],
+	"iris://vocabulary/domain#order": [{
+		"@value": 1
+	}],
+	"iris://vocabulary/domain#prebookInterval": [{
+		"@value": 30
+	}],
+	"iris://vocabulary/domain#prebookOperationTime": [{
+		"@value": 1500
+	}],
+	"iris://vocabulary/domain#prebookPercentage": [{
+		"@value": 100
+	}],
+	"iris://vocabulary/domain#prebookTodayPercentage": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#prefix": [{
+		"@language": "ru",
+		"@value": "С"
+	}],
+	"iris://vocabulary/domain#priority": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#serviceCodeEpgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#serviceLabel": [{
+		"@language": "ru",
+		"@value": "ЗАКЛЮЧЕНИЕ ДОГОВОРОВ КУПЛИ-ПРОДАЖИ ЗЕМЕЛЬНЫХ УЧАСТКОВ"
+	}]
+}, {
+	"@id": "iris://data#service-60",
+	"@type": [
+		"iris://vocabulary/domain#Service"
+	],
+	"iris://vocabulary/domain#codeFrgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#deptCodeFrgu": [{
+		"@value": "2100000010000002916"
+	}],
+	"iris://vocabulary/domain#hasProvider": [{
+		"@id": "iris://data#department-1"
+	}],
+	"iris://vocabulary/domain#hasSchedule": [{
+		"@id": "iris://data#schedule-4"
+	}],
+	"iris://vocabulary/domain#liveOperationTime": [{
+		"@value": 1200
+	}],
+	"iris://vocabulary/domain#order": [{
+		"@value": 1
+	}],
+	"iris://vocabulary/domain#prebookInterval": [{
+		"@value": 30
+	}],
+	"iris://vocabulary/domain#prebookOperationTime": [{
+		"@value": 1500
+	}],
+	"iris://vocabulary/domain#prebookPercentage": [{
+		"@value": 100
+	}],
+	"iris://vocabulary/domain#prebookTodayPercentage": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#prefix": [{
+		"@language": "ru",
+		"@value": "С"
+	}],
+	"iris://vocabulary/domain#priority": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#serviceCodeEpgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#serviceLabel": [{
+		"@language": "ru",
+		"@value": "ЗАКЛЮЧЕНИЕ ДОГОВОРОВ АРЕНДЫ ЗЕМЕЛЬНЫХ УЧАСТКОВ"
+	}]
+}, {
+	"@id": "iris://data#service-69",
+	"@type": [
+		"iris://vocabulary/domain#Service"
+	],
+	"iris://vocabulary/domain#codeFrgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#deptCodeFrgu": [{
+		"@value": "2100000010000002916"
+	}],
+	"iris://vocabulary/domain#hasProvider": [{
+		"@id": "iris://data#department-1"
+	}],
+	"iris://vocabulary/domain#hasSchedule": [{
+		"@id": "iris://data#schedule-4"
+	}],
+	"iris://vocabulary/domain#liveOperationTime": [{
+		"@value": 1200
+	}],
+	"iris://vocabulary/domain#order": [{
+		"@value": 1
+	}],
+	"iris://vocabulary/domain#prebookInterval": [{
+		"@value": 30
+	}],
+	"iris://vocabulary/domain#prebookOperationTime": [{
+		"@value": 1500
+	}],
+	"iris://vocabulary/domain#prebookPercentage": [{
+		"@value": 100
+	}],
+	"iris://vocabulary/domain#prebookTodayPercentage": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#prefix": [{
+		"@language": "ru",
+		"@value": "С"
+	}],
+	"iris://vocabulary/domain#priority": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#serviceCodeEpgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#serviceLabel": [{
+		"@language": "ru",
+		"@value": "ВЫДАЧА ОРДЕРА-РАЗРЕШЕНИЯ НА ПРОИЗВОДСТВО ЗЕМ. РАБОТ"
+	}]
+}, {
+	"@id": "iris://data#service-68",
+	"@type": [
+		"iris://vocabulary/domain#Service"
+	],
+	"iris://vocabulary/domain#codeFrgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#deptCodeFrgu": [{
+		"@value": "2100000010000002916"
+	}],
+	"iris://vocabulary/domain#hasProvider": [{
+		"@id": "iris://data#department-1"
+	}],
+	"iris://vocabulary/domain#hasSchedule": [{
+		"@id": "iris://data#schedule-4"
+	}],
+	"iris://vocabulary/domain#liveOperationTime": [{
+		"@value": 1200
+	}],
+	"iris://vocabulary/domain#order": [{
+		"@value": 1
+	}],
+	"iris://vocabulary/domain#prebookInterval": [{
+		"@value": 30
+	}],
+	"iris://vocabulary/domain#prebookOperationTime": [{
+		"@value": 1500
+	}],
+	"iris://vocabulary/domain#prebookPercentage": [{
+		"@value": 100
+	}],
+	"iris://vocabulary/domain#prebookTodayPercentage": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#prefix": [{
+		"@language": "ru",
+		"@value": "С"
+	}],
+	"iris://vocabulary/domain#priority": [{
+		"@value": 0
+	}],
+	"iris://vocabulary/domain#serviceCodeEpgu": [{
+		"@value": "0"
+	}],
+	"iris://vocabulary/domain#serviceLabel": [{
+		"@language": "ru",
+		"@value": "ПОДГОТОВКА И ВЫДАЧА ГРАДОСТРОИТЕЛЬНЫХ ПЛАНОВ ЗЕМ. УЧ."
 	}]
 }]

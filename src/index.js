@@ -1,3 +1,4 @@
 module.exports = {
-    LD: require("./LD")
+	LD: require("./LD"),
+	RD: require("./Direct")
 };
