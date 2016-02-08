@@ -5442,7 +5442,7 @@
 	"has_time_description": [
 		"[{\"data\":[[32400, 50000]], \"state\": \"a\"}, {\"data\":[[50400, 64800]], \"state\": \"a\"}]"
 	],
-	"schedule_of": [
+	"has_owner": [
 		"service-30",
 		"service-78",
 		"service-79",
@@ -5590,7 +5590,7 @@
 	"has_time_description": [
 		"[{\"data\":[[32400, 46800]], \"state\": \"a\"}, {\"data\":[[50400, 64800]], \"state\": \"a\"}]"
 	],
-	"schedule_of": [
+	"has_owner": [
 		"department-1"
 	]
 }, {
@@ -5607,7 +5607,7 @@
 	"has_time_description": [
 		"[{\"data\":[[0, 46800]], \"state\": \"a\"}, {\"data\":[[46800, 86400]], \"state\": \"a\"}]"
 	],
-	"schedule_of": [
+	"has_owner": [
 		"human-2"
 	]
 }, {
@@ -5624,7 +5624,7 @@
 	"has_time_description": [
 		"[{\"data\":[[32400, 46800]], \"state\": \"a\"}, {\"data\":[[50400, 64800]], \"state\": \"a\"}]"
 	],
-	"schedule_of": [
+	"has_owner": [
 		"human-1"
 	]
 }, {
