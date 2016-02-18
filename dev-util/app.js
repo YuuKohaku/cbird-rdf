@@ -1,25 +1,28 @@
 'use strict'
 
 let Couchbird = require("Couchbird")({
-	server_ip: "127.0.0.1",
-	n1ql: "127.0.0.1:8093"
-}).bucket("rdf");
+		server_ip: "127.0.0.1",
+		n1ql: "127.0.0.1:8093"
+	})
+	.bucket("rdf");
 let jsonld = require("jsonld");
 let Promise = require("bluebird");
 let fs = Promise.promisifyAll(require("fs"));
 let _ = require("lodash");
 
-let RDFcb = require("..").LD;
+let RDFcb = require("..")
+	.LD;
 
 let ps = jsonld.promises;
 let expand = require("./utils/expand");
 let raw = require("./utils/rdf-to-raw");
+let rawfields = require("./utils/get-raw-fields");
 let getviews = require("./utils/get-views");
 let setviews = require("./utils/set-views");
 let jld = require("./utils/jsonld");
 
 
-raw("./test/data/data_expanded.json")
+rawfields("./test/data/data_expanded_parsed.json")
 	//expand("./test/data.json");
 	// getviews(Couchbird, "./dev-util/output/out.json");
 	//setviews(Couchbird, "./examples/output/out.json");
