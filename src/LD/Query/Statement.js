@@ -15,7 +15,7 @@ function invertCharCase(ch) {
 
 class JsonLDViewQuery extends Abstract {
 	bySubject(subject) {
-		let keys = _.isArray(subject) ? subject : [subject];
+		let keys = _.castArray(subject);
 		let query = ViewQuery.from(this._db.bucket_name, "jsonld-subject")
 			.keys(keys)
 			.custom({
@@ -34,7 +34,7 @@ class JsonLDViewQuery extends Abstract {
 	}
 
 	byPredicate(subject) {
-		let keys = _.isArray(subject) ? subject : [subject];
+		let keys = _.castArray(subject);
 		let query = ViewQuery.from(this._db.bucket_name, "jsonld-predicate")
 			.keys(keys)
 			.custom({
@@ -53,7 +53,7 @@ class JsonLDViewQuery extends Abstract {
 	}
 
 	byObject(subject) {
-		let keys = _.isArray(subject) ? subject : [subject];
+		let keys = _.castArray(subject);
 		let query = ViewQuery.from(this._db.bucket_name, "jsonld-object")
 			.keys(keys)
 			.custom({

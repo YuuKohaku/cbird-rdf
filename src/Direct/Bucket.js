@@ -99,7 +99,7 @@ class CBStorageBucket extends Bucket {
 
 	getNodes(subjects) {
 		let promises = {};
-		let keys = _.isArray(subjects) ? subjects : [subjects];
+		let keys = _.castArray(subjects);
 		_.map(keys, (key) => {
 			promises[key] =
 				this.get(key)
@@ -112,7 +112,7 @@ class CBStorageBucket extends Bucket {
 
 	//!! possibly this will make other docs invalid because of non-existent node
 	removeNodes(subjects) {
-		let keys = _.isArray(subjects) ? subjects : [subjects];
+		let keys = _.castArray(subjects);
 		let promises = {};
 		_.map(keys, (key) => {
 			promises[key] = this.remove(key)
@@ -147,7 +147,7 @@ class CBStorageBucket extends Bucket {
 
 	uninstallViews(names) {
 		let mgr = this.manager();
-		let keys = _.isArray(names) ? names : [names];
+		let keys = _.castArray(names);
 		let promises = [];
 
 		for(var i in keys) {

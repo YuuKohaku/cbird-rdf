@@ -6,7 +6,7 @@ let ViewQuery = require("Couchbird").ViewQuery;
 
 class LDViewQuery extends Abstract {
 	bySubject(subject) {
-		let keys = _.isArray(subject) ? subject : [subject];
+		let keys = _.castArray(subject);
 		let query = ViewQuery.from(this._db.bucket_name, "subject")
 			.keys(keys)
 			.custom({
@@ -23,7 +23,7 @@ class LDViewQuery extends Abstract {
 	}
 
 	byPredicate(subject) {
-		let keys = _.isArray(subject) ? subject : [subject];
+		let keys = _.castArray(subject);
 		let query = ViewQuery.from(this._db.bucket_name, "predicate")
 			.keys(keys)
 			.custom({
@@ -40,7 +40,7 @@ class LDViewQuery extends Abstract {
 	}
 
 	byObject(subject) {
-		let keys = _.isArray(subject) ? subject : [subject];
+		let keys = _.castArray(subject);
 		let query = ViewQuery.from(this._db.bucket_name, "object")
 			.keys(keys)
 			.custom({

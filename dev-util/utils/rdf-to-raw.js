@@ -22,7 +22,7 @@ module.exports = function(fname) {
 
 				_.map(node, (db_data, key) => {
 					if(key == "@id" || key == "@type") return;
-					let db_val = _.isArray(db_data) ? db_data : [db_data];
+					let db_val = _.castArray(db_data);
 					let val = _.map(db_val, (piece) => {
 						if(!_.isObject(piece)) return piece;
 						return piece['@id'] || piece['@value'];
