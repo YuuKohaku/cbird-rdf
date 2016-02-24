@@ -17,12 +17,14 @@ let ps = jsonld.promises;
 let expand = require("./utils/expand");
 let raw = require("./utils/rdf-to-raw");
 let rawfields = require("./utils/get-raw-fields");
+let rawuncast = require("./utils/get-raw-uncast");
 let getviews = require("./utils/get-views");
 let setviews = require("./utils/set-views");
 let jld = require("./utils/jsonld");
 
 
-rawfields("./test/data/data_expanded_parsed.json")
+rawuncast("./test/data/data_expanded_parsed.json")
+	// rawfields("./test/data/data_expanded_parsed.json")
 	//expand("./test/data.json");
 	// getviews(Couchbird, "./dev-util/output/out.json");
 	//setviews(Couchbird, "./examples/output/out.json");
