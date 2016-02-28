@@ -57,7 +57,7 @@
     "ServiceGroup.view_name",
     "Terminal.attached_to",
     "Terminal.bound_service_groups",
-    "Terminal.prebook_state",
+    "Terminal.prebook_autoregister",
     "Terminal.default_agent",
     "Terminal.label",
     "Terminal.device_type",

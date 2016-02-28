@@ -19,8 +19,7 @@
         "priority": 0,
         "service_code_epgu": "0",
         "label": "СМЕНА НОМЕРА СЧЕТА В КРЕДИТНОЙ ОРГАНИЗАЦИИ"
-    },
-    {
+    }, {
         "@id": "service-126",
         "@type": "Service",
         "code_frgu": "0",
@@ -40,8 +39,7 @@
         "priority": 0,
         "service_code_epgu": "0",
         "label": "ЗАЯВЛЕНИЕ О ДОСТАВКЕ ПЕНСИИ"
-    },
-    {
+    }, {
         "@id": "service-125",
         "@type": "Service",
         "code_frgu": "0",
@@ -61,8 +59,7 @@
         "priority": 0,
         "service_code_epgu": "0",
         "label": "ФЕДЕРАЛЬНАЯ СОЦИАЛЬНАЯ ДОПЛАТА К ПЕНСИИ"
-    },
-    {
+    }, {
         "@id": "service-5",
         "@type": "Service",
         "code_frgu": "0",
@@ -82,38 +79,33 @@
         "priority": 0,
         "service_code_epgu": "0",
         "label": "ВЫПЛАТЫ НА ПИТАНИЕ РЕБЕНКА"
-    },
-    {
+    }, {
         "@id": "membership-2",
         "@type": "Membership",
         "member": "human-2",
         "organization": "department-1",
         "role": "Operator"
-    },
-    {
+    }, {
         "@id": "membership-1",
         "@type": "Membership",
         "member": "human-1",
         "organization": "department-1",
         "role": "Administrator"
-    },
-    {
+    }, {
         "@id": "pc-1",
         "@type": "Administrator",
         "attached_to": "department-1",
         "default_agent": "human-1",
         "label": "Администратор",
         "device_type": "administrator"
-    },
-    {
+    }, {
         "@id": "pc-3",
         "@type": "RoomAdministrator",
         "attached_to": "department-1",
         "default_agent": "human-3",
         "label": "Администратор зала",
         "device_type": "admin-panel"
-    },
-    {
+    }, {
         "@id": "service-2",
         "@type": "Service",
         "code_frgu": "2100000010000001258",
@@ -133,8 +125,7 @@
         "priority": 0,
         "service_code_epgu": "0",
         "label": "ПОСОБИЕ ПО НЕТРУДОСПОСОБНОСТИ ПРИ РОЖДЕНИИ РЕБЕНКА"
-    },
-    {
+    }, {
         "@id": "pc-2",
         "@type": "Workstation",
         "attached_to": "department-1",
@@ -142,8 +133,7 @@
         "default_agent": "human-2",
         "short_label": "1",
         "device_type": "control-panel"
-    },
-    {
+    }, {
         "@id": "megatron-2",
         "@type": "SystemEntity",
         "default_workstation": "rd-1",
@@ -151,8 +141,7 @@
         "login": "rd",
         "password_hash": "1",
         "state": "inactive"
-    },
-    {
+    }, {
         "@id": "megatron-1",
         "@type": "SystemEntity",
         "default_workstation": "term-1",
@@ -160,13 +149,11 @@
         "login": "megatron",
         "password_hash": "1",
         "state": "inactive"
-    },
-    {
+    }, {
         "@id": "service-122",
         "@type": "Service",
         "code_frgu": [
-            "10000002755",
-            "0"
+            "10000002755", "0"
         ],
         "dept_code_frgu": "10000681774",
         "prebook_offset": 0,
@@ -183,12 +170,8 @@
         "prefix": "ВП",
         "priority": 0,
         "service_code_epgu": "0",
-        "label": [
-            "КОМПЕНСАЦИЯ ПЕНСИОНЕРАМ ПРОЕЗДА К МЕСТУ ОТДЫХА",
-            "ПОЛУЧЕНИЕ СНИЛС"
-        ]
-    },
-    {
+        "label": ["КОМПЕНСАЦИЯ ПЕНСИОНЕРАМ ПРОЕЗДА К МЕСТУ ОТДЫХА", "ПОЛУЧЕНИЕ СНИЛС"]
+    }, {
         "@id": "service-34",
         "@type": "Service",
         "code_frgu": "0",
@@ -208,8 +191,7 @@
         "priority": 0,
         "service_code_epgu": "0",
         "label": "ВЫДАЧА КОПИЙ, ВЫПИСОК, ДОКУМЕНТОВ"
-    },
-    {
+    }, {
         "@id": "service-35",
         "@type": "Service",
         "code_frgu": "0",
@@ -229,8 +211,7 @@
         "priority": 0,
         "service_code_epgu": "0",
         "label": "ВЫДАЧА ВЫПИСОК ИЗ ПОХОЗЯЙСТВЕННЫХ КНИГ"
-    },
-    {
+    }, {
         "@id": "service-36",
         "@type": "Service",
         "code_frgu": "0",
@@ -250,8 +231,7 @@
         "priority": 0,
         "service_code_epgu": "0",
         "label": "ВЫДАЧА ЗАВЕРЕННЫХ КОПИЙ ДОКУМЕНТОВ"
-    },
-    {
+    }, {
         "@id": "service-37",
         "@type": "Service",
         "code_frgu": "0",
@@ -271,8 +251,7 @@
         "priority": 0,
         "service_code_epgu": "0",
         "label": "ВЫПИСКА ИЗ РЕЕСТРА МУН.ИМУЩЕСТВА МУН.РАЙОНА ГОРОДСКОГО ОКРУГА ЧР"
-    },
-    {
+    }, {
         "@id": "service-30",
         "@type": "Service",
         "code_frgu": "2100000010000005712",
@@ -292,8 +271,7 @@
         "priority": 0,
         "service_code_epgu": "0",
         "label": "АПОСТИЛЬ НА ДОКУМЕНТЫ ГРАЖДАНСКОГО СОСТОЯНИЯ"
-    },
-    {
+    }, {
         "@id": "service-31",
         "@type": "Service",
         "code_frgu": "0",
@@ -313,8 +291,7 @@
         "priority": 0,
         "service_code_epgu": "0",
         "label": "ВЫДАЧА УДОСТОВЕРЕНИЯ ПОСТРАДАВШИХ ОТ РАДИАКТ. КАТАСТРОФ ГРАЖДАНАМ И ИХ СЕМЬЯМ"
-    },
-    {
+    }, {
         "@id": "service-32",
         "@type": "Service",
         "code_frgu": "2100000010000003490",
@@ -334,8 +311,7 @@
         "priority": 0,
         "service_code_epgu": "0",
         "label": "ОХОТНИЧИЙ БИЛЕТ"
-    },
-    {
+    }, {
         "@id": "service-33",
         "@type": "Service",
         "code_frgu": "0",
@@ -355,13 +331,11 @@
         "priority": 0,
         "service_code_epgu": "0",
         "label": "ВЫДАЧА СПРАВОК"
-    },
-    {
+    }, {
         "@id": "orgroot-1",
         "@type": "FormalOrganization",
         "has_unit": "office-1"
-    },
-    {
+    }, {
         "@id": "service-120",
         "@type": "Service",
         "code_frgu": "0",
@@ -381,8 +355,7 @@
         "priority": 0,
         "service_code_epgu": "0",
         "label": "ЗАЯВЛЕНИЕ О НАБОРЕ СОЦИАЛЬНЫХ УСЛУГ"
-    },
-    {
+    }, {
         "@id": "service-38",
         "@type": "Service",
         "code_frgu": "0",
@@ -402,8 +375,7 @@
         "priority": 0,
         "service_code_epgu": "0",
         "label": "РАЗРЕШЕНИЕ НА ИЗУЧЕНИЕ НЕДР ЛЕСНОГО ФОНДА"
-    },
-    {
+    }, {
         "@id": "service-39",
         "@type": "Service",
         "code_frgu": "0",
@@ -423,21 +395,18 @@
         "priority": 0,
         "service_code_epgu": "0",
         "label": "РАЗРЕШЕНИЕ НА ВЫБРОС ВРЕДНЫХ ВЕЩЕСТВ В АТМОСФЕРУ"
-    },
-    {
+    }, {
         "@id": "office-1",
         "@type": "Office",
         "has_unit": "department-1",
         "label": "Офис 1",
         "org_timezone": "Europe/Moscow",
         "booking_methods": [
-            "live",
-            "prebook"
+            "live", "prebook"
         ],
         "pin_code_prefix": "001",
         "prebook_expiration_interval": 1200
-    },
-    {
+    }, {
         "@id": "service-129",
         "@type": "Service",
         "code_frgu": "0",
@@ -457,8 +426,7 @@
         "priority": 0,
         "service_code_epgu": "0",
         "label": "ЗАЯВЛЕНИЕ О ПЛАТЕЖАХ ИЗ ПЕНСИИ"
-    },
-    {
+    }, {
         "@id": "service-9",
         "@type": "Service",
         "code_frgu": "0",
@@ -478,8 +446,7 @@
         "priority": 0,
         "service_code_epgu": "0",
         "label": "ПОСОБИЕ НА РЕБЕНКА ВОЕННОГО"
-    },
-    {
+    }, {
         "@id": "service-41",
         "@type": "Service",
         "code_frgu": "0",
@@ -499,8 +466,7 @@
         "priority": 0,
         "service_code_epgu": "0",
         "label": "УПЛАТА СТРАХОВЫХ ВЗНОСОВ В ФСС"
-    },
-    {
+    }, {
         "@id": "service-40",
         "@type": "Service",
         "code_frgu": "0",
@@ -520,8 +486,7 @@
         "priority": 0,
         "service_code_epgu": "0",
         "label": "ГРАНТ НА РАЗВИТИЕ СЕЛЬСК.ХОЗЯЙСТВА НАЧИНАЮЩИМ ФЕРМЕРАМ"
-    },
-    {
+    }, {
         "@id": "service-43",
         "@type": "Service",
         "code_frgu": "0",
@@ -541,8 +506,7 @@
         "priority": 0,
         "service_code_epgu": "0",
         "label": "РАЗРЕШЕНИЕ НА БРАК В 16 ЛЕТ"
-    },
-    {
+    }, {
         "@id": "service-42",
         "@type": "Service",
         "code_frgu": "0",
@@ -562,8 +526,7 @@
         "priority": 0,
         "service_code_epgu": "0",
         "label": "ЗАКЛЮЧЕНИЕ БРАКА"
-    },
-    {
+    }, {
         "@id": "service-45",
         "@type": "Service",
         "code_frgu": "0",
@@ -583,8 +546,7 @@
         "priority": 0,
         "service_code_epgu": "0",
         "label": "ДОПОЛНИТЕЛЬНОГО ОБРАЗОВАНИЯ"
-    },
-    {
+    }, {
         "@id": "service-44",
         "@type": "Service",
         "code_frgu": "0",
@@ -604,8 +566,7 @@
         "priority": 0,
         "service_code_epgu": "0",
         "label": "БЕСПЛАТНОЕ ОБЩЕЕ ОБРАЗОВАНИЕ"
-    },
-    {
+    }, {
         "@id": "service-47",
         "@type": "Service",
         "code_frgu": "0",
@@ -625,8 +586,7 @@
         "priority": 0,
         "service_code_epgu": "0",
         "label": "ПРИЕМ ЗАЯВЛЕНИЯ О ЗАКЛЮЧЕНИИ БРАКА"
-    },
-    {
+    }, {
         "@id": "service-46",
         "@type": "Service",
         "code_frgu": "0",
@@ -646,8 +606,7 @@
         "priority": 0,
         "service_code_epgu": "0",
         "label": "ИНФОРМАЦИЯ О ПОЛУЧЕНИИ ОБЩЕГО ОБРАЗОВАНИЯ"
-    },
-    {
+    }, {
         "@id": "service-49",
         "@type": "Service",
         "code_frgu": "10000013628",
@@ -667,17 +626,14 @@
         "priority": 0,
         "service_code_epgu": "0",
         "label": "СВЕДЕНИЯ ИЗ ГКН"
-    },
-    {
+    }, {
         "@id": "service-48",
         "@type": "Service",
         "code_frgu": [
-            "10000012269",
-            "10000013633"
+            "10000012269", "10000013633"
         ],
         "dept_code_frgu": [
-            "10001739421",
-            "10001739409"
+            "10001739421", "10001739409"
         ],
         "prebook_offset": 0,
         "has_schedule": {
@@ -693,12 +649,8 @@
         "prefix": "С",
         "priority": 0,
         "service_code_epgu": "0",
-        "label": [
-            "СВЕДЕНИЯ ИЗ ЕГРП",
-            "КАДАСТРОВЫЙ УЧЕТ НЕДВИЖИМОСТИ"
-        ]
-    },
-    {
+        "label": ["СВЕДЕНИЯ ИЗ ЕГРП", "КАДАСТРОВЫЙ УЧЕТ НЕДВИЖИМОСТИ"]
+    }, {
         "@id": "service-109",
         "@type": "Service",
         "code_frgu": "0",
@@ -718,8 +670,7 @@
         "priority": 0,
         "service_code_epgu": "0",
         "label": "ВОЗМЕЩЕНИЕ БИЗНЕСУ ЗАТРАТ НА УЧАСТИЕ В ВЫСТАВКАХ"
-    },
-    {
+    }, {
         "@id": "service-108",
         "@type": "Service",
         "code_frgu": "2100000010000002079",
@@ -739,8 +690,7 @@
         "priority": 0,
         "service_code_epgu": "0",
         "label": "ВОЗМЕЩЕНИЕ БИЗНЕСУ ПРОЦЕНТОВ ПО КРЕДИТАМ"
-    },
-    {
+    }, {
         "@id": "service-105",
         "@type": "Service",
         "code_frgu": "2100000010000000949",
@@ -760,8 +710,7 @@
         "priority": 0,
         "service_code_epgu": "0",
         "label": "ЛИЦЕНЗИРОВАНИЕ ДЕЯТ. ПО ОБОРОТУ НАРКОТИЧ. СРЕДСТВ"
-    },
-    {
+    }, {
         "@id": "service-104",
         "@type": "Service",
         "code_frgu": "2100000010000001292",
@@ -781,8 +730,7 @@
         "priority": 0,
         "service_code_epgu": "0",
         "label": "АККРЕДИТАЦИЯ ОБРАЗОВАТЕЛЬНЫХ ОРГАНИЗАЦИЙ"
-    },
-    {
+    }, {
         "@id": "service-107",
         "@type": "Service",
         "code_frgu": "100000010000002251",
@@ -802,8 +750,7 @@
         "priority": 0,
         "service_code_epgu": "0",
         "label": "ЛИЦЕНЗИРОВАНИЕ ДЕЯТЕЛЬНОСТИ С МЕТАЛЛОЛОМОМ"
-    },
-    {
+    }, {
         "@id": "service-106",
         "@type": "Service",
         "code_frgu": "2100000010000000018",
@@ -823,8 +770,7 @@
         "priority": 0,
         "service_code_epgu": "0",
         "label": "ЛИЦЕНЗИЯ НА ПРОДАЖУ АЛКОГОЛЯ"
-    },
-    {
+    }, {
         "@id": "service-101",
         "@type": "Service",
         "code_frgu": "0",
@@ -844,8 +790,7 @@
         "priority": 0,
         "service_code_epgu": "0",
         "label": "ПРИЕМ УВЕДОМЛЕНИЯ ОТ ЮР.ЛИЦ О ПРОИЗВОДСТВЕ С.И.З."
-    },
-    {
+    }, {
         "@id": "service-100",
         "@type": "Service",
         "code_frgu": "0",
@@ -865,8 +810,7 @@
         "priority": 0,
         "service_code_epgu": "0",
         "label": "ИНФОРМИРОВАНИЕ ПЛАТЕЛЬЩИКОВ О СТРАХОВЫХ ВЗНОСАХ"
-    },
-    {
+    }, {
         "@id": "service-103",
         "@type": "Service",
         "code_frgu": "100000010000001326",
@@ -886,8 +830,7 @@
         "priority": 0,
         "service_code_epgu": "0",
         "label": "ЛИЦЕНЗИРОВАНИЕ ОБРАЗОВАТЕЛЬНЫХ ОРГАНИЗАЦИЙ"
-    },
-    {
+    }, {
         "@id": "service-102",
         "@type": "Service",
         "code_frgu": "0",
@@ -907,8 +850,7 @@
         "priority": 0,
         "service_code_epgu": "0",
         "label": "РАЗРЕШЕНИЕ НА ПЕРЕВОЗКУ ПАССАЖИРОВ (ТАКСИ)"
-    },
-    {
+    }, {
         "@id": "service-85",
         "@type": "Service",
         "code_frgu": "10000020393",
@@ -928,8 +870,7 @@
         "priority": 0,
         "service_code_epgu": "0",
         "label": "РЕГИСТРАЦИЯ И СНЯТИЕ С УЧЕТА ПО МЕСТУ ЖИТЕЛЬСТВА ПО МЕСТУ ПРЕБЫВАНИЯ"
-    },
-    {
+    }, {
         "@id": "service-84",
         "@type": "Service",
         "code_frgu": "10000027991",
@@ -949,8 +890,7 @@
         "priority": 0,
         "service_code_epgu": "0",
         "label": "УЧЕТ ИНОСТРАНЦЕВ ПО МЕСТУ ПРЕБЫВАНИЯ"
-    },
-    {
+    }, {
         "@id": "service-87",
         "@type": "Service",
         "code_frgu": "2100000010000001235",
@@ -970,8 +910,7 @@
         "priority": 0,
         "service_code_epgu": "0",
         "label": "ВЫПЛАТЫ СЕМЬЯМ ПОГИБШИХ ВОЕННЫХ НА ОПЛАТУ ЖИЛЬЯ"
-    },
-    {
+    }, {
         "@id": "service-86",
         "@type": "Service",
         "code_frgu": "2100000010000007714",
@@ -991,8 +930,7 @@
         "priority": 0,
         "service_code_epgu": "0",
         "label": "ПОСОБИЕ НА ПОГРЕБЕНИЕ УМЕРШИХ"
-    },
-    {
+    }, {
         "@id": "service-81",
         "@type": "Service",
         "code_frgu": "0",
@@ -1012,8 +950,7 @@
         "priority": 0,
         "service_code_epgu": "0",
         "label": "АДАПТАЦИЯ БЕЗРАБОТНЫХ ГРАЖДАН НА РЫНКЕ ТРУДА"
-    },
-    {
+    }, {
         "@id": "service-80",
         "@type": "Service",
         "code_frgu": "0",
@@ -1033,8 +970,7 @@
         "priority": 0,
         "service_code_epgu": "0",
         "label": "ТРУДОУСТРОЙСТВО НЕСОВЕРШЕННОЛЕТНИХ, БЕЗРАБОТНЫХ"
-    },
-    {
+    }, {
         "@id": "service-83",
         "@type": "Service",
         "code_frgu": "0",
@@ -1054,8 +990,7 @@
         "priority": 0,
         "service_code_epgu": "0",
         "label": "ТРУДОУСТРОЙСТВО ПРИ ПЕРЕСЕЛЕНИИ"
-    },
-    {
+    }, {
         "@id": "service-82",
         "@type": "Service",
         "code_frgu": "0",
@@ -1075,8 +1010,7 @@
         "priority": 0,
         "service_code_epgu": "0",
         "label": "СОДЕЙСТВИЕ В САМО ЗАНЯТОСТИ ГРАЖДАН"
-    },
-    {
+    }, {
         "@id": "service-89",
         "@type": "Service",
         "code_frgu": "0",
@@ -1096,8 +1030,7 @@
         "priority": 0,
         "service_code_epgu": "0",
         "label": "ПОСОБИЕ НА ПОГРЕБЕНИЕ ПОГИБШИХ В РЕЗУЛЬТАТЕ КАТАСТРОФЫ НА ЧЕРНОБЫЛЬСКОЙ АЭС"
-    },
-    {
+    }, {
         "@id": "service-88",
         "@type": "Service",
         "code_frgu": "0",
@@ -1117,8 +1050,7 @@
         "priority": 0,
         "service_code_epgu": "0",
         "label": "ПОСОБИЕ ДЕТЯМ ПОГИБШИХ СОТРУДНИКОВ ОИВ И ОТД. КАТЕГ. ВОЕННЫХ"
-    },
-    {
+    }, {
         "@id": "service-18",
         "@type": "Service",
         "code_frgu": "0",
@@ -1138,8 +1070,7 @@
         "priority": 0,
         "service_code_epgu": "0",
         "label": "ЗАКЛЮЧЕНИЕ ДОГОВОРОВ СОЦИАЛЬНОГО НАЙМА ЖИЛЫХ ПОМЕЩЕНИЙ"
-    },
-    {
+    }, {
         "@id": "service-19",
         "@type": "Service",
         "code_frgu": "0",
@@ -1159,8 +1090,7 @@
         "priority": 0,
         "service_code_epgu": "0",
         "label": "УЧЕТ ГРАЖДАН, НУЖДАЮЩИХСЯ В ЖИЛЫХ ПОМЕЩЕНИЯХ И ИМЕЮЩИХ ПРАВО НА ГОС.ПОДДЕРЖКУ НА СТРОИТЕЛЬСТВО ПРИОБРЕТЕНИЕ ЖИЛЫХ ПОМЕЩЕНИЙ"
-    },
-    {
+    }, {
         "@id": "service-16",
         "@type": "Service",
         "code_frgu": "0",
@@ -1180,8 +1110,7 @@
         "priority": 0,
         "service_code_epgu": "0",
         "label": "ПРЕДОСТАВЛЕНИЕ ГРАЖДАНАМ ЖИЛЫХ ПОМЕЩЕНИЙ МУН. СПЕЦИАЛ. ЖИЛ. ФОНДА МАНЕВРЕННОГО, СЛУЖЕБНОГО"
-    },
-    {
+    }, {
         "@id": "service-17",
         "@type": "Service",
         "code_frgu": "0",
@@ -1201,8 +1130,7 @@
         "priority": 0,
         "service_code_epgu": "0",
         "label": "ЖИЛЫЕ ПОМЕЩЕНИЯ МАЛОИМУЩИМ ГРАЖДАНАМ ПО ДОГОВОРАМ СОЦИАЛЬНОГО НАЙМА"
-    },
-    {
+    }, {
         "@id": "service-14",
         "@type": "Service",
         "code_frgu": "0",
@@ -1222,8 +1150,7 @@
         "priority": 0,
         "service_code_epgu": "0",
         "label": "ВЫДАЧА ГОСУДАРСТВЕННЫХ ЖИЛИЩНЫХ СЕРТИФИКАТОВ"
-    },
-    {
+    }, {
         "@id": "service-15",
         "@type": "Service",
         "code_frgu": "0",
@@ -1243,8 +1170,7 @@
         "priority": 0,
         "service_code_epgu": "0",
         "label": "РЕШЕНИЕ О СОГЛАСОВАНИИ ПЕРЕУСТРОЙСТВА И ИЛИ ПЕРЕПЛАНИРОВКИ ЖИЛОГО ПОМЕЩЕНИЯ"
-    },
-    {
+    }, {
         "@id": "service-12",
         "@type": "Service",
         "code_frgu": "0",
@@ -1264,8 +1190,7 @@
         "priority": 0,
         "service_code_epgu": "0",
         "label": "ПРИВАТИЗАЦИИ ЖИЛЬЯ, НАХОДЯЩЕГОСЯ В МУНИЦИПАЛЬНОЙ СОБСТВЕННОСТИ"
-    },
-    {
+    }, {
         "@id": "service-13",
         "@type": "Service",
         "code_frgu": "0",
@@ -1285,8 +1210,7 @@
         "priority": 0,
         "service_code_epgu": "0",
         "label": "ПОЛУЧЕНИЕ СОЦИАЛЬНОЙ ВЫПЛАТЫ НА ПРИОБРЕТЕНИЕ,СТРОИТЕЛЬСТВО ЖИЛЬЯ МОЛОДЫМ СЕМЬЯМ"
-    },
-    {
+    }, {
         "@id": "service-10",
         "@type": "Service",
         "code_frgu": "0",
@@ -1306,8 +1230,7 @@
         "priority": 0,
         "service_code_epgu": "0",
         "label": "ЗАПИСЬ В ДЕТСКИЕ САДЫ"
-    },
-    {
+    }, {
         "@id": "service-11",
         "@type": "Service",
         "code_frgu": "10000011206",
@@ -1327,8 +1250,7 @@
         "priority": 0,
         "service_code_epgu": "0",
         "label": "РЕГИСТРАЦИЯ ПРАВА НА НЕДВИЖИМОСТЬ"
-    },
-    {
+    }, {
         "@id": "human-1",
         "@type": "Employee",
         "available_workstation": "pc-1",
@@ -1345,8 +1267,7 @@
         "middle_name": "Иванович",
         "password_hash": "123456",
         "state": "inactive"
-    },
-    {
+    }, {
         "@id": "service-96",
         "@type": "Service",
         "code_frgu": "10000001306",
@@ -1366,8 +1287,7 @@
         "priority": 0,
         "service_code_epgu": "0",
         "label": "ВЫПИСКА ИЗ ЕГРН"
-    },
-    {
+    }, {
         "@id": "service-97",
         "@type": "Service",
         "code_frgu": "10000001306",
@@ -1387,8 +1307,7 @@
         "priority": 0,
         "service_code_epgu": "0",
         "label": "ВЫПИСКА ИЗ ЕГРЮЛ"
-    },
-    {
+    }, {
         "@id": "service-94",
         "@type": "Service",
         "code_frgu": "10000015911",
@@ -1408,8 +1327,7 @@
         "priority": 0,
         "service_code_epgu": "0",
         "label": "РЕГИСТРАЦИЯ ЮР.ЛИЦ, ИП,ФЕРМЕРСКИХ ХОЗЯЙСТВ"
-    },
-    {
+    }, {
         "@id": "service-95",
         "@type": "Service",
         "code_frgu": "10001760860",
@@ -1429,8 +1347,7 @@
         "priority": 0,
         "service_code_epgu": "0",
         "label": "ИНФОРМИРОВАНИЕ О ДЕЙСТВУЮЩИХ НАЛОГАХ И СБОРАХ"
-    },
-    {
+    }, {
         "@id": "service-92",
         "@type": "Service",
         "code_frgu": "10001294277",
@@ -1450,8 +1367,7 @@
         "priority": 0,
         "service_code_epgu": "0",
         "label": "РЕГИСТРАЦИЯ (СНЯТИЕ С УЧЕТА) СТРАХОВАТЕЛЕЙ"
-    },
-    {
+    }, {
         "@id": "service-93",
         "@type": "Service",
         "code_frgu": "10001294251",
@@ -1471,8 +1387,7 @@
         "priority": 0,
         "service_code_epgu": "0",
         "label": "ОТЧЕТ ПО ФОРМЕ 4А ФСС РФ"
-    },
-    {
+    }, {
         "@id": "service-90",
         "@type": "Service",
         "code_frgu": "0",
@@ -1492,8 +1407,7 @@
         "priority": 0,
         "service_code_epgu": "0",
         "label": "РЕГИСТРАЦИЯ СМЕРТИ"
-    },
-    {
+    }, {
         "@id": "service-91",
         "@type": "Service",
         "code_frgu": "10001294271",
@@ -1513,8 +1427,7 @@
         "priority": 0,
         "service_code_epgu": "0",
         "label": "РЕГИСТРАЦИЯ (СНЯТИЕ С УЧЕТА) РАБОТНИКОВ"
-    },
-    {
+    }, {
         "@id": "service-98",
         "@type": "Service",
         "code_frgu": "10002443284",
@@ -1534,8 +1447,7 @@
         "priority": 0,
         "service_code_epgu": "0",
         "label": "ВЫПИСКА ИЗ РЕЕСТРА ДИСКВАЛИФИЦИРОВАННЫХ ЛИЦ"
-    },
-    {
+    }, {
         "@id": "service-99",
         "@type": "Service",
         "code_frgu": "0",
@@ -1555,8 +1467,7 @@
         "priority": 0,
         "service_code_epgu": "0",
         "label": "СПРАВКА ОБ УПЛАЧЕНЫХ НАЛОГАХ И СБОРАХ"
-    },
-    {
+    }, {
         "@id": "service-23",
         "@type": "Service",
         "code_frgu": "0",
@@ -1576,8 +1487,7 @@
         "priority": 0,
         "service_code_epgu": "0",
         "label": "РАСПОРЯЖЕНИЕ МАТЕРИНСКИМ КАПИТАЛОМ"
-    },
-    {
+    }, {
         "@id": "service-22",
         "@type": "Service",
         "code_frgu": "0",
@@ -1597,8 +1507,7 @@
         "priority": 0,
         "service_code_epgu": "0",
         "label": "ПОЛУЧЕНИЕ СЕРТИФИКАТА НА МАТЕРИНСКИЙ КАПИТАЛ"
-    },
-    {
+    }, {
         "@id": "service-21",
         "@type": "Service",
         "code_frgu": "10000000611",
@@ -1618,8 +1527,7 @@
         "priority": 0,
         "service_code_epgu": "0",
         "label": "ЗАМЕНА ПАСПОРТА РФ"
-    },
-    {
+    }, {
         "@id": "service-20",
         "@type": "Service",
         "code_frgu": "0",
@@ -1639,8 +1547,7 @@
         "priority": 0,
         "service_code_epgu": "0",
         "label": "ПЕРЕВОД ЖИЛОГО ПОМЕЩЕНИЯ В НЕЖИЛОЕ ПОМЕЩЕНИЕ И НЕЖИЛОГО В ЖИЛОЕ"
-    },
-    {
+    }, {
         "@id": "service-27",
         "@type": "Service",
         "code_frgu": "10001959166",
@@ -1660,8 +1567,7 @@
         "priority": 0,
         "service_code_epgu": "0",
         "label": "ЗАГРАНИЧНЫЙ ПАСПОРТ"
-    },
-    {
+    }, {
         "@id": "service-26",
         "@type": "Service",
         "code_frgu": "0",
@@ -1681,8 +1587,7 @@
         "priority": 0,
         "service_code_epgu": "0",
         "label": "УЧЕТ МНОГОДЕТНЫХ СЕМЕЙ, ИМЕЮЩИХ ПРАВО НА ПОЛУЧЕНИЕ ЗЕМ. УЧ. БЕСПЛАТНО"
-    },
-    {
+    }, {
         "@id": "service-25",
         "@type": "Service",
         "code_frgu": "0",
@@ -1702,8 +1607,7 @@
         "priority": 0,
         "service_code_epgu": "0",
         "label": "ПОСОБИЕ НА ТРЕТЬЕГО РЕБЕНКА"
-    },
-    {
+    }, {
         "@id": "service-24",
         "@type": "Service",
         "code_frgu": "0",
@@ -1723,8 +1627,7 @@
         "priority": 0,
         "service_code_epgu": "0",
         "label": "МАТЕРИНСКИЙ КАПИТАЛ (РЕСПУБЛИКАНСКИЙ)"
-    },
-    {
+    }, {
         "@id": "service-29",
         "@type": "Service",
         "code_frgu": "2100000010000002847",
@@ -1744,8 +1647,7 @@
         "priority": 0,
         "service_code_epgu": "0",
         "label": "ПОВТОРНОЕ СВИДЕТЕЛЬСТВО О РЕГ. ГРАЖДАНСКОГО СОСТОЯНИЯ"
-    },
-    {
+    }, {
         "@id": "service-28",
         "@type": "Service",
         "code_frgu": "0",
@@ -1765,33 +1667,25 @@
         "priority": 0,
         "service_code_epgu": "0",
         "label": "РАСТОРЖЕНИЕ БРАКА"
-    },
-    {
+    }, {
         "@id": "sg-10",
         "@type": "ServiceGroup",
         "items_per_page": "10",
         "content": [
-            "service-85",
-            "service-84"
+            "service-85", "service-84"
         ],
         "label": "Смена места жительства",
         "view_name": "base"
-    },
-    {
+    }, {
         "@id": "sg-11",
         "@type": "ServiceGroup",
         "items_per_page": "10",
         "content": [
-            "service-87",
-            "service-86",
-            "service-88",
-            "service-89",
-            "service-90"
+            "service-87", "service-86", "service-88", "service-89", "service-90"
         ],
         "label": "Утрата близкого человека",
         "view_name": "base"
-    },
-    {
+    }, {
         "@id": "sg-12",
         "@type": "ServiceGroup",
         "items_per_page": "10",
@@ -1828,8 +1722,7 @@
         ],
         "label": "Открытие своего дела",
         "view_name": "base"
-    },
-    {
+    }, {
         "@id": "sg-13",
         "@type": "ServiceGroup",
         "items_per_page": "10",
@@ -1849,16 +1742,14 @@
         ],
         "label": "Выход на пенсию",
         "view_name": "base"
-    },
-    {
+    }, {
         "@id": "sg-14",
         "@type": "ServiceGroup",
         "items_per_page": "10",
         "content": "service-132",
         "label": "Прочее",
         "view_name": "base"
-    },
-    {
+    }, {
         "@id": "service-6",
         "@type": "Service",
         "code_frgu": "0",
@@ -1878,8 +1769,7 @@
         "priority": 0,
         "service_code_epgu": "0",
         "label": "ВЫПЛАТЫ УВОЛЕННЫМ ЖЕНЩИНАМ С ДЕТЬМИ"
-    },
-    {
+    }, {
         "@id": "service-7",
         "@type": "Service",
         "code_frgu": "0",
@@ -1899,8 +1789,7 @@
         "priority": 0,
         "service_code_epgu": "0",
         "label": "ПОСОБИЕ ПО НЕТРУДОСПОСОБНОСТИ ПО УХОДУ ЗА РЕБЕНКОМ"
-    },
-    {
+    }, {
         "@id": "service-4",
         "@type": "Service",
         "code_frgu": "2100000010000007718",
@@ -1920,13 +1809,11 @@
         "priority": 0,
         "service_code_epgu": "0",
         "label": "ПОСОБИЕ ПО БЕРЕМЕННОСТИ И РОДАМ"
-    },
-    {
+    }, {
         "@id": "service-124",
         "@type": "Service",
         "code_frgu": [
-            "0",
-            "10000002758"
+            "0", "10000002758"
         ],
         "dept_code_frgu": "10000681774",
         "prebook_offset": 0,
@@ -1943,12 +1830,8 @@
         "prefix": "ВП",
         "priority": 0,
         "service_code_epgu": "0",
-        "label": [
-            "СОЦ. ОБЕСПЕЧЕНИЕ ЛЕТЧИКАМ, И ШАХТЕРАМ",
-            "ЗАЯВЛЕНИЕ ОБ УСТАНОВЛЕНИИ ПЕНСИИ"
-        ]
-    },
-    {
+        "label": ["СОЦ. ОБЕСПЕЧЕНИЕ ЛЕТЧИКАМ, И ШАХТЕРАМ", "ЗАЯВЛЕНИЕ ОБ УСТАНОВЛЕНИИ ПЕНСИИ"]
+    }, {
         "@id": "service-123",
         "@type": "Service",
         "code_frgu": "10000002758",
@@ -1968,8 +1851,7 @@
         "priority": 0,
         "service_code_epgu": "0",
         "label": "ИНФОРМАЦИЯ О СОСТОЯНИИ ЛИЦЕВЫХ СЧЕТОВ"
-    },
-    {
+    }, {
         "@id": "service-3",
         "@type": "Service",
         "code_frgu": "2100000010000001881",
@@ -1989,8 +1871,7 @@
         "priority": 0,
         "service_code_epgu": "0",
         "label": "ПОСОБИЕ НА РЕБЕНКА"
-    },
-    {
+    }, {
         "@id": "service-121",
         "@type": "Service",
         "code_frgu": "10000002749",
@@ -2010,8 +1891,7 @@
         "priority": 0,
         "service_code_epgu": "0",
         "label": "ЗАЯВЛЕНИЕ О ВЫБОРЕ ПЕНСИОННОГО ФОНДА"
-    },
-    {
+    }, {
         "@id": "service-1",
         "@type": "Service",
         "code_frgu": "2100000010000002847",
@@ -2031,8 +1911,7 @@
         "priority": 0,
         "service_code_epgu": "0",
         "label": "РЕГИСТРАЦИЯ РОЖДЕНИЯ"
-    },
-    {
+    }, {
         "@id": "service-8",
         "@type": "Service",
         "code_frgu": "2100000010000007723",
@@ -2052,8 +1931,7 @@
         "priority": 0,
         "service_code_epgu": "0",
         "label": "ПОСОБИЕ БЕРЕМЕННОЙ ЖЕНЕ ВОЕННОГО"
-    },
-    {
+    }, {
         "@id": "service-128",
         "@type": "Service",
         "code_frgu": "0",
@@ -2073,23 +1951,20 @@
         "priority": 0,
         "service_code_epgu": "0",
         "label": "ЗАПРОС ПЕНСИОННОГО ДЕЛА"
-    },
-    {
+    }, {
         "@id": "term-1",
         "@type": "Terminal",
         "attached_to": "department-1",
         "bound_service_groups": "sg-0",
-        "prebook_state": "booked",
+        "prebook_autoregister": false,
         "default_agent": "megatron-1",
         "label": "Терминал 1",
         "device_type": "terminal",
         "booking_methods": [
-            "live",
-            "prebook"
+            "live", "prebook"
         ],
         "reload_interval": 5
-    },
-    {
+    }, {
         "@id": "service-78",
         "@type": "Service",
         "code_frgu": "0",
@@ -2109,8 +1984,7 @@
         "priority": 0,
         "service_code_epgu": "0",
         "label": "ПРОФ ОБУЧЕНИЕ БЕЗРАБОТНЫХ"
-    },
-    {
+    }, {
         "@id": "service-79",
         "@type": "Service",
         "code_frgu": "0",
@@ -2130,8 +2004,7 @@
         "priority": 0,
         "service_code_epgu": "0",
         "label": "ОРГАНИЗАЦИЯ ОБЩЕСТВЕННЫХ РАБОТ"
-    },
-    {
+    }, {
         "@id": "service-70",
         "@type": "Service",
         "code_frgu": "0",
@@ -2151,8 +2024,7 @@
         "priority": 0,
         "service_code_epgu": "0",
         "label": "ПРИСВОЕНИЕ АДРЕСОВ"
-    },
-    {
+    }, {
         "@id": "service-71",
         "@type": "Service",
         "code_frgu": "10000003882",
@@ -2172,8 +2044,7 @@
         "priority": 0,
         "service_code_epgu": "0",
         "label": "СПРАВКА ОБ ОТСУТСТВИИ (НАЛИЧИИ) СУДИМОСТИ"
-    },
-    {
+    }, {
         "@id": "service-72",
         "@type": "Service",
         "code_frgu": "10001294268",
@@ -2193,8 +2064,7 @@
         "priority": 0,
         "service_code_epgu": "0",
         "label": "РЕГИСТРАЦИЯ ОМС ПО НЕТРУДОСПОСОБНОСТИ"
-    },
-    {
+    }, {
         "@id": "service-73",
         "@type": "Service",
         "code_frgu": "0",
@@ -2214,8 +2084,7 @@
         "priority": 0,
         "service_code_epgu": "0",
         "label": "КОНСУЛЬТАЦИЯ ПО ТРУДОВОМУ ПРАВУ"
-    },
-    {
+    }, {
         "@id": "service-74",
         "@type": "Service",
         "code_frgu": "2100000010000001482",
@@ -2235,8 +2104,7 @@
         "priority": 0,
         "service_code_epgu": "0",
         "label": "ИНФОРМАЦИЯ О ПОЛОЖЕНИИ НА РЫНКЕ ТРУДА"
-    },
-    {
+    }, {
         "@id": "service-75",
         "@type": "Service",
         "code_frgu": "0",
@@ -2256,8 +2124,7 @@
         "priority": 0,
         "service_code_epgu": "0",
         "label": "ПОИСК РАБОТЫ ИЛИ РАБОТНИКОВ"
-    },
-    {
+    }, {
         "@id": "service-76",
         "@type": "Service",
         "code_frgu": "0",
@@ -2277,8 +2144,7 @@
         "priority": 0,
         "service_code_epgu": "0",
         "label": "ПРОФ.ОРИЕНТАЦИЯ ГРАЖДАН"
-    },
-    {
+    }, {
         "@id": "service-77",
         "@type": "Service",
         "code_frgu": "0",
@@ -2298,8 +2164,7 @@
         "priority": 0,
         "service_code_epgu": "0",
         "label": "ПСИХОЛОГИЧЕСКАЯ ПОДДЕРЖКА БЕЗРАБОТНЫХ"
-    },
-    {
+    }, {
         "@id": "service-118",
         "@type": "Service",
         "code_frgu": "0",
@@ -2319,8 +2184,7 @@
         "priority": 0,
         "service_code_epgu": "0",
         "label": "РАЗРЕШЕНИЯ, СОГЛАСОВАНИЯ НА ПЕРЕВОЗКУ КРУПНОГАБАРИТНОГО И ТЯЖЕЛОВЕСНОГО ГРУЗА"
-    },
-    {
+    }, {
         "@id": "service-119",
         "@type": "Service",
         "code_frgu": "0",
@@ -2340,8 +2204,7 @@
         "priority": 0,
         "service_code_epgu": "0",
         "label": "ПРАВО НА ОКАЗАНИЕ УСЛУГ ПО ПЕРЕВОЗКЕ ПАССАЖИРОВ АВТОМОБИЛЬНЫМ ТРАНСПОРТОМ"
-    },
-    {
+    }, {
         "@id": "service-112",
         "@type": "Service",
         "code_frgu": "0",
@@ -2361,8 +2224,7 @@
         "priority": 0,
         "service_code_epgu": "0",
         "label": "ПРЕДОСТАВЛЕНИЕ ЗЕМЕЛЬ ДЛЯ ФЕРМЕРСКОГО ХОЗ-ВА"
-    },
-    {
+    }, {
         "@id": "service-113",
         "@type": "Service",
         "code_frgu": "0",
@@ -2382,8 +2244,7 @@
         "priority": 0,
         "service_code_epgu": "0",
         "label": "ПЕРЕДАЧА ИМУЩЕСТВА ЧР, БЕЗВОЗМЕЗДНО"
-    },
-    {
+    }, {
         "@id": "service-110",
         "@type": "Service",
         "code_frgu": "2100000010000002116",
@@ -2403,8 +2264,7 @@
         "priority": 0,
         "service_code_epgu": "0",
         "label": "СУБСИДИЯ БИЗНЕСУ НА ПЕРВЫЙ ВЗНОС ПО ДОГОВОРУ ЛИЗИНГА"
-    },
-    {
+    }, {
         "@id": "service-111",
         "@type": "Service",
         "code_frgu": "2100000010000002650",
@@ -2424,8 +2284,7 @@
         "priority": 0,
         "service_code_epgu": "0",
         "label": "СУБСИДИЯ БИЗНЕСУ НА РАЗВИТИЕ НАРОДНЫХ РЕМЕСЕЛ И ПРОИЗВОДСТВО СУВЕНИРОВ"
-    },
-    {
+    }, {
         "@id": "service-116",
         "@type": "Service",
         "code_frgu": "0",
@@ -2445,8 +2304,7 @@
         "priority": 0,
         "service_code_epgu": "0",
         "label": "ПЕРЕДАЧА ИМУЩЕСТВА ЧР В АРЕНДУ"
-    },
-    {
+    }, {
         "@id": "service-117",
         "@type": "Service",
         "code_frgu": "0",
@@ -2466,8 +2324,7 @@
         "priority": 0,
         "service_code_epgu": "0",
         "label": "СПЕЦ. РАЗРЕШЕНИЕ НА ДВИЖЕНИЕ ПО АВТОДОРОГАМ Т/C, ПЕРЕВОЗЯЩИХ ОПАСНЫЕ ГРУЗЫ"
-    },
-    {
+    }, {
         "@id": "service-114",
         "@type": "Service",
         "code_frgu": "0",
@@ -2487,8 +2344,7 @@
         "priority": 0,
         "service_code_epgu": "0",
         "label": "ПЕРЕДАЧА ЗЕМЕЛЬ ЧР, В АРЕНДУ"
-    },
-    {
+    }, {
         "@id": "service-115",
         "@type": "Service",
         "code_frgu": "0",
@@ -2508,8 +2364,7 @@
         "priority": 0,
         "service_code_epgu": "0",
         "label": "ПЕРЕДАЧА ИМУЩЕСТВА ЧР В ДОВЕРИТЕЛЬНОЕ УПРАВЛЕНИЕ"
-    },
-    {
+    }, {
         "@id": "sg-8",
         "@type": "ServiceGroup",
         "items_per_page": "10",
@@ -2540,8 +2395,7 @@
         ],
         "label": "Индивидуальное жилищное строительство",
         "view_name": "base"
-    },
-    {
+    }, {
         "@id": "sg-9",
         "@type": "ServiceGroup",
         "items_per_page": "10",
@@ -2562,22 +2416,16 @@
         ],
         "label": "Потеря или поиск работы",
         "view_name": "base"
-    },
-    {
+    }, {
         "@id": "sg-4",
         "@type": "ServiceGroup",
         "items_per_page": "10",
         "content": [
-            "service-26",
-            "service-25",
-            "service-23",
-            "service-24",
-            "service-22"
+            "service-26", "service-25", "service-23", "service-24", "service-22"
         ],
         "label": "Рождение второго, третьего ребенка",
         "view_name": "base"
-    },
-    {
+    }, {
         "@id": "sg-5",
         "@type": "ServiceGroup",
         "items_per_page": "10",
@@ -2596,21 +2444,16 @@
         ],
         "label": "Получение документов",
         "view_name": "base"
-    },
-    {
+    }, {
         "@id": "sg-6",
         "@type": "ServiceGroup",
         "items_per_page": "10",
         "content": [
-            "service-41",
-            "service-39",
-            "service-40",
-            "service-38"
+            "service-41", "service-39", "service-40", "service-38"
         ],
         "label": "Малое предпринимательство",
         "view_name": "base"
-    },
-    {
+    }, {
         "@id": "sg-7",
         "@type": "ServiceGroup",
         "items_per_page": "10",
@@ -2624,8 +2467,7 @@
         ],
         "label": "Молодая семья",
         "view_name": "base"
-    },
-    {
+    }, {
         "@id": "sg-0",
         "@type": "ServiceGroup",
         "items_per_page": "15",
@@ -2648,8 +2490,7 @@
         "label": "Рождение ребенка",
         "view_order": "0",
         "view_name": "base"
-    },
-    {
+    }, {
         "@id": "sg-1",
         "@type": "ServiceGroup",
         "items_per_page": "10",
@@ -2667,8 +2508,7 @@
         ],
         "label": "Рождение ребенка",
         "view_name": "base"
-    },
-    {
+    }, {
         "@id": "sg-2",
         "@type": "ServiceGroup",
         "items_per_page": "10",
@@ -2686,16 +2526,14 @@
         ],
         "label": "Приобретение жилого помещения",
         "view_name": "base"
-    },
-    {
+    }, {
         "@id": "sg-3",
         "@type": "ServiceGroup",
         "items_per_page": "10",
         "content": "service-21",
         "label": "Замена документов",
         "view_name": "base"
-    },
-    {
+    }, {
         "@id": "schedule-5",
         "@type": "Schedule",
         "has_day": [
@@ -2708,15 +2546,11 @@
         ],
         "has_time_description": {
             "data": [
-                [
-                    0,
-                    86400
-                ]
+                [0, 86400]
             ],
             "state": "a"
         }
-    },
-    {
+    }, {
         "@id": "schedule-4",
         "@type": "Schedule",
         "has_day": [
@@ -2729,15 +2563,11 @@
         ],
         "has_time_description": {
             "data": [
-                [
-                    0,
-                    86400
-                ]
+                [0, 86400]
             ],
             "state": "a"
         }
-    },
-    {
+    }, {
         "@id": "schedule-3",
         "@type": "Schedule",
         "has_day": [
@@ -2750,15 +2580,11 @@
         ],
         "has_time_description": {
             "data": [
-                [
-                    0,
-                    86400
-                ]
+                [0, 86400]
             ],
             "state": "a"
         }
-    },
-    {
+    }, {
         "@id": "schedule-2",
         "@type": "Schedule",
         "has_day": [
@@ -2771,15 +2597,11 @@
         ],
         "has_time_description": {
             "data": [
-                [
-                    10000,
-                    86000
-                ]
+                [10000, 86000]
             ],
             "state": "a"
         }
-    },
-    {
+    }, {
         "@id": "schedule-6",
         "@type": "Schedule",
         "has_day": [
@@ -2792,15 +2614,11 @@
         ],
         "has_time_description": {
             "data": [
-                [
-                    30000,
-                    50000
-                ]
+                [30000, 50000]
             ],
             "state": "a"
         }
-    },
-    {
+    }, {
         "@id": "schedule-1",
         "@type": "Schedule",
         "has_day": [
@@ -2813,15 +2631,11 @@
         ],
         "has_time_description": {
             "data": [
-                [
-                    0,
-                    86400
-                ]
+                [0, 86400]
             ],
             "state": "a"
         }
-    },
-    {
+    }, {
         "@id": "department-1",
         "@type": "Department",
         "has_schedule": {
@@ -2831,8 +2645,7 @@
         "label": "Отдел 1",
         "pin_code_prefix": "001",
         "unit_of": "office-1"
-    },
-    {
+    }, {
         "@id": "human-2",
         "@type": "Employee",
         "first_name": "Лариса",
@@ -2983,8 +2796,7 @@
             "service-62"
         ],
         "state": "active"
-    },
-    {
+    }, {
         "@id": "rd-1",
         "@type": "Roomdisplay",
         "attached_to": "department-1",
@@ -2993,8 +2805,7 @@
         "device_type": "roomdisplay",
         "default_voice_duration": 15000,
         "pop_on_arrival": false
-    },
-    {
+    }, {
         "@id": "service-52",
         "@type": "Service",
         "code_frgu": "10000068913",
@@ -3014,8 +2825,7 @@
         "priority": 0,
         "service_code_epgu": "0",
         "label": "ПРЕДОСТАВЛЕНИЕ ФЕДЕРАЛЬНОГО ЗЕМ.УЧ, НА ТОРГАХ"
-    },
-    {
+    }, {
         "@id": "service-53",
         "@type": "Service",
         "code_frgu": "10000069147",
@@ -3035,8 +2845,7 @@
         "priority": 0,
         "service_code_epgu": "0",
         "label": "ВЫПИСКА ИЗ РЕЕСТРА ФЕДЕРАЛЬНОГО ИМУЩЕСТВА"
-    },
-    {
+    }, {
         "@id": "service-50",
         "@type": "Service",
         "code_frgu": "10000068975",
@@ -3056,8 +2865,7 @@
         "priority": 0,
         "service_code_epgu": "0",
         "label": "СОГЛАСОВАНИЕ ПРЕДОСТАВЛЕНИЯ ФЕДЕРАЛЬНОГО ЗЕМ.УЧ"
-    },
-    {
+    }, {
         "@id": "service-51",
         "@type": "Service",
         "code_frgu": "10000373692",
@@ -3077,8 +2885,7 @@
         "priority": 0,
         "service_code_epgu": "0",
         "label": "ПРЕДОСТАВЛЕНИЕ ФЕДЕРАЛЬНОГО ЗЕМ.УЧ, БЕЗ ТОРГОВ"
-    },
-    {
+    }, {
         "@id": "service-56",
         "@type": "Service",
         "code_frgu": "0",
@@ -3098,8 +2905,7 @@
         "priority": 0,
         "service_code_epgu": "0",
         "label": "РАЗРЕШЕНИЕ НА ВВОД ОБЪЕКТА В ЭКСПЛУАТАЦИЮ НА ТЕРРИТОРИИ ДВУХ И БОЛЕЕ МУН.РАЙОНОВ"
-    },
-    {
+    }, {
         "@id": "service-57",
         "@type": "Service",
         "code_frgu": "0",
@@ -3119,8 +2925,7 @@
         "priority": 0,
         "service_code_epgu": "0",
         "label": "РАЗРЕШЕНИЕ НА СТРОИТЕЛЬСТВО ОБЪЕКТА НА ТЕРРИТОРИИ ДВУХ И БОЛЕЕ МУН.РАЙОНОВ"
-    },
-    {
+    }, {
         "@id": "service-54",
         "@type": "Service",
         "code_frgu": "0",
@@ -3140,8 +2945,7 @@
         "priority": 0,
         "service_code_epgu": "0",
         "label": "ИНФОРМАЦИЯ ИЗ РЕЕСТРА ГОС ИМУЩЕСТВА ЧР"
-    },
-    {
+    }, {
         "@id": "service-55",
         "@type": "Service",
         "code_frgu": "0",
@@ -3161,8 +2965,7 @@
         "priority": 0,
         "service_code_epgu": "0",
         "label": "СОГЛАСОВАНИЕ РАСПОЛОЖЕНИЯ ЗЕМЕЛЬ НА КАДАСТРОВОМ ПЛАНЕ"
-    },
-    {
+    }, {
         "@id": "service-58",
         "@type": "Service",
         "code_frgu": "0",
@@ -3182,8 +2985,7 @@
         "priority": 0,
         "service_code_epgu": "0",
         "label": "РАЗРЕШЕНИЕ НА ВВОД ОБЪЕКТА В ЭКСПЛУАТАЦИЮ"
-    },
-    {
+    }, {
         "@id": "service-59",
         "@type": "Service",
         "code_frgu": "0",
@@ -3203,8 +3005,7 @@
         "priority": 0,
         "service_code_epgu": "0",
         "label": "РАЗРЕШЕНИЕ НА СТРОИТЕЛЬСТВО, РЕКОНСТРУКЦИЮ ОБЪЕКТОВ КАП. СТРОИТЕЛЬСТВА И ИНДИВИДУАЛЬНОЕ СТРОИТЕЛЬСТВО"
-    },
-    {
+    }, {
         "@id": "service-130",
         "@type": "Service",
         "code_frgu": "0",
@@ -3224,8 +3025,7 @@
         "priority": 0,
         "service_code_epgu": "0",
         "label": "СПРАВКА О РАЗМЕРЕ ПЕНСИИ"
-    },
-    {
+    }, {
         "@id": "service-131",
         "@type": "Service",
         "code_frgu": "0",
@@ -3245,8 +3045,7 @@
         "priority": 0,
         "service_code_epgu": "0",
         "label": "ЗАПИСЬ В ОЧЕРЕДЬ В ПАНСИОНАТЫ"
-    },
-    {
+    }, {
         "@id": "service-132",
         "@type": "Service",
         "code_frgu": "0",
@@ -3265,14 +3064,12 @@
         "priority": 0,
         "service_code_epgu": "0",
         "label": "ДОСТУП К ПОРТАЛУ ГОСУСЛУГИ.РФ"
-    },
-    {
+    }, {
         "@id": "webwidget-1",
         "@type": "SystemEntity",
         "login": "webwidget",
         "password_hash": "123456"
-    },
-    {
+    }, {
         "@id": "service-67",
         "@type": "Service",
         "code_frgu": "0",
@@ -3292,8 +3089,7 @@
         "priority": 0,
         "service_code_epgu": "0",
         "label": "ПОДГОТОВКА И ВЫДАЧА СХЕМЫ РАСПОЛОЖЕНИЯ ЗЕМ.УЧ. НА КАДАСТРОВОМ КВАРТАЛЕ"
-    },
-    {
+    }, {
         "@id": "service-66",
         "@type": "Service",
         "code_frgu": "0",
@@ -3313,8 +3109,7 @@
         "priority": 0,
         "service_code_epgu": "0",
         "label": "ПРЕДОСТАВЛЕНИЕ ЗЕМ.УЧ. ДЛЯ ЦЕЛЕЙ, НЕ СВЯЗАННЫХ СО СТРОИТЕЛЬСТВОМ"
-    },
-    {
+    }, {
         "@id": "service-65",
         "@type": "Service",
         "code_frgu": "0",
@@ -3334,8 +3129,7 @@
         "priority": 0,
         "service_code_epgu": "0",
         "label": "ПРЕДОСТАВЛЕНИЕ ЗЕМЕЛЬНОГО УЧАСТКА, НАХОДЯЩЕГОСЯ В МУН. СОБСТВЕННОСТИ, НА ТОРГАХ"
-    },
-    {
+    }, {
         "@id": "service-64",
         "@type": "Service",
         "code_frgu": "0",
@@ -3355,8 +3149,7 @@
         "priority": 0,
         "service_code_epgu": "0",
         "label": "ПРЕДОСТАВЛЕНИЕ ЗЕМЕЛЬНОГО УЧАСТКА, НАХОДЯЩЕГОСЯ В МУН. СОБСТВЕННОСТИ, БЕЗ ТОРГОВ"
-    },
-    {
+    }, {
         "@id": "service-63",
         "@type": "Service",
         "code_frgu": "0",
@@ -3376,8 +3169,7 @@
         "priority": 0,
         "service_code_epgu": "0",
         "label": "СОГЛАСОВАНИЕ ПРЕДОСТАВЛЕНИЯ ЗЕМЕЛЬНОГО УЧАСТКА"
-    },
-    {
+    }, {
         "@id": "service-62",
         "@type": "Service",
         "code_frgu": "0",
@@ -3397,8 +3189,7 @@
         "priority": 0,
         "service_code_epgu": "0",
         "label": "ИЗМЕНЕНИЕ ЦЕЛЕВОГО НАЗНАЧЕНИЯ ЗЕМЕЛЬНОГО УЧАСТКА"
-    },
-    {
+    }, {
         "@id": "service-61",
         "@type": "Service",
         "code_frgu": "0",
@@ -3418,8 +3209,7 @@
         "priority": 0,
         "service_code_epgu": "0",
         "label": "ЗАКЛЮЧЕНИЕ ДОГОВОРОВ КУПЛИ-ПРОДАЖИ ЗЕМЕЛЬНЫХ УЧАСТКОВ"
-    },
-    {
+    }, {
         "@id": "service-60",
         "@type": "Service",
         "code_frgu": "0",
@@ -3439,8 +3229,7 @@
         "priority": 0,
         "service_code_epgu": "0",
         "label": "ЗАКЛЮЧЕНИЕ ДОГОВОРОВ АРЕНДЫ ЗЕМЕЛЬНЫХ УЧАСТКОВ"
-    },
-    {
+    }, {
         "@id": "service-69",
         "@type": "Service",
         "code_frgu": "0",
@@ -3460,8 +3249,7 @@
         "priority": 0,
         "service_code_epgu": "0",
         "label": "ВЫДАЧА ОРДЕРА-РАЗРЕШЕНИЯ НА ПРОИЗВОДСТВО ЗЕМ. РАБОТ"
-    },
-    {
+    }, {
         "@id": "service-68",
         "@type": "Service",
         "code_frgu": "0",
