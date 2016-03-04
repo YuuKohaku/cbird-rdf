@@ -1,4 +1,5 @@
 module.exports = {
 	LD: require("./LD"),
-	RD: require("./Direct")
+	RD: require("./Direct"),
+	native: require("couchbird")
 };
