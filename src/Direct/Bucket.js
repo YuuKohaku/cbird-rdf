@@ -7,16 +7,16 @@ let path = require("path");
 let Couchbird = require("Couchbird");
 let Bucket = Couchbird.Bucket;
 
-let locate_ifaces = function(names) {
+let locate_ifaces = function (names) {
 	let result = {};
-	if(!_.isArray(names))
+	if (!_.isArray(names))
 		return result;
-	for(var i in names) {
+	for (var i in names) {
 		let iface = null;
 		try {
 			iface = require(`./Query/${names[i]}`);
 			result[names[i]] = iface;
-		} catch(e) {
+		} catch (e) {
 			iface = null;
 		}
 	}
@@ -40,7 +40,7 @@ class CBStorageBucket extends Bucket {
 	/////////////////////////mass nodes operations//////////////////////////////
 	insertNodes(triples, options = {}) {
 		let promises = {};
-		return Promise.resolve(triples)
+		return Promise.resolve(_.castArray(triples))
 			.then((res) => {
 				_.map(res, (val) => {
 					let opts = options[val["@id"]] || {};
@@ -60,7 +60,7 @@ class CBStorageBucket extends Bucket {
 	//nodes upsert
 	upsertNodes(triples, options = {}) {
 		let promises = {};
-		return Promise.resolve(triples)
+		return Promise.resolve(_.castArray(triples))
 			.then((res) => {
 				_.map(res, (val) => {
 					let opts = options[val["@id"]] || {};
@@ -80,7 +80,7 @@ class CBStorageBucket extends Bucket {
 	//replaces existing nodes with given ones
 	replaceNodes(triples, options = {}) {
 		let promises = {};
-		return Promise.resolve(triples)
+		return Promise.resolve(_.castArray(triples))
 			.then((res) => {
 				_.map(res, (val) => {
 					let opts = options[val["@id"]] || {};
@@ -112,20 +112,35 @@ class CBStorageBucket extends Bucket {
 
 	//!! possibly this will make other docs invalid because of non-existent node
 	removeNodes(subjects) {
-		let keys = _.castArray(subjects);
-		let promises = {};
-		_.map(keys, (key) => {
-			promises[key] = this.remove(key)
-				.catch((err) => {
-					return Promise.resolve(false);
+			let keys = _.castArray(subjects);
+			let promises = {};
+			_.map(keys, (key) => {
+				promises[key] = this.remove(key)
+					.catch((err) => {
+						return Promise.resolve(false);
+					});
+			});
+			return Promise.props(promises);
+		}
+		//finally, it came to counters
+	counterInsert(cKey, cOptions, dValue, dOptions, delimiter) {
+			var bucket = this._bucket;
+			return new Promise((resolve, reject) => {
+				bucket.counter(cKey, 1, cOptions, (err, res) => {
+					if (err) {
+						reject(new Error("DATABASE_ERROR", err));
+					} else {
+						//temporary, TODO: pass func or format string to form new id?
+						var id = [dValue["@id"], res.value].join(delimiter || "/");
+						dValue["@id"] = id;
+						resolve(this.insertNodes(dValue, dOptions));
+					}
 				});
-		});
-		return Promise.props(promises);
-	}
-
-	/////////////////////Views functions///////////////////////////
-	//Views installation
-	//default-views.json by default
+			});
+		}
+		/////////////////////Views functions///////////////////////////
+		//Views installation
+		//default-views.json by default
 
 	installViews(filename) {
 		let mgr = this.manager();
@@ -135,7 +150,7 @@ class CBStorageBucket extends Bucket {
 			.then((res) => {
 				let doc = JSON.parse(res);
 				let promises = [];
-				for(var i in doc) {
+				for (var i in doc) {
 					promises.push(mgr.upsertDesignDocument(i, doc[i]));
 				}
 				return Promise.all(promises);
@@ -150,7 +165,7 @@ class CBStorageBucket extends Bucket {
 		let keys = _.castArray(names);
 		let promises = [];
 
-		for(var i in keys) {
+		for (var i in keys) {
 			promises.push(mgr.removeDesignDocument(keys[i]));
 		}
 		return Promise.all(promises)
@@ -158,6 +173,7 @@ class CBStorageBucket extends Bucket {
 				return Promise.reject(new Error("Unable to uninstall views  ", names));
 			});
 	}
+
 
 	/////////////////////Inherited///////////////////////////
 
