@@ -27,6 +27,7 @@ class CBStorageBucket extends Bucket {
 	constructor(...args) {
 		super(...args);
 		this.assignQueryInterfaces(['N1ql']);
+		this.setOperationTimeout(100000)
 	}
 
 	///////////////////////////Query/////////////////////////////////////////
@@ -100,14 +101,21 @@ class CBStorageBucket extends Bucket {
 	getNodes(subjects) {
 		let promises = {};
 		let keys = _.castArray(subjects);
-		_.map(keys, (key) => {
-			promises[key] =
-				this.get(key)
-				.catch((err) => {
-					return Promise.resolve(undefined);
-				});
-		});
-		return Promise.props(promises);
+		return Promise.map(keys, (key) => {
+				return this.get(key)
+					.catch((err) => {
+						return Promise.resolve(undefined);
+					});
+			}, {
+				concurrency: 1000
+			})
+			.then(res => {
+				let found = _.keyBy(res, item => item && item.value['@id']);
+				return _.reduce(keys, (acc, key) => {
+					acc[key] = found[key];
+					return acc;
+				}, {});
+			});
 	}
 
 	//!! possibly this will make other docs invalid because of non-existent node
