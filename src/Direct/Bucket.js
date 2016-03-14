@@ -30,7 +30,7 @@ class CBStorageBucket extends Bucket {
 	}
 
 	configure(cfg) {
-		this.concurrency = cfg.concurrency || 1000;
+		this.concurrency = cfg.concurrency || 10000;
 		this.operation_timeout = cfg.operation_timeout || 30000;
 		this.setOperationTimeout(this.operation_timeout);
 	}
@@ -106,13 +106,14 @@ class CBStorageBucket extends Bucket {
 	getNodes(subjects) {
 		let promises = {};
 		let keys = _.castArray(subjects);
+		let concurrency = this.concurrency;
 		return Promise.map(keys, (key) => {
 				return this.get(key)
 					.catch((err) => {
 						return Promise.resolve(undefined);
 					});
 			}, {
-				concurrency: 1000
+				concurrency
 			})
 			.then(res => {
 				return _.reduce(keys, (acc, key, index) => {
