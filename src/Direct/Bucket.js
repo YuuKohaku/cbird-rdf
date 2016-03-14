@@ -27,7 +27,12 @@ class CBStorageBucket extends Bucket {
 	constructor(...args) {
 		super(...args);
 		this.assignQueryInterfaces(['N1ql']);
-		this.setOperationTimeout(100000)
+	}
+
+	configure(cfg) {
+		this.concurrency = cfg.concurrency || 1000;
+		this.operation_timeout = cfg.operation_timeout || 30000;
+		this.setOperationTimeout(this.operation_timeout);
 	}
 
 	///////////////////////////Query/////////////////////////////////////////
@@ -110,9 +115,8 @@ class CBStorageBucket extends Bucket {
 				concurrency: 1000
 			})
 			.then(res => {
-				let found = _.keyBy(res, item => item && item.value['@id']);
-				return _.reduce(keys, (acc, key) => {
-					acc[key] = found[key];
+				return _.reduce(keys, (acc, key, index) => {
+					acc[key] = res[index];
 					return acc;
 				}, {});
 			});
