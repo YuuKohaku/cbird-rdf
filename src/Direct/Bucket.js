@@ -70,10 +70,11 @@ class CBStorageBucket extends Bucket {
 			.then((res) => {
 				_.map(res, (val) => {
 					let opts = options[val["@id"]] || {};
+					// console.log(val['@id'], opts);
 					promises[val["@id"]] =
 						this.upsert(val["@id"], val, opts)
 						.catch((err) => {
-							return Promise.resolve(false);
+							return Promise.resolve(undefined);
 						});
 				});
 				return Promise.props(promises);
@@ -200,6 +201,7 @@ class CBStorageBucket extends Bucket {
 	upsert(subject, value, options = {}) {
 		return super.upsert(subject, value, options)
 			.catch((err) => {
+				// console.log("ERR", err);
 				return Promise.resolve(undefined);
 			});
 	}
