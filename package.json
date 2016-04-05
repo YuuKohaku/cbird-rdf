@@ -33,7 +33,7 @@
     "Couchbird": "git+https://github.com/YuuKohaku/Couchbird.git",
     "bluebird": "^3.3.4",
     "jsonld": "^0.4.6",
-    "lodash": "^4.6.1",
+    "lodash": "^4.8.2",
     "make-error": "^1.1.1"
   },
   "devDependencies": {
