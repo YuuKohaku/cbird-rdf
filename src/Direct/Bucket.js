@@ -108,17 +108,16 @@ class CBStorageBucket extends Bucket {
 		let promises = {};
 		let keys = _.castArray(subjects);
 		let concurrency = this.concurrency;
-		return Promise.map(keys, (key) => {
-				return this.get(key)
-					.catch((err) => {
-						return Promise.resolve(undefined);
-					});
-			}, {
-				concurrency
-			})
-			.then(res => {
+		return  this.getMulti(keys)
+				.then(res => {
 				return _.reduce(keys, (acc, key, index) => {
-					acc[key] = res[index];
+					acc[key] = res[key].error ?  undefined : res[key];
+					return acc;
+				}, {});
+			})
+			.catch((err)=>{
+				return _.reduce(keys, (acc, key, index) => {
+					acc[key] = undefined;
 					return acc;
 				}, {});
 			});
