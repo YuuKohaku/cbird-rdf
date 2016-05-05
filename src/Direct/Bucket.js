@@ -247,7 +247,7 @@ class CBStorageBucket extends Bucket {
 	}
 
 	getMulti(subjects) {
-		return super.getMulti(subjects)
+		return super.getMulti(_.compact(_.castArray(subjects)))
 			.catch((err) => {
 				return Promise.resolve(undefined);
 			});
