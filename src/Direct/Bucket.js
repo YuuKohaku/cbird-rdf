@@ -30,8 +30,8 @@ class CBStorageBucket extends Bucket {
 	}
 
 	configure(cfg) {
-		this.concurrency = cfg.concurrency || 10000;
-		this.operation_timeout = cfg.operation_timeout || 30000;
+		this.concurrency = cfg.concurrency || 1000;
+		this.operation_timeout = cfg.operation_timeout || 120000;
 		this.setOperationTimeout(this.operation_timeout);
 	}
 
