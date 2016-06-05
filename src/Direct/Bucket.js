@@ -27,11 +27,16 @@ class CBStorageBucket extends Bucket {
 	constructor(...args) {
 		super(...args);
 		this.assignQueryInterfaces(['N1ql']);
+		this._bucket.on('error', (err) => {
+			console.log("CBIRD_RDF ERR:", err.message);
+			global.logger && logger.error(err, "Bucket %s error", this.bucket_name);
+			return this.reconnect();
+		});
 	}
 
 	configure(cfg) {
 		this.concurrency = cfg.concurrency || 1000;
-		this.operation_timeout = cfg.operation_timeout || 120000;
+		this.operation_timeout = cfg.operation_timeout || 240000;
 		this.setOperationTimeout(this.operation_timeout);
 	}
 
@@ -108,14 +113,15 @@ class CBStorageBucket extends Bucket {
 		let promises = {};
 		let keys = _.castArray(subjects);
 		let concurrency = this.concurrency;
-		return  this.getMulti(keys)
-				.then(res => {
+		return this.getMulti(keys)
+			.then(res => {
+				// console.log("GETNODES", keys, res);
 				return _.reduce(keys, (acc, key, index) => {
-					acc[key] = res[key].error ?  undefined : res[key];
+					acc[key] = res[key].error ? undefined : res[key];
 					return acc;
 				}, {});
 			})
-			.catch((err)=>{
+			.catch((err) => {
 				return _.reduce(keys, (acc, key, index) => {
 					acc[key] = undefined;
 					return acc;
