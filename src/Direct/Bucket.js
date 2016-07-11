@@ -27,17 +27,6 @@ class CBStorageBucket extends Bucket {
 	constructor(...args) {
 		super(...args);
 		this.assignQueryInterfaces(['N1ql']);
-		this._bucket.on('error', (err) => {
-			console.log("CBIRD_RDF ERR:", err.message);
-			global.logger && logger.error(err, "Bucket %s error", this.bucket_name);
-			return this.reconnect();
-		});
-	}
-
-	configure(cfg) {
-		this.concurrency = cfg.concurrency || 1000;
-		this.operation_timeout = cfg.operation_timeout || 240000;
-		this.setOperationTimeout(this.operation_timeout);
 	}
 
 	///////////////////////////Query/////////////////////////////////////////

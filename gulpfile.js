@@ -24,8 +24,13 @@ gulp.task('upd', ['es6'], function () {
 		.pipe(gulp.dest("../iris-v2/node_modules/cbird-rdf/build"));
 });
 
+gulp.task('upd-cb', function () {
+	return gulp.src(["../Couchbird/**/*.js"])
+		.pipe(gulp.dest("../iris-v2/node_modules/Couchbird"));
+});
+
 gulp.task('test-upd', function () {
-	gulp.watch(["src/**/*.js", "tests/**/*.js"], ['upd']);
+	gulp.watch(["src/**/*.js", "../Couchbird/src/**/*.js", "tests/**/*.js"], ['upd', 'upd-cb']);
 });
 
 gulp.task("dev", ['es6'],
