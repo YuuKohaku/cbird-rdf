@@ -30,7 +30,7 @@
 	},
 	"homepage": "https://github.com/YuuKohaku/cbird-rdf",
 	"dependencies": {
-		"Couchbird": "git+https://github.com/sdk-group/Couchbird.git#get-multi-workers",
+		"Couchbird": "git+https://github.com/sdk-group/Couchbird.git",
 		"bluebird": "^3.4.3",
 		"jsonld": "^0.4.11",
 		"lodash": "^4.15.0",
