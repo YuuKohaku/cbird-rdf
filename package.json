@@ -31,10 +31,10 @@
 	"homepage": "https://github.com/YuuKohaku/cbird-rdf",
 	"dependencies": {
 		"Couchbird": "git+https://github.com/sdk-group/Couchbird.git",
-		"bluebird": "^3.4.3",
+		"bluebird": "^3.4.6",
 		"jsonld": "^0.4.11",
-		"lodash": "^4.15.0",
-		"make-error": "^1.2.0"
+		"lodash": "^4.16.1",
+		"make-error": "^1.2.1"
 	},
 	"devDependencies": {
 		"gulp-babel": "^6.1.2",
